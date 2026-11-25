@@ -36,6 +36,10 @@ Daten: `shorts.py stats` (Aufrufe/Likes über API) + Studio-Werte pro Short (`pe
 | Layout v3 | ohne Zoom + angepasste Facecam (ab 25.11. 21:05, erster: Trymacs Vogel EazTuqIluFY) vs. v2 | läuft – Ausspielung (Aufrufe nach 2–24 h) mit den v2-Shorts vergleichen |
 | Teil-2-Clips | Fortsetzung eines geflopten Clips | nicht mehr machen – „Teil 2“ braucht Vorwissen (Regel 2), Pyramide Teil 2 am 25.11. 18:10 auf skip |
 
+## Vorschläge für REGELN.md
+Claude ändert REGELN.md nicht selbst. Wenn die Zahlen eine Regeländerung nahelegen, steht der Vorschlag hier (mit Beleg) – der Nutzer entscheidet.
+- (noch keine)
+
 ## Log der Analysen
 - **25.11.2026 16:50** – erste Auswertung (9 Shorts). 3 Gewinner (608/335/292 Aufrufe) alle aus dem 12-Uhr-Batch, Layout v1, Talk/Aussage-Clips. 2 Shorts im Test durchgefallen (80–100 % weggewischt) – beide mit schwachem Einstieg. Neue v2-Shorts (Pyramide, Krabbe, Krokodil, Niklas) noch zu jung für ein Urteil.
 - **25.11.2026 18:10** – (keine Studio-Abfrage fällig, letzte 16:50). API: Gewinner wachsen weiter (Armut 612 / 108 pro Std, Bauprojekt 365, Soundsetup 214). Alle v2-Shorts 0–3 Aufrufe → werden kaum getestet (siehe Experiment Design). Gepostet: Trymacs Stinger/Angel (20,8 s, Einstieg „Oh mein Gott, nein!“) als Test „kurz + starker Einstieg“. Pyramide Teil 2 und Trymacs Tierleichen (Einstieg „Ich geh ja gleich mal rüber…“) wegen Regel 2 aussortiert.

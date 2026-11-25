@@ -4,6 +4,9 @@
 !.gitignore
 !README.md
 !STRATEGIE.md
+!REGELN.md
+!live.py
+!docs/live.json
 !POSTING_ROUTINE.md
 !DAILY_ROUTINE.md
 !YOUTUBE_SETUP.md

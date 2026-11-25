@@ -1,0 +1,33 @@
+{
+ "state": "idle",
+ "current": null,
+ "runs": [
+  {
+   "title": "Manuell im Chat: Live-Monitoring + Regeln einrichten",
+   "started": "2026-11-25T21:19:17",
+   "steps": [
+    {
+     "t": "2026-11-25T21:19:17",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-25T21:19:18",
+     "text": "REGELN.md, live.py und Live-Bereich im Dashboard gebaut",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-25T21:19:18",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-25T21:19:18",
+   "state": "ok",
+   "summary": "Live-Monitoring und Regeldatei eingerichtet"
+  }
+ ],
+ "rules": null,
+ "updated": "2026-11-25T21:19:18",
+ "last_summary": "Live-Monitoring und Regeldatei eingerichtet"
+}

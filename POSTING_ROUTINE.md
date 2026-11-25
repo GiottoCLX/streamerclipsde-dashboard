@@ -1,66 +1,48 @@
-# Posting-Routine StreamerclipsDE – alle 2 Stunden ein Short (über den Browser)
+# Technik-Anleitung für die Läufe (StreamerclipsDE)
 
-Wunsch des Nutzers: **Posten → sobald online sofort den nächsten Clip suchen → fertig machen → bis zum nächsten Termin warten → posten → …**
-Immer über **YouTube Studio im Browser** (Claude in Chrome), nie über die API. Kritisch sein: Wenn ein Clip nicht gut ist, weitersuchen, neu schneiden.
+**Was** wann passiert, steht in `REGELN.md` – die hat immer Vorrang. Hier steht nur, **wie** die einzelnen Schritte technisch gehen.
+Ordner: `C:\Users\diene\Desktop\Shorts Automatik` · Python: `.\.venv\Scripts\python.exe` (unten kurz `py`).
 
-Ordner: `C:\Users\diene\Desktop\Shorts Automatik` · Python: `.\.venv\Scripts\python.exe shorts.py …`
-Kanal: **StreamerclipsDE** (Handle @clx_visuals), Kanal-ID `UC5wsIwWO9EMifAyY9oLyRrQ`, config-Schlüssel `kanal1`.
-Streamer (Eligella-Bubble): eliasn97, sidneyeweka, niklaswilson, trymacs, montanablack88.
+**Live-Meldungen:** Vor jedem Schritt `py live.py step "<was jetzt passiert>"` – kurz und auf Deutsch, so dass der Nutzer versteht, was gerade läuft (z. B. „Lade Short hoch: Monte – Gerechte Strafe“). Probleme mit `py live.py warn "<Problem>"`.
 
-## Teil A – Posten (1 Short pro Lauf)
+## Schritt 1 – Start
+`py live.py start "Lauf HH:MM"` (holt die neueste REGELN.md von GitHub). Dann `REGELN.md` und `STRATEGIE.md` lesen.
 
-1. `shorts.py browser-queue --channel kanal1 --limit 3` → `queue\kanal1.json` (ältester fertiger Short zuerst, `file` ist die <10-MB-Version).
-   - Leer? → direkt zu Teil B, danach den frisch fertigen Short sofort posten.
-2. Chrome: Tab mit `https://studio.youtube.com/channel/UC5wsIwWO9EMifAyY9oLyRrQ/videos/short` öffnen.
-   - Prüfen, dass oben/links **StreamerclipsDE** steht. Anderer Kanal oder Login-Seite → NICHT posten, im Bericht melden.
-   - **Doppel-Check:** Steht der Titel des Shorts schon in der Shorts-Liste? → nicht nochmal hochladen; ID aus der Liste holen und nur `mark-uploaded` ausführen.
-3. Inhalt von `studio_upload.js` per javascript_tool ausführen (lädt die Helfer), dann:
-   1. `await __openUpload()`
-   2. `find` "hidden file input" → `file_upload` mit dem Pfad aus `file`
-   3. ~8 s warten, `__setStudio(title, description)` (Titel/Beschreibung aus queue) → muss `{title, descLen}` liefern, sonst kurz warten und erneut
-   4. `await __toPublic()` → `kids:true, public:true`
-   5. `await __publish()` → `{state, link}`
-4. Video-ID aus `link` (oder aus der Shorts-Liste) holen → `shorts.py mark-uploaded "<meta>" <ID>`
-5. `shorts.py status <ID>` → muss `public` sein (bei `uploaded` = wird noch verarbeitet, ok). `rejected`/`failed` → im Bericht melden.
+## Schritt 2 – Prüfen
+`py live.py check` → JSON mit `may_post`, `reason` und allen Schaltern (`posts_per_run`, `stock`, `clip_len`, `expire_h`, `streamers`, `missing_streamers`).
+- `missing_streamers` nicht leer → je Streamer einen `[[streamer]]`-Block (name, twitch, channel = "kanal1", zoom = 1.3) in `config.toml` ergänzen.
+- `pause: true` → nur Schritt 4 (nur `stats`) und Schritt 7.
 
-## Teil C – Performance prüfen & lernen (nach dem Posten, vor Teil B)
+## Schritt 3 – Posten (nur wenn `may_post`)
+1. `py shorts.py browser-queue --channel kanal1 --limit 3` → `queue\kanal1.json` (ältester zuerst, `file` = <10-MB-Version).
+2. Claude in Chrome: Werkzeuge in EINEM ToolSearch laden (tabs_context_mcp, tabs_create_mcp, navigate, computer, find, javascript_tool, file_upload, get_page_text, browser_batch, tabs_close_mcp), eigenen Tab öffnen:
+   `https://studio.youtube.com/channel/UC5wsIwWO9EMifAyY9oLyRrQ/videos/short`
+   - Steht dort **StreamerclipsDE**? Sonst nicht posten (`live.py warn`).
+   - Titel schon in der Liste? → nicht hochladen, ID aus der Liste holen, nur `mark-uploaded`.
+3. Inhalt von `studio_upload.js` per javascript_tool ausführen, dann je ein Aufruf:
+   `await __openUpload()` → `find` „hidden file input“ → `file_upload` (Pfad aus `file`) → ~8 s warten → `__setStudio(title, description)` (muss `{title, descLen}` liefern) → `await __toPublic()` (`kids:true, public:true`) → `await __publish()`.
+4. Video-ID aus der Shorts-Liste (`a[href*="/video/"]`) → `py shorts.py mark-uploaded "<meta>" <ID>` → `py shorts.py status <ID>` muss `public` zeigen. Tab schließen.
 
-1. `shorts.py stats` → Aufrufe, Aufrufe/Std, Like-Rate aller öffentlichen Shorts (Verlauf in `stats\kanal1.json`).
-2. Studio-Werte holen für Shorts, die **2–72 h alt** sind und deren `perf.checked_at` älter als 6 h ist (max. 4 pro Lauf, die ältesten zuerst):
-   - navigate zu `https://studio.youtube.com/video/<ID>/analytics/tab-overview/period-default`
-   - die Funktion `__perf` aus `studio_upload.js` definieren und `await __perf()` ausführen (pro Video ein eigener javascript-Aufruf, sonst Timeout) → `{aufrufe, angesehen, weggewischt, likes, avd}`
-   - `shorts.py perf <ID> aufrufe=… angesehen=… weggewischt=… avd=… likes=…`
-3. **Analysieren** (Gewinner vs. Verlierer vergleichen): Transkript-Anfang (erste 2 s!), Länge, Streamer, Inhalt (Talk vs. Gameplay), Headline-Stil, Design v1/v2, Uhrzeit, `experiment`.
-   Gewinner = viele Aufrufe/Std UND angesehen ≥ 55 %. Verlierer = < 10 Aufrufe nach 24 h oder angesehen < 45 %.
-4. **`STRATEGIE.md` aktualisieren**, wenn es neue Belege gibt: Regel mit konkretem Beleg (Video, Zahlen) ergänzen/ändern/streichen, Experiment-Tabelle pflegen, eine Zeile ins „Log der Analysen“. Nur Aussagen mit Daten-Beleg als Regel; Vermutungen als Hypothese/Experiment.
-5. Fertige, noch nicht gepostete Shorts gegen die aktuellen Regeln prüfen – passt einer nicht mehr (z. B. schwacher Einstieg, zu lang), neu schneiden oder `skip` setzen.
+## Schritt 4 – Zahlen auswerten
+1. `py shorts.py stats`
+2. Studio-Werte für Shorts, die 2–72 h alt sind und deren `perf.checked_at` älter als 6 h ist (max. 4, älteste zuerst): navigate zu `https://studio.youtube.com/video/<ID>/analytics/tab-overview/period-default`, `__perf` aus `studio_upload.js` definieren, `await __perf()` (pro Video ein eigener Aufruf) → `py shorts.py perf <ID> aufrufe=… angesehen=… weggewischt=… avd=… likes=…`
+3. Gewinner (viele Aufrufe/Std UND angesehen ≥ 55 %) mit Verlierern (< 10 Aufrufe nach 24 h oder angesehen < 45 %) vergleichen: Einstieg (erste 2 s), Länge, Streamer, Talk/Gameplay, Headline, Layout, Uhrzeit, `experiment`.
+4. `STRATEGIE.md` pflegen (Regeln nur mit Zahlen-Beleg, Rest als Experiment, Zeile ins Log). Ideen, die eine Änderung an `REGELN.md` bräuchten → unter „Vorschläge für REGELN.md“ in `STRATEGIE.md` eintragen, nicht selbst ändern.
 
-## Teil B – Nächsten Clip suchen (direkt nach Teil C)
+## Schritt 5 – Vorrat prüfen
+Fertige, ungepostete Shorts (`.json` ohne `uploaded`/`skip`) gegen REGELN.md prüfen. Älter als `expire_h` oder unpassend → `"skip": "<Grund>"` in die .json.
 
-**Zuerst `STRATEGIE.md` lesen** – die Regeln dort haben Vorrang vor den allgemeinen Kriterien unten. Bei jedem Pick bewusst eine Strategie-Regel anwenden und, wenn sinnvoll, ein offenes Experiment testen: im Pick `"experiment": "<was getestet wird>"` eintragen.
+## Schritt 6 – Nächsten Clip vorbereiten
+1. `py shorts.py scout --channel kanal1 --range 24hr --limit 8` (zu wenig → `--range 7d --limit 5`).
+2. `scout\<datum>.txt` lesen (Abschnitt StreamerclipsDE) und nach REGELN.md Abschnitt 3 auswählen. Nur Streamer aus dem Schalter.
+3. `picks\<datum>_<HHMM>.json`: `[{"id": "...", "headline": "...", "title": "...", "start": s, "end": s, "experiment": "..."}]` – Länge laut Schalter `clip_len`.
+4. `py shorts.py render picks\<datei>.json`
+5. `py shorts.py sheet "<mp4>"` → PNG mit Read ansehen und nach REGELN.md Abschnitt 4 prüfen. Nicht gut → start/end ändern und neu rendern (vorher die Datei in `klein\` löschen) oder `skip`.
 
+## Schritt 7 – Abschluss
+1. Log-Zeile an `logs\posting.log`: `<YYYY-MM-DD HH:MM> | gepostet: <Titel> <ID oder -> | bereit: <Anzahl> | Notiz`
+2. `py dashboard.py --push`
+3. `py live.py done "<1 Satz: was gepostet, was bereitliegt, Probleme>"`
+4. Kurzer Bericht auf Deutsch.
 
-Ziel: Es sollen immer **2 fertige, ungepostete** Shorts bereitliegen. Fertige Shorts, die älter als 36 Stunden sind (Datum im Ordnernamen bzw. `uploaded` fehlt), nicht mehr posten → in ihrer .json `"skip": "zu alt"` setzen.
-
-1. `shorts.py scout --channel kanal1 --range 24hr --limit 8` (neue Clips der letzten 24 h, schon gesehene werden übersprungen). Zu wenig Gutes → zusätzlich `--range 7d --limit 5`, aber Neues bevorzugen.
-2. `scout\<datum>.txt` lesen (nur Abschnitt StreamerclipsDE) und **kritisch** auswählen:
-   - lustig/spannend **und ohne Vorwissen verständlich**
-   - **die Pointe/Auflösung muss im Clip sein** – endet der Clip vor der Antwort/Reaktion, NICHT nehmen
-   - keine Werbung/Sponsor-Reads, keine Wett-/Casino-Seiten im Bild, keine Musik-Hauptinhalte
-   - kein Clip, der schon gepostet wurde oder fast gleich ist (gleicher Moment aus anderem Clip)
-3. Auswahl in `picks\<datum>_<HHMM>.json`: `[{"id": "...", "headline": "kurz, max ~45 Zeichen, mit Emoji", "title": "YouTube-Titel", "start": s, "end": s}]` (start/end optional – schneide Leerlauf am Anfang weg, aber nie die Pointe am Ende).
-4. `shorts.py render picks\<datei>.json`
-5. **Ansehen und prüfen:** `shorts.py sheet "<mp4>"` → PNG mit Read anschauen. Prüfen:
-   - **Kopf oben komplett** (Mütze/Haare nicht abgeschnitten), Mund/Kinn sichtbar, kein Zoom-Effekt (Nutzer-Vorgabe) – sonst start/end ändern oder skip
-   - Gesicht nicht vom Banner verdeckt, Banner gut lesbar, keine doppelten Untertitel (eingebrannte Stream-Untertitel), Layout passt (Facecam oben / Gameplay unten bzw. Vollbild)
-   - Untertitel-Text in der .json/.ass ergibt Sinn
-   - Nicht gut? → neu schneiden (start/end anpassen, neu rendern) oder in der .json `"skip": "<Grund>"` setzen und den nächsten Kandidaten nehmen.
-
-## Regeln
-- Nur auf StreamerclipsDE posten. Keine anderen Kanäle, keine Kanal-Einstellungen ändern, keine Videos löschen oder bearbeiten.
-- Keine Änderungen an `shorts.py`, `config.toml`, `studio_upload.js`.
-- Kein API-Upload (`shorts.py upload`), nur Browser.
-- Chrome nicht verbunden → nicht posten, aber Teil B trotzdem machen; im Bericht melden.
-- Am Ende eine Zeile an `logs\posting.log` anhängen: `<Zeit> | gepostet: <Titel> <ID oder -> | bereit: <Anzahl> | Notiz`.
-- **Ganz zum Schluss das Dashboard aktualisieren:** `.\.venv\Scripts\python.exe dashboard.py --push` (baut `docs\index.html` und pusht zu GitHub → https://giottoclx.github.io/streamerclipsde-dashboard/). Schlägt der Push fehl, im Bericht vermerken – nichts anderes deswegen ändern.
-- Das Repo ist **öffentlich**: Niemals `.gitignore` ändern oder Dateien wie `client_secret.json`, `tokens\`, `state.json`, `output\` mit `git add -f` hinzufügen.
+Bei Abbruch: `py live.py fail "<Grund>"` (und trotzdem Log-Zeile + Dashboard, wenn möglich).

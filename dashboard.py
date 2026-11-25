@@ -111,15 +111,25 @@ def build():
 
     strat_md = (ROOT / "STRATEGIE.md").read_text("utf-8-sig") if (ROOT / "STRATEGIE.md").exists() else ""
     strat_html = markdown.markdown(strat_md, extensions=["tables"])
+    rules_md = (ROOT / "REGELN.md").read_text("utf-8-sig") if (ROOT / "REGELN.md").exists() else ""
+    rules_html = markdown.markdown(rules_md, extensions=["tables"])
+    import live as live_mod
+    rules_ver = live_mod.rules_version()
+    try:
+        switches = live_mod.parse_rules()
+    except Exception:
+        switches = None
 
     data = {
+        "repo": REPO, "rules_ver": rules_ver, "switches": switches,
+        "live": load_json(ROOT / "docs" / "live.json", None),
         "generated": now.strftime("%d.%m.%Y %H:%M"), "next_post": next_slot(now).strftime("%H:%M"),
         "last_run": last_run, "status_ok": status_ok, "total": total, "views_24h": views_24h,
         "posted": len(rows), "posted_24h": posted_24h, "avg_watched": avg_watched,
         "best": best, "rows": rows, "series": series, "queue": queue, "skipped": skipped, "log": log_lines,
     }
     page = TEMPLATE.replace("/*DATA*/null", json.dumps(data, ensure_ascii=False).replace("</", "<\\/")) \
-                   .replace("<!--STRATEGY-->", strat_html)
+                   .replace("<!--STRATEGY-->", strat_html).replace("<!--RULES-->", rules_html)
     out = ROOT / "docs" / "index.html"
     out.parent.mkdir(exist_ok=True)
     out.write_text(page, "utf-8")
@@ -136,6 +146,7 @@ def push():
         return
     stamp = dt.datetime.now().strftime("%d.%m.%Y %H:%M")
     git("commit", "-m", f"Dashboard-Update {stamp}\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>")
+    git("pull", "--rebase", "--autostash", "-q", check=False)  # Regel-Änderungen von GitHub übernehmen
     r = git("push", "-q", check=False)
     print("gepusht" if r.returncode == 0 else f"Push fehlgeschlagen: {r.stderr.strip()[:300]}")
     ensure_pages()
@@ -235,6 +246,38 @@ a { color: var(--series-1); }
 #t-shorts td:nth-child(2) { min-width: 230px; }
 .kpis .card:last-child .value { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 ol.queue { margin: 0; padding-left: 20px; } ol.queue li { margin: 6px 0; }
+/* ---- Live */
+.live { display: grid; grid-template-columns: 1.1fr 1fr; gap: 14px; margin-bottom: 14px; }
+@media (max-width: 900px) { .live { grid-template-columns: 1fr; } }
+.now { display: flex; gap: 14px; align-items: flex-start; }
+.beacon { width: 14px; height: 14px; border-radius: 50%; margin-top: 7px; flex: none; background: var(--muted); }
+.beacon.run { background: var(--good); box-shadow: 0 0 0 0 rgba(12,163,12,.5); animation: pulse 1.6s infinite; }
+.beacon.err { background: var(--crit); } .beacon.warn { background: var(--warn); }
+@keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(12,163,12,0); } 100% { box-shadow: 0 0 0 0 rgba(12,163,12,0); } }
+@media (prefers-reduced-motion: reduce) { .beacon.run { animation: none; } }
+.now .big { font-size: 20px; font-weight: 640; line-height: 1.3; }
+.now .what { font-size: 15px; margin-top: 4px; }
+.facts { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 12px; font-size: 13px; color: var(--ink-2); }
+.facts b { color: var(--ink); font-weight: 600; }
+.steps { list-style: none; margin: 8px 0 0; padding: 0; max-height: 330px; overflow-y: auto; }
+.steps li { display: grid; grid-template-columns: 46px 18px 1fr; gap: 6px; padding: 5px 0; border-bottom: 1px solid var(--grid); font-size: 13px; }
+.steps .tm { color: var(--muted); font-variant-numeric: tabular-nums; }
+.steps .k { font-weight: 700; text-align: center; }
+.k.step { color: var(--good-text); } .k.warn { color: #b07800; } .k.fail { color: var(--crit); }
+.runs { list-style: none; margin: 6px 0 0; padding: 0; }
+.runs li { padding: 7px 0; border-bottom: 1px solid var(--grid); font-size: 13px; }
+.runs summary { cursor: pointer; list-style: none; display: flex; gap: 8px; align-items: baseline; }
+.runs summary::-webkit-details-marker { display: none; }
+.runs .when { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.switch { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 8px; margin: 10px 0 4px; }
+.switch div { background: var(--page); border-radius: 10px; padding: 8px 10px; font-size: 12.5px; color: var(--ink-2); }
+.switch b { display: block; color: var(--ink); font-size: 14px; font-weight: 620; }
+.btn { display: inline-block; padding: 6px 12px; border-radius: 8px; background: var(--accent); color: #fff !important; text-decoration: none; font-size: 13px; font-weight: 600; }
+.rules h1 { display: none; }
+.rules h2 { font-size: 15.5px; margin: 22px 0 8px; padding-top: 14px; border-top: 1px solid var(--grid); }
+.rules li { margin: 5px 0; } .rules code { background: var(--page); padding: 1px 5px; border-radius: 5px; font-size: 12.5px; }
+.rules hr { display: none; }
+details.fold > summary { cursor: pointer; color: var(--series-1); font-size: 13px; margin-top: 8px; }
 </style>
 </head>
 <body>
@@ -245,9 +288,24 @@ ol.queue { margin: 0; padding-left: 20px; } ol.queue li { margin: 6px 0; }
     <span class="meta" id="gen"></span>
   </header>
   <nav>
-    <a href="#zahlen">Zahlen</a><a href="#shorts">Alle Shorts</a><a href="#queue">Warteschlange</a>
-    <a href="#strategie">Strategie</a><a href="#log">Verlauf</a>
+    <a href="#live">Live</a><a href="#zahlen">Zahlen</a><a href="#shorts">Alle Shorts</a><a href="#queue">Warteschlange</a>
+    <a href="#regeln">Regeln</a><a href="#strategie">Strategie</a><a href="#log">Verlauf</a>
   </nav>
+
+  <div class="live" id="live">
+    <div class="card">
+      <div class="now"><span class="beacon" id="lv-beacon"></span>
+        <div style="min-width:0"><div class="big" id="lv-state">Lade Live-Status …</div><div class="what" id="lv-what"></div></div></div>
+      <div class="facts" id="lv-facts"></div>
+      <ul class="steps" id="lv-steps" aria-live="polite"></ul>
+      <div class="small" style="margin-top:8px" id="lv-upd"></div>
+    </div>
+    <div class="card">
+      <h2>Letzte Läufe</h2>
+      <div class="small">Antippen für alle Schritte</div>
+      <ul class="runs" id="lv-runs"></ul>
+    </div>
+  </div>
 
   <div class="grid kpis" id="zahlen">
     <div class="card hero"><div class="label">Aufrufe gesamt</div><div class="value" id="k-total"></div><div class="sub" id="k-total-sub"></div></div>
@@ -272,6 +330,16 @@ ol.queue { margin: 0; padding-left: 20px; } ol.queue li { margin: 6px 0; }
     <div class="card"><h2>Warteschlange</h2><div class="small" style="margin-bottom:8px">Wird alle 2 Stunden gepostet · nächster Post ca. <span id="next"></span></div><ol class="queue" id="q"></ol></div>
     <div class="card"><h2>Aussortiert</h2><div class="small" style="margin-bottom:8px">Fertig geschnitten, aber nicht gepostet</div><ul id="sk" style="margin:0;padding-left:20px"></ul></div>
   </div>
+
+  <section id="regeln" class="card">
+    <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
+      <div><h2>Regeln für Claude</h2><div class="small" id="rv"></div></div>
+      <a class="btn" id="edit-rules" target="_blank" rel="noopener">Regeln bearbeiten ✎</a>
+    </div>
+    <div class="switch" id="sw"></div>
+    <div class="small">Änderungen auf GitHub speichern – der nächste Lauf übernimmt sie automatisch.</div>
+    <details class="fold"><summary>Alle Regeln anzeigen</summary><div class="rules"><!--RULES--></div></details>
+  </section>
 
   <section id="strategie" class="card strategy"><!--STRATEGY--></section>
 
@@ -380,6 +448,90 @@ renderTable();
 $('q').innerHTML = D.queue.length ? D.queue.map(q => `<li><b>${esc(q.slot)}</b> – ${esc(q.title)}</li>`).join('') : '<li class="small">Leer – der nächste Lauf sucht neue Clips.</li>';
 $('sk').innerHTML = D.skipped.length ? D.skipped.map(s => `<li>${esc(s.title)} <span class="small">– ${esc(s.reason)}</span></li>`).join('') : '<li class="small">Nichts aussortiert.</li>';
 $('logbox').textContent = D.log.length ? D.log.join('\n') : 'Noch keine Läufe.';
+
+// ---- Regeln
+(function () {
+  $('edit-rules').href = `https://github.com/${D.repo}/edit/main/REGELN.md`;
+  const v = D.rules_ver;
+  $('rv').textContent = v ? `Stand ${v.date.slice(8, 10)}.${v.date.slice(5, 7)}. ${v.date.slice(11)} · zuletzt ${v.web ? 'auf GitHub (von dir)' : 'lokal'} geändert` : 'Noch nicht auf GitHub gespeichert';
+  const s = D.switches;
+  if (!s) return;
+  const items = [
+    ['Pause', s.pause ? '⏸ ja – postet nicht' : 'nein'], ['Posts pro Lauf', s.posts_per_run],
+    ['Posting-Zeiten', s.hours.join('–') + ' Uhr'], ['Mindestabstand', s.min_gap_min + ' Min.'],
+    ['Vorrat fertiger Shorts', s.stock], ['Cliplänge', s.clip_len.join('–') + ' s'],
+    ['Verfällt nach', s.expire_h + ' h'], ['Streamer', s.streamers.length + ': ' + s.streamers.join(', ')],
+  ];
+  $('sw').innerHTML = items.map(([k, v]) => `<div>${esc(k)}<b>${esc(v)}</b></div>`).join('');
+})();
+
+// ---- Live-Status (fragt docs/live.json alle 30 s ab)
+const hm = d => d.toLocaleTimeString('de-DE', {hour: '2-digit', minute: '2-digit'});
+const dm = d => d.toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit'});
+const ago = d => { const m = Math.round((Date.now() - d) / 60000); return m < 1 ? 'gerade eben' : m < 60 ? `vor ${m} Min.` : m < 1440 ? `vor ${Math.floor(m / 60)} Std. ${m % 60} Min.` : `vor ${Math.floor(m / 1440)} Tg.`; };
+const dur = (a, b) => { const m = Math.round((b - a) / 60000); return m < 60 ? `${m} Min.` : `${Math.floor(m / 60)} Std. ${m % 60} Min.`; };
+function nextRun() { const d = new Date(); d.setMinutes(0, 0, 0); d.setHours(d.getHours() + (d.getHours() % 2 ? 1 : 2)); return d; }
+const KI = {step: '✓', warn: '!', fail: '✕'};
+const stepLi = s => `<li><span class="tm">${hm(new Date(s.t))}</span><span class="k ${s.kind}">${KI[s.kind] || '·'}</span><span>${esc(s.text)}</span></li>`;
+let LIVE = D.live, liveFetched = null;
+
+function renderLive() {
+  const L = LIVE;
+  if (!L) { $('lv-state').textContent = 'Noch keine Live-Daten'; $('lv-what').textContent = 'Erscheinen beim nächsten Lauf.'; return; }
+  const cur = L.current, running = L.state === 'running' && cur;
+  const runs = L.runs || [];
+  const last = cur ? cur.steps[cur.steps.length - 1] : null;
+  const lastT = last ? new Date(last.t) : null;
+  const stale = running && lastT && Date.now() - lastT > 25 * 60000;
+  const lastStart = runs[0] ? new Date(runs[0].started) : null;
+  const overdue = !running && lastStart && Date.now() - lastStart > 150 * 60000;
+  const b = $('lv-beacon'), nr = nextRun();
+  let state, what, pill, cls;
+  if (running && stale) {
+    cls = 'warn'; state = 'Lauf hängt vielleicht'; what = `Letzte Meldung ${ago(lastT)}: „${last.text}“ – PC, Claude-App und Chrome prüfen.`;
+    pill = ['var(--warn)', '!', 'Lauf meldet sich nicht mehr'];
+  } else if (running) {
+    cls = 'run'; state = 'Läuft gerade · ' + cur.title; what = last ? `Jetzt: ${last.text}` : 'Startet …';
+    pill = ['var(--good)', '●', 'Arbeitet gerade'];
+  } else if (overdue) {
+    cls = 'err'; state = 'Lauf überfällig'; what = `Letzter Lauf ${ago(lastStart)} gestartet – PC an? Claude-App offen? Chrome offen?`;
+    pill = ['var(--crit)', '!', 'Lauf überfällig – PC/App prüfen'];
+  } else if (L.state === 'error') {
+    cls = 'err'; state = 'Letzter Lauf mit Problem'; what = L.last_summary || '';
+    pill = ['var(--crit)', '!', 'Letzter Lauf mit Problem'];
+  } else {
+    cls = ''; state = 'Wartet auf den nächsten Lauf'; what = `Nächster Lauf ca. ${hm(nr)} Uhr (in ${dur(Date.now(), nr)})`;
+    pill = ['var(--good)', '✓', 'Bereit – nächster Lauf ' + hm(nr)];
+  }
+  b.className = 'beacon ' + cls;
+  $('lv-state').textContent = state; $('lv-what').textContent = what;
+  $('status').innerHTML = `<span class="dot" style="background:${pill[0]}"></span><b>${pill[1]}</b> ${esc(pill[2])}`;
+
+  const facts = [];
+  if (running) facts.push(`Läuft seit <b>${hm(new Date(cur.started))}</b> (${dur(new Date(cur.started), Date.now())})`);
+  if (L.check) facts.push(`Posten: <b>${L.check.may_post ? 'erlaubt' : 'nicht jetzt'}</b> <span class="small">(${esc(L.check.reason)}, Prüfung ${hm(new Date(L.check.t))})</span>`);
+  if (L.rules) facts.push(`Regeln: Stand <b>${esc(L.rules.date.slice(8, 10) + '.' + L.rules.date.slice(5, 7) + '. ' + L.rules.date.slice(11))}</b>`);
+  $('lv-facts').innerHTML = facts.map(f => `<span>${f}</span>`).join('');
+
+  const shown = running ? cur : runs[0];
+  $('lv-steps').innerHTML = shown ? (running ? '' : `<li><span></span><span></span><span class="small">Letzter Lauf: ${esc(shown.title)}</span></li>`) + [...shown.steps].reverse().map(stepLi).join('') : '';
+  $('lv-runs').innerHTML = runs.length ? runs.map(r => {
+    const a = new Date(r.started), e = r.finished ? new Date(r.finished) : null;
+    const ic = r.state === 'ok' ? '<span class="k step">✓</span>' : '<span class="k fail">✕</span>';
+    const warns = r.steps.filter(s => s.kind === 'warn').length;
+    return `<li><details><summary>${ic}<span class="when">${dm(a)} ${hm(a)}</span><span><b>${esc(r.title)}</b>${e ? ` · ${dur(a, e)}` : ''}${warns ? ` · <span class="k warn">${warns} Warnung${warns > 1 ? 'en' : ''}</span>` : ''}<br><span class="small">${esc(r.summary || '')}</span></span></summary>
+      <ul class="steps">${r.steps.map(stepLi).join('')}</ul></details></li>`;
+  }).join('') : '<li class="small">Noch keine Läufe mit Live-Meldungen.</li>';
+  $('lv-upd').textContent = (liveFetched ? `Live aktualisiert ${hm(liveFetched)}` : 'Live-Stand vom Seitenaufbau') + ' · prüft alle 30 s · Anzeige ca. 1 Min. verzögert';
+}
+async function pollLive() {
+  try {
+    const r = await fetch('live.json?t=' + Date.now(), {cache: 'no-store'});
+    if (r.ok) { LIVE = await r.json(); liveFetched = new Date(); }
+  } catch (e) { /* lokal geöffnet: eingebetteten Stand nutzen */ }
+  renderLive();
+}
+renderLive(); pollLive(); setInterval(pollLive, 30000);
 </script>
 </body>
 </html>

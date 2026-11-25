@@ -77,6 +77,38 @@ a { color: var(--series-1); }
 #t-shorts td:nth-child(2) { min-width: 230px; }
 .kpis .card:last-child .value { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 ol.queue { margin: 0; padding-left: 20px; } ol.queue li { margin: 6px 0; }
+/* ---- Live */
+.live { display: grid; grid-template-columns: 1.1fr 1fr; gap: 14px; margin-bottom: 14px; }
+@media (max-width: 900px) { .live { grid-template-columns: 1fr; } }
+.now { display: flex; gap: 14px; align-items: flex-start; }
+.beacon { width: 14px; height: 14px; border-radius: 50%; margin-top: 7px; flex: none; background: var(--muted); }
+.beacon.run { background: var(--good); box-shadow: 0 0 0 0 rgba(12,163,12,.5); animation: pulse 1.6s infinite; }
+.beacon.err { background: var(--crit); } .beacon.warn { background: var(--warn); }
+@keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(12,163,12,0); } 100% { box-shadow: 0 0 0 0 rgba(12,163,12,0); } }
+@media (prefers-reduced-motion: reduce) { .beacon.run { animation: none; } }
+.now .big { font-size: 20px; font-weight: 640; line-height: 1.3; }
+.now .what { font-size: 15px; margin-top: 4px; }
+.facts { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 12px; font-size: 13px; color: var(--ink-2); }
+.facts b { color: var(--ink); font-weight: 600; }
+.steps { list-style: none; margin: 8px 0 0; padding: 0; max-height: 330px; overflow-y: auto; }
+.steps li { display: grid; grid-template-columns: 46px 18px 1fr; gap: 6px; padding: 5px 0; border-bottom: 1px solid var(--grid); font-size: 13px; }
+.steps .tm { color: var(--muted); font-variant-numeric: tabular-nums; }
+.steps .k { font-weight: 700; text-align: center; }
+.k.step { color: var(--good-text); } .k.warn { color: #b07800; } .k.fail { color: var(--crit); }
+.runs { list-style: none; margin: 6px 0 0; padding: 0; }
+.runs li { padding: 7px 0; border-bottom: 1px solid var(--grid); font-size: 13px; }
+.runs summary { cursor: pointer; list-style: none; display: flex; gap: 8px; align-items: baseline; }
+.runs summary::-webkit-details-marker { display: none; }
+.runs .when { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.switch { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 8px; margin: 10px 0 4px; }
+.switch div { background: var(--page); border-radius: 10px; padding: 8px 10px; font-size: 12.5px; color: var(--ink-2); }
+.switch b { display: block; color: var(--ink); font-size: 14px; font-weight: 620; }
+.btn { display: inline-block; padding: 6px 12px; border-radius: 8px; background: var(--accent); color: #fff !important; text-decoration: none; font-size: 13px; font-weight: 600; }
+.rules h1 { display: none; }
+.rules h2 { font-size: 15.5px; margin: 22px 0 8px; padding-top: 14px; border-top: 1px solid var(--grid); }
+.rules li { margin: 5px 0; } .rules code { background: var(--page); padding: 1px 5px; border-radius: 5px; font-size: 12.5px; }
+.rules hr { display: none; }
+details.fold > summary { cursor: pointer; color: var(--series-1); font-size: 13px; margin-top: 8px; }
 </style>
 </head>
 <body>
@@ -87,9 +119,24 @@ ol.queue { margin: 0; padding-left: 20px; } ol.queue li { margin: 6px 0; }
     <span class="meta" id="gen"></span>
   </header>
   <nav>
-    <a href="#zahlen">Zahlen</a><a href="#shorts">Alle Shorts</a><a href="#queue">Warteschlange</a>
-    <a href="#strategie">Strategie</a><a href="#log">Verlauf</a>
+    <a href="#live">Live</a><a href="#zahlen">Zahlen</a><a href="#shorts">Alle Shorts</a><a href="#queue">Warteschlange</a>
+    <a href="#regeln">Regeln</a><a href="#strategie">Strategie</a><a href="#log">Verlauf</a>
   </nav>
+
+  <div class="live" id="live">
+    <div class="card">
+      <div class="now"><span class="beacon" id="lv-beacon"></span>
+        <div style="min-width:0"><div class="big" id="lv-state">Lade Live-Status …</div><div class="what" id="lv-what"></div></div></div>
+      <div class="facts" id="lv-facts"></div>
+      <ul class="steps" id="lv-steps" aria-live="polite"></ul>
+      <div class="small" style="margin-top:8px" id="lv-upd"></div>
+    </div>
+    <div class="card">
+      <h2>Letzte Läufe</h2>
+      <div class="small">Antippen für alle Schritte</div>
+      <ul class="runs" id="lv-runs"></ul>
+    </div>
+  </div>
 
   <div class="grid kpis" id="zahlen">
     <div class="card hero"><div class="label">Aufrufe gesamt</div><div class="value" id="k-total"></div><div class="sub" id="k-total-sub"></div></div>
@@ -114,6 +161,95 @@ ol.queue { margin: 0; padding-left: 20px; } ol.queue li { margin: 6px 0; }
     <div class="card"><h2>Warteschlange</h2><div class="small" style="margin-bottom:8px">Wird alle 2 Stunden gepostet · nächster Post ca. <span id="next"></span></div><ol class="queue" id="q"></ol></div>
     <div class="card"><h2>Aussortiert</h2><div class="small" style="margin-bottom:8px">Fertig geschnitten, aber nicht gepostet</div><ul id="sk" style="margin:0;padding-left:20px"></ul></div>
   </div>
+
+  <section id="regeln" class="card">
+    <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
+      <div><h2>Regeln für Claude</h2><div class="small" id="rv"></div></div>
+      <a class="btn" id="edit-rules" target="_blank" rel="noopener">Regeln bearbeiten ✎</a>
+    </div>
+    <div class="switch" id="sw"></div>
+    <div class="small">Änderungen auf GitHub speichern – der nächste Lauf übernimmt sie automatisch.</div>
+    <details class="fold"><summary>Alle Regeln anzeigen</summary><div class="rules"><h1>Regeln für Claude – StreamerclipsDE</h1>
+<p><strong>Diese Datei ist die einzige verbindliche Anweisung.</strong> Was hier steht, gilt – egal was in einem Chat besprochen wurde.
+Jeder Lauf lädt zuerst die neueste Version von GitHub. Ändern: auf GitHub die Datei öffnen → Stift-Symbol → speichern.
+Claude ändert diese Datei <strong>nie von sich aus</strong>, sondern schlägt Änderungen nur vor (im Bericht und im Dashboard unter „Vorschläge“).</p>
+<p>Rangfolge bei Widersprüchen: <strong>REGELN.md</strong> (du) → <code>STRATEGIE.md</code> (Claudes Lern-Notizen aus den Zahlen) → <code>POSTING_ROUTINE.md</code> (Technik-Anleitung).</p>
+<hr />
+<h2>1. Schalter</h2>
+<p>Nur den Wert hinter dem Doppelpunkt ändern.</p>
+<ul>
+<li><strong>Pause:</strong> nein</li>
+<li><strong>Posts pro Lauf:</strong> 1</li>
+<li><strong>Posting-Zeiten:</strong> 08:00-24:00</li>
+<li><strong>Mindestabstand zwischen zwei Posts (Minuten):</strong> 100</li>
+<li><strong>Fertige Shorts auf Vorrat:</strong> 2</li>
+<li><strong>Cliplänge (Sekunden):</strong> 15-40</li>
+<li><strong>Fertige Shorts verfallen nach (Stunden):</strong> 36</li>
+<li><strong>Streamer:</strong> eliasn97, sidneyeweka, niklaswilson, trymacs, montanablack88</li>
+</ul>
+<p>Bedeutung:</p>
+<ul>
+<li><em>Pause: ja</em> → nichts posten, nichts Neues schneiden. Es werden nur die Zahlen aktualisiert und das Dashboard gepflegt.</li>
+<li><em>Posting-Zeiten</em> → außerhalb dieser Zeit wird nicht gepostet, aber trotzdem ausgewertet und der nächste Clip vorbereitet.</li>
+<li><em>Mindestabstand</em> → wurde vor kürzerer Zeit gepostet (z. B. manuell im Chat), wird in diesem Lauf nicht gepostet.</li>
+<li><em>Streamer</em> → nur Clips dieser Twitch-Kanäle. Neuer Name hier → der nächste Lauf trägt ihn in <code>config.toml</code> ein (Kanal kanal1).</li>
+</ul>
+<p>Wie oft ein Lauf startet (derzeit <strong>alle 2 Stunden zur vollen Stunde</strong>, bis ~9 Min. später), ist in der Claude-App eingestellt – das kann diese Datei nicht ändern. Dafür Claude im Chat Bescheid sagen.</p>
+<hr />
+<h2>2. Ablauf jedes Laufs (genau in dieser Reihenfolge)</h2>
+<p>Jeder Schritt wird live im Dashboard gemeldet (<code>live.py step</code>).</p>
+<ol>
+<li><strong>Start:</strong> <code>live.py start</code> – neueste Regeln laden, Live-Status „läuft“.</li>
+<li><strong>Prüfen:</strong> <code>live.py check</code> – darf jetzt gepostet werden? (Pause, Posting-Zeiten, Mindestabstand). Ergebnis melden.</li>
+<li><strong>Posten</strong> (nur wenn erlaubt und ein geprüfter Short bereitliegt): ältester fertiger Short über YouTube Studio im Browser, öffentlich. Danach prüfen, dass er wirklich öffentlich ist.</li>
+<li><strong>Zahlen auswerten:</strong> Aufrufe aller Shorts holen, für junge Shorts (2–72 h) die Studio-Werte (angesehen/weggewischt). Gewinner und Verlierer vergleichen, Erkenntnisse in <code>STRATEGIE.md</code> (nur mit Zahlen-Beleg).</li>
+<li><strong>Vorrat prüfen:</strong> fertige Shorts gegen diese Regeln prüfen; zu alte oder unpassende aussortieren (mit Grund).</li>
+<li><strong>Nächsten Clip vorbereiten</strong>, bis der Vorrat (Schalter) wieder voll ist: neue Twitch-Clips der letzten 24 h suchen (sonst 7 Tage), auswählen, schneiden, Vorschaubild ansehen und kritisch prüfen.</li>
+<li><strong>Abschluss:</strong> Log-Zeile, Dashboard aktualisieren, <code>live.py done</code> mit kurzer Zusammenfassung, Bericht auf Deutsch.</li>
+</ol>
+<p>Geht etwas schief: <code>live.py warn</code> (weiter machen) oder <code>live.py fail</code> (Lauf abbrechen) – mit Grund.</p>
+<hr />
+<h2>3. Welche Clips genommen werden</h2>
+<ul>
+<li>Lustig oder spannend <strong>und ohne Vorwissen verständlich</strong> (keine Insider, keine „Teil 2“-Clips).</li>
+<li><strong>Der erste Satz weckt allein Neugier</strong> – Frage, krasse Aussage, Schreckmoment. Kein Begrüßen, kein „Okay, warte“, kein Leerlauf am Anfang.</li>
+<li><strong>Die Pointe / Auflösung muss im Clip sein.</strong> Endet der Clip vor der Antwort oder Reaktion → nicht nehmen.</li>
+<li>Frisch: bevorzugt Clips von heute/gestern.</li>
+<li>Nicht schon gepostet und nicht fast gleich wie ein geposteter Clip.</li>
+<li><strong>Verboten:</strong> Werbung/Sponsor-Teile, Wett-/Casino-Seiten im Bild, Musik als Hauptinhalt, Clips, die jemanden bloßstellen oder beleidigen sollen.</li>
+</ul>
+<h2>4. Wie geschnitten wird</h2>
+<ul>
+<li><strong>Kein Zoom-Effekt.</strong></li>
+<li><strong>Gesicht in der Facecam immer komplett:</strong> Kopf/Mütze oben nicht abgeschnitten, Mund/Kinn sichtbar.</li>
+<li>Facecam oben, Gameplay unten; bei Just Chatting Zuschnitt auf den Streamer.</li>
+<li>Untertitel groß in der Mitte, Überschrift (Banner) als wörtliches Zitat oder klare Aussage, max. ~45 Zeichen, mit Emoji.</li>
+<li>Leerlauf am Anfang wegschneiden, aber <strong>nie</strong> die Pointe am Ende.</li>
+<li>Jeder Short wird vor dem Posten als Vorschaubild angesehen. Passt etwas nicht → neu schneiden oder aussortieren.</li>
+</ul>
+<h2>5. Posten</h2>
+<ul>
+<li>Nur auf <strong>StreamerclipsDE</strong> (@clx_visuals, Kanal-ID UC5wsIwWO9EMifAyY9oLyRrQ), immer über <strong>YouTube Studio im Browser</strong>, öffentlich, „nicht für Kinder“.</li>
+<li>Vor dem Upload prüfen: richtiger Kanal eingeloggt, Titel noch nicht in der Shorts-Liste (keine Doppel-Uploads).</li>
+<li>Titel = Überschrift + Streamer-Name, Beschreibung mit Link zum Streamer und Original-Clip, „Alle Rechte beim Streamer“.</li>
+</ul>
+<h2>6. Was Claude nie tut</h2>
+<ul>
+<li>Keine Videos löschen, auf privat stellen oder nachträglich bearbeiten – das entscheidest du.</li>
+<li>Keine Kanal-Einstellungen ändern, keine anderen Kanäle anfassen.</li>
+<li>Keine Passwörter eingeben, keine Logins oder Konto-Bestätigungen – das machst du.</li>
+<li>Kein API-Upload, nur Browser.</li>
+<li>Diese Datei (<code>REGELN.md</code>) nicht selbst ändern.</li>
+<li>Das Repo ist öffentlich: nie <code>client_secret.json</code>, Tokens, <code>state.json</code> oder Videos hochladen, <code>.gitignore</code> nicht ändern.</li>
+<li>Programmdateien (<code>shorts.py</code>, <code>dashboard.py</code>, <code>live.py</code>, <code>studio_upload.js</code>, <code>config.toml</code>) nur ändern, wenn du es im Chat ausdrücklich willst (Ausnahme: neuer Streamer aus Abschnitt 1 in <code>config.toml</code>).</li>
+</ul>
+<h2>7. Wenn etwas nicht geht</h2>
+<ul>
+<li>Chrome nicht verbunden oder Studio nicht eingeloggt → <strong>nicht posten</strong>, Rest des Laufs trotzdem machen, Warnung im Dashboard.</li>
+<li>Upload abgelehnt / Fehler → nicht wiederholen, Warnung im Dashboard und im Bericht.</li>
+<li>Kein guter Clip gefunden → lieber <strong>nichts</strong> vorbereiten als einen schlechten Clip; im Bericht sagen.</li>
+</ul></div></details>
+  </section>
 
   <section id="strategie" class="card strategy"><h1>Reichweiten-Strategie StreamerclipsDE</h1>
 <p>Lebendes Dokument: Wird bei jeder Analyse aktualisiert. <strong>Vor jeder Clip-Auswahl lesen und die Regeln anwenden.</strong>
@@ -185,6 +321,9 @@ Daten: <code>shorts.py stats</code> (Aufrufe/Likes über API) + Studio-Werte pro
 </tr>
 </tbody>
 </table>
+<h2>Vorschläge für REGELN.md</h2>
+<p>Claude ändert REGELN.md nicht selbst. Wenn die Zahlen eine Regeländerung nahelegen, steht der Vorschlag hier (mit Beleg) – der Nutzer entscheidet.
+- (noch keine)</p>
 <h2>Log der Analysen</h2>
 <ul>
 <li><strong>25.11.2026 16:50</strong> – erste Auswertung (9 Shorts). 3 Gewinner (608/335/292 Aufrufe) alle aus dem 12-Uhr-Batch, Layout v1, Talk/Aussage-Clips. 2 Shorts im Test durchgefallen (80–100 % weggewischt) – beide mit schwachem Einstieg. Neue v2-Shorts (Pyramide, Krabbe, Krokodil, Niklas) noch zu jung für ein Urteil.</li>
@@ -196,7 +335,7 @@ Daten: <code>shorts.py stats</code> (Aufrufe/Likes über API) + Studio-Werte pro
 </div>
 <div class="tip" id="tip"></div>
 <script>
-const D = {"generated": "25.11.2026 21:10", "next_post": "22:00", "last_run": "2026-11-25 21:10", "status_ok": true, "total": 1835, "views_24h": 1835, "posted": 11, "posted_24h": 11, "avg_watched": 52.4, "best": {"id": "2CZ6_sDMaf8", "title": "„Eure Armut kotzt mich an“ – Monte über Neuseeland 💀 | MontanaBlack", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T12:31:08", "dur": 56.1, "views": 998, "vph": 130.1, "like_rate": 3.7, "likes": 37, "angesehen": 60.3, "weggewischt": 39.7, "avd": 18.9, "design": "v1", "experiment": "", "cls": "top", "verdict": "Gewinner", "headline": "Monte über die Hater nach dem GTA-Stream aus Neuseeland", "clip_title": "wie war neuseeland"}, "rows": [{"id": "iEDWe8vu7Ms", "title": "MontanaBlack: „Seit ich GTA 6 zocke, hab ich im Real Life das Bedürfnis…“ 💀", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T20:11:31", "dur": 37.3, "views": 0, "vph": 0.0, "like_rate": 0.0, "likes": 0, "angesehen": null, "weggewischt": null, "avd": null, "design": "v2", "experiment": "Monte Aussage/Talk (Gewinner-Typ) + Zitat-Headline, gekürzt auf ~37 s", "cls": "test", "verdict": "Test läuft", "headline": "„Seit ich GTA 6 zocke, hab ich das Bedürfnis…“ 💀", "clip_title": "Im realen Leben in GTA 6"}, {"id": "Np_c7kTAmuU", "title": "Trymacs dachte, er hat eine Stinger – es war eine Angel 💀", "streamer": "Trymacs", "uploaded_at": "2026-11-25T18:11:36", "dur": 20.8, "views": 2, "vph": 1.0, "like_rate": 0.0, "likes": 0, "angesehen": null, "weggewischt": null, "avd": null, "design": "v2", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Trymacs hält eine Angel für einen Raketenwerfer 💀", "clip_title": "max verwechselt"}, {"id": "qYmCHhqI4b8", "title": "MontanaBlack wird in GTA 6 von einem Krokodil erschreckt 😱", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T16:37:42", "dur": 30.0, "views": 3, "vph": 0.8, "like_rate": 0.0, "likes": 0, "angesehen": null, "weggewischt": null, "avd": null, "design": "v2", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Krokodil erschreckt Monte zu Tode 😱", "clip_title": "Krokodil erschreckt Monte"}, {"id": "m96lt6Xqn2g", "title": "Eligella: „Ich hab fotografisches Gedächtnis“ – Pyramide vs. Fußballplatz 💀", "streamer": "Eligella", "uploaded_at": "2026-11-25T14:48:17", "dur": 40.0, "views": 7, "vph": 1.3, "like_rate": 0.0, "likes": 0, "angesehen": 100.0, "weggewischt": null, "avd": null, "design": "v2", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Wie viele Pyramiden passen auf einen Fußballplatz? 💀", "clip_title": "3vs3 Gaming-Olympiade mit dem Squad 🔥 |  !iconleague !doku !eligella !gaming !uncut !clips"}, {"id": "VMRxqYxF4G8", "title": "MontanaBlack findet eine Mutanten-Riesenkrabbe in GTA 6 🦀", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T14:48:13", "dur": 33.0, "views": 5, "vph": 0.9, "like_rate": 0.0, "likes": 0, "angesehen": 100.0, "weggewischt": null, "avd": null, "design": "v2", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Monte trifft auf eine RIESENKRABBE 🦀", "clip_title": "Krabbe greift Monte an"}, {"id": "Fbmzcv4WFgM", "title": "Eli verzweifelt am Bauprojekt 😂 | Eligella", "streamer": "Eligella", "uploaded_at": "2026-11-25T12:31:08", "dur": 60.1, "views": 489, "vph": 63.7, "like_rate": 1.0, "likes": 5, "angesehen": 58.4, "weggewischt": 41.6, "avd": 15.0, "design": "v1", "experiment": "", "cls": "top", "verdict": "Gewinner", "headline": "Eli sieht das Ergebnis vom Bauprojekt… 💀", "clip_title": "häuser"}, {"id": "2CZ6_sDMaf8", "title": "„Eure Armut kotzt mich an“ – Monte über Neuseeland 💀 | MontanaBlack", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T12:31:08", "dur": 56.1, "views": 998, "vph": 130.1, "like_rate": 3.7, "likes": 37, "angesehen": 60.3, "weggewischt": 39.7, "avd": 18.9, "design": "v1", "experiment": "", "cls": "top", "verdict": "Gewinner", "headline": "Monte über die Hater nach dem GTA-Stream aus Neuseeland", "clip_title": "wie war neuseeland"}, {"id": "5MIIxI_Ox7s", "title": "Monte rastet wegen dem Stream-Sound aus 😂 | MontanaBlack", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T12:31:08", "dur": 43.6, "views": 4, "vph": 0.5, "like_rate": 25.0, "likes": 1, "angesehen": 0.0, "weggewischt": 100.0, "avd": null, "design": "v1", "experiment": "", "cls": "flop", "verdict": "Flop", "headline": "„Wenn der Chat sagt, der Sound ist scheiße…“ 💀", "clip_title": "Sound ist schlecht"}, {"id": "g1hxmDj_Ubo", "title": "Monte verprügelt Schradin im Game 😂 | MontanaBlack", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T12:31:08", "dur": 41.1, "views": 4, "vph": 0.5, "like_rate": 25.0, "likes": 1, "angesehen": 20.0, "weggewischt": 80.0, "avd": null, "design": "v1", "experiment": "", "cls": "flop", "verdict": "Flop", "headline": "Monte trifft Schradin im Game 💀", "clip_title": "Monte verprügelt schradin"}, {"id": "EJYpH6FotiI", "title": "Niklas Wilson will auf keinen Fall abreißen 😂", "streamer": "Niklas Wilson", "uploaded_at": "2026-11-25T12:31:08", "dur": 33.5, "views": 2, "vph": 0.3, "like_rate": 50.0, "likes": 1, "angesehen": 100.0, "weggewischt": null, "avd": null, "design": "v1", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Zu viele Häuser – wer muss abreißen? 😂", "clip_title": "zu viel"}, {"id": "jvcmF0haDzQ", "title": "Trymacs: „Das schlechteste Soundsetup von ganz Twitch-Deutschland“ 😂", "streamer": "Trymacs", "uploaded_at": "2026-11-25T11:52:14", "dur": 60.1, "views": 321, "vph": 38.6, "like_rate": 0.9, "likes": 3, "angesehen": 38.4, "weggewischt": 61.6, "avd": 13.6, "design": "v1", "experiment": "", "cls": "flop", "verdict": "Flop", "headline": "Trymacs rastet wegen Willis Sound-Setup aus 😂", "clip_title": "trymacs platzt"}], "series": [{"t": "2026-11-25T16:46", "views": 916}, {"t": "2026-11-25T16:57", "views": 964}, {"t": "2026-11-25T18:11", "views": 1203}, {"t": "2026-11-25T20:11", "views": 1835}], "queue": [{"title": "MontanaBlack: „Das war eine absolut gerechte Strafe“ – sie ging auf seine Mutter 💀", "streamer": "MontanaBlack", "slot": "25.11. 22:00"}, {"title": "MontanaBlack: „Wenn du gut bist, wirst du entdeckt – das ist gelogen“ 💀", "streamer": "MontanaBlack", "slot": "26.11. 00:00"}, {"title": "Trymacs: „Er hat 'ne Faust von der Security bekommen“ – Nicis Festival-Story 💀", "streamer": "Trymacs", "slot": "26.11. 02:00"}], "skipped": [{"title": "Leute fallen auf Wutköder Video rein 😂 | MontanaBlack", "reason": true}, {"title": "digger was 😂 | Trymacs", "reason": true}, {"title": "Eligella hat jetzt einen Übersetzer für englische Fans 😂", "reason": true}, {"title": "Eligella schätzt die Pyramide auf 25 Meter 💀 (Teil 2)", "reason": "schwacher Einstieg ('Sind 25 Meter oder so…'), braucht Teil 1 (Teil 1 nur 4 Aufrufe) – Regel 2"}, {"title": "Niklas Wilson: „Er ist overrated“ – dann trifft er 💀", "reason": "vom Nutzer abgelehnt (schlecht)"}], "log": ["2026-11-25 21:10 | gepostet: Trymacs Lieblingsinteraktion (Vogel) EazTuqIluFY | bereit: 3 | manuell auf Nutzerwunsch; Zoom entfernt, Facecam-Zuschnitt neu (Kopf komplett), Warteschlange neu gerendert", "2026-11-25 20:18 | gepostet: Monte GTA6-Real-Life iEDWe8vu7Ms | bereit: 3 | Studio: Krokodil 4/Stinger 3 Aufrufe bei 100 % angesehen -> Ausspielungsproblem (v2?) bestätigt sich; neu: Monte Gerechte Strafe, Monte 'Das ist gelogen'", "2026-11-25 18:17 | gepostet: Trymacs Stinger/Angel Np_c7kTAmuU | bereit: 2 | Pyramide Teil 2 + Tierleichen auf skip (schwacher Einstieg); neu: Trymacs Security-Faust, Monte GTA6-Real-Life; v2-Shorts fast ohne Impressionen (Design-Warnsignal)", "2026-11-25 16:41 | gepostet: Krokodil erschreckt Monte qYmCHhqI4b8 | bereit: 4 | Pyramide Teil 2 (mit Auflösung) als nächstes"]};
+const D = {"repo": "GiottoCLX/streamerclipsde-dashboard", "rules_ver": null, "switches": {"pause": false, "posts_per_run": 1, "hours": ["08:00", "24:00"], "min_gap_min": 100, "stock": 2, "clip_len": [15, 40], "expire_h": 36, "streamers": ["eliasn97", "sidneyeweka", "niklaswilson", "trymacs", "montanablack88"]}, "live": {"state": "idle", "current": null, "runs": [{"title": "Manuell im Chat: Live-Monitoring + Regeln einrichten", "started": "2026-11-25T21:19:17", "steps": [{"t": "2026-11-25T21:19:17", "text": "Lauf gestartet, neueste Regeln geladen", "kind": "step"}, {"t": "2026-11-25T21:19:18", "text": "REGELN.md, live.py und Live-Bereich im Dashboard gebaut", "kind": "step"}, {"t": "2026-11-25T21:19:18", "text": "Fertig", "kind": "step"}], "finished": "2026-11-25T21:19:18", "state": "ok", "summary": "Live-Monitoring und Regeldatei eingerichtet"}], "rules": null, "updated": "2026-11-25T21:19:18", "last_summary": "Live-Monitoring und Regeldatei eingerichtet"}, "generated": "25.11.2026 21:19", "next_post": "22:00", "last_run": "2026-11-25 21:10", "status_ok": true, "total": 1835, "views_24h": 1835, "posted": 11, "posted_24h": 11, "avg_watched": 52.4, "best": {"id": "2CZ6_sDMaf8", "title": "„Eure Armut kotzt mich an“ – Monte über Neuseeland 💀 | MontanaBlack", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T12:31:08", "dur": 56.1, "views": 998, "vph": 130.1, "like_rate": 3.7, "likes": 37, "angesehen": 60.3, "weggewischt": 39.7, "avd": 18.9, "design": "v1", "experiment": "", "cls": "top", "verdict": "Gewinner", "headline": "Monte über die Hater nach dem GTA-Stream aus Neuseeland", "clip_title": "wie war neuseeland"}, "rows": [{"id": "iEDWe8vu7Ms", "title": "MontanaBlack: „Seit ich GTA 6 zocke, hab ich im Real Life das Bedürfnis…“ 💀", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T20:11:31", "dur": 37.3, "views": 0, "vph": 0.0, "like_rate": 0.0, "likes": 0, "angesehen": null, "weggewischt": null, "avd": null, "design": "v2", "experiment": "Monte Aussage/Talk (Gewinner-Typ) + Zitat-Headline, gekürzt auf ~37 s", "cls": "test", "verdict": "Test läuft", "headline": "„Seit ich GTA 6 zocke, hab ich das Bedürfnis…“ 💀", "clip_title": "Im realen Leben in GTA 6"}, {"id": "Np_c7kTAmuU", "title": "Trymacs dachte, er hat eine Stinger – es war eine Angel 💀", "streamer": "Trymacs", "uploaded_at": "2026-11-25T18:11:36", "dur": 20.8, "views": 2, "vph": 1.0, "like_rate": 0.0, "likes": 0, "angesehen": null, "weggewischt": null, "avd": null, "design": "v2", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Trymacs hält eine Angel für einen Raketenwerfer 💀", "clip_title": "max verwechselt"}, {"id": "qYmCHhqI4b8", "title": "MontanaBlack wird in GTA 6 von einem Krokodil erschreckt 😱", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T16:37:42", "dur": 30.0, "views": 3, "vph": 0.8, "like_rate": 0.0, "likes": 0, "angesehen": null, "weggewischt": null, "avd": null, "design": "v2", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Krokodil erschreckt Monte zu Tode 😱", "clip_title": "Krokodil erschreckt Monte"}, {"id": "m96lt6Xqn2g", "title": "Eligella: „Ich hab fotografisches Gedächtnis“ – Pyramide vs. Fußballplatz 💀", "streamer": "Eligella", "uploaded_at": "2026-11-25T14:48:17", "dur": 40.0, "views": 7, "vph": 1.3, "like_rate": 0.0, "likes": 0, "angesehen": 100.0, "weggewischt": null, "avd": null, "design": "v2", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Wie viele Pyramiden passen auf einen Fußballplatz? 💀", "clip_title": "3vs3 Gaming-Olympiade mit dem Squad 🔥 |  !iconleague !doku !eligella !gaming !uncut !clips"}, {"id": "VMRxqYxF4G8", "title": "MontanaBlack findet eine Mutanten-Riesenkrabbe in GTA 6 🦀", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T14:48:13", "dur": 33.0, "views": 5, "vph": 0.9, "like_rate": 0.0, "likes": 0, "angesehen": 100.0, "weggewischt": null, "avd": null, "design": "v2", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Monte trifft auf eine RIESENKRABBE 🦀", "clip_title": "Krabbe greift Monte an"}, {"id": "Fbmzcv4WFgM", "title": "Eli verzweifelt am Bauprojekt 😂 | Eligella", "streamer": "Eligella", "uploaded_at": "2026-11-25T12:31:08", "dur": 60.1, "views": 489, "vph": 63.7, "like_rate": 1.0, "likes": 5, "angesehen": 58.4, "weggewischt": 41.6, "avd": 15.0, "design": "v1", "experiment": "", "cls": "top", "verdict": "Gewinner", "headline": "Eli sieht das Ergebnis vom Bauprojekt… 💀", "clip_title": "häuser"}, {"id": "2CZ6_sDMaf8", "title": "„Eure Armut kotzt mich an“ – Monte über Neuseeland 💀 | MontanaBlack", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T12:31:08", "dur": 56.1, "views": 998, "vph": 130.1, "like_rate": 3.7, "likes": 37, "angesehen": 60.3, "weggewischt": 39.7, "avd": 18.9, "design": "v1", "experiment": "", "cls": "top", "verdict": "Gewinner", "headline": "Monte über die Hater nach dem GTA-Stream aus Neuseeland", "clip_title": "wie war neuseeland"}, {"id": "5MIIxI_Ox7s", "title": "Monte rastet wegen dem Stream-Sound aus 😂 | MontanaBlack", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T12:31:08", "dur": 43.6, "views": 4, "vph": 0.5, "like_rate": 25.0, "likes": 1, "angesehen": 0.0, "weggewischt": 100.0, "avd": null, "design": "v1", "experiment": "", "cls": "flop", "verdict": "Flop", "headline": "„Wenn der Chat sagt, der Sound ist scheiße…“ 💀", "clip_title": "Sound ist schlecht"}, {"id": "g1hxmDj_Ubo", "title": "Monte verprügelt Schradin im Game 😂 | MontanaBlack", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T12:31:08", "dur": 41.1, "views": 4, "vph": 0.5, "like_rate": 25.0, "likes": 1, "angesehen": 20.0, "weggewischt": 80.0, "avd": null, "design": "v1", "experiment": "", "cls": "flop", "verdict": "Flop", "headline": "Monte trifft Schradin im Game 💀", "clip_title": "Monte verprügelt schradin"}, {"id": "EJYpH6FotiI", "title": "Niklas Wilson will auf keinen Fall abreißen 😂", "streamer": "Niklas Wilson", "uploaded_at": "2026-11-25T12:31:08", "dur": 33.5, "views": 2, "vph": 0.3, "like_rate": 50.0, "likes": 1, "angesehen": 100.0, "weggewischt": null, "avd": null, "design": "v1", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Zu viele Häuser – wer muss abreißen? 😂", "clip_title": "zu viel"}, {"id": "jvcmF0haDzQ", "title": "Trymacs: „Das schlechteste Soundsetup von ganz Twitch-Deutschland“ 😂", "streamer": "Trymacs", "uploaded_at": "2026-11-25T11:52:14", "dur": 60.1, "views": 321, "vph": 38.6, "like_rate": 0.9, "likes": 3, "angesehen": 38.4, "weggewischt": 61.6, "avd": 13.6, "design": "v1", "experiment": "", "cls": "flop", "verdict": "Flop", "headline": "Trymacs rastet wegen Willis Sound-Setup aus 😂", "clip_title": "trymacs platzt"}], "series": [{"t": "2026-11-25T16:46", "views": 916}, {"t": "2026-11-25T16:57", "views": 964}, {"t": "2026-11-25T18:11", "views": 1203}, {"t": "2026-11-25T20:11", "views": 1835}], "queue": [{"title": "MontanaBlack: „Das war eine absolut gerechte Strafe“ – sie ging auf seine Mutter 💀", "streamer": "MontanaBlack", "slot": "25.11. 22:00"}, {"title": "MontanaBlack: „Wenn du gut bist, wirst du entdeckt – das ist gelogen“ 💀", "streamer": "MontanaBlack", "slot": "26.11. 00:00"}, {"title": "Trymacs: „Er hat 'ne Faust von der Security bekommen“ – Nicis Festival-Story 💀", "streamer": "Trymacs", "slot": "26.11. 02:00"}], "skipped": [{"title": "Leute fallen auf Wutköder Video rein 😂 | MontanaBlack", "reason": true}, {"title": "digger was 😂 | Trymacs", "reason": true}, {"title": "Eligella hat jetzt einen Übersetzer für englische Fans 😂", "reason": true}, {"title": "Eligella schätzt die Pyramide auf 25 Meter 💀 (Teil 2)", "reason": "schwacher Einstieg ('Sind 25 Meter oder so…'), braucht Teil 1 (Teil 1 nur 4 Aufrufe) – Regel 2"}, {"title": "Niklas Wilson: „Er ist overrated“ – dann trifft er 💀", "reason": "vom Nutzer abgelehnt (schlecht)"}], "log": ["2026-11-25 21:10 | gepostet: Trymacs Lieblingsinteraktion (Vogel) EazTuqIluFY | bereit: 3 | manuell auf Nutzerwunsch; Zoom entfernt, Facecam-Zuschnitt neu (Kopf komplett), Warteschlange neu gerendert", "2026-11-25 20:18 | gepostet: Monte GTA6-Real-Life iEDWe8vu7Ms | bereit: 3 | Studio: Krokodil 4/Stinger 3 Aufrufe bei 100 % angesehen -> Ausspielungsproblem (v2?) bestätigt sich; neu: Monte Gerechte Strafe, Monte 'Das ist gelogen'", "2026-11-25 18:17 | gepostet: Trymacs Stinger/Angel Np_c7kTAmuU | bereit: 2 | Pyramide Teil 2 + Tierleichen auf skip (schwacher Einstieg); neu: Trymacs Security-Faust, Monte GTA6-Real-Life; v2-Shorts fast ohne Impressionen (Design-Warnsignal)", "2026-11-25 16:41 | gepostet: Krokodil erschreckt Monte qYmCHhqI4b8 | bereit: 4 | Pyramide Teil 2 (mit Auflösung) als nächstes"]};
 const $ = id => document.getElementById(id);
 const fmt = n => n == null ? '–' : n.toLocaleString('de-DE');
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -297,6 +436,90 @@ renderTable();
 $('q').innerHTML = D.queue.length ? D.queue.map(q => `<li><b>${esc(q.slot)}</b> – ${esc(q.title)}</li>`).join('') : '<li class="small">Leer – der nächste Lauf sucht neue Clips.</li>';
 $('sk').innerHTML = D.skipped.length ? D.skipped.map(s => `<li>${esc(s.title)} <span class="small">– ${esc(s.reason)}</span></li>`).join('') : '<li class="small">Nichts aussortiert.</li>';
 $('logbox').textContent = D.log.length ? D.log.join('\n') : 'Noch keine Läufe.';
+
+// ---- Regeln
+(function () {
+  $('edit-rules').href = `https://github.com/${D.repo}/edit/main/REGELN.md`;
+  const v = D.rules_ver;
+  $('rv').textContent = v ? `Stand ${v.date.slice(8, 10)}.${v.date.slice(5, 7)}. ${v.date.slice(11)} · zuletzt ${v.web ? 'auf GitHub (von dir)' : 'lokal'} geändert` : 'Noch nicht auf GitHub gespeichert';
+  const s = D.switches;
+  if (!s) return;
+  const items = [
+    ['Pause', s.pause ? '⏸ ja – postet nicht' : 'nein'], ['Posts pro Lauf', s.posts_per_run],
+    ['Posting-Zeiten', s.hours.join('–') + ' Uhr'], ['Mindestabstand', s.min_gap_min + ' Min.'],
+    ['Vorrat fertiger Shorts', s.stock], ['Cliplänge', s.clip_len.join('–') + ' s'],
+    ['Verfällt nach', s.expire_h + ' h'], ['Streamer', s.streamers.length + ': ' + s.streamers.join(', ')],
+  ];
+  $('sw').innerHTML = items.map(([k, v]) => `<div>${esc(k)}<b>${esc(v)}</b></div>`).join('');
+})();
+
+// ---- Live-Status (fragt docs/live.json alle 30 s ab)
+const hm = d => d.toLocaleTimeString('de-DE', {hour: '2-digit', minute: '2-digit'});
+const dm = d => d.toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit'});
+const ago = d => { const m = Math.round((Date.now() - d) / 60000); return m < 1 ? 'gerade eben' : m < 60 ? `vor ${m} Min.` : m < 1440 ? `vor ${Math.floor(m / 60)} Std. ${m % 60} Min.` : `vor ${Math.floor(m / 1440)} Tg.`; };
+const dur = (a, b) => { const m = Math.round((b - a) / 60000); return m < 60 ? `${m} Min.` : `${Math.floor(m / 60)} Std. ${m % 60} Min.`; };
+function nextRun() { const d = new Date(); d.setMinutes(0, 0, 0); d.setHours(d.getHours() + (d.getHours() % 2 ? 1 : 2)); return d; }
+const KI = {step: '✓', warn: '!', fail: '✕'};
+const stepLi = s => `<li><span class="tm">${hm(new Date(s.t))}</span><span class="k ${s.kind}">${KI[s.kind] || '·'}</span><span>${esc(s.text)}</span></li>`;
+let LIVE = D.live, liveFetched = null;
+
+function renderLive() {
+  const L = LIVE;
+  if (!L) { $('lv-state').textContent = 'Noch keine Live-Daten'; $('lv-what').textContent = 'Erscheinen beim nächsten Lauf.'; return; }
+  const cur = L.current, running = L.state === 'running' && cur;
+  const runs = L.runs || [];
+  const last = cur ? cur.steps[cur.steps.length - 1] : null;
+  const lastT = last ? new Date(last.t) : null;
+  const stale = running && lastT && Date.now() - lastT > 25 * 60000;
+  const lastStart = runs[0] ? new Date(runs[0].started) : null;
+  const overdue = !running && lastStart && Date.now() - lastStart > 150 * 60000;
+  const b = $('lv-beacon'), nr = nextRun();
+  let state, what, pill, cls;
+  if (running && stale) {
+    cls = 'warn'; state = 'Lauf hängt vielleicht'; what = `Letzte Meldung ${ago(lastT)}: „${last.text}“ – PC, Claude-App und Chrome prüfen.`;
+    pill = ['var(--warn)', '!', 'Lauf meldet sich nicht mehr'];
+  } else if (running) {
+    cls = 'run'; state = 'Läuft gerade · ' + cur.title; what = last ? `Jetzt: ${last.text}` : 'Startet …';
+    pill = ['var(--good)', '●', 'Arbeitet gerade'];
+  } else if (overdue) {
+    cls = 'err'; state = 'Lauf überfällig'; what = `Letzter Lauf ${ago(lastStart)} gestartet – PC an? Claude-App offen? Chrome offen?`;
+    pill = ['var(--crit)', '!', 'Lauf überfällig – PC/App prüfen'];
+  } else if (L.state === 'error') {
+    cls = 'err'; state = 'Letzter Lauf mit Problem'; what = L.last_summary || '';
+    pill = ['var(--crit)', '!', 'Letzter Lauf mit Problem'];
+  } else {
+    cls = ''; state = 'Wartet auf den nächsten Lauf'; what = `Nächster Lauf ca. ${hm(nr)} Uhr (in ${dur(Date.now(), nr)})`;
+    pill = ['var(--good)', '✓', 'Bereit – nächster Lauf ' + hm(nr)];
+  }
+  b.className = 'beacon ' + cls;
+  $('lv-state').textContent = state; $('lv-what').textContent = what;
+  $('status').innerHTML = `<span class="dot" style="background:${pill[0]}"></span><b>${pill[1]}</b> ${esc(pill[2])}`;
+
+  const facts = [];
+  if (running) facts.push(`Läuft seit <b>${hm(new Date(cur.started))}</b> (${dur(new Date(cur.started), Date.now())})`);
+  if (L.check) facts.push(`Posten: <b>${L.check.may_post ? 'erlaubt' : 'nicht jetzt'}</b> <span class="small">(${esc(L.check.reason)}, Prüfung ${hm(new Date(L.check.t))})</span>`);
+  if (L.rules) facts.push(`Regeln: Stand <b>${esc(L.rules.date.slice(8, 10) + '.' + L.rules.date.slice(5, 7) + '. ' + L.rules.date.slice(11))}</b>`);
+  $('lv-facts').innerHTML = facts.map(f => `<span>${f}</span>`).join('');
+
+  const shown = running ? cur : runs[0];
+  $('lv-steps').innerHTML = shown ? (running ? '' : `<li><span></span><span></span><span class="small">Letzter Lauf: ${esc(shown.title)}</span></li>`) + [...shown.steps].reverse().map(stepLi).join('') : '';
+  $('lv-runs').innerHTML = runs.length ? runs.map(r => {
+    const a = new Date(r.started), e = r.finished ? new Date(r.finished) : null;
+    const ic = r.state === 'ok' ? '<span class="k step">✓</span>' : '<span class="k fail">✕</span>';
+    const warns = r.steps.filter(s => s.kind === 'warn').length;
+    return `<li><details><summary>${ic}<span class="when">${dm(a)} ${hm(a)}</span><span><b>${esc(r.title)}</b>${e ? ` · ${dur(a, e)}` : ''}${warns ? ` · <span class="k warn">${warns} Warnung${warns > 1 ? 'en' : ''}</span>` : ''}<br><span class="small">${esc(r.summary || '')}</span></span></summary>
+      <ul class="steps">${r.steps.map(stepLi).join('')}</ul></details></li>`;
+  }).join('') : '<li class="small">Noch keine Läufe mit Live-Meldungen.</li>';
+  $('lv-upd').textContent = (liveFetched ? `Live aktualisiert ${hm(liveFetched)}` : 'Live-Stand vom Seitenaufbau') + ' · prüft alle 30 s · Anzeige ca. 1 Min. verzögert';
+}
+async function pollLive() {
+  try {
+    const r = await fetch('live.json?t=' + Date.now(), {cache: 'no-store'});
+    if (r.ok) { LIVE = await r.json(); liveFetched = new Date(); }
+  } catch (e) { /* lokal geöffnet: eingebetteten Stand nutzen */ }
+  renderLive();
+}
+renderLive(); pollLive(); setInterval(pollLive, 30000);
 </script>
 </body>
 </html>
