@@ -36,6 +36,12 @@ Daten: `shorts.py stats` (Aufrufe/Likes über API) + Studio-Werte pro Short (`pe
 | Layout v3 | ohne Zoom + angepasste Facecam (ab 25.11. 21:05, erster: Trymacs Vogel EazTuqIluFY) vs. v2 | läuft – Ausspielung (Aufrufe nach 2–24 h) mit den v2-Shorts vergleichen |
 | Teil-2-Clips | Fortsetzung eines geflopten Clips | nicht mehr machen – „Teil 2“ braucht Vorwissen (Regel 2), Pyramide Teil 2 am 25.11. 18:10 auf skip |
 
+## Stream Clips Daily (englisch, kanal4) – eigene Notizen
+Start 25.11.2026. Noch keine eigenen Zahlen; die deutschen Regeln oben gelten als Startannahme, bis eigene Belege da sind.
+- Beobachtung 25.11.: Viele Clips von Kai Cenat und Jynxzi kommen schon im Hochformat mit eingebrannten Untertiteln → `"subtitles": false` oder Clip meiden (doppelte Untertitel).
+- Beobachtung 25.11.: Frische 24-h-Clips sind oft GTA-Chaos ohne klaren Moment; die Top-Clips der Woche (meiste Aufrufe) sind eher Highlights.
+- Hypothese: US-Publikum ist abends deutscher Zeit (ab ~15 Uhr) aktiv → Posts nachmittags/abends sollten besser laufen. Prüfen, sobald Zahlen da sind.
+
 ## Vorschläge für REGELN.md
 Claude ändert REGELN.md nicht selbst. Wenn die Zahlen eine Regeländerung nahelegen, steht der Vorschlag hier (mit Beleg) – der Nutzer entscheidet.
 - (noch keine)

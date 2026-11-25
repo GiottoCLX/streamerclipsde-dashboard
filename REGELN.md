@@ -92,7 +92,7 @@ Außerdem:
 - **Die Pointe / Auflösung muss im Clip sein.** Endet der Clip vor der Antwort oder Reaktion → nicht nehmen.
 - Frisch: bevorzugt Clips von heute/gestern.
 - Nicht schon gepostet und nicht fast gleich wie ein geposteter Clip.
-- **Verboten:** Werbung/Sponsor-Teile, Wett-/Casino-Seiten im Bild, Musik als Hauptinhalt, Clips, die jemanden bloßstellen oder beleidigen sollen.
+- **Verboten:** rassistische Wörter/Beleidigungen im Clip (z. B. N-Wort, „retard“ – die Untertitel würden sie groß zeigen), Werbung/Sponsor-Teile, Wett-/Casino-Seiten im Bild, Musik als Hauptinhalt, Clips, die jemanden bloßstellen oder beleidigen sollen.
 
 ## 4. Wie geschnitten wird
 

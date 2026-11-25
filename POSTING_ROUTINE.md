@@ -3,6 +3,18 @@
 **Was** wann passiert, steht in `REGELN.md` – die hat immer Vorrang. Hier steht nur, **wie** die einzelnen Schritte technisch gehen.
 Ordner: `C:\Users\diene\Desktop\Shorts Automatik` · Python: `.\.venv\Scripts\python.exe` (unten kurz `py`).
 
+**Zwei Kanäle:** Jeder Lauf gehört zu genau einem Kanal. Überall `--channel <kanal>` mitgeben (`live.py`, `browser-queue`, `scout`, `stats`, `status`).
+
+| | kanal1 | kanal4 |
+|---|---|---|
+| Name | StreamerclipsDE (deutsch) | Stream Clips Daily (englisch) |
+| Studio | `https://studio.youtube.com/channel/UC5wsIwWO9EMifAyY9oLyRrQ/videos/short` | `https://studio.youtube.com/channel/UCItdS5ca1wZv4FBEM_6IarQ/videos/short` |
+| Prüfen, dass Studio zeigt | StreamerclipsDE | Stream Clips Daily |
+| Log-Zeile beginnt nach der Zeit mit | – | `[Stream Clips Daily]` |
+| Sprache Pick (headline/title/warum) | Deutsch (warum: Deutsch) | headline/title **Englisch**, warum Deutsch |
+
+Englische Clips haben oft schon **eingebrannte Untertitel** im Bild (z. B. Kai Cenat, Jynxzi) → im Pick `"subtitles": false` setzen, sonst doppelt. Kein N-Wort und keine Beleidigungen im Clip (Untertitel würden es groß zeigen).
+
 **Live-Meldungen:** Vor jedem Schritt `py live.py step "<was jetzt passiert>"` – kurz und auf Deutsch, so dass der Nutzer versteht, was gerade läuft (z. B. „Lade Short hoch: Monte – Gerechte Strafe“). Probleme mit `py live.py warn "<Problem>"`.
 
 ## Schritt 1 – Start
