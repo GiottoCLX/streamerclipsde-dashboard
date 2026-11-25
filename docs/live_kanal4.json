@@ -13,6 +13,11 @@
     "t": "2026-11-25T21:55:28",
     "text": "Kanal umbenannt zu Stream Clips Daily, Regeln und Dashboard für 2 Kanäle erweitert",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-25T21:55:36",
+    "text": "Prüfe die englischen Clips von heute nach dem strengen Maßstab",
+    "kind": "step"
    }
   ]
  },
@@ -22,7 +27,7 @@
   "date": "2026-11-25 21:40",
   "web": false
  },
- "updated": "2026-11-25T21:55:33",
+ "updated": "2026-11-25T21:55:36",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-25T21:55:32",
