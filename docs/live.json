@@ -1,6 +1,16 @@
 {
- "state": "idle",
- "current": null,
+ "state": "running",
+ "current": {
+  "title": "Lauf 00:10",
+  "started": "2026-11-26T00:10:01",
+  "steps": [
+   {
+    "t": "2026-11-26T00:10:01",
+    "text": "Lauf gestartet, neueste Regeln geladen",
+    "kind": "step"
+   }
+  ]
+ },
  "runs": [
   {
    "title": "Lauf 22:10",
@@ -121,11 +131,11 @@
   }
  ],
  "rules": {
-  "commit": "f2dbbed",
-  "date": "2026-11-25 21:58",
+  "commit": "ee98191",
+  "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-25T22:20:42",
+ "updated": "2026-11-26T00:10:01",
  "last_summary": "Kein Post (Mindestabstand), Vorrat 1 (Trymacs Festival-Story, Note 8), kein neuer 8er-Clip gefunden; Studio zeigt 'Hoppla' für StreamerclipsDE",
  "channel": "kanal1",
  "check": {
