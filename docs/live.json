@@ -8,6 +8,11 @@
     "t": "2026-11-25T21:20:48",
     "text": "Lauf gestartet, neueste Regeln geladen",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-25T21:20:51",
+    "text": "Prüfe, ob diese Meldung im Dashboard ankommt",
+    "kind": "step"
    }
   ]
  },
@@ -42,6 +47,6 @@
   "date": "2026-11-25 21:19",
   "web": false
  },
- "updated": "2026-11-25T21:20:48",
+ "updated": "2026-11-25T21:20:51",
  "last_summary": "Live-Monitoring und Regeldatei eingerichtet"
 }
