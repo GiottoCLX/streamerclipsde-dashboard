@@ -26,7 +26,8 @@ STATE_FILE = ROOT / "state.json"
 SCOUT_DIR = ROOT / "scout"
 FACE_MODEL = ROOT / "models" / "face_detection_yunet.onnx"
 W, H = 1080, 1920
-TOP_H = 700            # Höhe der Facecam oben im Split-Layout
+TOP_H = 700            # Standardhöhe der Facecam oben im Split-Layout
+TOP_MIN, TOP_MAX = 620, 920  # Facecam-Fläche passt sich der Cam an (kein mittiger Beschnitt mehr)
 BOT_H = H - TOP_H      # Höhe des Gameplays unten
 
 os.environ.setdefault("HF_HUB_DISABLE_SYMLINKS_WARNING", "1")
@@ -238,18 +239,42 @@ def detect_layout(src):
         return {**info, "layout": "cam", "cx": ncx * vw}
 
     # Sonst: Facecam über Gameplay. Rahmen der Facecam über Kanten suchen.
+    cx, cy, fw, fh = ncx * vw, ncy * vh, nfw * vw, nfh * vh
+    face_top = cy - fh / 2
     rect = find_facecam_rect(grays, ncx * dw, ncy * dh, nfw * dw, nfh * dh)
     if rect:
         x0, y0, x1, y1 = (v * vw / dw for v in rect)
-    else:  # kein Rahmen (z.B. freigestellte Cam) -> enger Bereich rund ums Gesicht
-        cx, cy, fw, fh = ncx * vw, ncy * vh, nfw * vw, nfh * vh
-        cw = min(vw, fw * 2.6)
-        ch = min(vh, cw * TOP_H / W)
+    else:  # kein Rahmen (z.B. freigestellte Cam) -> Kopf + Schultern mit Luft nach oben
+        cw = min(vw, fw * 3.6)
+        ch = min(vh, cw * 0.75)
         x0 = min(max(cx - cw / 2, 0), vw - cw)
-        y0 = min(max(cy + fh * 0.1 - ch / 2, 0), vh - ch)
+        y0 = min(max(face_top - fh * 0.9, 0), vh - ch)
         x1, y1 = x0 + cw, y0 + ch
-    crop = tuple(int(round(v / 2) * 2) for v in (x1 - x0, y1 - y0, x0, y0))
-    return {**info, "layout": "split", "facecam_border": bool(rect), "crop": crop}
+    top_h, crop = fit_top(x0, y0, x1, y1, cx, face_top, fh)
+    return {**info, "layout": "split", "facecam_border": bool(rect), "crop": crop, "top_h": top_h}
+
+
+def fit_top(x0, y0, x1, y1, cx=None, face_top=None, fh=0.0):
+    """Facecam-Ausschnitt passend zur oberen Fläche (Breite W, Höhe TOP_MIN..TOP_MAX).
+    Die Höhe richtet sich nach der Facecam, statt alles auf eine feste Höhe zu zwingen.
+    Zu hoch -> unten (Brust/Mikro) abschneiden, nie den Kopf. Zu breit -> seitlich ums Gesicht."""
+    cw, ch = x1 - x0, y1 - y0
+    top_h = int(min(max(W * ch / cw, TOP_MIN), TOP_MAX)) // 2 * 2
+    a = W / top_h
+    if cw / ch > a + 1e-3:
+        nw = ch * a
+        c = cx if cx is not None else x0 + cw / 2
+        x0, cw = min(max(c - nw / 2, x0), x1 - nw), nw
+    elif cw / ch < a - 1e-3:
+        nh = cw / a
+        t = face_top - 0.75 * fh if face_top is not None else y0 + (ch - nh) / 2
+        t = min(max(t, y0), y1 - nh)
+        face_cut = face_top is not None and face_top + 1.35 * fh > t + nh  # Kinn/Mund fiele weg
+        if face_cut or (face_top is None and nh < ch * 0.9):
+            # Ausschnitt würde das Gesicht anschneiden: ganze Cam zeigen, Seiten unscharf auffüllen
+            return top_h, tuple(int(v) // 2 * 2 for v in (cw, ch, x0, y0)) + ("fit",)
+        y0, ch = t, nh
+    return top_h, tuple(int(v) // 2 * 2 for v in (cw, ch, x0, y0))
 
 
 def find_facecam_rect(grays, cx, cy, fw, fh):
@@ -296,22 +321,29 @@ def build_filter(lay, streamer):
     layout = lay["layout"]
     if "facecam" in streamer:  # manuelle Facecam aus config.toml hat Vorrang
         fx, fy, fw, fh = streamer["facecam"]
-        layout, crop = "split", (vw * fw, vh * fh, vw * fx, vh * fy)
-        crop = tuple(int(round(v / 2) * 2) for v in crop)
+        layout = "split"
+        top_h, crop = fit_top(vw * fx, vh * fy, vw * (fx + fw), vh * (fy + fh))
     elif layout == "split":
-        crop = lay["crop"]
+        crop, top_h = lay["crop"], lay.get("top_h", TOP_H)
 
     if layout == "split":
-        cw, ch, cx, cy = crop
+        cw, ch, cx, cy = crop[:4]
+        bot_h = H - top_h
         # unteren Rand weglassen: dort sitzen oft eingebrannte Live-Untertitel des Streams
         gh = int(round(vh * (1 - float(streamer.get("cut_bottom", 0.13))) / 2) * 2)
-        gw = int(round(gh * W / BOT_H / 2) * 2)
-        f = (f"[0:v]split[a][b];"
-             f"[a]crop={cw}:{ch}:{cx}:{cy},scale={W}:{TOP_H}:force_original_aspect_ratio=increase,"
-             f"crop={W}:{TOP_H}[top];"
-             f"[b]crop={gw}:{gh}:{(vw - gw) // 2}:0,scale={W}:{BOT_H}[bot];"
+        gw = min(vw, int(round(gh * W / bot_h / 2) * 2))
+        if len(crop) > 4:  # "fit": ganze Cam, Seiten mit unscharfer Kopie füllen
+            top = (f"[a]crop={cw}:{ch}:{cx}:{cy},split[ca][cb];"
+                   f"[ca]scale={W}:{top_h}:force_original_aspect_ratio=increase,crop={W}:{top_h},"
+                   f"boxblur=20:2,eq=brightness=-0.12[cbg];"
+                   f"[cb]scale=-2:{top_h}[cfg];[cbg][cfg]overlay=(W-w)/2:0[top];")
+        else:
+            top = (f"[a]crop={cw}:{ch}:{cx}:{cy},scale={W}:{top_h}:force_original_aspect_ratio=increase,"
+                   f"crop={W}:{top_h}[top];")
+        f = (f"[0:v]split[a][b];" + top +
+             f"[b]crop={gw}:{gh}:{(vw - gw) // 2}:0,scale={W}:{bot_h}[bot];"
              f"[top][bot]vstack,setsar=1[v]")
-        return f, 135, TOP_H
+        return f, 135, top_h
     if layout == "cam":
         # unteren Rand weglassen (eingebrannte Live-Untertitel), Rest auf 9:16 zuschneiden
         ch = int(round(vh * (1 - float(streamer.get("cut_bottom", 0.11))) / 2) * 2)
@@ -525,21 +557,16 @@ def render_short(src, workdir, out_file, streamer, cfg, ffmpeg, headline="",
     full = probe_duration(src, ffmpeg)
     duration = min(end or full, full) - (start or 0)
 
-    # Farben etwas kräftiger + kurzer Zoom bei lauten Momenten (Schreien, Lachen)
+    # Farben etwas kräftiger. Kein Zoom-Effekt mehr (Nutzerwunsch 25.11.: "der Zoom ist voll Arsch")
     post = "eq=saturation=1.12:contrast=1.04"
-    peaks = audio_peaks(src, ffmpeg, start, end)
-    if peaks:
-        z = "+".join(f"0.14*between(in,{int(p * 30)},{int((p + 0.7) * 30)})" for p in peaks)
-        post += (f",zoompan=z='1+{z}':d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
-                 f":s={W}x{H}:fps=30")
     split = lay["layout"] == "split" or "facecam" in streamer
     head_dur = None
     if split:
         # Facecam oben nicht verdecken: Banner unten übers Gameplay, nach 3 s ausblenden
-        head_y, head_dur = TOP_H + 330, 3.0
+        head_y, head_dur = sub_y + 330, 3.0  # sub_y = Höhe der Facecam-Fläche
     write_ass(workdir / "subs.ass", chunk_words(words) if subtitles else [], sub_y, headline, head_y,
               duration, accent, tag=f"twitch.tv/{streamer['twitch']}",
-              divider_y=TOP_H if split else None, tag_y=TOP_H - 95 if split else None, head_dur=head_dur)
+              divider_y=sub_y if split else None, tag_y=sub_y - 95 if split else None, head_dur=head_dur)
     # relativer Pfad -> keine Windows-Escape-Probleme
     vf = vf[:-3] + f"[v0];[v0]{post}[v1];[v1]ass=subs.ass:fontsdir=../../fonts[v]"
     run([ffmpeg, "-y", *trim_args(start, end), "-i", src.name, "-filter_complex", vf,

@@ -51,6 +51,7 @@ Ziel: Es sollen immer **2 fertige, ungepostete** Shorts bereitliegen. Fertige Sh
 3. Auswahl in `picks\<datum>_<HHMM>.json`: `[{"id": "...", "headline": "kurz, max ~45 Zeichen, mit Emoji", "title": "YouTube-Titel", "start": s, "end": s}]` (start/end optional – schneide Leerlauf am Anfang weg, aber nie die Pointe am Ende).
 4. `shorts.py render picks\<datei>.json`
 5. **Ansehen und prüfen:** `shorts.py sheet "<mp4>"` → PNG mit Read anschauen. Prüfen:
+   - **Kopf oben komplett** (Mütze/Haare nicht abgeschnitten), Mund/Kinn sichtbar, kein Zoom-Effekt (Nutzer-Vorgabe) – sonst start/end ändern oder skip
    - Gesicht nicht vom Banner verdeckt, Banner gut lesbar, keine doppelten Untertitel (eingebrannte Stream-Untertitel), Layout passt (Facecam oben / Gameplay unten bzw. Vollbild)
    - Untertitel-Text in der .json/.ass ergibt Sinn
    - Nicht gut? → neu schneiden (start/end anpassen, neu rendern) oder in der .json `"skip": "<Grund>"` setzen und den nächsten Kandidaten nehmen.

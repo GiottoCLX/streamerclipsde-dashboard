@@ -22,6 +22,9 @@ Daten: `shorts.py stats` (Aufrufe/Likes über API) + Studio-Werte pro Short (`pe
    → Ziel **15–35 s**. Lange Clips mit start/end auf den Kern schneiden.
 4. **Pointe muss drin sein** (Nutzer-Feedback 25.11.: Pyramiden-Clip endete ohne Auflösung).
 5. **Einzeln posten, regelmäßig** (seit 25.11. alle 2 h) – vorher wurden 6 auf einmal hochgeladen.
+6. **Kein Zoom-Effekt, Gesicht immer komplett** (Nutzer-Vorgabe 25.11. 21:00: „der Zoom ist voll Arsch“, Köpfe oben oft abgeschnitten).
+   Seit 21:05 im Code: kein Ruck-Zoom mehr bei lauten Stellen; Facecam-Fläche passt sich der Cam an (620–920 px hoch), Kopf mit Luft nach oben, abgeschnitten wird nur unten (Brust/Mikro); würde das Gesicht angeschnitten, wird die ganze Cam gezeigt (Seiten unscharf).
+   → Beim Sheet-Check prüfen: Kopf/Mütze oben vollständig, Mund/Kinn sichtbar.
 
 ## Offene Experimente (immer nur 1 Variable ändern, im Pick als `"experiment"` vermerken)
 | Experiment | Variante | Status |
@@ -30,6 +33,7 @@ Daten: `shorts.py stats` (Aufrufe/Likes über API) + Studio-Werte pro Short (`pe
 | Inhalt | Just Chatting / Aussage vs. GTA-Gameplay | läuft – GTA-Clips vom 25.11. (Krabbe, Krokodil) beobachten |
 | Headline-Stil | wörtliches Zitat „…“ vs. Beschreibung („Monte trifft auf…“) | läuft |
 | Design | v1 (altes Layout) vs. v2 (neues Layout) | **Warnsignal 18:10:** alle 4 v2-Shorts bekommen kaum Impressionen (Niklas 2 Aufrufe nach 5,7 h – im selben Batch wie die 3 v1-Gewinner; Pyramide 3, Krabbe 1 nach 3,4 h; Krokodil 0 nach 1,6 h). Nicht weggewischt, sondern gar nicht ausgespielt. Design ist im Code an den Pfad gekoppelt (`design` aus `kanal` im Dateinamen) → nicht per Pick testbar, Nutzer informieren. Urteil nach 24 h. **20:12:** Muster hält (n=6): Stinger (starker Einstieg, 100 % angesehen) nur 3 Aufrufe nach 2 h, Krokodil 4 nach 3,6 h – die wenigen Zuschauer schauen also zu Ende, es fehlt nur die Ausspielung. Gleichzeitig wachsen die v1-Shorts weiter (Armut 998, +130/Std) → Kanal ist nicht generell gedrosselt. Starker Hinweis auf v2-Layout (oder Upload-Weg/-Datei), aber noch nicht bewiesen. |
+| Layout v3 | ohne Zoom + angepasste Facecam (ab 25.11. 21:05, erster: Trymacs Vogel EazTuqIluFY) vs. v2 | läuft – Ausspielung (Aufrufe nach 2–24 h) mit den v2-Shorts vergleichen |
 | Teil-2-Clips | Fortsetzung eines geflopten Clips | nicht mehr machen – „Teil 2“ braucht Vorwissen (Regel 2), Pyramide Teil 2 am 25.11. 18:10 auf skip |
 
 ## Log der Analysen

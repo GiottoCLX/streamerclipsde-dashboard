@@ -1,0 +1,26 @@
+[
+    {
+        "id":  "655084807",
+        "headline":  "„Das war eine absolut gerechte Strafe“ 💀",
+        "title":  "MontanaBlack: „Das war eine absolut gerechte Strafe“ – sie ging auf seine Mutter 💀",
+        "start":  17.0,
+        "end":  38.5,
+        "experiment":  "Inhalt: GTA-Gameplay mit Schreckmoment-Einstieg (\u0027WAS?! BITCH!\u0027) + Zitat-Headline, ~21 s"
+    },
+    {
+        "id":  "448838961",
+        "headline":  "„Einfach machen? Das ist gelogen“ 💀",
+        "title":  "MontanaBlack: „Wenn du gut bist, wirst du entdeckt – das ist gelogen“ 💀",
+        "start":  0.8,
+        "end":  38.8,
+        "experiment":  "Talk/Aussage (Gewinner-Typ), Einstieg mit klarer Frage, ~38 s"
+    },
+    {
+        "id":  "3917217353",
+        "headline":  "„Er hat \u0027ne Faust von der Security bekommen“ 💀",
+        "title":  "Trymacs: „Er hat \u0027ne Faust von der Security bekommen“ – Nicis Festival-Story 💀",
+        "start":  8.4,
+        "end":  33,
+        "experiment":  "Länge ≤30 s + Zitat-Headline, Talk-Story (Start bei Hook \u0027was der bei Festivals gemacht hat\u0027)"
+    }
+]
