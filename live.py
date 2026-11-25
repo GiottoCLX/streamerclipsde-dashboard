@@ -7,8 +7,9 @@
     python live.py fail  "Grund"             -> Lauf abgebrochen
     python live.py check                     -> Schalter aus REGELN.md lesen: darf jetzt gepostet werden?
 
-Schreibt docs/live.json und pusht nur diese Datei (das Dashboard fragt sie alle 30 s ab).
---no-push: nur lokal schreiben (zum Testen).
+--channel kanal4: für Stream Clips Daily (Standard: kanal1 = StreamerclipsDE).
+Schreibt docs/live.json (kanal1) bzw. docs/live_<kanal>.json und pusht nur diese Datei
+(das Dashboard fragt sie alle 30 s ab). --no-push: nur lokal schreiben (zum Testen).
 """
 import datetime as dt
 import json
@@ -18,7 +19,12 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-LIVE = ROOT / "docs" / "live.json"
+CHANNEL = "kanal1"
+
+
+def live_file(channel=None):
+    ch = channel or CHANNEL
+    return ROOT / "docs" / ("live.json" if ch == "kanal1" else f"live_{ch}.json")
 RULES = ROOT / "REGELN.md"
 KEEP_RUNS = 15
 
@@ -44,10 +50,15 @@ def rules_version():
     return {"commit": h, "date": date[:16].replace("T", " "), "web": committer == "GitHub"}
 
 
-def parse_rules():
-    """Liest die Schalter (Abschnitt 1) aus REGELN.md."""
+def parse_rules(channel=None):
+    """Liest die Schalter des Kanals (Abschnitt 1, Unterabschnitt „### … (<kanal>)“) aus REGELN.md."""
+    ch = channel or CHANNEL
     text = RULES.read_text("utf-8-sig")
     sec = text.split("## 1.", 1)[-1].split("\n## ", 1)[0]
+    parts = re.split(r"^### ", sec, flags=re.M)
+    mine = [x for x in parts if re.match(rf"[^\n]*\({ch}\)", x)]
+    if mine:
+        sec = mine[0]
     raw = {k.strip().lower(): v.strip() for k, v in re.findall(r"^- \*\*(.+?):\*\*\s*(.+)$", sec, re.M)}
 
     def get(prefix, default=""):
@@ -79,9 +90,9 @@ def last_post_time():
     sys.path.insert(0, str(ROOT))
     import shorts
     cfg = shorts.load_config()
-    times = [dt.datetime.fromisoformat(m["uploaded_at"]) for _, m in shorts.all_metas(cfg, "kanal1")
+    times = [dt.datetime.fromisoformat(m["uploaded_at"]) for _, m in shorts.all_metas(cfg, CHANNEL)
              if m.get("uploaded") and m.get("uploaded_at")]
-    known = {s["twitch"].lower() for s in cfg["streamer"] if s.get("channel", "kanal1") == "kanal1"}
+    known = {s["twitch"].lower() for s in cfg["streamer"] if s.get("channel", "kanal1") == CHANNEL}
     return (max(times) if times else None), known
 
 
@@ -107,7 +118,7 @@ def cmd_check():
         reasons.append(f"außerhalb der Posting-Zeiten {r['hours'][0]}-{r['hours'][1]}")
     if gap is not None and gap < r["min_gap_min"]:
         reasons.append(f"letzter Post erst vor {gap} Min. (Mindestabstand {r['min_gap_min']})")
-    out = {**r, "may_post": not reasons, "reason": "; ".join(reasons) or "Posten erlaubt",
+    out = {"channel": CHANNEL, **r, "may_post": not reasons, "reason": "; ".join(reasons) or "Posten erlaubt",
            "minutes_since_last_post": gap, "rules_pulled": ok,
            "missing_streamers": [s for s in r["streamers"] if s not in known],
            "rules_version": rules_version()}
@@ -121,20 +132,23 @@ def cmd_check():
 
 
 def load():
-    if LIVE.exists():
-        return json.loads(LIVE.read_text("utf-8-sig"))
+    if live_file().exists():
+        return json.loads(live_file().read_text("utf-8-sig"))
     return {"state": "idle", "current": None, "runs": []}
 
 
 def save(live, push=True, msg="Live-Update"):
     live["updated"] = now().isoformat()
-    LIVE.parent.mkdir(exist_ok=True)
-    LIVE.write_text(json.dumps(live, ensure_ascii=False, indent=1), "utf-8")
+    f = live_file()
+    live["channel"] = CHANNEL
+    f.parent.mkdir(exist_ok=True)
+    f.write_text(json.dumps(live, ensure_ascii=False, indent=1), "utf-8")
     if not push:
         return
-    git("add", "docs/live.json")
+    rel = f.relative_to(ROOT).as_posix()
+    git("add", rel)
     git("commit", "-q", "-m", msg[:72], "-m", "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>",
-        "--", "docs/live.json")
+        "--", rel)
     pull()
     r = git("push", "-q")
     if r.returncode:
@@ -160,7 +174,13 @@ def finish(live, state, summary):
 
 
 def main():
-    args = [a for a in sys.argv[1:] if a != "--no-push"]
+    global CHANNEL
+    argv = sys.argv[1:]
+    if "--channel" in argv:
+        i = argv.index("--channel")
+        CHANNEL = argv[i + 1]
+        del argv[i:i + 2]
+    args = [a for a in argv if a != "--no-push"]
     if not args:
         sys.exit(__doc__)
     cmd, text = args[0], " ".join(args[1:]).strip()
@@ -187,7 +207,7 @@ def main():
         finish(live, "fail", text)
     else:
         sys.exit(__doc__)
-    save(live, push, f"Live: {cmd} {text}")
+    save(live, push, f"Live {CHANNEL}: {cmd} {text}")
     print(f"live: {cmd} {text}")
 
 

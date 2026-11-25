@@ -45,7 +45,8 @@ upload = "browser"
 hashtags = ["#shorts", "#twitch", "#deutsch", "#minecraft"]
 
 [channels.kanal4]
-name = "Stream Clips Daily"  # englische Streamer
+name = "Stream Clips Daily"  # englische Streamer – @streamclipsdailyen (ehem. persönlicher Kanal „giordan diener“, umbenannt 25.11.2026)
+channel_id = "UCItdS5ca1wZv4FBEM_6IarQ"
 language = "en"
 accent = "#E8132B"
 upload = "browser"

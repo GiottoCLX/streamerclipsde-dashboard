@@ -1,4 +1,4 @@
-# Regeln für Claude – StreamerclipsDE
+# Regeln für Claude – StreamerclipsDE & Stream Clips Daily
 
 **Diese Datei ist die einzige verbindliche Anweisung.** Was hier steht, gilt – egal was in einem Chat besprochen wurde.
 Jeder Lauf lädt zuerst die neueste Version von GitHub. Ändern: auf GitHub die Datei öffnen → Stift-Symbol → speichern.
@@ -6,11 +6,17 @@ Claude ändert diese Datei **nie von sich aus**, sondern schlägt Änderungen nu
 
 Rangfolge bei Widersprüchen: **REGELN.md** (du) → `STRATEGIE.md` (Claudes Lern-Notizen aus den Zahlen) → `POSTING_ROUTINE.md` (Technik-Anleitung).
 
+Alle Regeln ab Abschnitt 2 gelten für **beide Kanäle**. Nur die Schalter sind pro Kanal.
+
 ---
 
 ## 1. Schalter
 
 Nur den Wert hinter dem Doppelpunkt ändern.
+
+### StreamerclipsDE (kanal1)
+
+Deutsch · @clx_visuals · Läufe zu jeder **geraden** Stunde (00, 02, 04 …)
 
 - **Pause:** nein
 - **Posts pro Lauf:** 1
@@ -21,15 +27,28 @@ Nur den Wert hinter dem Doppelpunkt ändern.
 - **Fertige Shorts verfallen nach (Stunden):** 36
 - **Streamer:** eliasn97, sidneyeweka, niklaswilson, trymacs, montanablack88
 
+### Stream Clips Daily (kanal4)
+
+Englisch · @streamclipsdailyen · Läufe zu jeder **ungeraden** Stunde (01, 03, 05 …)
+
+- **Pause:** nein
+- **Posts pro Lauf:** 1
+- **Posting-Zeiten:** 06:00-24:00
+- **Mindestabstand zwischen zwei Posts (Minuten):** 100
+- **Fertige Shorts auf Vorrat:** 2
+- **Cliplänge (Sekunden):** 15-45
+- **Fertige Shorts verfallen nach (Stunden):** 36
+- **Streamer:** kaicenat, jynxzi, marlon, lacy, stableronaldo
+
 Bedeutung:
 
 - *Pause: ja* → nichts posten, nichts Neues schneiden. Es werden nur die Zahlen aktualisiert und das Dashboard gepflegt.
-- *Posting-Zeiten* → außerhalb dieser Zeit wird nicht gepostet, aber trotzdem ausgewertet und der nächste Clip vorbereitet.
+- *Posting-Zeiten* → außerhalb dieser Zeit wird nicht gepostet, aber trotzdem ausgewertet und der nächste Clip vorbereitet. (Deutsche Uhrzeit – beim englischen Kanal ist das US-Publikum 6–9 h zurück.)
 - *Verfallen* → ein fertig geschnittener, aber noch nicht geposteter Short wird nach dieser Zeit aussortiert und nicht mehr gepostet, weil der Clip dann nicht mehr aktuell ist (Twitch-Momente sind nach 1–2 Tagen „alt“, oft haben ihn andere Kanäle schon gepostet).
 - *Mindestabstand* → wurde vor kürzerer Zeit gepostet (z. B. manuell im Chat), wird in diesem Lauf nicht gepostet.
-- *Streamer* → nur Clips dieser Twitch-Kanäle. Neuer Name hier → der nächste Lauf trägt ihn in `config.toml` ein (Kanal kanal1).
+- *Streamer* → nur Clips dieser Twitch-Kanäle. Neuer Name hier → der nächste Lauf trägt ihn in `config.toml` ein (beim passenden Kanal).
 
-Wie oft ein Lauf startet (derzeit **alle 2 Stunden zur vollen Stunde**, bis ~9 Min. später), ist in der Claude-App eingestellt – das kann diese Datei nicht ändern. Dafür Claude im Chat Bescheid sagen.
+Wie oft ein Lauf startet (derzeit **alle 2 Stunden pro Kanal**, versetzt um 1 Stunde, bis ~9 Min. später), ist in der Claude-App eingestellt – das kann diese Datei nicht ändern. Dafür Claude im Chat Bescheid sagen.
 
 ---
 
@@ -37,8 +56,8 @@ Wie oft ein Lauf startet (derzeit **alle 2 Stunden zur vollen Stunde**, bis ~9 M
 
 Jeder Schritt wird live im Dashboard gemeldet (`live.py step`).
 
-1. **Start:** `live.py start` – neueste Regeln laden, Live-Status „läuft“.
-2. **Prüfen:** `live.py check` – darf jetzt gepostet werden? (Pause, Posting-Zeiten, Mindestabstand). Ergebnis melden.
+1. **Start:** `live.py start --channel <kanal>` – neueste Regeln laden, Live-Status „läuft“.
+2. **Prüfen:** `live.py check --channel <kanal>` – darf jetzt gepostet werden? (Pause, Posting-Zeiten, Mindestabstand). Ergebnis melden.
 3. **Posten** (nur wenn erlaubt und ein geprüfter Short bereitliegt): ältester fertiger Short über YouTube Studio im Browser, öffentlich. Danach prüfen, dass er wirklich öffentlich ist.
 4. **Zahlen auswerten:** Aufrufe aller Shorts holen, für junge Shorts (2–72 h) die Studio-Werte (angesehen/weggewischt). Gewinner und Verlierer vergleichen, Erkenntnisse in `STRATEGIE.md` (nur mit Zahlen-Beleg).
 5. **Vorrat prüfen:** fertige Shorts gegen diese Regeln prüfen; zu alte oder unpassende aussortieren (mit Grund).
@@ -86,9 +105,11 @@ Außerdem:
 
 ## 5. Posten
 
-- Nur auf **StreamerclipsDE** (@clx_visuals, Kanal-ID UC5wsIwWO9EMifAyY9oLyRrQ), immer über **YouTube Studio im Browser**, öffentlich, „nicht für Kinder“.
-- Vor dem Upload prüfen: richtiger Kanal eingeloggt, Titel noch nicht in der Shorts-Liste (keine Doppel-Uploads).
-- Titel = Überschrift + Streamer-Name, Beschreibung mit Link zum Streamer und Original-Clip, „Alle Rechte beim Streamer“.
+- Nur auf diese zwei Kanäle, immer über **YouTube Studio im Browser**, öffentlich, „nicht für Kinder“:
+  - **StreamerclipsDE** (@clx_visuals, Kanal-ID UC5wsIwWO9EMifAyY9oLyRrQ) – nur deutsche Clips, Titel/Überschrift/Untertitel auf Deutsch.
+  - **Stream Clips Daily** (@streamclipsdailyen, Kanal-ID UCItdS5ca1wZv4FBEM_6IarQ) – nur englische Clips, Titel/Überschrift/Untertitel auf **Englisch**.
+- Vor dem Upload prüfen: Studio zeigt den richtigen Kanal, Titel noch nicht in dessen Shorts-Liste (keine Doppel-Uploads), Clip gehört zu diesem Kanal.
+- Titel = Überschrift + Streamer-Name, Beschreibung mit Link zum Streamer und Original-Clip, „Alle Rechte beim Streamer“ (englisch: „All rights belong to the streamer“).
 
 ## 6. Was Claude nie tut
 

@@ -7,6 +7,7 @@
 !REGELN.md
 !live.py
 !docs/live.json
+!docs/live_*.json
 !POSTING_ROUTINE.md
 !DAILY_ROUTINE.md
 !YOUTUBE_SETUP.md

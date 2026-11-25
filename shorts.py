@@ -916,9 +916,15 @@ def cmd_mark_uploaded(cfg, args):
     print(f"markiert: {meta['title']} -> https://youtube.com/shorts/{args.youtube_id}")
 
 
+def read_client(channel):
+    """Nur-Lesen (öffentliche Zahlen): Kanäle ohne eigene API-Verbindung (Browser-Upload) lesen über kanal1,
+    damit sich nie ein Login-Fenster öffnet."""
+    return youtube_client(channel if (ROOT / "tokens" / f"{channel}.json").exists() else "kanal1")
+
+
 def cmd_status(cfg, args):
     """Zeigt Sichtbarkeit und Verarbeitungsstatus von Videos (kostet 1 Quota-Einheit)."""
-    yt = youtube_client(args.channel)
+    yt = read_client(args.channel)
     r = yt.videos().list(part="status,snippet", id=",".join(args.ids)).execute()
     found = set()
     for it in r.get("items", []):
@@ -948,7 +954,7 @@ def cmd_stats(cfg, args):
     if not metas:
         print("Noch nichts gepostet.")
         return
-    yt = youtube_client(args.channel)
+    yt = read_client(args.channel)
     items = {}
     ids = [meta["youtube_id"] for _, meta in metas]
     for i in range(0, len(ids), 50):

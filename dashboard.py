@@ -52,16 +52,24 @@ def total_series(hist):
     return out
 
 
-def next_slot(now):
-    h = (now.hour // POST_EVERY_H + 1) * POST_EVERY_H
-    base = now.replace(minute=0, second=0, microsecond=0)
-    return base + dt.timedelta(hours=h - now.hour)
+CHANNELS = {  # Reihenfolge = Reihenfolge der Umschalter im Dashboard
+    "kanal1": {"name": "StreamerclipsDE", "handle": "@clx_visuals", "lang": "Deutsch", "offset": 0, "logo": "SC",
+               "tag": None},
+    "kanal4": {"name": "Stream Clips Daily", "handle": "@streamclipsdailyen", "lang": "Englisch", "offset": 1,
+               "logo": "SD", "tag": "[Stream Clips Daily]"},
+}
 
 
-def build():
-    cfg = shorts.load_config()
-    now = dt.datetime.now()
-    hist = load_json(ROOT / "stats" / f"{CHANNEL}.json", {})
+def next_slot(now, offset=0):
+    """Nächster Lauf: kanal1 zu geraden, kanal4 (offset 1) zu ungeraden Stunden."""
+    t = now.replace(minute=0, second=0, microsecond=0) + dt.timedelta(hours=1)
+    while (t.hour - offset) % POST_EVERY_H:
+        t += dt.timedelta(hours=1)
+    return t
+
+
+def channel_data(ch, info, cfg, now, picks, all_log):
+    hist = load_json(ROOT / "stats" / f"{ch}.json", {})
     rows = []
     for vid, e in hist.items():
         cls, label = verdict(e)
@@ -75,21 +83,18 @@ def build():
             "headline": e.get("headline") or "", "clip_title": e.get("clip_title") or "",
         })
     rows.sort(key=lambda r: r["uploaded_at"], reverse=True)
-
     series = total_series(hist)
     total = series[-1]["views"] if series else 0
     day_ago = (now - dt.timedelta(hours=24)).isoformat(timespec="minutes")
-    base = [p for p in series if p["t"] <= day_ago]
+    base = [x for x in series if x["t"] <= day_ago]
     views_24h = total - (base[-1]["views"] if base else 0)
     watched = [r["angesehen"] for r in rows if r["angesehen"] is not None and r["views"] >= 20]
-    avg_watched = round(sum(watched) / len(watched), 1) if watched else None
-    best = max(rows, key=lambda r: r["views"]) if rows else None
-    posted_24h = sum(1 for r in rows if r["uploaded_at"] >= day_ago)
-
-    queue = []
-    slot = next_slot(now)
-    picks = shorts._headlines()
-    for m, meta in shorts.all_metas(cfg, CHANNEL):
+    metas = shorts.all_metas(cfg, ch)
+    # gepostet, aber noch nicht in den Stats (Stats laufen erst beim nächsten Lauf)
+    known = set(hist)
+    pending = [m for _, m in metas if m.get("youtube_id") and m["youtube_id"] not in known]
+    queue, slot = [], next_slot(now, info["offset"])
+    for _, meta in metas:
         if meta.get("uploaded") or meta.get("skip") or not (ROOT / meta["file"]).exists():
             continue
         pk = picks.get(str(meta.get("source", {}).get("id", "")), {})
@@ -97,46 +102,55 @@ def build():
                       "slot": slot.strftime("%d.%m. %H:%M"), "note": pk.get("note"), "warum": pk.get("warum", "")})
         slot += dt.timedelta(hours=POST_EVERY_H)
     skipped = [{"title": meta["title"].replace(" #shorts", ""), "reason": meta["skip"]}
-               for m, meta in shorts.all_metas(cfg, CHANNEL) if meta.get("skip") and not meta.get("uploaded")]
+               for _, meta in metas if meta.get("skip") and not meta.get("uploaded")]
+    tag = info["tag"]
+    if tag:
+        log = [l for l in all_log if tag in l]
+    else:
+        log = [l for l in all_log if not any(c["tag"] and c["tag"] in l for c in CHANNELS.values())]
+    import live as live_mod
+    try:
+        switches = live_mod.parse_rules(ch)
+    except Exception:
+        switches = None
+    lf = live_mod.live_file(ch)
+    return {
+        **info, "key": ch, "live_file": lf.name, "live": load_json(lf, None), "switches": switches,
+        "next_post": next_slot(now, info["offset"]).strftime("%H:%M"),
+        "total": total, "views_24h": views_24h, "posted": len(rows) + len(pending),
+        "posted_24h": sum(1 for r in rows if r["uploaded_at"] >= day_ago)
+                      + sum(1 for m in pending if (m.get("uploaded_at") or "") >= day_ago),
+        "pending_stats": len(pending),
+        "avg_watched": round(sum(watched) / len(watched), 1) if watched else None,
+        "best": max(rows, key=lambda r: r["views"]) if rows else None,
+        "rows": rows, "series": series, "queue": queue, "skipped": skipped, "log": log[-20:][::-1],
+    }
 
-    log_lines = []
+
+def build():
+    cfg = shorts.load_config()
+    now = dt.datetime.now()
+    picks = shorts._headlines()
     lp = ROOT / "logs" / "posting.log"
-    if lp.exists():
-        log_lines = [l for l in lp.read_text("utf-8-sig").splitlines() if l.strip()][-20:][::-1]
-    last_run = log_lines[0].split(" | ")[0] if log_lines else None
-    status_ok = True
-    if last_run:
-        try:
-            status_ok = (now - dt.datetime.strptime(last_run, "%Y-%m-%d %H:%M")) < dt.timedelta(hours=POST_EVERY_H * 2 + 1)
-        except ValueError:
-            pass
+    all_log = [l for l in lp.read_text("utf-8-sig").splitlines() if l.strip()] if lp.exists() else []
+    chans = {ch: channel_data(ch, info, cfg, now, picks, all_log) for ch, info in CHANNELS.items()}
 
     strat_md = (ROOT / "STRATEGIE.md").read_text("utf-8-sig") if (ROOT / "STRATEGIE.md").exists() else ""
     strat_html = markdown.markdown(strat_md, extensions=["tables"])
     rules_md = (ROOT / "REGELN.md").read_text("utf-8-sig") if (ROOT / "REGELN.md").exists() else ""
     rules_html = markdown.markdown(rules_md, extensions=["tables"])
     import live as live_mod
-    rules_ver = live_mod.rules_version()
-    try:
-        switches = live_mod.parse_rules()
-    except Exception:
-        switches = None
 
-    data = {
-        "repo": REPO, "rules_ver": rules_ver, "switches": switches,
-        "live": load_json(ROOT / "docs" / "live.json", None),
-        "generated": now.strftime("%d.%m.%Y %H:%M"), "next_post": next_slot(now).strftime("%H:%M"),
-        "last_run": last_run, "status_ok": status_ok, "total": total, "views_24h": views_24h,
-        "posted": len(rows), "posted_24h": posted_24h, "avg_watched": avg_watched,
-        "best": best, "rows": rows, "series": series, "queue": queue, "skipped": skipped, "log": log_lines,
-    }
+    data = {"repo": REPO, "rules_ver": live_mod.rules_version(), "generated": now.strftime("%d.%m.%Y %H:%M"),
+            "order": list(CHANNELS), "ch": chans}
     page = TEMPLATE_FILE.read_text("utf-8").replace("/*DATA*/null", json.dumps(data, ensure_ascii=False).replace("</", "<\\/")) \
                    .replace("<!--STRATEGY-->", strat_html).replace("<!--RULES-->", rules_html)
     out = ROOT / "docs" / "index.html"
     out.parent.mkdir(exist_ok=True)
     out.write_text(page, "utf-8")
     (ROOT / "docs" / ".nojekyll").write_text("", "utf-8")
-    print(f"Dashboard gebaut -> {out.relative_to(ROOT)}  ({len(rows)} Shorts, {total} Aufrufe)")
+    print("Dashboard gebaut -> docs/index.html  (" + ", ".join(
+        f"{c['name']}: {c['posted']} Shorts, {c['total']} Aufrufe" for c in chans.values()) + ")")
 
 
 def push():
