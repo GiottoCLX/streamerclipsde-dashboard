@@ -23,6 +23,11 @@
     "t": "2026-11-25T21:56:16",
     "text": "4 alte englische Shorts aussortiert (Note 5) – warte auf frische Clips",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-25T21:57:43",
+    "text": "Frische 24-h-Clips geprüft: keiner schafft Note 8 – suche in den Top-Clips der letzten 7 Tage",
+    "kind": "step"
    }
   ]
  },
@@ -32,7 +37,7 @@
   "date": "2026-11-25 21:40",
   "web": false
  },
- "updated": "2026-11-25T21:56:16",
+ "updated": "2026-11-25T21:57:43",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-25T21:55:32",
