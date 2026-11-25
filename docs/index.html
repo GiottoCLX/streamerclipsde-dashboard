@@ -3,173 +3,308 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>StreamerclipsDE – Dashboard</title>
+<title>StreamerclipsDE · Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
   color-scheme: light;
-  --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
-  --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10);
-  --series-1: #2a78d6; --wash: rgba(42,120,214,0.10);
-  --good: #0ca30c; --good-text: #006300; --warn: #fab219; --crit: #d03b3b;
-  --accent: #9146FF;
+  --page: #f3f3f6; --surface: #ffffff; --surface-2: #f7f7fa; --line: #e6e6ec; --line-2: #d6d6df;
+  --ink: #101016; --ink-2: #555563; --muted: #8b8b99;
+  --accent: #8b5cf6; --accent-ink: #6d3ee6; --accent-soft: rgba(139,92,246,.10);
+  --series: #7c4dff; --series-wash: rgba(124,77,255,.12);
+  --good: #12a150; --good-soft: rgba(18,161,80,.12); --warn: #e8a10c; --warn-soft: rgba(232,161,12,.14);
+  --crit: #e5484d; --crit-soft: rgba(229,72,77,.12);
+  --shadow: 0 1px 2px rgba(16,16,22,.04), 0 4px 18px rgba(16,16,22,.05);
+  --r: 16px;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
-    --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
-    --series-1: #3987e5; --wash: rgba(57,135,229,0.12); --good-text: #0ca30c;
+    --page: #0a0a0e; --surface: #131318; --surface-2: #1a1a21; --line: #24242d; --line-2: #31313c;
+    --ink: #f3f3f6; --ink-2: #b0b0bd; --muted: #777787;
+    --accent-ink: #b79bff; --accent-soft: rgba(139,92,246,.16);
+    --series: #9d7bff; --series-wash: rgba(157,123,255,.14);
+    --good-soft: rgba(18,161,80,.18); --warn-soft: rgba(232,161,12,.16); --crit-soft: rgba(229,72,77,.16);
+    --shadow: 0 1px 2px rgba(0,0,0,.3);
   }
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--page); color: var(--ink);
-  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
-.wrap { max-width: 1180px; margin: 0 auto; padding: 28px 20px 60px; }
-header { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-bottom: 24px; }
-header h1 { font-size: 22px; margin: 0; font-weight: 650; }
-header h1 span { display: inline-block; width: 10px; height: 10px; border-radius: 3px; background: var(--accent); margin-right: 8px; }
-.meta { color: var(--ink-2); font-size: 13px; }
-.pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
-  font-size: 13px; border: 1px solid var(--border); background: var(--surface); }
-.dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
-nav { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; }
-nav a { color: var(--ink-2); text-decoration: none; font-size: 13px; padding: 4px 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); }
-nav a:hover { color: var(--ink); }
-.card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; }
-.grid { display: grid; gap: 14px; }
-.kpis { grid-template-columns: 1.4fr repeat(4, 1fr); margin-bottom: 14px; }
-@media (max-width: 900px) { .kpis { grid-template-columns: 1fr 1fr; } .kpis .hero { grid-column: 1 / -1; } }
-.label { color: var(--ink-2); font-size: 13px; }
-.value { font-size: 26px; font-weight: 620; margin-top: 2px; }
-.hero .value { font-size: 52px; line-height: 1.1; }
-.sub { color: var(--muted); font-size: 12.5px; margin-top: 2px; }
-h2 { font-size: 16px; margin: 0 0 4px; font-weight: 640; }
-section { margin-top: 26px; scroll-margin-top: 16px; }
-.two { grid-template-columns: 1fr 1fr; }
-@media (max-width: 900px) { .two { grid-template-columns: 1fr; } }
-svg text { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
-.tip { position: fixed; pointer-events: none; background: var(--surface); color: var(--ink); border: 1px solid var(--border);
-  border-radius: 8px; padding: 7px 10px; font-size: 12.5px; box-shadow: 0 4px 16px rgba(0,0,0,.12); display: none; max-width: 320px; z-index: 10; }
-.tip b { font-weight: 620; }
-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-th { text-align: left; color: var(--ink-2); font-weight: 560; padding: 8px 8px; border-bottom: 1px solid var(--axis); white-space: nowrap; cursor: pointer; user-select: none; }
-td { padding: 8px 8px; border-bottom: 1px solid var(--grid); vertical-align: top; }
-td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.scroll { overflow-x: auto; }
-a { color: var(--series-1); }
-.tag { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; font-size: 12px; }
-.tag .ic { font-weight: 700; }
-.top .ic { color: var(--good-text); } .flop .ic { color: var(--crit); } .test .ic, .mid .ic { color: var(--muted); }
-.small { color: var(--muted); font-size: 12px; }
-.strategy h1 { font-size: 18px; margin-top: 0; }
-.strategy h2 { font-size: 15.5px; margin: 22px 0 8px; padding-top: 14px; border-top: 1px solid var(--grid); }
-.strategy table th { cursor: default; }
-.strategy code { background: var(--page); padding: 1px 5px; border-radius: 5px; font-size: 12.5px; }
-.strategy li { margin: 6px 0; }
-.log { font: 12.5px/1.6 ui-monospace, Consolas, monospace; white-space: pre-wrap; color: var(--ink-2); }
-.bars { margin-top: 10px; }
-.bar-row { display: grid; grid-template-columns: minmax(0, 42%) 1fr; gap: 10px; align-items: center; padding: 5px 0; outline: none; }
-.bl { font-size: 12.5px; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: right; }
-.bt { display: flex; align-items: center; gap: 6px; border-left: 1px solid var(--axis); min-height: 18px; }
-.bar { height: 16px; max-width: calc(100% - 48px); background: var(--series-1); border-radius: 0 4px 4px 0; }
-.bv { font-size: 12px; color: var(--ink); font-variant-numeric: tabular-nums; }
-.bar-row:hover .bar, .bar-row:focus .bar { opacity: .8; }
-#t-shorts td:nth-child(2) { min-width: 230px; }
-.kpis .card:last-child .value { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-ol.queue { margin: 0; padding-left: 20px; } ol.queue li { margin: 6px 0; }
-/* ---- Live */
-.live { display: grid; grid-template-columns: 1.1fr 1fr; gap: 14px; margin-bottom: 14px; }
-@media (max-width: 900px) { .live { grid-template-columns: 1fr; } }
-.now { display: flex; gap: 14px; align-items: flex-start; }
-.beacon { width: 14px; height: 14px; border-radius: 50%; margin-top: 7px; flex: none; background: var(--muted); }
-.beacon.run { background: var(--good); box-shadow: 0 0 0 0 rgba(12,163,12,.5); animation: pulse 1.6s infinite; }
-.beacon.err { background: var(--crit); } .beacon.warn { background: var(--warn); }
-@keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(12,163,12,0); } 100% { box-shadow: 0 0 0 0 rgba(12,163,12,0); } }
-@media (prefers-reduced-motion: reduce) { .beacon.run { animation: none; } }
-.now .big { font-size: 20px; font-weight: 640; line-height: 1.3; }
-.now .what { font-size: 15px; margin-top: 4px; }
-.facts { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 12px; font-size: 13px; color: var(--ink-2); }
-.facts b { color: var(--ink); font-weight: 600; }
-.steps { list-style: none; margin: 8px 0 0; padding: 0; max-height: 330px; overflow-y: auto; }
-.steps li { display: grid; grid-template-columns: 46px 18px 1fr; gap: 6px; padding: 5px 0; border-bottom: 1px solid var(--grid); font-size: 13px; }
-.steps .tm { color: var(--muted); font-variant-numeric: tabular-nums; }
-.steps .k { font-weight: 700; text-align: center; }
-.k.step { color: var(--good-text); } .k.warn { color: #b07800; } .k.fail { color: var(--crit); }
-.runs { list-style: none; margin: 6px 0 0; padding: 0; }
-.runs li { padding: 7px 0; border-bottom: 1px solid var(--grid); font-size: 13px; }
-.runs summary { cursor: pointer; list-style: none; display: flex; gap: 8px; align-items: baseline; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+body { margin: 0; background: var(--page); color: var(--ink); -webkit-font-smoothing: antialiased;
+  font: 14.5px/1.5 Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; font-feature-settings: "cv11", "ss01"; }
+a { color: var(--accent-ink); text-decoration: none; } a:hover { text-decoration: underline; }
+.num { font-variant-numeric: tabular-nums; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* ---------- Hero */
+.hero { position: relative; overflow: hidden; color: #f4f2ff; padding: 26px 0 30px;
+  background: radial-gradient(900px 380px at 85% -10%, rgba(139,92,246,.55), transparent 60%),
+              radial-gradient(600px 300px at 0% 120%, rgba(56,189,248,.18), transparent 60%),
+              linear-gradient(180deg, #0d0b17 0%, #141026 100%); }
+.hero::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .35;
+  background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size: 32px 32px; mask-image: linear-gradient(180deg, #000, transparent 85%); }
+.hero > .wrap { position: relative; z-index: 1; }
+.brand { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.logo { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; font-weight: 800; font-size: 15px; letter-spacing: -.02em;
+  background: linear-gradient(135deg, #a78bfa, #7c3aed); box-shadow: 0 6px 20px rgba(124,58,237,.45), inset 0 1px 0 rgba(255,255,255,.3); color: #fff; }
+.brand h1 { margin: 0; font-size: 21px; font-weight: 700; letter-spacing: -.02em; }
+.brand .handle { color: rgba(236,232,255,.62); font-size: 13px; }
+.brand .spacer { flex: 1; }
+.chip { display: inline-flex; align-items: center; gap: 7px; height: 30px; padding: 0 12px; border-radius: 999px; font-size: 12.5px; font-weight: 600;
+  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); color: #f4f2ff; white-space: nowrap; backdrop-filter: blur(6px); }
+.chip .d { width: 8px; height: 8px; border-radius: 50%; background: #a1a1b5; }
+.stamp { color: rgba(236,232,255,.55); font-size: 12.5px; }
+
+.hero-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 16px; margin-top: 22px; }
+@media (max-width: 920px) { .hero-grid { grid-template-columns: 1fr; } }
+.glass { background: rgba(255,255,255,.055); border: 1px solid rgba(255,255,255,.10); border-radius: var(--r); padding: 20px 22px; backdrop-filter: blur(10px); }
+.eyebrow { text-transform: uppercase; letter-spacing: .09em; font-size: 11px; font-weight: 700; color: rgba(236,232,255,.55); }
+.now { display: flex; gap: 16px; align-items: flex-start; margin-top: 10px; }
+.beacon { position: relative; width: 14px; height: 14px; border-radius: 50%; margin-top: 8px; flex: none; background: #8f8fa6; }
+.beacon.run { background: #22c55e; } .beacon.warn { background: #f5b301; } .beacon.err { background: #f43f5e; }
+.beacon.run::after { content: ""; position: absolute; inset: -6px; border-radius: 50%; border: 2px solid #22c55e; animation: ring 1.8s ease-out infinite; }
+@keyframes ring { from { transform: scale(.5); opacity: .9; } to { transform: scale(1.6); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .beacon.run::after { animation: none; opacity: 0; } }
+.now .big { font-size: 24px; font-weight: 700; letter-spacing: -.02em; line-height: 1.25; }
+.now .what { font-size: 15px; color: rgba(244,242,255,.85); margin-top: 6px; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.fact { font-size: 12.5px; padding: 5px 10px; border-radius: 8px; background: rgba(255,255,255,.07); color: rgba(244,242,255,.8); }
+.fact b { color: #fff; font-weight: 600; }
+.fact.no b { color: #fcd34d; } .fact.yes b { color: #86efac; }
+.timeline { list-style: none; margin: 16px 0 0; padding: 0; max-height: 260px; overflow-y: auto; }
+.timeline li { display: grid; grid-template-columns: 44px 22px 1fr; gap: 6px; align-items: start; padding: 6px 0; font-size: 13px; color: rgba(244,242,255,.86); }
+.timeline li + li { border-top: 1px dashed rgba(255,255,255,.08); }
+.timeline .tm { color: rgba(236,232,255,.5); font-variant-numeric: tabular-nums; padding-top: 1px; }
+.ic { width: 18px; height: 18px; border-radius: 50%; display: grid; place-items: center; font-size: 10.5px; font-weight: 800; }
+.ic.step { background: rgba(34,197,94,.18); color: #4ade80; } .ic.warn { background: rgba(245,179,1,.2); color: #fcd34d; }
+.ic.fail { background: rgba(244,63,94,.2); color: #fb7185; } .ic.info { background: rgba(255,255,255,.1); color: #ccc; }
+.upd { margin-top: 12px; font-size: 11.5px; color: rgba(236,232,255,.45); }
+.side { display: grid; gap: 16px; align-content: start; }
+.next-big { font-size: 34px; font-weight: 800; letter-spacing: -.03em; margin-top: 4px; }
+.next-sub { color: rgba(236,232,255,.62); font-size: 13px; }
+.runs { list-style: none; margin: 10px 0 0; padding: 0; }
+.runs li + li { border-top: 1px solid rgba(255,255,255,.07); }
+.runs summary { cursor: pointer; list-style: none; display: grid; grid-template-columns: 22px 1fr auto; gap: 8px; align-items: start; padding: 8px 0; }
 .runs summary::-webkit-details-marker { display: none; }
-.runs .when { color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
-.switch { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 8px; margin: 10px 0 4px; }
-.switch div { background: var(--page); border-radius: 10px; padding: 8px 10px; font-size: 12.5px; color: var(--ink-2); }
-.switch b { display: block; color: var(--ink); font-size: 14px; font-weight: 620; }
-.btn { display: inline-block; padding: 6px 12px; border-radius: 8px; background: var(--accent); color: #fff !important; text-decoration: none; font-size: 13px; font-weight: 600; }
-.rules h1 { display: none; }
-.rules h2 { font-size: 15.5px; margin: 22px 0 8px; padding-top: 14px; border-top: 1px solid var(--grid); }
-.rules li { margin: 5px 0; } .rules code { background: var(--page); padding: 1px 5px; border-radius: 5px; font-size: 12.5px; }
-.rules hr { display: none; }
-details.fold > summary { cursor: pointer; color: var(--series-1); font-size: 13px; margin-top: 8px; }
+.runs .t { font-size: 13px; font-weight: 600; color: #f4f2ff; } .runs .s { font-size: 12px; color: rgba(236,232,255,.55); }
+.runs .when { font-size: 12px; color: rgba(236,232,255,.5); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.runs .timeline { margin: 0 0 8px 30px; max-height: none; }
+
+/* ---------- Nav */
+nav.tabs { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--page) 82%, transparent); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line); }
+nav.tabs .wrap { display: flex; gap: 4px; overflow-x: auto; padding-top: 10px; padding-bottom: 10px; scrollbar-width: none; }
+nav.tabs a { color: var(--ink-2); font-size: 13px; font-weight: 600; padding: 7px 13px; border-radius: 9px; white-space: nowrap; text-decoration: none; }
+nav.tabs a:hover { background: var(--surface-2); color: var(--ink); }
+nav.tabs a.on { background: var(--ink); color: var(--page); }
+
+/* ---------- Sections */
+main { padding: 26px 0 70px; }
+section { margin-top: 34px; } section:first-child { margin-top: 0; }
+.sec-h { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+.sec-h h2 { margin: 0; font-size: 19px; font-weight: 700; letter-spacing: -.02em; }
+.sec-h p { margin: 3px 0 0; color: var(--muted); font-size: 13px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 20px 22px; box-shadow: var(--shadow); }
+.card h3 { margin: 0; font-size: 14.5px; font-weight: 650; }
+.card .hint { color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 920px) { .grid2 { grid-template-columns: 1fr; } }
+
+/* KPIs */
+.kpis { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 16px; }
+@media (max-width: 920px) { .kpis { grid-template-columns: 1fr 1fr; } .kpis .k-hero { grid-column: 1 / -1; } }
+.kpi { position: relative; }
+.kpi .lbl { display: flex; align-items: center; gap: 8px; color: var(--ink-2); font-size: 13px; font-weight: 550; }
+.kpi .lbl svg { width: 16px; height: 16px; color: var(--accent); }
+.kpi .val { font-size: 30px; font-weight: 750; letter-spacing: -.03em; margin-top: 8px; line-height: 1.1; }
+.kpi .sub { color: var(--muted); font-size: 12.5px; margin-top: 6px; }
+.k-hero .val { font-size: 46px; }
+.k-hero .spark { position: absolute; right: 18px; bottom: 16px; width: 46%; height: 64px; }
+.meter { height: 6px; border-radius: 99px; background: var(--surface-2); margin-top: 12px; overflow: hidden; position: relative; }
+.meter i { position: absolute; inset: 0 auto 0 0; border-radius: 99px; background: var(--series); }
+.meter b { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--ink-2); left: 70%; }
+
+/* Top shorts */
+.gallery { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+@media (max-width: 1050px) { .gallery { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
+.tile { display: block; color: inherit; text-decoration: none !important; }
+.thumb { position: relative; aspect-ratio: 9 / 16; border-radius: 14px; overflow: hidden; background: var(--surface-2); border: 1px solid var(--line); }
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .25s; }
+.tile:hover .thumb img { transform: scale(1.04); }
+.thumb .rank { position: absolute; top: 8px; left: 8px; width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center;
+  background: rgba(0,0,0,.6); color: #fff; font-weight: 800; font-size: 12.5px; backdrop-filter: blur(4px); }
+.thumb .views { position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 10px 9px; color: #fff; font-weight: 700; font-size: 15px;
+  background: linear-gradient(transparent, rgba(0,0,0,.78)); }
+.thumb .views span { font-weight: 500; font-size: 11.5px; opacity: .8; }
+.tile .tt { font-size: 12.5px; font-weight: 600; margin-top: 8px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.35; }
+.tile .ts { font-size: 11.5px; color: var(--muted); margin-top: 2px; }
+
+/* Badges */
+.badge { display: inline-flex; align-items: center; gap: 5px; height: 22px; padding: 0 8px; border-radius: 6px; font-size: 11.5px; font-weight: 650; white-space: nowrap; }
+.badge.top { background: var(--good-soft); color: var(--good); } .badge.flop { background: var(--crit-soft); color: var(--crit); }
+.badge.test { background: var(--accent-soft); color: var(--accent-ink); } .badge.mid { background: var(--surface-2); color: var(--ink-2); }
+
+/* Charts */
+svg text { fill: var(--muted); font-size: 11px; font-family: inherit; font-variant-numeric: tabular-nums; }
+.bars { margin-top: 14px; }
+.bar-row { display: grid; grid-template-columns: minmax(0, 40%) 1fr; gap: 12px; align-items: center; padding: 4px 0; outline: none; }
+.bl { font-size: 12.5px; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: right; }
+.bt { display: flex; align-items: center; gap: 8px; min-height: 20px; }
+.bar { height: 14px; max-width: calc(100% - 52px); background: var(--series); border-radius: 0 4px 4px 0; transition: opacity .15s; }
+.bv { font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.bar-row:hover .bar, .bar-row:focus .bar { opacity: .75; }
+
+/* Table */
+.tbl-wrap { overflow-x: auto; margin: 6px -22px -20px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { text-align: left; color: var(--muted); font-weight: 600; font-size: 11.5px; text-transform: uppercase; letter-spacing: .05em; padding: 10px 12px;
+  border-bottom: 1px solid var(--line); white-space: nowrap; cursor: pointer; user-select: none; background: var(--surface-2); }
+th:first-child, td:first-child { padding-left: 22px; } th:last-child, td:last-child { padding-right: 22px; }
+td { padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+tr:last-child td { border-bottom: 0; }
+tbody tr:hover { background: var(--surface-2); }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.sc { display: flex; gap: 12px; align-items: center; min-width: 280px; }
+.sc img { width: 36px; height: 64px; object-fit: cover; border-radius: 7px; flex: none; background: var(--surface-2); }
+.sc .t { font-weight: 600; color: var(--ink); line-height: 1.35; }
+.sc .x { font-size: 11.5px; color: var(--muted); margin-top: 2px; }
+
+/* Queue */
+.q { list-style: none; margin: 12px 0 0; padding: 0; }
+.q li { display: grid; grid-template-columns: 74px 1fr; gap: 12px; align-items: center; padding: 10px 0; }
+.q li + li { border-top: 1px solid var(--line); }
+.slot { text-align: center; border-radius: 10px; background: var(--accent-soft); color: var(--accent-ink); padding: 6px 4px; font-weight: 700; font-size: 15px; line-height: 1.15; }
+.slot span { display: block; font-size: 11px; font-weight: 600; opacity: .75; }
+.q .t { font-weight: 600; font-size: 13.5px; line-height: 1.35; } .q .s { font-size: 12px; color: var(--muted); }
+.sk li { display: block; } .sk .why { font-size: 12px; color: var(--crit); margin-top: 2px; }
+
+/* Rules */
+.sw { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 16px; }
+@media (max-width: 920px) { .sw { grid-template-columns: 1fr 1fr; } }
+.sw div { border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; background: var(--surface-2); }
+.sw small { display: block; color: var(--muted); font-size: 11.5px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }
+.sw b { display: block; font-size: 16px; font-weight: 700; margin-top: 3px; letter-spacing: -.01em; }
+.sw .wide { grid-column: span 2; } .sw .wide b { font-size: 13.5px; font-weight: 600; }
+.sw .paused { background: var(--warn-soft); border-color: transparent; }
+.btn { display: inline-flex; align-items: center; gap: 8px; height: 38px; padding: 0 16px; border-radius: 10px; background: var(--accent); color: #fff !important;
+  font-size: 13.5px; font-weight: 650; text-decoration: none !important; box-shadow: 0 4px 14px rgba(139,92,246,.35); }
+.btn:hover { filter: brightness(1.08); }
+details.fold { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 12px; }
+details.fold > summary { cursor: pointer; color: var(--accent-ink); font-size: 13.5px; font-weight: 600; }
+.prose { color: var(--ink-2); font-size: 14px; }
+.prose h1 { display: none; }
+.prose h2 { color: var(--ink); font-size: 15.5px; font-weight: 700; margin: 26px 0 8px; letter-spacing: -.01em; }
+.prose strong { color: var(--ink); } .prose li { margin: 5px 0; } .prose hr { display: none; }
+.prose code { background: var(--surface-2); border: 1px solid var(--line); padding: 1px 6px; border-radius: 6px; font-size: 12.5px; color: var(--ink); }
+.prose table { margin: 8px 0; font-size: 13px; } .prose th { cursor: default; text-transform: none; letter-spacing: 0; font-size: 12.5px; }
+.prose td, .prose th { padding: 8px 10px; } .prose td:first-child, .prose th:first-child { padding-left: 10px; }
+.log { margin: 0; font: 12.5px/1.75 ui-monospace, "JetBrains Mono", Consolas, monospace; white-space: pre-wrap; color: var(--ink-2);
+  background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; max-height: 380px; overflow: auto; }
+.empty { color: var(--muted); font-size: 13px; padding: 10px 0; }
+.tip { position: fixed; pointer-events: none; background: var(--surface); color: var(--ink); border: 1px solid var(--line-2); border-radius: 10px;
+  padding: 8px 11px; font-size: 12.5px; box-shadow: 0 10px 30px rgba(0,0,0,.18); display: none; max-width: 320px; z-index: 50; }
+.tip .small { color: var(--muted); }
+footer { color: var(--muted); font-size: 12px; text-align: center; padding: 10px 0 40px; }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <h1><span></span>StreamerclipsDE · Dashboard</h1>
-    <span class="pill" id="status"></span>
-    <span class="meta" id="gen"></span>
-  </header>
-  <nav>
-    <a href="#live">Live</a><a href="#zahlen">Zahlen</a><a href="#shorts">Alle Shorts</a><a href="#queue">Warteschlange</a>
-    <a href="#regeln">Regeln</a><a href="#strategie">Strategie</a><a href="#log">Verlauf</a>
-  </nav>
-
-  <div class="live" id="live">
-    <div class="card">
-      <div class="now"><span class="beacon" id="lv-beacon"></span>
-        <div style="min-width:0"><div class="big" id="lv-state">Lade Live-Status …</div><div class="what" id="lv-what"></div></div></div>
-      <div class="facts" id="lv-facts"></div>
-      <ul class="steps" id="lv-steps" aria-live="polite"></ul>
-      <div class="small" style="margin-top:8px" id="lv-upd"></div>
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">
+      <div class="logo">SC</div>
+      <div><h1>StreamerclipsDE</h1><div class="handle">@clx_visuals · Shorts-Automatik</div></div>
+      <div class="spacer"></div>
+      <span class="chip" id="status"><span class="d"></span>…</span>
+      <span class="stamp" id="gen"></span>
     </div>
-    <div class="card">
-      <h2>Letzte Läufe</h2>
-      <div class="small">Antippen für alle Schritte</div>
-      <ul class="runs" id="lv-runs"></ul>
+    <div class="hero-grid" id="live">
+      <div class="glass">
+        <div class="eyebrow">Live</div>
+        <div class="now"><span class="beacon" id="lv-beacon"></span>
+          <div style="min-width:0"><div class="big" id="lv-state">Lade Live-Status …</div><div class="what" id="lv-what"></div></div></div>
+        <div class="facts" id="lv-facts"></div>
+        <ul class="timeline" id="lv-steps" aria-live="polite"></ul>
+        <div class="upd" id="lv-upd"></div>
+      </div>
+      <div class="side">
+        <div class="glass">
+          <div class="eyebrow">Nächster Lauf</div>
+          <div class="next-big num" id="nx-time">–</div>
+          <div class="next-sub" id="nx-sub"></div>
+        </div>
+        <div class="glass">
+          <div class="eyebrow">Letzte Läufe</div>
+          <ul class="runs" id="lv-runs"></ul>
+        </div>
+      </div>
     </div>
   </div>
+</header>
 
-  <div class="grid kpis" id="zahlen">
-    <div class="card hero"><div class="label">Aufrufe gesamt</div><div class="value" id="k-total"></div><div class="sub" id="k-total-sub"></div></div>
-    <div class="card"><div class="label">Aufrufe letzte 24 h</div><div class="value" id="k-24h"></div></div>
-    <div class="card"><div class="label">Shorts gepostet</div><div class="value" id="k-posted"></div><div class="sub" id="k-posted-sub"></div></div>
-    <div class="card"><div class="label">Ø angesehen (statt weggewischt)</div><div class="value" id="k-watched"></div><div class="sub">Ziel ≥ 70 %</div></div>
-    <div class="card"><div class="label">Bester Short</div><div class="value" style="font-size:17px;line-height:1.3" id="k-best"></div><div class="sub" id="k-best-sub"></div></div>
-  </div>
+<nav class="tabs"><div class="wrap" id="tabs">
+  <a href="#live">Live</a><a href="#zahlen">Zahlen</a><a href="#top">Top-Shorts</a><a href="#shorts">Alle Shorts</a>
+  <a href="#queue">Warteschlange</a><a href="#regeln">Regeln</a><a href="#strategie">Strategie</a><a href="#log">Verlauf</a>
+</div></nav>
 
-  <div class="grid two">
-    <div class="card"><h2>Aufrufe gesamt über Zeit</h2><div class="small">Summe aller Shorts zu jedem Messzeitpunkt</div><div id="c-line"></div></div>
-    <div class="card"><h2>Aufrufe pro Short</h2><div class="small">Sortiert nach Aufrufen</div><div id="c-bars"></div></div>
-  </div>
-
-  <section id="shorts" class="card">
-    <h2>Alle Shorts</h2>
-    <div class="small" style="margin-bottom:8px">Spaltenkopf anklicken zum Sortieren. „Angesehen“ = Anteil, der nicht weggewischt hat (YouTube Studio). Ø Sek. = durchschnittliche Wiedergabe pro Aufruf.</div>
-    <div class="scroll"><table id="t-shorts"></table></div>
+<main class="wrap">
+  <section id="zahlen">
+    <div class="kpis">
+      <div class="card kpi k-hero">
+        <div class="lbl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>Aufrufe gesamt</div>
+        <div class="val num" id="k-total"></div><div class="sub" id="k-total-sub"></div>
+        <svg class="spark" id="spark" preserveAspectRatio="none" aria-hidden="true"></svg>
+      </div>
+      <div class="card kpi">
+        <div class="lbl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>Letzte 24 h</div>
+        <div class="val num" id="k-24h"></div><div class="sub">neue Aufrufe</div>
+      </div>
+      <div class="card kpi">
+        <div class="lbl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M10 9l4 3-4 3z"/></svg>Shorts gepostet</div>
+        <div class="val num" id="k-posted"></div><div class="sub" id="k-posted-sub"></div>
+      </div>
+      <div class="card kpi">
+        <div class="lbl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Ø angesehen</div>
+        <div class="val num" id="k-watched"></div>
+        <div class="meter" title="Ziel 70 %"><i id="k-meter"></i><b></b></div>
+        <div class="sub">statt weggewischt · Ziel ≥ 70 %</div>
+      </div>
+    </div>
+    <div class="grid2" style="margin-top:16px">
+      <div class="card"><h3>Aufrufe gesamt über Zeit</h3><div class="hint">Summe aller Shorts zu jedem Messzeitpunkt</div><div id="c-line"></div></div>
+      <div class="card"><h3>Aufrufe pro Short</h3><div class="hint">Sortiert nach Aufrufen</div><div id="c-bars"></div></div>
+    </div>
   </section>
 
-  <div class="grid two" style="margin-top:14px" id="queue">
-    <div class="card"><h2>Warteschlange</h2><div class="small" style="margin-bottom:8px">Wird alle 2 Stunden gepostet · nächster Post ca. <span id="next"></span></div><ol class="queue" id="q"></ol></div>
-    <div class="card"><h2>Aussortiert</h2><div class="small" style="margin-bottom:8px">Fertig geschnitten, aber nicht gepostet</div><ul id="sk" style="margin:0;padding-left:20px"></ul></div>
-  </div>
+  <section id="top">
+    <div class="sec-h"><div><h2>Top-Shorts</h2><p>Die meistgesehenen Shorts – antippen öffnet YouTube</p></div></div>
+    <div class="gallery" id="gallery"></div>
+  </section>
 
-  <section id="regeln" class="card">
-    <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between">
-      <div><h2>Regeln für Claude</h2><div class="small" id="rv"></div></div>
-      <a class="btn" id="edit-rules" target="_blank" rel="noopener">Regeln bearbeiten ✎</a>
+  <section id="shorts">
+    <div class="sec-h"><div><h2>Alle Shorts</h2><p>Spaltenkopf antippen zum Sortieren · „Angesehen“ = Anteil, der nicht weggewischt hat</p></div></div>
+    <div class="card"><div class="tbl-wrap"><table id="t-shorts"></table></div></div>
+  </section>
+
+  <section id="queue">
+    <div class="sec-h"><div><h2>Warteschlange</h2><p>Fertig geschnitten und geprüft</p></div></div>
+    <div class="grid2">
+      <div class="card"><h3>Als Nächstes</h3><div class="hint">Geplante Zeit nach den Regeln (alle 2 h)</div><ol class="q" id="q"></ol></div>
+      <div class="card"><h3>Aussortiert</h3><div class="hint">Fertig, aber nicht gepostet – mit Grund</div><ul class="q sk" id="sk"></ul></div>
     </div>
-    <div class="switch" id="sw"></div>
-    <div class="small">Änderungen auf GitHub speichern – der nächste Lauf übernimmt sie automatisch.</div>
-    <details class="fold"><summary>Alle Regeln anzeigen</summary><div class="rules"><h1>Regeln für Claude – StreamerclipsDE</h1>
+  </section>
+
+  <section id="regeln">
+    <div class="sec-h">
+      <div><h2>Regeln für Claude</h2><p id="rv"></p></div>
+      <a class="btn" id="edit-rules" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>Regeln bearbeiten</a>
+    </div>
+    <div class="card">
+      <h3>Schalter</h3><div class="hint">Änderungen auf GitHub speichern – der nächste Lauf übernimmt sie automatisch</div>
+      <div class="sw" id="sw"></div>
+      <details class="fold"><summary>Alle Regeln lesen</summary><div class="prose"><h1>Regeln für Claude – StreamerclipsDE</h1>
 <p><strong>Diese Datei ist die einzige verbindliche Anweisung.</strong> Was hier steht, gilt – egal was in einem Chat besprochen wurde.
 Jeder Lauf lädt zuerst die neueste Version von GitHub. Ändern: auf GitHub die Datei öffnen → Stift-Symbol → speichern.
 Claude ändert diese Datei <strong>nie von sich aus</strong>, sondern schlägt Änderungen nur vor (im Bericht und im Dashboard unter „Vorschläge“).</p>
@@ -180,10 +315,10 @@ Claude ändert diese Datei <strong>nie von sich aus</strong>, sondern schlägt �
 <ul>
 <li><strong>Pause:</strong> nein</li>
 <li><strong>Posts pro Lauf:</strong> 1</li>
-<li><strong>Posting-Zeiten:</strong> 08:00-24:00</li>
+<li><strong>Posting-Zeiten:</strong> 06:00-24:00</li>
 <li><strong>Mindestabstand zwischen zwei Posts (Minuten):</strong> 100</li>
 <li><strong>Fertige Shorts auf Vorrat:</strong> 2</li>
-<li><strong>Cliplänge (Sekunden):</strong> 15-40</li>
+<li><strong>Cliplänge (Sekunden):</strong> 15-45</li>
 <li><strong>Fertige Shorts verfallen nach (Stunden):</strong> 36</li>
 <li><strong>Streamer:</strong> eliasn97, sidneyeweka, niklaswilson, trymacs, montanablack88</li>
 </ul>
@@ -191,6 +326,7 @@ Claude ändert diese Datei <strong>nie von sich aus</strong>, sondern schlägt �
 <ul>
 <li><em>Pause: ja</em> → nichts posten, nichts Neues schneiden. Es werden nur die Zahlen aktualisiert und das Dashboard gepflegt.</li>
 <li><em>Posting-Zeiten</em> → außerhalb dieser Zeit wird nicht gepostet, aber trotzdem ausgewertet und der nächste Clip vorbereitet.</li>
+<li><em>Verfallen</em> → ein fertig geschnittener, aber noch nicht geposteter Short wird nach dieser Zeit aussortiert und nicht mehr gepostet, weil der Clip dann nicht mehr aktuell ist (Twitch-Momente sind nach 1–2 Tagen „alt“, oft haben ihn andere Kanäle schon gepostet).</li>
 <li><em>Mindestabstand</em> → wurde vor kürzerer Zeit gepostet (z. B. manuell im Chat), wird in diesem Lauf nicht gepostet.</li>
 <li><em>Streamer</em> → nur Clips dieser Twitch-Kanäle. Neuer Name hier → der nächste Lauf trägt ihn in <code>config.toml</code> ein (Kanal kanal1).</li>
 </ul>
@@ -249,9 +385,12 @@ Claude ändert diese Datei <strong>nie von sich aus</strong>, sondern schlägt �
 <li>Upload abgelehnt / Fehler → nicht wiederholen, Warnung im Dashboard und im Bericht.</li>
 <li>Kein guter Clip gefunden → lieber <strong>nichts</strong> vorbereiten als einen schlechten Clip; im Bericht sagen.</li>
 </ul></div></details>
+    </div>
   </section>
 
-  <section id="strategie" class="card strategy"><h1>Reichweiten-Strategie StreamerclipsDE</h1>
+  <section id="strategie">
+    <div class="sec-h"><div><h2>Strategie</h2><p>Was Claude aus den Zahlen gelernt hat – Regeln nur mit Beleg</p></div></div>
+    <div class="card prose"><h1>Reichweiten-Strategie StreamerclipsDE</h1>
 <p>Lebendes Dokument: Wird bei jeder Analyse aktualisiert. <strong>Vor jeder Clip-Auswahl lesen und die Regeln anwenden.</strong>
 Daten: <code>shorts.py stats</code> (Aufrufe/Likes über API) + Studio-Werte pro Short (<code>perf</code>: angesehen %, weggewischt %, avd = Ø Sekunden).</p>
 <h2>Wie YouTube Shorts verteilt (Arbeitsmodell)</h2>
@@ -329,59 +468,72 @@ Daten: <code>shorts.py stats</code> (Aufrufe/Likes über API) + Studio-Werte pro
 <li><strong>25.11.2026 16:50</strong> – erste Auswertung (9 Shorts). 3 Gewinner (608/335/292 Aufrufe) alle aus dem 12-Uhr-Batch, Layout v1, Talk/Aussage-Clips. 2 Shorts im Test durchgefallen (80–100 % weggewischt) – beide mit schwachem Einstieg. Neue v2-Shorts (Pyramide, Krabbe, Krokodil, Niklas) noch zu jung für ein Urteil.</li>
 <li><strong>25.11.2026 18:10</strong> – (keine Studio-Abfrage fällig, letzte 16:50). API: Gewinner wachsen weiter (Armut 612 / 108 pro Std, Bauprojekt 365, Soundsetup 214). Alle v2-Shorts 0–3 Aufrufe → werden kaum getestet (siehe Experiment Design). Gepostet: Trymacs Stinger/Angel (20,8 s, Einstieg „Oh mein Gott, nein!“) als Test „kurz + starker Einstieg“. Pyramide Teil 2 und Trymacs Tierleichen (Einstieg „Ich geh ja gleich mal rüber…“) wegen Regel 2 aussortiert.</li>
 <li><strong>25.11.2026 20:12</strong> – Studio: Krokodil 4 Aufrufe/100 % angesehen, Stinger 3/100 % (je 0 weggewischt). API: Armut 998 (130/Std), Bauprojekt 489, Soundsetup 321; alle 7 Shorts seit dem 12-Uhr-Batch bei 0–7 Aufrufen. Folgerung: Problem ist die Ausspielung, nicht Einstieg/Inhalt (Regel 2 trotzdem weiter anwenden). Gepostet: Monte GTA6-Real-Life (Talk/Zitat). Neu gerendert: Monte „Gerechte Strafe“ (GTA, Schreckmoment-Einstieg, 21 s) und Monte „Einfach machen? Das ist gelogen“ (Talk, Frage-Einstieg, 38 s).</li>
-</ul></section>
+</ul></div>
+  </section>
 
-  <section id="log" class="card"><h2>Verlauf der Läufe</h2><div class="small" style="margin-bottom:8px">Neueste zuerst</div><div class="log" id="logbox"></div></section>
-</div>
+  <section id="log">
+    <div class="sec-h"><div><h2>Verlauf</h2><p>Eine Zeile pro Lauf, neueste zuerst</p></div></div>
+    <pre class="log" id="logbox"></pre>
+  </section>
+</main>
+<footer>StreamerclipsDE · automatisch erstellt · <a href="https://github.com/GiottoCLX/streamerclipsde-dashboard" target="_blank" rel="noopener">GitHub</a></footer>
 <div class="tip" id="tip"></div>
 <script>
-const D = {"repo": "GiottoCLX/streamerclipsde-dashboard", "rules_ver": {"commit": "a2cfbc9", "date": "2026-11-25 21:19", "web": false}, "switches": {"pause": false, "posts_per_run": 1, "hours": ["08:00", "24:00"], "min_gap_min": 100, "stock": 2, "clip_len": [15, 40], "expire_h": 36, "streamers": ["eliasn97", "sidneyeweka", "niklaswilson", "trymacs", "montanablack88"]}, "live": {"state": "idle", "current": null, "runs": [{"title": "Manuell im Chat: Live-Monitoring + Regeln einrichten", "started": "2026-11-25T21:19:17", "steps": [{"t": "2026-11-25T21:19:17", "text": "Lauf gestartet, neueste Regeln geladen", "kind": "step"}, {"t": "2026-11-25T21:19:18", "text": "REGELN.md, live.py und Live-Bereich im Dashboard gebaut", "kind": "step"}, {"t": "2026-11-25T21:19:18", "text": "Fertig", "kind": "step"}], "finished": "2026-11-25T21:19:18", "state": "ok", "summary": "Live-Monitoring und Regeldatei eingerichtet"}], "rules": null, "updated": "2026-11-25T21:19:18", "last_summary": "Live-Monitoring und Regeldatei eingerichtet"}, "generated": "25.11.2026 21:19", "next_post": "22:00", "last_run": "2026-11-25 21:10", "status_ok": true, "total": 1835, "views_24h": 1835, "posted": 11, "posted_24h": 11, "avg_watched": 52.4, "best": {"id": "2CZ6_sDMaf8", "title": "„Eure Armut kotzt mich an“ – Monte über Neuseeland 💀 | MontanaBlack", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T12:31:08", "dur": 56.1, "views": 998, "vph": 130.1, "like_rate": 3.7, "likes": 37, "angesehen": 60.3, "weggewischt": 39.7, "avd": 18.9, "design": "v1", "experiment": "", "cls": "top", "verdict": "Gewinner", "headline": "Monte über die Hater nach dem GTA-Stream aus Neuseeland", "clip_title": "wie war neuseeland"}, "rows": [{"id": "iEDWe8vu7Ms", "title": "MontanaBlack: „Seit ich GTA 6 zocke, hab ich im Real Life das Bedürfnis…“ 💀", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T20:11:31", "dur": 37.3, "views": 0, "vph": 0.0, "like_rate": 0.0, "likes": 0, "angesehen": null, "weggewischt": null, "avd": null, "design": "v2", "experiment": "Monte Aussage/Talk (Gewinner-Typ) + Zitat-Headline, gekürzt auf ~37 s", "cls": "test", "verdict": "Test läuft", "headline": "„Seit ich GTA 6 zocke, hab ich das Bedürfnis…“ 💀", "clip_title": "Im realen Leben in GTA 6"}, {"id": "Np_c7kTAmuU", "title": "Trymacs dachte, er hat eine Stinger – es war eine Angel 💀", "streamer": "Trymacs", "uploaded_at": "2026-11-25T18:11:36", "dur": 20.8, "views": 2, "vph": 1.0, "like_rate": 0.0, "likes": 0, "angesehen": null, "weggewischt": null, "avd": null, "design": "v2", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Trymacs hält eine Angel für einen Raketenwerfer 💀", "clip_title": "max verwechselt"}, {"id": "qYmCHhqI4b8", "title": "MontanaBlack wird in GTA 6 von einem Krokodil erschreckt 😱", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T16:37:42", "dur": 30.0, "views": 3, "vph": 0.8, "like_rate": 0.0, "likes": 0, "angesehen": null, "weggewischt": null, "avd": null, "design": "v2", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Krokodil erschreckt Monte zu Tode 😱", "clip_title": "Krokodil erschreckt Monte"}, {"id": "m96lt6Xqn2g", "title": "Eligella: „Ich hab fotografisches Gedächtnis“ – Pyramide vs. Fußballplatz 💀", "streamer": "Eligella", "uploaded_at": "2026-11-25T14:48:17", "dur": 40.0, "views": 7, "vph": 1.3, "like_rate": 0.0, "likes": 0, "angesehen": 100.0, "weggewischt": null, "avd": null, "design": "v2", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Wie viele Pyramiden passen auf einen Fußballplatz? 💀", "clip_title": "3vs3 Gaming-Olympiade mit dem Squad 🔥 |  !iconleague !doku !eligella !gaming !uncut !clips"}, {"id": "VMRxqYxF4G8", "title": "MontanaBlack findet eine Mutanten-Riesenkrabbe in GTA 6 🦀", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T14:48:13", "dur": 33.0, "views": 5, "vph": 0.9, "like_rate": 0.0, "likes": 0, "angesehen": 100.0, "weggewischt": null, "avd": null, "design": "v2", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Monte trifft auf eine RIESENKRABBE 🦀", "clip_title": "Krabbe greift Monte an"}, {"id": "Fbmzcv4WFgM", "title": "Eli verzweifelt am Bauprojekt 😂 | Eligella", "streamer": "Eligella", "uploaded_at": "2026-11-25T12:31:08", "dur": 60.1, "views": 489, "vph": 63.7, "like_rate": 1.0, "likes": 5, "angesehen": 58.4, "weggewischt": 41.6, "avd": 15.0, "design": "v1", "experiment": "", "cls": "top", "verdict": "Gewinner", "headline": "Eli sieht das Ergebnis vom Bauprojekt… 💀", "clip_title": "häuser"}, {"id": "2CZ6_sDMaf8", "title": "„Eure Armut kotzt mich an“ – Monte über Neuseeland 💀 | MontanaBlack", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T12:31:08", "dur": 56.1, "views": 998, "vph": 130.1, "like_rate": 3.7, "likes": 37, "angesehen": 60.3, "weggewischt": 39.7, "avd": 18.9, "design": "v1", "experiment": "", "cls": "top", "verdict": "Gewinner", "headline": "Monte über die Hater nach dem GTA-Stream aus Neuseeland", "clip_title": "wie war neuseeland"}, {"id": "5MIIxI_Ox7s", "title": "Monte rastet wegen dem Stream-Sound aus 😂 | MontanaBlack", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T12:31:08", "dur": 43.6, "views": 4, "vph": 0.5, "like_rate": 25.0, "likes": 1, "angesehen": 0.0, "weggewischt": 100.0, "avd": null, "design": "v1", "experiment": "", "cls": "flop", "verdict": "Flop", "headline": "„Wenn der Chat sagt, der Sound ist scheiße…“ 💀", "clip_title": "Sound ist schlecht"}, {"id": "g1hxmDj_Ubo", "title": "Monte verprügelt Schradin im Game 😂 | MontanaBlack", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T12:31:08", "dur": 41.1, "views": 4, "vph": 0.5, "like_rate": 25.0, "likes": 1, "angesehen": 20.0, "weggewischt": 80.0, "avd": null, "design": "v1", "experiment": "", "cls": "flop", "verdict": "Flop", "headline": "Monte trifft Schradin im Game 💀", "clip_title": "Monte verprügelt schradin"}, {"id": "EJYpH6FotiI", "title": "Niklas Wilson will auf keinen Fall abreißen 😂", "streamer": "Niklas Wilson", "uploaded_at": "2026-11-25T12:31:08", "dur": 33.5, "views": 2, "vph": 0.3, "like_rate": 50.0, "likes": 1, "angesehen": 100.0, "weggewischt": null, "avd": null, "design": "v1", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Zu viele Häuser – wer muss abreißen? 😂", "clip_title": "zu viel"}, {"id": "jvcmF0haDzQ", "title": "Trymacs: „Das schlechteste Soundsetup von ganz Twitch-Deutschland“ 😂", "streamer": "Trymacs", "uploaded_at": "2026-11-25T11:52:14", "dur": 60.1, "views": 321, "vph": 38.6, "like_rate": 0.9, "likes": 3, "angesehen": 38.4, "weggewischt": 61.6, "avd": 13.6, "design": "v1", "experiment": "", "cls": "flop", "verdict": "Flop", "headline": "Trymacs rastet wegen Willis Sound-Setup aus 😂", "clip_title": "trymacs platzt"}], "series": [{"t": "2026-11-25T16:46", "views": 916}, {"t": "2026-11-25T16:57", "views": 964}, {"t": "2026-11-25T18:11", "views": 1203}, {"t": "2026-11-25T20:11", "views": 1835}], "queue": [{"title": "MontanaBlack: „Das war eine absolut gerechte Strafe“ – sie ging auf seine Mutter 💀", "streamer": "MontanaBlack", "slot": "25.11. 22:00"}, {"title": "MontanaBlack: „Wenn du gut bist, wirst du entdeckt – das ist gelogen“ 💀", "streamer": "MontanaBlack", "slot": "26.11. 00:00"}, {"title": "Trymacs: „Er hat 'ne Faust von der Security bekommen“ – Nicis Festival-Story 💀", "streamer": "Trymacs", "slot": "26.11. 02:00"}], "skipped": [{"title": "Leute fallen auf Wutköder Video rein 😂 | MontanaBlack", "reason": true}, {"title": "digger was 😂 | Trymacs", "reason": true}, {"title": "Eligella hat jetzt einen Übersetzer für englische Fans 😂", "reason": true}, {"title": "Eligella schätzt die Pyramide auf 25 Meter 💀 (Teil 2)", "reason": "schwacher Einstieg ('Sind 25 Meter oder so…'), braucht Teil 1 (Teil 1 nur 4 Aufrufe) – Regel 2"}, {"title": "Niklas Wilson: „Er ist overrated“ – dann trifft er 💀", "reason": "vom Nutzer abgelehnt (schlecht)"}], "log": ["2026-11-25 21:10 | gepostet: Trymacs Lieblingsinteraktion (Vogel) EazTuqIluFY | bereit: 3 | manuell auf Nutzerwunsch; Zoom entfernt, Facecam-Zuschnitt neu (Kopf komplett), Warteschlange neu gerendert", "2026-11-25 20:18 | gepostet: Monte GTA6-Real-Life iEDWe8vu7Ms | bereit: 3 | Studio: Krokodil 4/Stinger 3 Aufrufe bei 100 % angesehen -> Ausspielungsproblem (v2?) bestätigt sich; neu: Monte Gerechte Strafe, Monte 'Das ist gelogen'", "2026-11-25 18:17 | gepostet: Trymacs Stinger/Angel Np_c7kTAmuU | bereit: 2 | Pyramide Teil 2 + Tierleichen auf skip (schwacher Einstieg); neu: Trymacs Security-Faust, Monte GTA6-Real-Life; v2-Shorts fast ohne Impressionen (Design-Warnsignal)", "2026-11-25 16:41 | gepostet: Krokodil erschreckt Monte qYmCHhqI4b8 | bereit: 4 | Pyramide Teil 2 (mit Auflösung) als nächstes"]};
+const D = {"repo": "GiottoCLX/streamerclipsde-dashboard", "rules_ver": {"commit": "a2cfbc9", "date": "2026-11-25 21:19", "web": false}, "switches": {"pause": false, "posts_per_run": 1, "hours": ["06:00", "24:00"], "min_gap_min": 100, "stock": 2, "clip_len": [15, 45], "expire_h": 36, "streamers": ["eliasn97", "sidneyeweka", "niklaswilson", "trymacs", "montanablack88"]}, "live": {"state": "idle", "current": null, "runs": [{"title": "Test der Live-Anzeige", "started": "2026-11-25T21:20:48", "steps": [{"t": "2026-11-25T21:20:48", "text": "Lauf gestartet, neueste Regeln geladen", "kind": "step"}, {"t": "2026-11-25T21:20:51", "text": "Prüfe, ob diese Meldung im Dashboard ankommt", "kind": "step"}, {"t": "2026-11-25T21:22:21", "text": "Fertig", "kind": "step"}], "finished": "2026-11-25T21:22:21", "state": "ok", "summary": "Test erfolgreich – Live-Anzeige funktioniert"}, {"title": "Manuell im Chat: Live-Monitoring + Regeln einrichten", "started": "2026-11-25T21:19:17", "steps": [{"t": "2026-11-25T21:19:17", "text": "Lauf gestartet, neueste Regeln geladen", "kind": "step"}, {"t": "2026-11-25T21:19:18", "text": "REGELN.md, live.py und Live-Bereich im Dashboard gebaut", "kind": "step"}, {"t": "2026-11-25T21:19:18", "text": "Fertig", "kind": "step"}], "finished": "2026-11-25T21:19:18", "state": "ok", "summary": "Live-Monitoring und Regeldatei eingerichtet"}], "rules": {"commit": "a2cfbc9", "date": "2026-11-25 21:19", "web": false}, "updated": "2026-11-25T21:22:21", "last_summary": "Test erfolgreich – Live-Anzeige funktioniert"}, "generated": "25.11.2026 21:31", "next_post": "22:00", "last_run": "2026-11-25 21:10", "status_ok": true, "total": 1835, "views_24h": 1835, "posted": 11, "posted_24h": 11, "avg_watched": 52.4, "best": {"id": "2CZ6_sDMaf8", "title": "„Eure Armut kotzt mich an“ – Monte über Neuseeland 💀 | MontanaBlack", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T12:31:08", "dur": 56.1, "views": 998, "vph": 130.1, "like_rate": 3.7, "likes": 37, "angesehen": 60.3, "weggewischt": 39.7, "avd": 18.9, "design": "v1", "experiment": "", "cls": "top", "verdict": "Gewinner", "headline": "Monte über die Hater nach dem GTA-Stream aus Neuseeland", "clip_title": "wie war neuseeland"}, "rows": [{"id": "iEDWe8vu7Ms", "title": "MontanaBlack: „Seit ich GTA 6 zocke, hab ich im Real Life das Bedürfnis…“ 💀", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T20:11:31", "dur": 37.3, "views": 0, "vph": 0.0, "like_rate": 0.0, "likes": 0, "angesehen": null, "weggewischt": null, "avd": null, "design": "v2", "experiment": "Monte Aussage/Talk (Gewinner-Typ) + Zitat-Headline, gekürzt auf ~37 s", "cls": "test", "verdict": "Test läuft", "headline": "„Seit ich GTA 6 zocke, hab ich das Bedürfnis…“ 💀", "clip_title": "Im realen Leben in GTA 6"}, {"id": "Np_c7kTAmuU", "title": "Trymacs dachte, er hat eine Stinger – es war eine Angel 💀", "streamer": "Trymacs", "uploaded_at": "2026-11-25T18:11:36", "dur": 20.8, "views": 2, "vph": 1.0, "like_rate": 0.0, "likes": 0, "angesehen": null, "weggewischt": null, "avd": null, "design": "v2", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Trymacs hält eine Angel für einen Raketenwerfer 💀", "clip_title": "max verwechselt"}, {"id": "qYmCHhqI4b8", "title": "MontanaBlack wird in GTA 6 von einem Krokodil erschreckt 😱", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T16:37:42", "dur": 30.0, "views": 3, "vph": 0.8, "like_rate": 0.0, "likes": 0, "angesehen": null, "weggewischt": null, "avd": null, "design": "v2", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Krokodil erschreckt Monte zu Tode 😱", "clip_title": "Krokodil erschreckt Monte"}, {"id": "m96lt6Xqn2g", "title": "Eligella: „Ich hab fotografisches Gedächtnis“ – Pyramide vs. Fußballplatz 💀", "streamer": "Eligella", "uploaded_at": "2026-11-25T14:48:17", "dur": 40.0, "views": 7, "vph": 1.3, "like_rate": 0.0, "likes": 0, "angesehen": 100.0, "weggewischt": null, "avd": null, "design": "v2", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Wie viele Pyramiden passen auf einen Fußballplatz? 💀", "clip_title": "3vs3 Gaming-Olympiade mit dem Squad 🔥 |  !iconleague !doku !eligella !gaming !uncut !clips"}, {"id": "VMRxqYxF4G8", "title": "MontanaBlack findet eine Mutanten-Riesenkrabbe in GTA 6 🦀", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T14:48:13", "dur": 33.0, "views": 5, "vph": 0.9, "like_rate": 0.0, "likes": 0, "angesehen": 100.0, "weggewischt": null, "avd": null, "design": "v2", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Monte trifft auf eine RIESENKRABBE 🦀", "clip_title": "Krabbe greift Monte an"}, {"id": "Fbmzcv4WFgM", "title": "Eli verzweifelt am Bauprojekt 😂 | Eligella", "streamer": "Eligella", "uploaded_at": "2026-11-25T12:31:08", "dur": 60.1, "views": 489, "vph": 63.7, "like_rate": 1.0, "likes": 5, "angesehen": 58.4, "weggewischt": 41.6, "avd": 15.0, "design": "v1", "experiment": "", "cls": "top", "verdict": "Gewinner", "headline": "Eli sieht das Ergebnis vom Bauprojekt… 💀", "clip_title": "häuser"}, {"id": "2CZ6_sDMaf8", "title": "„Eure Armut kotzt mich an“ – Monte über Neuseeland 💀 | MontanaBlack", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T12:31:08", "dur": 56.1, "views": 998, "vph": 130.1, "like_rate": 3.7, "likes": 37, "angesehen": 60.3, "weggewischt": 39.7, "avd": 18.9, "design": "v1", "experiment": "", "cls": "top", "verdict": "Gewinner", "headline": "Monte über die Hater nach dem GTA-Stream aus Neuseeland", "clip_title": "wie war neuseeland"}, {"id": "5MIIxI_Ox7s", "title": "Monte rastet wegen dem Stream-Sound aus 😂 | MontanaBlack", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T12:31:08", "dur": 43.6, "views": 4, "vph": 0.5, "like_rate": 25.0, "likes": 1, "angesehen": 0.0, "weggewischt": 100.0, "avd": null, "design": "v1", "experiment": "", "cls": "flop", "verdict": "Flop", "headline": "„Wenn der Chat sagt, der Sound ist scheiße…“ 💀", "clip_title": "Sound ist schlecht"}, {"id": "g1hxmDj_Ubo", "title": "Monte verprügelt Schradin im Game 😂 | MontanaBlack", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T12:31:08", "dur": 41.1, "views": 4, "vph": 0.5, "like_rate": 25.0, "likes": 1, "angesehen": 20.0, "weggewischt": 80.0, "avd": null, "design": "v1", "experiment": "", "cls": "flop", "verdict": "Flop", "headline": "Monte trifft Schradin im Game 💀", "clip_title": "Monte verprügelt schradin"}, {"id": "EJYpH6FotiI", "title": "Niklas Wilson will auf keinen Fall abreißen 😂", "streamer": "Niklas Wilson", "uploaded_at": "2026-11-25T12:31:08", "dur": 33.5, "views": 2, "vph": 0.3, "like_rate": 50.0, "likes": 1, "angesehen": 100.0, "weggewischt": null, "avd": null, "design": "v1", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Zu viele Häuser – wer muss abreißen? 😂", "clip_title": "zu viel"}, {"id": "jvcmF0haDzQ", "title": "Trymacs: „Das schlechteste Soundsetup von ganz Twitch-Deutschland“ 😂", "streamer": "Trymacs", "uploaded_at": "2026-11-25T11:52:14", "dur": 60.1, "views": 321, "vph": 38.6, "like_rate": 0.9, "likes": 3, "angesehen": 38.4, "weggewischt": 61.6, "avd": 13.6, "design": "v1", "experiment": "", "cls": "flop", "verdict": "Flop", "headline": "Trymacs rastet wegen Willis Sound-Setup aus 😂", "clip_title": "trymacs platzt"}], "series": [{"t": "2026-11-25T16:46", "views": 916}, {"t": "2026-11-25T16:57", "views": 964}, {"t": "2026-11-25T18:11", "views": 1203}, {"t": "2026-11-25T20:11", "views": 1835}], "queue": [{"title": "MontanaBlack: „Das war eine absolut gerechte Strafe“ – sie ging auf seine Mutter 💀", "streamer": "MontanaBlack", "slot": "25.11. 22:00"}, {"title": "MontanaBlack: „Wenn du gut bist, wirst du entdeckt – das ist gelogen“ 💀", "streamer": "MontanaBlack", "slot": "26.11. 00:00"}, {"title": "Trymacs: „Er hat 'ne Faust von der Security bekommen“ – Nicis Festival-Story 💀", "streamer": "Trymacs", "slot": "26.11. 02:00"}], "skipped": [{"title": "Leute fallen auf Wutköder Video rein 😂 | MontanaBlack", "reason": true}, {"title": "digger was 😂 | Trymacs", "reason": true}, {"title": "Eligella hat jetzt einen Übersetzer für englische Fans 😂", "reason": true}, {"title": "Eligella schätzt die Pyramide auf 25 Meter 💀 (Teil 2)", "reason": "schwacher Einstieg ('Sind 25 Meter oder so…'), braucht Teil 1 (Teil 1 nur 4 Aufrufe) – Regel 2"}, {"title": "Niklas Wilson: „Er ist overrated“ – dann trifft er 💀", "reason": "vom Nutzer abgelehnt (schlecht)"}], "log": ["2026-11-25 21:10 | gepostet: Trymacs Lieblingsinteraktion (Vogel) EazTuqIluFY | bereit: 3 | manuell auf Nutzerwunsch; Zoom entfernt, Facecam-Zuschnitt neu (Kopf komplett), Warteschlange neu gerendert", "2026-11-25 20:18 | gepostet: Monte GTA6-Real-Life iEDWe8vu7Ms | bereit: 3 | Studio: Krokodil 4/Stinger 3 Aufrufe bei 100 % angesehen -> Ausspielungsproblem (v2?) bestätigt sich; neu: Monte Gerechte Strafe, Monte 'Das ist gelogen'", "2026-11-25 18:17 | gepostet: Trymacs Stinger/Angel Np_c7kTAmuU | bereit: 2 | Pyramide Teil 2 + Tierleichen auf skip (schwacher Einstieg); neu: Trymacs Security-Faust, Monte GTA6-Real-Life; v2-Shorts fast ohne Impressionen (Design-Warnsignal)", "2026-11-25 16:41 | gepostet: Krokodil erschreckt Monte qYmCHhqI4b8 | bereit: 4 | Pyramide Teil 2 (mit Auflösung) als nächstes"]};
 const $ = id => document.getElementById(id);
 const fmt = n => n == null ? '–' : n.toLocaleString('de-DE');
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const thumb = id => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
 const tip = $('tip');
 function showTip(ev, h) { tip.innerHTML = h; tip.style.display = 'block'; moveTip(ev); }
 function moveTip(ev) { const x = Math.min(ev.clientX + 14, innerWidth - tip.offsetWidth - 8); tip.style.left = x + 'px'; tip.style.top = (ev.clientY + 14) + 'px'; }
 function hideTip() { tip.style.display = 'none'; }
+const VERD = {top: '▲ Gewinner', flop: '▼', test: '● Test läuft', mid: 'Mittel'};
+const badge = r => `<span class="badge ${r.cls}">${r.cls === 'flop' ? '▼ ' + esc(r.verdict) : r.cls === 'top' ? '▲ ' + esc(r.verdict) : r.cls === 'test' ? '● ' + esc(r.verdict) : esc(r.verdict)}</span>`;
 
-const lr = D.last_run ? D.last_run.match(/\d{4}-(\d\d)-(\d\d) (\d\d:\d\d)/) : null;
-$('gen').textContent = 'Stand ' + D.generated + (lr ? ` · letzter Lauf ${lr[2]}.${lr[1]}. ${lr[3]}` : '');
-$('status').innerHTML = D.status_ok
-  ? '<span class="dot" style="background:var(--good)"></span><b>✓</b> Läuft – postet alle 2 h'
-  : '<span class="dot" style="background:var(--crit)"></span><b>!</b> Letzter Lauf ist länger her – PC/App/Chrome prüfen';
+$('gen').textContent = 'Zahlen: ' + D.generated;
+
+// ---- KPIs
 $('k-total').textContent = fmt(D.total);
 $('k-total-sub').textContent = D.posted ? 'Ø ' + fmt(Math.round(D.total / D.posted)) + ' pro Short' : '';
-$('k-24h').textContent = fmt(D.views_24h);
+$('k-24h').textContent = (D.views_24h > 0 ? '+' : '') + fmt(D.views_24h);
 $('k-posted').textContent = fmt(D.posted);
 $('k-posted-sub').textContent = D.posted_24h + ' in den letzten 24 h';
 $('k-watched').textContent = D.avg_watched == null ? '–' : D.avg_watched.toLocaleString('de-DE') + ' %';
-if (D.best) { $('k-best').textContent = D.best.title; $('k-best-sub').textContent = fmt(D.best.views) + ' Aufrufe · ' + D.best.streamer; }
-$('next').textContent = D.next_post + ' Uhr';
+$('k-meter').style.width = (D.avg_watched || 0) + '%';
+(function () {
+  const s = D.series, el = $('spark');
+  if (s.length < 2) return;
+  const ts = s.map(p => new Date(p.t).getTime()), t0 = ts[0], t1 = ts[ts.length - 1], vmax = Math.max(...s.map(p => p.views)) || 1;
+  const pts = s.map((p, i) => [(ts[i] - t0) / ((t1 - t0) || 1) * 100, 30 - p.views / vmax * 27]);
+  el.setAttribute('viewBox', '0 0 100 32');
+  el.innerHTML = `<polygon points="0,32 ${pts.map(p => p.join(',')).join(' ')} 100,32" fill="var(--series-wash)"/>
+    <polyline points="${pts.map(p => p.join(',')).join(' ')}" fill="none" stroke="var(--series)" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>`;
+})();
 
-// ---- line chart: total views over time
+// ---- Line chart
 (function () {
   const el = $('c-line'), s = D.series;
-  if (s.length < 2) { el.innerHTML = '<p class="small">Noch zu wenige Messpunkte – füllt sich mit jedem Lauf.</p>'; return; }
-  const W = 540, H = 230, L = 46, R = 14, T = 14, B = 26;
+  if (s.length < 2) { el.innerHTML = '<p class="empty">Noch zu wenige Messpunkte – füllt sich mit jedem Lauf.</p>'; return; }
+  const W = 560, H = 240, L = 46, R = 14, T = 18, B = 28;
   const ts = s.map(p => new Date(p.t).getTime()), t0 = Math.min(...ts), t1 = Math.max(...ts);
   const vmax = Math.max(...s.map(p => p.views)) || 1;
-  const step = Math.pow(10, Math.floor(Math.log10(vmax))) * (vmax / Math.pow(10, Math.floor(Math.log10(vmax))) > 5 ? 2 : 1);
+  const mag = Math.pow(10, Math.floor(Math.log10(vmax))), step = mag * (vmax / mag > 5 ? 2 : vmax / mag > 2 ? 1 : .5);
   const ymax = Math.ceil(vmax / step) * step;
   const x = t => L + (t - t0) / ((t1 - t0) || 1) * (W - L - R), y = v => T + (1 - v / ymax) * (H - T - B);
   let g = '';
-  for (let v = 0; v <= ymax; v += step) g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--grid)"/><text x="${L - 6}" y="${y(v) + 4}" text-anchor="end">${fmt(v)}</text>`;
+  for (let v = 0; v <= ymax + 1e-9; v += step) g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)" ${v ? 'stroke-dasharray="3 4"' : ''}/><text x="${L - 8}" y="${y(v) + 4}" text-anchor="end">${fmt(v)}</text>`;
   const fmtT = t => { const d = new Date(t); return d.toLocaleDateString('de-DE', {day:'2-digit', month:'2-digit'}) + ' ' + d.toLocaleTimeString('de-DE', {hour:'2-digit', minute:'2-digit'}); };
   g += `<text x="${L}" y="${H - 6}">${fmtT(t0)}</text><text x="${W - R}" y="${H - 6}" text-anchor="end">${fmtT(t1)}</text>`;
   const pts = s.map((p, i) => `${x(ts[i])},${y(p.views)}`).join(' ');
-  const area = `${x(ts[0])},${y(0)} ${pts} ${x(ts[ts.length - 1])},${y(0)}`;
   const last = s[s.length - 1];
-  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Gesamtaufrufe über Zeit, aktuell ${fmt(last.views)}">
-    ${g}<line x1="${L}" x2="${W - R}" y1="${y(0)}" y2="${y(0)}" stroke="var(--axis)"/>
-    <polygon points="${area}" fill="var(--wash)"/>
-    <polyline points="${pts}" fill="none" stroke="var(--series-1)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-    <line id="xh" y1="${T}" y2="${H - B}" stroke="var(--axis)" visibility="hidden"/>
-    <circle id="xd" r="4.5" fill="var(--series-1)" stroke="var(--surface)" stroke-width="2" visibility="hidden"/>
-    <circle cx="${x(ts[ts.length - 1])}" cy="${y(last.views)}" r="4.5" fill="var(--series-1)" stroke="var(--surface)" stroke-width="2"/>
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Gesamtaufrufe über Zeit, aktuell ${fmt(last.views)}" style="margin-top:10px">
+    <defs><linearGradient id="lg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="var(--series)" stop-opacity=".28"/><stop offset="1" stop-color="var(--series)" stop-opacity="0"/></linearGradient></defs>
+    ${g}<polygon points="${x(ts[0])},${y(0)} ${pts} ${x(ts[ts.length - 1])},${y(0)}" fill="url(#lg)"/>
+    <polyline points="${pts}" fill="none" stroke="var(--series)" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+    <line id="xh" y1="${T}" y2="${H - B}" stroke="var(--line-2)" visibility="hidden"/>
+    <circle id="xd" r="5" fill="var(--series)" stroke="var(--surface)" stroke-width="2" visibility="hidden"/>
+    <circle cx="${x(ts[ts.length - 1])}" cy="${y(last.views)}" r="5" fill="var(--series)" stroke="var(--surface)" stroke-width="2"/>
     <rect id="hit" x="${L}" y="${T}" width="${W - L - R}" height="${H - T - B}" fill="transparent"/></svg>`;
   const svg = el.querySelector('svg'), hit = svg.querySelector('#hit'), xh = svg.querySelector('#xh'), xd = svg.querySelector('#xd');
   hit.addEventListener('mousemove', ev => {
@@ -394,35 +546,42 @@ $('next').textContent = D.next_post + ' Uhr';
   hit.addEventListener('mouseleave', () => { xh.setAttribute('visibility', 'hidden'); xd.setAttribute('visibility', 'hidden'); hideTip(); });
 })();
 
-// ---- horizontal bars: views per short (HTML, damit Beschriftung auf dem Handy lesbar bleibt)
+// ---- Bars
 (function () {
   const el = $('c-bars'), rows = [...D.rows].sort((a, b) => b.views - a.views);
-  if (!rows.length) { el.innerHTML = '<p class="small">Noch keine Daten.</p>'; return; }
+  if (!rows.length) { el.innerHTML = '<p class="empty">Noch keine Daten.</p>'; return; }
   const vmax = Math.max(...rows.map(r => r.views)) || 1;
   el.innerHTML = '<div class="bars" role="list" aria-label="Aufrufe pro Short">' + rows.map((r, i) =>
-    `<div class="bar-row" role="listitem" tabindex="0" data-i="${i}">
-       <div class="bl">${esc(r.title)}</div>
-       <div class="bt"><div class="bar" style="width:${r.views ? Math.max(r.views / vmax * 100, 1) : 0}%"></div><span class="bv">${fmt(r.views)}</span></div>
-     </div>`).join('') + '</div>';
+    `<div class="bar-row" role="listitem" tabindex="0" data-i="${i}"><div class="bl">${esc(r.title)}</div>
+       <div class="bt"><div class="bar" style="width:${r.views ? Math.max(r.views / vmax * 100, 1) : 0}%"></div><span class="bv">${fmt(r.views)}</span></div></div>`).join('') + '</div>';
   el.querySelectorAll('.bar-row').forEach(n => {
     const r = rows[+n.dataset.i];
-    const h = `<b>${esc(r.title)}</b><br>${fmt(r.views)} Aufrufe · ${r.angesehen == null ? '–' : r.angesehen + ' %'} angesehen<br><span class="small">${esc(r.streamer)} · ${r.verdict}</span>`;
+    const h = `<b>${esc(r.title)}</b><br>${fmt(r.views)} Aufrufe · ${r.angesehen == null ? '–' : r.angesehen + ' %'} angesehen<br><span class="small">${esc(r.streamer)} · ${esc(r.verdict)}</span>`;
     n.addEventListener('mousemove', ev => showTip(ev, h)); n.addEventListener('mouseleave', hideTip);
   });
 })();
 
-// ---- table
+// ---- Gallery
+(function () {
+  const rows = [...D.rows].sort((a, b) => b.views - a.views).slice(0, 6);
+  $('gallery').innerHTML = rows.length ? rows.map((r, i) => `<a class="tile" href="https://youtube.com/shorts/${r.id}" target="_blank" rel="noopener">
+    <div class="thumb"><img loading="lazy" src="${thumb(r.id)}" alt=""><span class="rank">${i + 1}</span>
+      <div class="views num">${fmt(r.views)} <span>Aufrufe</span></div></div>
+    <div class="tt">${esc(r.title)}</div><div class="ts">${esc(r.streamer)}${r.angesehen != null ? ' · ' + r.angesehen.toLocaleString('de-DE') + ' % angesehen' : ''}</div></a>`).join('')
+    : '<p class="empty">Noch keine Shorts.</p>';
+})();
+
+// ---- Table
 const cols = [
-  ['uploaded_at', 'Gepostet', r => r.uploaded_at ? new Date(r.uploaded_at).toLocaleString('de-DE', {day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit'}) : '–'],
-  ['title', 'Short', r => `<a href="https://youtube.com/shorts/${r.id}" target="_blank" rel="noopener">${esc(r.title)}</a>${r.experiment ? `<div class="small">Experiment: ${esc(r.experiment)}</div>` : ''}`],
-  ['streamer', 'Streamer', r => esc(r.streamer)],
-  ['verdict', 'Bewertung', r => `<span class="tag ${r.cls}"><span class="ic">${{top:'▲', flop:'▼', test:'…', mid:'–'}[r.cls]}</span>${r.verdict}</span>`],
-  ['views', 'Aufrufe', r => fmt(r.views), 1], ['vph', 'pro Std', r => fmt(r.vph), 1],
+  ['title', 'Short', r => `<div class="sc"><img loading="lazy" src="${thumb(r.id)}" alt=""><div><a class="t" href="https://youtube.com/shorts/${r.id}" target="_blank" rel="noopener">${esc(r.title)}</a>
+     <div class="x">${esc(r.streamer)} · ${r.uploaded_at ? new Date(r.uploaded_at).toLocaleString('de-DE', {day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit'}) : '–'}${r.experiment ? ' · Test: ' + esc(r.experiment) : ''}</div></div></div>`],
+  ['verdict', 'Bewertung', badge],
+  ['views', 'Aufrufe', r => `<b>${fmt(r.views)}</b>`, 1], ['vph', 'pro Std', r => fmt(r.vph), 1],
   ['angesehen', 'Angesehen', r => r.angesehen == null ? '–' : r.angesehen.toLocaleString('de-DE') + ' %', 1],
   ['avd', 'Ø Sek.', r => r.avd == null ? '–' : r.avd.toLocaleString('de-DE'), 1],
   ['dur', 'Länge', r => r.dur == null ? '–' : Math.round(r.dur) + ' s', 1],
-  ['like_rate', 'Likes', r => `${fmt(r.likes)} <span class="small">(${r.like_rate.toLocaleString('de-DE')} %)</span>`, 1],
-  ['design', 'Design', r => esc(r.design)],
+  ['likes', 'Likes', r => fmt(r.likes), 1],
+  ['uploaded_at', 'Gepostet', r => r.uploaded_at ? new Date(r.uploaded_at).toLocaleString('de-DE', {day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit'}) : '–', 1],
 ];
 let sortKey = 'uploaded_at', sortDir = -1;
 function renderTable() {
@@ -433,38 +592,54 @@ function renderTable() {
 }
 renderTable();
 
-$('q').innerHTML = D.queue.length ? D.queue.map(q => `<li><b>${esc(q.slot)}</b> – ${esc(q.title)}</li>`).join('') : '<li class="small">Leer – der nächste Lauf sucht neue Clips.</li>';
-$('sk').innerHTML = D.skipped.length ? D.skipped.map(s => `<li>${esc(s.title)} <span class="small">– ${esc(s.reason)}</span></li>`).join('') : '<li class="small">Nichts aussortiert.</li>';
+// ---- Queue
+$('q').innerHTML = D.queue.length ? D.queue.map(q => { const [d, t] = q.slot.split(' ');
+  return `<li><div class="slot num">${esc(t)}<span>${esc(d)}</span></div><div><div class="t">${esc(q.title)}</div><div class="s">${esc(q.streamer)}</div></div></li>`; }).join('')
+  : '<li class="empty">Leer – der nächste Lauf sucht neue Clips.</li>';
+$('sk').innerHTML = D.skipped.length ? D.skipped.map(s => `<li><div class="t">${esc(s.title)}</div><div class="why">${esc(s.reason)}</div></li>`).join('')
+  : '<li class="empty">Nichts aussortiert.</li>';
 $('logbox').textContent = D.log.length ? D.log.join('\n') : 'Noch keine Läufe.';
 
 // ---- Regeln
 (function () {
   $('edit-rules').href = `https://github.com/${D.repo}/edit/main/REGELN.md`;
   const v = D.rules_ver;
-  $('rv').textContent = v ? `Stand ${v.date.slice(8, 10)}.${v.date.slice(5, 7)}. ${v.date.slice(11)} · zuletzt ${v.web ? 'auf GitHub (von dir)' : 'lokal'} geändert` : 'Noch nicht auf GitHub gespeichert';
+  $('rv').textContent = v ? `Stand ${v.date.slice(8, 10)}.${v.date.slice(5, 7)}. ${v.date.slice(11)} · zuletzt ${v.web ? 'auf GitHub (von dir)' : 'lokal'} geändert · gelten vor allem anderen` : 'Gelten vor allem anderen';
   const s = D.switches;
   if (!s) return;
   const items = [
-    ['Pause', s.pause ? '⏸ ja – postet nicht' : 'nein'], ['Posts pro Lauf', s.posts_per_run],
-    ['Posting-Zeiten', s.hours.join('–') + ' Uhr'], ['Mindestabstand', s.min_gap_min + ' Min.'],
-    ['Vorrat fertiger Shorts', s.stock], ['Cliplänge', s.clip_len.join('–') + ' s'],
-    ['Verfällt nach', s.expire_h + ' h'], ['Streamer', s.streamers.length + ': ' + s.streamers.join(', ')],
+    ['Status', s.pause ? '⏸ Pausiert' : '▶ Aktiv', s.pause ? 'paused' : ''], ['Posting-Zeiten', s.hours.join('–') + ' Uhr'],
+    ['Posts pro Lauf', s.posts_per_run], ['Mindestabstand', s.min_gap_min + ' Min.'],
+    ['Vorrat', s.stock + ' Shorts'], ['Cliplänge', s.clip_len.join('–') + ' s'],
+    ['Verfällt nach', s.expire_h + ' Std.'], ['Streamer', s.streamers.length + ' Kanäle'],
+    ['Streamer-Liste', s.streamers.join(', '), 'wide'],
   ];
-  $('sw').innerHTML = items.map(([k, v]) => `<div>${esc(k)}<b>${esc(v)}</b></div>`).join('');
+  $('sw').innerHTML = items.map(([k, v, c]) => `<div class="${c || ''}"><small>${esc(k)}</small><b>${esc(v)}</b></div>`).join('');
 })();
 
-// ---- Live-Status (fragt docs/live.json alle 30 s ab)
+// ---- Nav: aktiven Abschnitt markieren
+(function () {
+  const links = [...document.querySelectorAll('#tabs a')];
+  const obs = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id));
+  }), {rootMargin: '-45% 0px -50% 0px'});
+  links.forEach(a => { const t = document.querySelector(a.getAttribute('href')); if (t) obs.observe(t); });
+})();
+
+// ---- Live (fragt live.json alle 30 s ab)
 const hm = d => d.toLocaleTimeString('de-DE', {hour: '2-digit', minute: '2-digit'});
 const dm = d => d.toLocaleDateString('de-DE', {day: '2-digit', month: '2-digit'});
 const ago = d => { const m = Math.round((Date.now() - d) / 60000); return m < 1 ? 'gerade eben' : m < 60 ? `vor ${m} Min.` : m < 1440 ? `vor ${Math.floor(m / 60)} Std. ${m % 60} Min.` : `vor ${Math.floor(m / 1440)} Tg.`; };
-const dur = (a, b) => { const m = Math.round((b - a) / 60000); return m < 60 ? `${m} Min.` : `${Math.floor(m / 60)} Std. ${m % 60} Min.`; };
+const dur = (a, b) => { const m = Math.max(0, Math.round((b - a) / 60000)); return m < 60 ? `${m} Min.` : `${Math.floor(m / 60)} Std. ${m % 60} Min.`; };
 function nextRun() { const d = new Date(); d.setMinutes(0, 0, 0); d.setHours(d.getHours() + (d.getHours() % 2 ? 1 : 2)); return d; }
 const KI = {step: '✓', warn: '!', fail: '✕'};
-const stepLi = s => `<li><span class="tm">${hm(new Date(s.t))}</span><span class="k ${s.kind}">${KI[s.kind] || '·'}</span><span>${esc(s.text)}</span></li>`;
+const stepLi = s => `<li><span class="tm">${hm(new Date(s.t))}</span><span class="ic ${s.kind}">${KI[s.kind] || '·'}</span><span>${esc(s.text)}</span></li>`;
 let LIVE = D.live, liveFetched = null;
 
 function renderLive() {
-  const L = LIVE;
+  const L = LIVE, nr = nextRun();
+  $('nx-time').textContent = hm(nr) + ' Uhr';
+  $('nx-sub').textContent = `in ${dur(Date.now(), nr)} · startet bis zu 9 Min. später`;
   if (!L) { $('lv-state').textContent = 'Noch keine Live-Daten'; $('lv-what').textContent = 'Erscheinen beim nächsten Lauf.'; return; }
   const cur = L.current, running = L.state === 'running' && cur;
   const runs = L.runs || [];
@@ -473,50 +648,45 @@ function renderLive() {
   const stale = running && lastT && Date.now() - lastT > 25 * 60000;
   const lastStart = runs[0] ? new Date(runs[0].started) : null;
   const overdue = !running && lastStart && Date.now() - lastStart > 150 * 60000;
-  const b = $('lv-beacon'), nr = nextRun();
   let state, what, pill, cls;
   if (running && stale) {
     cls = 'warn'; state = 'Lauf hängt vielleicht'; what = `Letzte Meldung ${ago(lastT)}: „${last.text}“ – PC, Claude-App und Chrome prüfen.`;
-    pill = ['var(--warn)', '!', 'Lauf meldet sich nicht mehr'];
+    pill = ['#f5b301', 'Meldet sich nicht mehr'];
   } else if (running) {
-    cls = 'run'; state = 'Läuft gerade · ' + cur.title; what = last ? `Jetzt: ${last.text}` : 'Startet …';
-    pill = ['var(--good)', '●', 'Arbeitet gerade'];
+    cls = 'run'; state = cur.title; what = last ? last.text : 'Startet …'; pill = ['#22c55e', 'Arbeitet gerade'];
   } else if (overdue) {
-    cls = 'err'; state = 'Lauf überfällig'; what = `Letzter Lauf ${ago(lastStart)} gestartet – PC an? Claude-App offen? Chrome offen?`;
-    pill = ['var(--crit)', '!', 'Lauf überfällig – PC/App prüfen'];
+    cls = 'err'; state = 'Lauf überfällig'; what = `Letzter Lauf ${ago(lastStart)} gestartet – PC an? Claude-App und Chrome offen?`;
+    pill = ['#f43f5e', 'Lauf überfällig'];
   } else if (L.state === 'error') {
-    cls = 'err'; state = 'Letzter Lauf mit Problem'; what = L.last_summary || '';
-    pill = ['var(--crit)', '!', 'Letzter Lauf mit Problem'];
+    cls = 'err'; state = 'Letzter Lauf mit Problem'; what = L.last_summary || ''; pill = ['#f43f5e', 'Problem beim letzten Lauf'];
   } else {
-    cls = ''; state = 'Wartet auf den nächsten Lauf'; what = `Nächster Lauf ca. ${hm(nr)} Uhr (in ${dur(Date.now(), nr)})`;
-    pill = ['var(--good)', '✓', 'Bereit – nächster Lauf ' + hm(nr)];
+    cls = ''; state = 'Wartet auf den nächsten Lauf'; what = L.last_summary ? 'Zuletzt: ' + L.last_summary : ''; pill = ['#22c55e', 'Bereit'];
   }
-  b.className = 'beacon ' + cls;
+  $('lv-beacon').className = 'beacon ' + cls;
   $('lv-state').textContent = state; $('lv-what').textContent = what;
-  $('status').innerHTML = `<span class="dot" style="background:${pill[0]}"></span><b>${pill[1]}</b> ${esc(pill[2])}`;
-
+  $('status').innerHTML = `<span class="d" style="background:${pill[0]}"></span>${esc(pill[1])}`;
   const facts = [];
-  if (running) facts.push(`Läuft seit <b>${hm(new Date(cur.started))}</b> (${dur(new Date(cur.started), Date.now())})`);
-  if (L.check) facts.push(`Posten: <b>${L.check.may_post ? 'erlaubt' : 'nicht jetzt'}</b> <span class="small">(${esc(L.check.reason)}, Prüfung ${hm(new Date(L.check.t))})</span>`);
-  if (L.rules) facts.push(`Regeln: Stand <b>${esc(L.rules.date.slice(8, 10) + '.' + L.rules.date.slice(5, 7) + '. ' + L.rules.date.slice(11))}</b>`);
-  $('lv-facts').innerHTML = facts.map(f => `<span>${f}</span>`).join('');
-
+  if (running) facts.push(`<span class="fact">Läuft seit <b>${hm(new Date(cur.started))}</b> · ${dur(new Date(cur.started), Date.now())}</span>`);
+  if (L.check) facts.push(`<span class="fact ${L.check.may_post ? 'yes' : 'no'}">Posten <b>${L.check.may_post ? 'erlaubt' : 'nicht jetzt'}</b> · ${esc(L.check.reason)}</span>`);
+  if (L.rules) facts.push(`<span class="fact">Regeln vom <b>${esc(L.rules.date.slice(8, 10) + '.' + L.rules.date.slice(5, 7) + '. ' + L.rules.date.slice(11))}</b></span>`);
+  $('lv-facts').innerHTML = facts.join('');
   const shown = running ? cur : runs[0];
-  $('lv-steps').innerHTML = shown ? (running ? '' : `<li><span></span><span></span><span class="small">Letzter Lauf: ${esc(shown.title)}</span></li>`) + [...shown.steps].reverse().map(stepLi).join('') : '';
-  $('lv-runs').innerHTML = runs.length ? runs.map(r => {
+  $('lv-steps').innerHTML = shown ? [...shown.steps].reverse().map(stepLi).join('') : '';
+  $('lv-runs').innerHTML = runs.length ? runs.slice(0, 6).map(r => {
     const a = new Date(r.started), e = r.finished ? new Date(r.finished) : null;
-    const ic = r.state === 'ok' ? '<span class="k step">✓</span>' : '<span class="k fail">✕</span>';
     const warns = r.steps.filter(s => s.kind === 'warn').length;
-    return `<li><details><summary>${ic}<span class="when">${dm(a)} ${hm(a)}</span><span><b>${esc(r.title)}</b>${e ? ` · ${dur(a, e)}` : ''}${warns ? ` · <span class="k warn">${warns} Warnung${warns > 1 ? 'en' : ''}</span>` : ''}<br><span class="small">${esc(r.summary || '')}</span></span></summary>
-      <ul class="steps">${r.steps.map(stepLi).join('')}</ul></details></li>`;
-  }).join('') : '<li class="small">Noch keine Läufe mit Live-Meldungen.</li>';
-  $('lv-upd').textContent = (liveFetched ? `Live aktualisiert ${hm(liveFetched)}` : 'Live-Stand vom Seitenaufbau') + ' · prüft alle 30 s · Anzeige ca. 1 Min. verzögert';
+    return `<li><details><summary><span class="ic ${r.state === 'ok' ? 'step' : 'fail'}">${r.state === 'ok' ? '✓' : '✕'}</span>
+      <span><span class="t">${esc(r.title)}</span><br><span class="s">${esc(r.summary || '')}${warns ? ` · ${warns} Warnung${warns > 1 ? 'en' : ''}` : ''}</span></span>
+      <span class="when">${dm(a)} ${hm(a)}${e ? '<br>' + dur(a, e) : ''}</span></summary>
+      <ul class="timeline">${r.steps.map(stepLi).join('')}</ul></details></li>`;
+  }).join('') : '<li class="s" style="padding:8px 0">Noch keine Läufe mit Live-Meldungen.</li>';
+  $('lv-upd').textContent = (liveFetched ? `Live aktualisiert ${hm(liveFetched)}` : 'Stand vom Seitenaufbau') + ' · prüft alle 30 s · ca. 1 Min. Verzögerung';
 }
 async function pollLive() {
   try {
     const r = await fetch('live.json?t=' + Date.now(), {cache: 'no-store'});
     if (r.ok) { LIVE = await r.json(); liveFetched = new Date(); }
-  } catch (e) { /* lokal geöffnet: eingebetteten Stand nutzen */ }
+  } catch (e) { /* lokal geöffnet */ }
   renderLive();
 }
 renderLive(); pollLive(); setInterval(pollLive, 30000);

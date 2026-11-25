@@ -1,4 +1,4 @@
-# Öffentliches Repo: alles ignorieren und nur ausdrücklich Erlaubtes hochladen.
+﻿# Öffentliches Repo: alles ignorieren und nur ausdrücklich Erlaubtes hochladen.
 # NIE hochladen: client_secret.json, tokens/, state.json, output/, work/, scout/, queue/, .venv/
 *
 !.gitignore
@@ -13,6 +13,7 @@
 !requirements.txt
 !shorts.py
 !dashboard.py
+!dashboard_template.html
 !studio_upload.js
 !config.toml
 !docs/

@@ -14,10 +14,10 @@ Nur den Wert hinter dem Doppelpunkt ändern.
 
 - **Pause:** nein
 - **Posts pro Lauf:** 1
-- **Posting-Zeiten:** 08:00-24:00
+- **Posting-Zeiten:** 06:00-24:00
 - **Mindestabstand zwischen zwei Posts (Minuten):** 100
 - **Fertige Shorts auf Vorrat:** 2
-- **Cliplänge (Sekunden):** 15-40
+- **Cliplänge (Sekunden):** 15-45
 - **Fertige Shorts verfallen nach (Stunden):** 36
 - **Streamer:** eliasn97, sidneyeweka, niklaswilson, trymacs, montanablack88
 
@@ -25,6 +25,7 @@ Bedeutung:
 
 - *Pause: ja* → nichts posten, nichts Neues schneiden. Es werden nur die Zahlen aktualisiert und das Dashboard gepflegt.
 - *Posting-Zeiten* → außerhalb dieser Zeit wird nicht gepostet, aber trotzdem ausgewertet und der nächste Clip vorbereitet.
+- *Verfallen* → ein fertig geschnittener, aber noch nicht geposteter Short wird nach dieser Zeit aussortiert und nicht mehr gepostet, weil der Clip dann nicht mehr aktuell ist (Twitch-Momente sind nach 1–2 Tagen „alt“, oft haben ihn andere Kanäle schon gepostet).
 - *Mindestabstand* → wurde vor kürzerer Zeit gepostet (z. B. manuell im Chat), wird in diesem Lauf nicht gepostet.
 - *Streamer* → nur Clips dieser Twitch-Kanäle. Neuer Name hier → der nächste Lauf trägt ihn in `config.toml` ein (Kanal kanal1).
 
