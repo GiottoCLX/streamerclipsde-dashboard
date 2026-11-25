@@ -1,62 +1,71 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 00:10",
-  "started": "2026-11-26T00:10:01",
-  "steps": [
-   {
-    "t": "2026-11-26T00:10:01",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T00:10:10",
-    "text": "Prüfe, ob gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T00:10:21",
-    "text": "Kein Post: außerhalb der Posting-Zeiten (06-24 Uhr) – werte Zahlen aus",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T00:10:34",
-    "text": "Hole Studio-Werte für junge Shorts (GTA6-Real-Life, Tierleiche)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T00:11:35",
-    "text": "Studio-Analytics zeigt 'Ein Fehler ist aufgetreten' (wie 22:10, vermutlich anderer Kanal aktiv) – keine Studio-Werte",
-    "kind": "warn"
-   },
-   {
-    "t": "2026-11-26T00:11:38",
-    "text": "Prüfe Vorrat fertiger Shorts",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T00:12:30",
-    "text": "Suche neue Twitch-Clips (letzte 24 h)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T00:14:15",
-    "text": "Keine 8+ in 24 h – suche in den letzten 7 Tagen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T00:16:49",
-    "text": "Kein neuer Clip mit Note 8+ (24 h + 7 Tage, 42 Kandidaten) – nichts vorbereitet",
-    "kind": "warn"
-   },
-   {
-    "t": "2026-11-26T00:16:52",
-    "text": "Abschluss: Log und Dashboard",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 00:10",
+   "started": "2026-11-26T00:10:01",
+   "steps": [
+    {
+     "t": "2026-11-26T00:10:01",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T00:10:10",
+     "text": "Prüfe, ob gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T00:10:21",
+     "text": "Kein Post: außerhalb der Posting-Zeiten (06-24 Uhr) – werte Zahlen aus",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T00:10:34",
+     "text": "Hole Studio-Werte für junge Shorts (GTA6-Real-Life, Tierleiche)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T00:11:35",
+     "text": "Studio-Analytics zeigt 'Ein Fehler ist aufgetreten' (wie 22:10, vermutlich anderer Kanal aktiv) – keine Studio-Werte",
+     "kind": "warn"
+    },
+    {
+     "t": "2026-11-26T00:11:38",
+     "text": "Prüfe Vorrat fertiger Shorts",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T00:12:30",
+     "text": "Suche neue Twitch-Clips (letzte 24 h)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T00:14:15",
+     "text": "Keine 8+ in 24 h – suche in den letzten 7 Tagen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T00:16:49",
+     "text": "Kein neuer Clip mit Note 8+ (24 h + 7 Tage, 42 Kandidaten) – nichts vorbereitet",
+     "kind": "warn"
+    },
+    {
+     "t": "2026-11-26T00:16:52",
+     "text": "Abschluss: Log und Dashboard",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T00:17:02",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-26T00:17:02",
+   "state": "ok",
+   "summary": "Kein Post (außerhalb 06-24 Uhr), kein neuer 8+-Clip gefunden, Vorrat 1 (Trymacs Festival, Note 8); Studio-Analytics fehlerhaft"
+  },
   {
    "title": "Lauf 22:10",
    "started": "2026-11-25T22:10:03",
@@ -180,8 +189,8 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T00:16:52",
- "last_summary": "Kein Post (Mindestabstand), Vorrat 1 (Trymacs Festival-Story, Note 8), kein neuer 8er-Clip gefunden; Studio zeigt 'Hoppla' für StreamerclipsDE",
+ "updated": "2026-11-26T00:17:02",
+ "last_summary": "Kein Post (außerhalb 06-24 Uhr), kein neuer 8+-Clip gefunden, Vorrat 1 (Trymacs Festival, Note 8); Studio-Analytics fehlerhaft",
  "channel": "kanal1",
  "check": {
   "t": "2026-11-26T00:10:14",
