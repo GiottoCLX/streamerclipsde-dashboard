@@ -43,13 +43,20 @@
     "views": 489,
     "likes": 5,
     "comments": 0
+   },
+   {
+    "t": "2026-11-25T22:10",
+    "age_h": 9.7,
+    "views": 489,
+    "likes": 5,
+    "comments": 0
    }
   ],
   "views": 489,
   "likes": 5,
   "comments": 0,
-  "age_h": 7.7,
-  "views_per_h": 63.7,
+  "age_h": 9.7,
+  "views_per_h": 50.6,
   "like_rate": 1.0,
   "experiment": null,
   "clip_title": "häuser",
@@ -99,14 +106,21 @@
     "views": 998,
     "likes": 37,
     "comments": 2
+   },
+   {
+    "t": "2026-11-25T22:10",
+    "age_h": 9.7,
+    "views": 1392,
+    "likes": 36,
+    "comments": 2
    }
   ],
-  "views": 998,
-  "likes": 37,
+  "views": 1392,
+  "likes": 36,
   "comments": 2,
-  "age_h": 7.7,
-  "views_per_h": 130.1,
-  "like_rate": 3.7,
+  "age_h": 9.7,
+  "views_per_h": 144.2,
+  "like_rate": 2.6,
   "experiment": null,
   "clip_title": "wie war neuseeland",
   "design": "v1"
@@ -153,13 +167,20 @@
     "views": 4,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-25T22:10",
+    "age_h": 9.7,
+    "views": 4,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 4,
   "likes": 1,
   "comments": 0,
-  "age_h": 7.7,
-  "views_per_h": 0.5,
+  "age_h": 9.7,
+  "views_per_h": 0.4,
   "like_rate": 25.0,
   "experiment": null,
   "clip_title": "Sound ist schlecht",
@@ -207,14 +228,21 @@
     "views": 4,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-25T22:10",
+    "age_h": 9.7,
+    "views": 5,
+    "likes": 1,
+    "comments": 0
    }
   ],
-  "views": 4,
+  "views": 5,
   "likes": 1,
   "comments": 0,
-  "age_h": 7.7,
+  "age_h": 9.7,
   "views_per_h": 0.5,
-  "like_rate": 25.0,
+  "like_rate": 20.0,
   "experiment": null,
   "clip_title": "Monte verprügelt schradin",
   "design": "v1"
@@ -260,14 +288,21 @@
     "views": 2,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-25T22:10",
+    "age_h": 9.7,
+    "views": 3,
+    "likes": 1,
+    "comments": 0
    }
   ],
-  "views": 2,
+  "views": 3,
   "likes": 1,
   "comments": 0,
-  "age_h": 7.7,
+  "age_h": 9.7,
   "views_per_h": 0.3,
-  "like_rate": 50.0,
+  "like_rate": 33.3,
   "experiment": null,
   "clip_title": "zu viel",
   "design": "v1"
@@ -316,13 +351,20 @@
     "views": 321,
     "likes": 3,
     "comments": 0
+   },
+   {
+    "t": "2026-11-25T22:10",
+    "age_h": 10.3,
+    "views": 343,
+    "likes": 3,
+    "comments": 0
    }
   ],
-  "views": 321,
+  "views": 343,
   "likes": 3,
   "comments": 0,
-  "age_h": 8.3,
-  "views_per_h": 38.6,
+  "age_h": 10.3,
+  "views_per_h": 33.3,
   "like_rate": 0.9,
   "experiment": null,
   "clip_title": "trymacs platzt",
@@ -369,13 +411,20 @@
     "views": 7,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-25T22:10",
+    "age_h": 7.4,
+    "views": 8,
+    "likes": 0,
+    "comments": 0
    }
   ],
-  "views": 7,
+  "views": 8,
   "likes": 0,
   "comments": 0,
-  "age_h": 5.4,
-  "views_per_h": 1.3,
+  "age_h": 7.4,
+  "views_per_h": 1.1,
   "like_rate": 0.0,
   "experiment": null,
   "clip_title": "3vs3 Gaming-Olympiade mit dem Squad 🔥 |  !iconleague !doku !eligella !gaming !uncut !clips",
@@ -422,13 +471,20 @@
     "views": 5,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-25T22:10",
+    "age_h": 7.4,
+    "views": 6,
+    "likes": 0,
+    "comments": 0
    }
   ],
-  "views": 5,
+  "views": 6,
   "likes": 0,
   "comments": 0,
-  "age_h": 5.4,
-  "views_per_h": 0.9,
+  "age_h": 7.4,
+  "views_per_h": 0.8,
   "like_rate": 0.0,
   "experiment": null,
   "clip_title": "Krabbe greift Monte an",
@@ -442,7 +498,13 @@
   "layout": "split",
   "uploaded_at": "2026-11-25T16:37:42",
   "upload_hour": 16,
-  "perf": {},
+  "perf": {
+   "aufrufe": 4.0,
+   "angesehen": 100.0,
+   "weggewischt": 0.0,
+   "likes": 0.0,
+   "checked_at": "2026-11-25T20:12"
+  },
   "snapshots": [
    {
     "t": "2026-11-25T16:46",
@@ -471,13 +533,20 @@
     "views": 3,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-25T22:10",
+    "age_h": 5.5,
+    "views": 5,
+    "likes": 0,
+    "comments": 0
    }
   ],
-  "views": 3,
+  "views": 5,
   "likes": 0,
   "comments": 0,
-  "age_h": 3.6,
-  "views_per_h": 0.8,
+  "age_h": 5.5,
+  "views_per_h": 0.9,
   "like_rate": 0.0,
   "experiment": null,
   "clip_title": "Krokodil erschreckt Monte",
@@ -494,7 +563,13 @@
   "layout": "split",
   "uploaded_at": "2026-11-25T18:11:36",
   "upload_hour": 18,
-  "perf": {},
+  "perf": {
+   "aufrufe": 3.0,
+   "angesehen": 100.0,
+   "weggewischt": 0.0,
+   "likes": 0.0,
+   "checked_at": "2026-11-25T20:12"
+  },
   "snapshots": [
    {
     "t": "2026-11-25T18:11",
@@ -509,12 +584,19 @@
     "views": 2,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-25T22:10",
+    "age_h": 4.0,
+    "views": 4,
+    "likes": 0,
+    "comments": 0
    }
   ],
-  "views": 2,
+  "views": 4,
   "likes": 0,
   "comments": 0,
-  "age_h": 2.0,
+  "age_h": 4.0,
   "views_per_h": 1.0,
   "like_rate": 0.0
  },
@@ -537,12 +619,47 @@
     "views": 0,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-25T22:10",
+    "age_h": 2.0,
+    "views": 4,
+    "likes": 1,
+    "comments": 0
+   }
+  ],
+  "views": 4,
+  "likes": 1,
+  "comments": 0,
+  "age_h": 2.0,
+  "views_per_h": 2.0,
+  "like_rate": 25.0
+ },
+ "EazTuqIluFY": {
+  "dur": 17.2,
+  "title": "Trymacs' Lieblingsinteraktion in GTA 6: Leute mit Tierleichen abwerfen 😂 #shorts",
+  "streamer": "Trymacs",
+  "headline": "Trymacs bewirft Leute mit einem toten Vogel 😂",
+  "experiment": "neues Layout ohne Zoom + Facecam mit Kopf-Luft; Start direkt bei der Pointe-Ankündigung",
+  "clip_title": "trymacs wirft man mit vogel ab",
+  "design": "v2",
+  "layout": "split",
+  "uploaded_at": "2026-11-25T21:06:12",
+  "upload_hour": 21,
+  "perf": {},
+  "snapshots": [
+   {
+    "t": "2026-11-25T22:10",
+    "age_h": 1.1,
+    "views": 0,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 0,
   "likes": 0,
   "comments": 0,
-  "age_h": 0.1,
+  "age_h": 1.1,
   "views_per_h": 0.0,
   "like_rate": 0.0
  }

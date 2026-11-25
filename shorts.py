@@ -609,12 +609,23 @@ def produce(clip, s, cfg, ffmpeg, state, out_dir=None, pick=None):
     out_file = out_dir / f"{name}.mp4"
     print(f"   -> {pick.get('headline') or clip['title']}")
     src = download_clip(clip["url"], work)
+    start, end, edit_info = pick.get("start"), pick.get("end"), None
+    try:  # Pro-Schnitt: Pausen raus, Mehrfach-Schnitt, Cold Open (siehe schnitt.py)
+        import schnitt
+        edited, edit_info = schnitt.make(src, work, ffmpeg, cfg, pick, ch["language"], transcribe, probe_duration)
+        if edited:
+            src, start, end = edited, None, None
+        print(f"      Schnitt: {edit_info}")
+    except Exception as e:
+        print(f"      Schnitt übersprungen ({e}) – normaler Zuschnitt")
     transcript, layout = render_short(
         src, work, out_file, s, cfg, ffmpeg, headline=pick.get("headline", ""),
-        start=pick.get("start"), end=pick.get("end"), subtitles=pick.get("subtitles", True),
+        start=start, end=end, subtitles=pick.get("subtitles", True),
         language=ch["language"], accent=ch.get("accent", "#9146FF"))
     meta = make_metadata(clip, s, transcript, cfg, pick.get("title"), ch)
     meta.update(file=str(out_file.relative_to(ROOT)), layout=layout, uploaded=False, channel=ch["key"])
+    if edit_info:
+        meta["schnitt"] = edit_info
     out_file.with_suffix(".json").write_text(json.dumps(meta, indent=2, ensure_ascii=False), "utf-8")
     state["done"][clip["id"]] = {"file": meta["file"], "date": dt.date.today().isoformat()}
     save_state(state)
@@ -697,6 +708,34 @@ def cmd_render(cfg, args):
             produce(clip, by_name[clip["streamer"]], cfg, ffmpeg, state, None, pick)
         except Exception as e:
             print(f"      FEHLER: {e}")
+
+
+def cmd_words(cfg, args):
+    """Wortgenaue Zeiten eines Scout-Clips – zum Planen von "segments" (Gespräch straffen)."""
+    known = {}
+    for f in sorted(SCOUT_DIR.glob("*.json")):
+        for c in json.loads(f.read_text("utf-8-sig")):
+            known[c["id"]] = c
+    clip = known.get(str(args.id))
+    if not clip:
+        sys.exit("unbekannte Clip-ID (erst scout laufen lassen)")
+    ffmpeg = find_ffmpeg()
+    lang = chan(cfg, clip.get("channel", "kanal1"))["language"]
+    work = ROOT / "work" / f"words_{args.id}"
+    src = download_clip(clip["url"], work, "worst[height>=360]/worst")
+    try:
+        _, words = transcribe(src, ffmpeg, cfg, args.start, args.end, lang)
+        off = args.start or 0
+        line = []
+        for w0, w1, t in words:
+            line.append(f"{off + w0:.2f}-{off + w1:.2f} {t}")
+            if t.endswith((".", "?", "!")) or len(line) >= 8:
+                print("  ".join(line))
+                line = []
+        if line:
+            print("  ".join(line))
+    finally:
+        shutil.rmtree(work, ignore_errors=True)
 
 
 def cmd_run(cfg, args):
@@ -1082,6 +1121,10 @@ def main():
     sp.add_argument("--channel", default="kanal1")
     sp = sub.add_parser("sheet", help="Standbilder eines Shorts zum Prüfen")
     sp.add_argument("video")
+    sp = sub.add_parser("words", help="wortgenaue Zeiten eines Scout-Clips (für segments)")
+    sp.add_argument("id")
+    sp.add_argument("--start", type=float)
+    sp.add_argument("--end", type=float)
     sp = sub.add_parser("stats", help="Performance aller geposteten Shorts abrufen")
     sp.add_argument("--channel", default="kanal1")
     sp = sub.add_parser("perf", help="Studio-Werte (Angesehen %%, Wiedergabedauer) eintragen")
@@ -1092,7 +1135,7 @@ def main():
     {"check": cmd_check, "scout": cmd_scout, "render": cmd_render, "run": cmd_run,
      "auth": cmd_auth, "upload": cmd_upload, "browser-queue": cmd_browser_queue,
      "mark-uploaded": cmd_mark_uploaded, "status": cmd_status,
-     "sheet": cmd_contact_sheet, "stats": cmd_stats, "perf": cmd_perf}[args.cmd.replace("_", "-")](cfg, args)
+     "sheet": cmd_contact_sheet, "stats": cmd_stats, "perf": cmd_perf, "words": cmd_words}[args.cmd.replace("_", "-")](cfg, args)
 
 
 if __name__ == "__main__":

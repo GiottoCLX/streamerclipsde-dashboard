@@ -103,6 +103,15 @@ Außerdem:
 - Leerlauf am Anfang wegschneiden, aber **nie** die Pointe am Ende.
 - Jeder Short wird vor dem Posten als Vorschaubild angesehen. Passt etwas nicht → neu schneiden oder aussortieren.
 
+**Schnittstil – schneiden wie ein Profi-Editor, nicht nur ein Stück ausschneiden:**
+
+- **Jump-Cuts (automatisch):** Tote Stellen – keine Sprache, leise **und** keine Bewegung im Bild – fliegen raus. Lacher, Schreie, Action und stille Reaktionen bleiben drin. Höchstens ein Viertel eines Teils wird so gekürzt, damit es nicht zerhackt wirkt.
+- **Gespräche straffen:** Bei Talk/Storys nur die starken Sätze aneinanderreihen. Abschweifungen, Wiederholungen, Stottern, „ähm, warte mal“, Chat-Vorlesen und Nebengespräche rausschneiden (mehrere Teile im Pick). Die Story muss danach trotzdem verständlich sein.
+- **Cold Open, wenn es passt:** Die stärkste Sekunde (Schrei, krasse Aussage, Reaktion) 1–2 s ganz vorne als Teaser, dann der Clip von vorne. Nicht machen, wenn es die Pointe verrät.
+- **Tempo:** In den ersten 2 Sekunden muss etwas passieren. Kein Satz darf mittendrin abgeschnitten werden, die Pointe und die Reaktion darauf bleiben immer komplett.
+- **Stille Aufbau-Momente schützen:** Ist eine ruhige Stelle wichtig (z. B. Spannung vor dem Schreck), wird sie als „geschützt“ markiert und nicht gekürzt.
+- Weiterhin: **kein Zoom**, keine Effekt-Spielereien – harte, saubere Schnitte.
+
 ## 5. Posten
 
 - Nur auf diese zwei Kanäle, immer über **YouTube Studio im Browser**, öffentlich, „nicht für Kinder“:

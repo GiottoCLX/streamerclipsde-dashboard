@@ -48,6 +48,11 @@ Fertige, ungepostete Shorts (`.json` ohne `uploaded`/`skip`) gegen REGELN.md pr�
 1. `py shorts.py scout --channel kanal1 --range 24hr --limit 8` (zu wenig → `--range 7d --limit 5`).
 2. `scout\<datum>.txt` lesen (Abschnitt StreamerclipsDE) und nach REGELN.md Abschnitt 3 auswählen (Qualitäts-Check, Note ≥ 8). Nur Streamer aus dem Schalter. Bei Kandidaten, die vom Text her gut wirken, vor dem Pick auch das Bild ansehen: rendern + `sheet` – erst dann die endgültige Note.
 3. `picks\<datum>_<HHMM>.json`: `[{"id": "...", "headline": "...", "title": "...", "start": s, "end": s, "note": 8, "warum": "1 Satz: was passiert und warum es lustig/krass/cool ist", "experiment": "..."}]` – Länge laut Schalter `clip_len`.
+   **Schnitt (REGELN.md Abschnitt 4, Technik in `schnitt.py`):**
+   - Jump-Cuts laufen automatisch (Pausen ohne Sprache, leise, ohne Bewegung; max. 25 % pro Teil). Abschalten: `"tighten": false`.
+   - Gespräch straffen: statt start/end `"segments": [[s, e], [s, e], …]` – nur die starken Sätze. Wortgenaue Zeiten: `py shorts.py words <clip-id> [--start s --end e]`. Grenzen zwischen zwei Wörtern legen (Ende eines Worts + 0,1 s), nie mitten im Wort.
+   - Stille Stelle schützen: `"keep": [[s, e]]`. Cold Open: `"hook": [s, e]` (1–2,5 s, stärkster Moment, verrät die Pointe nicht).
+   - Die Render-Ausgabe zeigt `Schnitt: {…}` (Teile, entfernte Pausen, Länge) – das steht danach auch in der .json unter `"schnitt"`.
 4. `py shorts.py render picks\<datei>.json`
 5. `py shorts.py sheet "<mp4>"` → PNG mit Read ansehen und nach REGELN.md Abschnitt 4 prüfen. Nicht gut → start/end ändern und neu rendern (vorher die Datei in `klein\` löschen) oder `skip`.
 
