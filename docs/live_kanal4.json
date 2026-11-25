@@ -22,6 +22,11 @@
   "date": "2026-11-25 21:40",
   "web": false
  },
- "updated": "2026-11-25T21:55:28",
- "channel": "kanal4"
+ "updated": "2026-11-25T21:55:33",
+ "channel": "kanal4",
+ "check": {
+  "t": "2026-11-25T21:55:32",
+  "may_post": true,
+  "reason": "Posten erlaubt"
+ }
 }
