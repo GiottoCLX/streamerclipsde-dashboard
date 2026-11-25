@@ -58,7 +58,7 @@ Geht etwas schief: `live.py warn` (weiter machen) oder `live.py fail` (Lauf abbr
 1. **Weiterschick-Test:** Würde man den Clip einem Freund schicken („guck mal 😂“)?
 2. **Ein klarer Moment:** Lässt sich in einem Satz sagen, was passiert und warum es lustig/krass/cool ist?
 3. **Sofort verständlich:** Versteht man in den ersten 3 Sekunden ohne Kontext, worum es geht?
-4. **Man sieht es:** Der Moment passiert im Bild bzw. live – nicht nur nacherzählt oder im Nebensatz erwähnt.
+4. **Der Moment ist komplett drin:** Entweder passiert er live im Bild – oder es ist eine **lustige Story, die im Clip vollständig erzählt wird** (Anfang, Pointe, Reaktion). Nicht ok: Momente, die nur im Nebensatz erwähnt werden oder bei denen man den Rest der Geschichte nicht mitbekommt. (Beispiel ok: Trymacs erzählt, wie Nici auf fremde Bühnen klettert und eine Faust von der Security kassiert.)
 5. **Pointe drin:** Die Reaktion/Auflösung ist im Clip.
 6. **Kein Leerlauf:** keine Pausen, kein Drumherum-Reden, kein Wirrwarr aus mehreren Leuten durcheinander.
 
