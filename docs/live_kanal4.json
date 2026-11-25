@@ -1,0 +1,22 @@
+{
+ "state": "running",
+ "current": {
+  "title": "Einrichtung im Chat",
+  "started": "2026-11-25T21:55:24",
+  "steps": [
+   {
+    "t": "2026-11-25T21:55:24",
+    "text": "Lauf gestartet, neueste Regeln geladen",
+    "kind": "step"
+   }
+  ]
+ },
+ "runs": [],
+ "rules": {
+  "commit": "938c8d8",
+  "date": "2026-11-25 21:40",
+  "web": false
+ },
+ "updated": "2026-11-25T21:55:25",
+ "channel": "kanal4"
+}
