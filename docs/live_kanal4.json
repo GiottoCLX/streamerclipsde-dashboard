@@ -18,6 +18,11 @@
     "t": "2026-11-25T21:55:36",
     "text": "Prüfe die englischen Clips von heute nach dem strengen Maßstab",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-25T21:56:16",
+    "text": "4 alte englische Shorts aussortiert (Note 5) – warte auf frische Clips",
+    "kind": "step"
    }
   ]
  },
@@ -27,7 +32,7 @@
   "date": "2026-11-25 21:40",
   "web": false
  },
- "updated": "2026-11-25T21:55:36",
+ "updated": "2026-11-25T21:56:16",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-25T21:55:32",
