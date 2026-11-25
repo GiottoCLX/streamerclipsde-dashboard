@@ -291,7 +291,7 @@ footer { color: var(--muted); font-size: 12px; text-align: center; padding: 10px
   <section id="queue">
     <div class="sec-h"><div><h2>Warteschlange</h2><p>Fertig geschnitten und geprüft</p></div></div>
     <div class="grid2">
-      <div class="card"><h3>Als Nächstes</h3><div class="hint">Geplante Zeit nach den Regeln (alle 2 h)</div><ol class="q" id="q"></ol></div>
+      <div class="card"><h3>Als Nächstes</h3><div class="hint">Nur Clips mit Note ≥ 8 · geplante Zeit nach den Regeln</div><ol class="q" id="q"></ol></div>
       <div class="card"><h3>Aussortiert</h3><div class="hint">Fertig, aber nicht gepostet – mit Grund</div><ul class="q sk" id="sk"></ul></div>
     </div>
   </section>
@@ -436,8 +436,9 @@ renderTable();
 
 // ---- Queue
 $('q').innerHTML = D.queue.length ? D.queue.map(q => { const [d, t] = q.slot.split(' ');
-  return `<li><div class="slot num">${esc(t)}<span>${esc(d)}</span></div><div><div class="t">${esc(q.title)}</div><div class="s">${esc(q.streamer)}</div></div></li>`; }).join('')
-  : '<li class="empty">Leer – der nächste Lauf sucht neue Clips.</li>';
+  return `<li><div class="slot num">${esc(t)}<span>${esc(d)}</span></div><div><div class="t">${esc(q.title)}${q.note ? ` <span class="badge ${q.note >= 8 ? 'top' : 'mid'}">Note ${esc(q.note)}/10</span>` : ''}</div>
+    <div class="s">${esc(q.streamer)}${q.warum ? ' · ' + esc(q.warum) : ''}</div></div></li>`; }).join('')
+  : '<li class="empty">Leer – kein Clip hat die strenge Prüfung (Note ≥ 8) bestanden. Der nächste Lauf sucht weiter.</li>';
 $('sk').innerHTML = D.skipped.length ? D.skipped.map(s => `<li><div class="t">${esc(s.title)}</div><div class="why">${esc(s.reason)}</div></li>`).join('')
   : '<li class="empty">Nichts aussortiert.</li>';
 $('logbox').textContent = D.log.length ? D.log.join('\n') : 'Noch keine Läufe.';

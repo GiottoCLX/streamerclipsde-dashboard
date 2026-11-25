@@ -88,11 +88,13 @@ def build():
 
     queue = []
     slot = next_slot(now)
+    picks = shorts._headlines()
     for m, meta in shorts.all_metas(cfg, CHANNEL):
         if meta.get("uploaded") or meta.get("skip") or not (ROOT / meta["file"]).exists():
             continue
+        pk = picks.get(str(meta.get("source", {}).get("id", "")), {})
         queue.append({"title": meta["title"].replace(" #shorts", ""), "streamer": meta.get("streamer", ""),
-                      "slot": slot.strftime("%d.%m. %H:%M")})
+                      "slot": slot.strftime("%d.%m. %H:%M"), "note": pk.get("note"), "warum": pk.get("warum", "")})
         slot += dt.timedelta(hours=POST_EVERY_H)
     skipped = [{"title": meta["title"].replace(" #shorts", ""), "reason": meta["skip"]}
                for m, meta in shorts.all_metas(cfg, CHANNEL) if meta.get("skip") and not meta.get("uploaded")]

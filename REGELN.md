@@ -51,6 +51,23 @@ Geht etwas schief: `live.py warn` (weiter machen) oder `live.py fail` (Lauf abbr
 
 ## 3. Welche Clips genommen werden
 
+**Sehr streng prüfen. Lieber gar nichts posten als einen mittelmäßigen Short.** Nur echte Highlights: ein **lustiger** Moment (man lacht wirklich), ein **krasser** Moment (Schreck, Fail, Rage, unfassbare Situation) oder ein **cooler** Moment (Skill, epische Szene, legendäre Aussage). Kein Gelaber, keine Meinungen ohne Knall, kein „ganz nett“.
+
+**Qualitäts-Check – jeder Punkt muss mit JA beantwortet werden:**
+
+1. **Weiterschick-Test:** Würde man den Clip einem Freund schicken („guck mal 😂“)?
+2. **Ein klarer Moment:** Lässt sich in einem Satz sagen, was passiert und warum es lustig/krass/cool ist?
+3. **Sofort verständlich:** Versteht man in den ersten 3 Sekunden ohne Kontext, worum es geht?
+4. **Man sieht es:** Der Moment passiert im Bild bzw. live – nicht nur nacherzählt oder im Nebensatz erwähnt.
+5. **Pointe drin:** Die Reaktion/Auflösung ist im Clip.
+6. **Kein Leerlauf:** keine Pausen, kein Drumherum-Reden, kein Wirrwarr aus mehreren Leuten durcheinander.
+
+Danach eine **Note von 1–10** vergeben (10 = viral-verdächtig). **Nur ab Note 8 wird geschnitten und gepostet.** Note und eine Begründung in einem Satz („warum ist das cool?“) stehen im Pick (`"note"`, `"warum"`) und werden im Dashboard angezeigt. Nach dem Schneiden das Vorschaubild noch einmal mit demselben Maßstab prüfen – wirkt es geschnitten schwächer, aussortieren.
+
+Findet ein Lauf keinen Clip mit Note 8+: weiter suchen (7 Tage, mehr Clips pro Streamer). Gibt es dann immer noch keinen, **nichts vorbereiten** und das im Bericht sagen.
+
+Außerdem:
+
 - Lustig oder spannend **und ohne Vorwissen verständlich** (keine Insider, keine „Teil 2“-Clips).
 - **Der erste Satz weckt allein Neugier** – Frage, krasse Aussage, Schreckmoment. Kein Begrüßen, kein „Okay, warte“, kein Leerlauf am Anfang.
 - **Die Pointe / Auflösung muss im Clip sein.** Endet der Clip vor der Antwort oder Reaktion → nicht nehmen.
