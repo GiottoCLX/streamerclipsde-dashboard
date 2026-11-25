@@ -1,6 +1,7 @@
 # Shorts-Automatik
 
-**Dashboard:** https://giottoclx.github.io/streamerclipsde-dashboard/ (wird alle 2 Stunden automatisch aktualisiert)
+**Dashboard:** https://giottoclx.github.io/streamerclipsde-dashboard/ (Live-Status alle 30 s, Zahlen nach jedem Lauf)
+**Regeln:** [`REGELN.md`](REGELN.md) – die einzige verbindliche Anweisung für Claude. Hier ändern (auch auf GitHub), der nächste Lauf übernimmt es.
 
 Holt die meistgesehenen Twitch-Clips der Streamer aus `config.toml` und macht daraus fertige YouTube Shorts (1080x1920, mit Untertiteln, Titel und Beschreibung inkl. Credits).
 
