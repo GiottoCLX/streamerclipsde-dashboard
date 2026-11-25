@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StreamerclipsDE – Dashboard</title>
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
+  --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10);
+  --series-1: #2a78d6; --wash: rgba(42,120,214,0.10);
+  --good: #0ca30c; --good-text: #006300; --warn: #fab219; --crit: #d03b3b;
+  --accent: #9146FF;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
+    --series-1: #3987e5; --wash: rgba(57,135,229,0.12); --good-text: #0ca30c;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--ink);
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+.wrap { max-width: 1180px; margin: 0 auto; padding: 28px 20px 60px; }
+header { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-bottom: 24px; }
+header h1 { font-size: 22px; margin: 0; font-weight: 650; }
+header h1 span { display: inline-block; width: 10px; height: 10px; border-radius: 3px; background: var(--accent); margin-right: 8px; }
+.meta { color: var(--ink-2); font-size: 13px; }
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  font-size: 13px; border: 1px solid var(--border); background: var(--surface); }
+.dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+nav { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; }
+nav a { color: var(--ink-2); text-decoration: none; font-size: 13px; padding: 4px 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); }
+nav a:hover { color: var(--ink); }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; }
+.grid { display: grid; gap: 14px; }
+.kpis { grid-template-columns: 1.4fr repeat(4, 1fr); margin-bottom: 14px; }
+@media (max-width: 900px) { .kpis { grid-template-columns: 1fr 1fr; } .kpis .hero { grid-column: 1 / -1; } }
+.label { color: var(--ink-2); font-size: 13px; }
+.value { font-size: 26px; font-weight: 620; margin-top: 2px; }
+.hero .value { font-size: 52px; line-height: 1.1; }
+.sub { color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+h2 { font-size: 16px; margin: 0 0 4px; font-weight: 640; }
+section { margin-top: 26px; scroll-margin-top: 16px; }
+.two { grid-template-columns: 1fr 1fr; }
+@media (max-width: 900px) { .two { grid-template-columns: 1fr; } }
+svg text { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+.tip { position: fixed; pointer-events: none; background: var(--surface); color: var(--ink); border: 1px solid var(--border);
+  border-radius: 8px; padding: 7px 10px; font-size: 12.5px; box-shadow: 0 4px 16px rgba(0,0,0,.12); display: none; max-width: 320px; z-index: 10; }
+.tip b { font-weight: 620; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { text-align: left; color: var(--ink-2); font-weight: 560; padding: 8px 8px; border-bottom: 1px solid var(--axis); white-space: nowrap; cursor: pointer; user-select: none; }
+td { padding: 8px 8px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.scroll { overflow-x: auto; }
+a { color: var(--series-1); }
+.tag { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; font-size: 12px; }
+.tag .ic { font-weight: 700; }
+.top .ic { color: var(--good-text); } .flop .ic { color: var(--crit); } .test .ic, .mid .ic { color: var(--muted); }
+.small { color: var(--muted); font-size: 12px; }
+.strategy h1 { font-size: 18px; margin-top: 0; }
+.strategy h2 { font-size: 15.5px; margin: 22px 0 8px; padding-top: 14px; border-top: 1px solid var(--grid); }
+.strategy table th { cursor: default; }
+.strategy code { background: var(--page); padding: 1px 5px; border-radius: 5px; font-size: 12.5px; }
+.strategy li { margin: 6px 0; }
+.log { font: 12.5px/1.6 ui-monospace, Consolas, monospace; white-space: pre-wrap; color: var(--ink-2); }
+.bars { margin-top: 10px; }
+.bar-row { display: grid; grid-template-columns: minmax(0, 42%) 1fr; gap: 10px; align-items: center; padding: 5px 0; outline: none; }
+.bl { font-size: 12.5px; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: right; }
+.bt { display: flex; align-items: center; gap: 6px; border-left: 1px solid var(--axis); min-height: 18px; }
+.bar { height: 16px; max-width: calc(100% - 48px); background: var(--series-1); border-radius: 0 4px 4px 0; }
+.bv { font-size: 12px; color: var(--ink); font-variant-numeric: tabular-nums; }
+.bar-row:hover .bar, .bar-row:focus .bar { opacity: .8; }
+#t-shorts td:nth-child(2) { min-width: 230px; }
+.kpis .card:last-child .value { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+ol.queue { margin: 0; padding-left: 20px; } ol.queue li { margin: 6px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1><span></span>StreamerclipsDE · Dashboard</h1>
+    <span class="pill" id="status"></span>
+    <span class="meta" id="gen"></span>
+  </header>
+  <nav>
+    <a href="#zahlen">Zahlen</a><a href="#shorts">Alle Shorts</a><a href="#queue">Warteschlange</a>
+    <a href="#strategie">Strategie</a><a href="#log">Verlauf</a>
+  </nav>
+
+  <div class="grid kpis" id="zahlen">
+    <div class="card hero"><div class="label">Aufrufe gesamt</div><div class="value" id="k-total"></div><div class="sub" id="k-total-sub"></div></div>
+    <div class="card"><div class="label">Aufrufe letzte 24 h</div><div class="value" id="k-24h"></div></div>
+    <div class="card"><div class="label">Shorts gepostet</div><div class="value" id="k-posted"></div><div class="sub" id="k-posted-sub"></div></div>
+    <div class="card"><div class="label">Ø angesehen (statt weggewischt)</div><div class="value" id="k-watched"></div><div class="sub">Ziel ≥ 70 %</div></div>
+    <div class="card"><div class="label">Bester Short</div><div class="value" style="font-size:17px;line-height:1.3" id="k-best"></div><div class="sub" id="k-best-sub"></div></div>
+  </div>
+
+  <div class="grid two">
+    <div class="card"><h2>Aufrufe gesamt über Zeit</h2><div class="small">Summe aller Shorts zu jedem Messzeitpunkt</div><div id="c-line"></div></div>
+    <div class="card"><h2>Aufrufe pro Short</h2><div class="small">Sortiert nach Aufrufen</div><div id="c-bars"></div></div>
+  </div>
+
+  <section id="shorts" class="card">
+    <h2>Alle Shorts</h2>
+    <div class="small" style="margin-bottom:8px">Spaltenkopf anklicken zum Sortieren. „Angesehen“ = Anteil, der nicht weggewischt hat (YouTube Studio). Ø Sek. = durchschnittliche Wiedergabe pro Aufruf.</div>
+    <div class="scroll"><table id="t-shorts"></table></div>
+  </section>
+
+  <div class="grid two" style="margin-top:14px" id="queue">
+    <div class="card"><h2>Warteschlange</h2><div class="small" style="margin-bottom:8px">Wird alle 2 Stunden gepostet · nächster Post ca. <span id="next"></span></div><ol class="queue" id="q"></ol></div>
+    <div class="card"><h2>Aussortiert</h2><div class="small" style="margin-bottom:8px">Fertig geschnitten, aber nicht gepostet</div><ul id="sk" style="margin:0;padding-left:20px"></ul></div>
+  </div>
+
+  <section id="strategie" class="card strategy"><h1>Reichweiten-Strategie StreamerclipsDE</h1>
+<p>Lebendes Dokument: Wird bei jeder Analyse aktualisiert. <strong>Vor jeder Clip-Auswahl lesen und die Regeln anwenden.</strong>
+Daten: <code>shorts.py stats</code> (Aufrufe/Likes über API) + Studio-Werte pro Short (<code>perf</code>: angesehen %, weggewischt %, avd = Ø Sekunden).</p>
+<h2>Wie YouTube Shorts verteilt (Arbeitsmodell)</h2>
+<ul>
+<li>Jeder neue Short wird erst einer kleinen Testgruppe gezeigt. Entscheidend ist <strong>„Angesehen vs. weggewischt“</strong>: Wer in den ersten 1–2 Sekunden wegwischt, killt den Short.
+  Danach zählt, <strong>wie viel vom Video</strong> angesehen wird (Ø Wiedergabedauer ÷ Länge) und ob Leute es mehrfach ansehen (Loops).</li>
+<li>Richtwerte: angesehen <strong>≥ 70 %</strong> = stark, 55–70 % = okay, &lt; 50 % = schwach. Ø Wiedergabe ≥ 70 % der Länge = stark.</li>
+<li>Ein Short mit &lt; 10 Aufrufen nach 24 h ist im Test durchgefallen (YouTube zeigt ihn kaum noch).</li>
+</ul>
+<h2>Aktuelle Regeln (aus den Daten abgeleitet – mit Beleg)</h2>
+<ol>
+<li><strong>Starkes Zitat / klare Aussage gewinnt.</strong> Bestes Video: „Eure Armut kotzt mich an“ – Monte (608 Aufrufe, 60 % angesehen, 18 Likes = 3 %). Kontroverse, wörtlich zitierte Aussage im Titel + Banner.
+   → Titel und Headline möglichst als <strong>wörtliches, provokantes Zitat in „…“</strong> formulieren.</li>
+<li><strong>Die ersten 2 Sekunden müssen sitzen und zur Headline passen.</strong> Im Test zu 80–100 % weggewischt (3 Aufrufe):
+   „Monte rastet wegen Stream-Sound aus“ – beginnt mit „Ne, brauchst du nicht mehr. Mach mal morgen Termin bei Arbeitsamt…“ (ohne Kontext unverständlich, passt nicht zur Headline);
+   „Monte verprügelt Schradin“ – beginnt mit „Okay, nein. Ganz kurz.“ (Leerlauf, man muss Schradin kennen).
+   Gewinner „Eure Armut…“ beginnt mit einer klaren Frage: „Wie war Neuseeland? Ich sage euch, wie Neuseeland war.“
+   → Clip <strong>dort starten, wo der erste Satz allein Neugier weckt</strong> (Frage, krasse Aussage, Schreckmoment). Kein Begrüßen, keine Sub-Danksagungen, kein „Okay, warte“.
+   → Keine Clips, die Insider-Wissen über Nebenpersonen brauchen.</li>
+<li><strong>Kürzer ist besser (Hypothese, n klein).</strong> 60-s-Clips halten nur ~15–19 s Ø (25–33 %). Trymacs Soundsetup (60 s) wurde zu 62 % weggewischt.
+   → Ziel <strong>15–35 s</strong>. Lange Clips mit start/end auf den Kern schneiden.</li>
+<li><strong>Pointe muss drin sein</strong> (Nutzer-Feedback 25.11.: Pyramiden-Clip endete ohne Auflösung).</li>
+<li><strong>Einzeln posten, regelmäßig</strong> (seit 25.11. alle 2 h) – vorher wurden 6 auf einmal hochgeladen.</li>
+</ol>
+<h2>Offene Experimente (immer nur 1 Variable ändern, im Pick als <code>"experiment"</code> vermerken)</h2>
+<table>
+<thead>
+<tr>
+<th>Experiment</th>
+<th>Variante</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Länge</td>
+<td>≤ 30 s vs. 45–60 s</td>
+<td>läuft – ab jetzt bevorzugt kurz, Vergleich mit den 60-s-Clips</td>
+</tr>
+<tr>
+<td>Inhalt</td>
+<td>Just Chatting / Aussage vs. GTA-Gameplay</td>
+<td>läuft – GTA-Clips vom 25.11. (Krabbe, Krokodil) beobachten</td>
+</tr>
+<tr>
+<td>Headline-Stil</td>
+<td>wörtliches Zitat „…“ vs. Beschreibung („Monte trifft auf…“)</td>
+<td>läuft</td>
+</tr>
+<tr>
+<td>Design</td>
+<td>v1 (altes Layout) vs. v2 (neues Layout)</td>
+<td>Top-3 bisher alle v1 – v2-Shorts nach 24 h vergleichen</td>
+</tr>
+</tbody>
+</table>
+<h2>Log der Analysen</h2>
+<ul>
+<li><strong>25.11.2026 16:50</strong> – erste Auswertung (9 Shorts). 3 Gewinner (608/335/292 Aufrufe) alle aus dem 12-Uhr-Batch, Layout v1, Talk/Aussage-Clips. 2 Shorts im Test durchgefallen (80–100 % weggewischt) – beide mit schwachem Einstieg. Neue v2-Shorts (Pyramide, Krabbe, Krokodil, Niklas) noch zu jung für ein Urteil.</li>
+</ul></section>
+
+  <section id="log" class="card"><h2>Verlauf der Läufe</h2><div class="small" style="margin-bottom:8px">Neueste zuerst</div><div class="log" id="logbox"></div></section>
+</div>
+<div class="tip" id="tip"></div>
+<script>
+const D = {"generated": "25.11.2026 16:58", "next_post": "18:00", "last_run": "2026-11-25 16:41", "status_ok": true, "total": 964, "views_24h": 964, "posted": 9, "posted_24h": 9, "avg_watched": 52.4, "best": {"id": "2CZ6_sDMaf8", "title": "„Eure Armut kotzt mich an“ – Monte über Neuseeland 💀 | MontanaBlack", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T12:31:08", "dur": 56.1, "views": 464, "vph": 104.4, "like_rate": 4.3, "likes": 20, "angesehen": 60.3, "weggewischt": 39.7, "avd": 18.9, "design": "v1", "experiment": "", "cls": "top", "verdict": "Gewinner", "headline": "Monte über die Hater nach dem GTA-Stream aus Neuseeland", "clip_title": "wie war neuseeland"}, "rows": [{"id": "qYmCHhqI4b8", "title": "MontanaBlack wird in GTA 6 von einem Krokodil erschreckt 😱", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T16:37:42", "dur": 30.0, "views": 0, "vph": 0.0, "like_rate": 0.0, "likes": 0, "angesehen": null, "weggewischt": null, "avd": null, "design": "v2", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Krokodil erschreckt Monte zu Tode 😱", "clip_title": "Krokodil erschreckt Monte"}, {"id": "m96lt6Xqn2g", "title": "Eligella: „Ich hab fotografisches Gedächtnis“ – Pyramide vs. Fußballplatz 💀", "streamer": "Eligella", "uploaded_at": "2026-11-25T14:48:17", "dur": 40.0, "views": 3, "vph": 1.4, "like_rate": 0.0, "likes": 0, "angesehen": 100.0, "weggewischt": null, "avd": null, "design": "v2", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Wie viele Pyramiden passen auf einen Fußballplatz? 💀", "clip_title": "3vs3 Gaming-Olympiade mit dem Squad 🔥 |  !iconleague !doku !eligella !gaming !uncut !clips"}, {"id": "VMRxqYxF4G8", "title": "MontanaBlack findet eine Mutanten-Riesenkrabbe in GTA 6 🦀", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T14:48:13", "dur": 33.0, "views": 1, "vph": 0.5, "like_rate": 0.0, "likes": 0, "angesehen": 100.0, "weggewischt": null, "avd": null, "design": "v2", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Monte trifft auf eine RIESENKRABBE 🦀", "clip_title": "Krabbe greift Monte an"}, {"id": "Fbmzcv4WFgM", "title": "Eli verzweifelt am Bauprojekt 😂 | Eligella", "streamer": "Eligella", "uploaded_at": "2026-11-25T12:31:08", "dur": 60.1, "views": 275, "vph": 61.9, "like_rate": 1.1, "likes": 3, "angesehen": 58.4, "weggewischt": 41.6, "avd": 15.0, "design": "v1", "experiment": "", "cls": "top", "verdict": "Gewinner", "headline": "Eli sieht das Ergebnis vom Bauprojekt… 💀", "clip_title": "häuser"}, {"id": "2CZ6_sDMaf8", "title": "„Eure Armut kotzt mich an“ – Monte über Neuseeland 💀 | MontanaBlack", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T12:31:08", "dur": 56.1, "views": 464, "vph": 104.4, "like_rate": 4.3, "likes": 20, "angesehen": 60.3, "weggewischt": 39.7, "avd": 18.9, "design": "v1", "experiment": "", "cls": "top", "verdict": "Gewinner", "headline": "Monte über die Hater nach dem GTA-Stream aus Neuseeland", "clip_title": "wie war neuseeland"}, {"id": "5MIIxI_Ox7s", "title": "Monte rastet wegen dem Stream-Sound aus 😂 | MontanaBlack", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T12:31:08", "dur": 43.6, "views": 3, "vph": 0.7, "like_rate": 33.3, "likes": 1, "angesehen": 0.0, "weggewischt": 100.0, "avd": null, "design": "v1", "experiment": "", "cls": "flop", "verdict": "Flop", "headline": "„Wenn der Chat sagt, der Sound ist scheiße…“ 💀", "clip_title": "Sound ist schlecht"}, {"id": "g1hxmDj_Ubo", "title": "Monte verprügelt Schradin im Game 😂 | MontanaBlack", "streamer": "MontanaBlack", "uploaded_at": "2026-11-25T12:31:08", "dur": 41.1, "views": 3, "vph": 0.7, "like_rate": 33.3, "likes": 1, "angesehen": 20.0, "weggewischt": 80.0, "avd": null, "design": "v1", "experiment": "", "cls": "flop", "verdict": "Flop", "headline": "Monte trifft Schradin im Game 💀", "clip_title": "Monte verprügelt schradin"}, {"id": "EJYpH6FotiI", "title": "Niklas Wilson will auf keinen Fall abreißen 😂", "streamer": "Niklas Wilson", "uploaded_at": "2026-11-25T12:31:08", "dur": 33.5, "views": 1, "vph": 0.2, "like_rate": 100.0, "likes": 1, "angesehen": 100.0, "weggewischt": null, "avd": null, "design": "v1", "experiment": "", "cls": "test", "verdict": "Test läuft", "headline": "Zu viele Häuser – wer muss abreißen? 😂", "clip_title": "zu viel"}, {"id": "jvcmF0haDzQ", "title": "Trymacs: „Das schlechteste Soundsetup von ganz Twitch-Deutschland“ 😂", "streamer": "Trymacs", "uploaded_at": "2026-11-25T11:52:14", "dur": 60.1, "views": 214, "vph": 42.0, "like_rate": 1.4, "likes": 3, "angesehen": 38.4, "weggewischt": 61.6, "avd": 13.6, "design": "v1", "experiment": "", "cls": "flop", "verdict": "Flop", "headline": "Trymacs rastet wegen Willis Sound-Setup aus 😂", "clip_title": "trymacs platzt"}], "series": [{"t": "2026-11-25T16:46", "views": 916}, {"t": "2026-11-25T16:57", "views": 964}], "queue": [{"title": "Eligella schätzt die Pyramide auf 25 Meter 💀 (Teil 2)", "streamer": "Eligella", "slot": "25.11. 18:00"}, {"title": "Trymacs dachte, er hat eine Stinger – es war eine Angel 💀", "streamer": "Trymacs", "slot": "25.11. 20:00"}, {"title": "Trymacs' Lieblingsinteraktion in GTA 6: Leute mit Tierleichen abwerfen 😂", "streamer": "Trymacs", "slot": "25.11. 22:00"}], "skipped": [{"title": "Leute fallen auf Wutköder Video rein 😂 | MontanaBlack", "reason": true}, {"title": "digger was 😂 | Trymacs", "reason": true}, {"title": "Eligella hat jetzt einen Übersetzer für englische Fans 😂", "reason": true}, {"title": "Niklas Wilson: „Er ist overrated“ – dann trifft er 💀", "reason": "vom Nutzer abgelehnt (schlecht)"}], "log": ["2026-11-25 16:41 | gepostet: Krokodil erschreckt Monte qYmCHhqI4b8 | bereit: 4 | Pyramide Teil 2 (mit Auflösung) als nächstes"]};
+const $ = id => document.getElementById(id);
+const fmt = n => n == null ? '–' : n.toLocaleString('de-DE');
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const tip = $('tip');
+function showTip(ev, h) { tip.innerHTML = h; tip.style.display = 'block'; moveTip(ev); }
+function moveTip(ev) { const x = Math.min(ev.clientX + 14, innerWidth - tip.offsetWidth - 8); tip.style.left = x + 'px'; tip.style.top = (ev.clientY + 14) + 'px'; }
+function hideTip() { tip.style.display = 'none'; }
+
+const lr = D.last_run ? D.last_run.match(/\d{4}-(\d\d)-(\d\d) (\d\d:\d\d)/) : null;
+$('gen').textContent = 'Stand ' + D.generated + (lr ? ` · letzter Lauf ${lr[2]}.${lr[1]}. ${lr[3]}` : '');
+$('status').innerHTML = D.status_ok
+  ? '<span class="dot" style="background:var(--good)"></span><b>✓</b> Läuft – postet alle 2 h'
+  : '<span class="dot" style="background:var(--crit)"></span><b>!</b> Letzter Lauf ist länger her – PC/App/Chrome prüfen';
+$('k-total').textContent = fmt(D.total);
+$('k-total-sub').textContent = D.posted ? 'Ø ' + fmt(Math.round(D.total / D.posted)) + ' pro Short' : '';
+$('k-24h').textContent = fmt(D.views_24h);
+$('k-posted').textContent = fmt(D.posted);
+$('k-posted-sub').textContent = D.posted_24h + ' in den letzten 24 h';
+$('k-watched').textContent = D.avg_watched == null ? '–' : D.avg_watched.toLocaleString('de-DE') + ' %';
+if (D.best) { $('k-best').textContent = D.best.title; $('k-best-sub').textContent = fmt(D.best.views) + ' Aufrufe · ' + D.best.streamer; }
+$('next').textContent = D.next_post + ' Uhr';
+
+// ---- line chart: total views over time
+(function () {
+  const el = $('c-line'), s = D.series;
+  if (s.length < 2) { el.innerHTML = '<p class="small">Noch zu wenige Messpunkte – füllt sich mit jedem Lauf.</p>'; return; }
+  const W = 540, H = 230, L = 46, R = 14, T = 14, B = 26;
+  const ts = s.map(p => new Date(p.t).getTime()), t0 = Math.min(...ts), t1 = Math.max(...ts);
+  const vmax = Math.max(...s.map(p => p.views)) || 1;
+  const step = Math.pow(10, Math.floor(Math.log10(vmax))) * (vmax / Math.pow(10, Math.floor(Math.log10(vmax))) > 5 ? 2 : 1);
+  const ymax = Math.ceil(vmax / step) * step;
+  const x = t => L + (t - t0) / ((t1 - t0) || 1) * (W - L - R), y = v => T + (1 - v / ymax) * (H - T - B);
+  let g = '';
+  for (let v = 0; v <= ymax; v += step) g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--grid)"/><text x="${L - 6}" y="${y(v) + 4}" text-anchor="end">${fmt(v)}</text>`;
+  const fmtT = t => { const d = new Date(t); return d.toLocaleDateString('de-DE', {day:'2-digit', month:'2-digit'}) + ' ' + d.toLocaleTimeString('de-DE', {hour:'2-digit', minute:'2-digit'}); };
+  g += `<text x="${L}" y="${H - 6}">${fmtT(t0)}</text><text x="${W - R}" y="${H - 6}" text-anchor="end">${fmtT(t1)}</text>`;
+  const pts = s.map((p, i) => `${x(ts[i])},${y(p.views)}`).join(' ');
+  const area = `${x(ts[0])},${y(0)} ${pts} ${x(ts[ts.length - 1])},${y(0)}`;
+  const last = s[s.length - 1];
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Gesamtaufrufe über Zeit, aktuell ${fmt(last.views)}">
+    ${g}<line x1="${L}" x2="${W - R}" y1="${y(0)}" y2="${y(0)}" stroke="var(--axis)"/>
+    <polygon points="${area}" fill="var(--wash)"/>
+    <polyline points="${pts}" fill="none" stroke="var(--series-1)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    <line id="xh" y1="${T}" y2="${H - B}" stroke="var(--axis)" visibility="hidden"/>
+    <circle id="xd" r="4.5" fill="var(--series-1)" stroke="var(--surface)" stroke-width="2" visibility="hidden"/>
+    <circle cx="${x(ts[ts.length - 1])}" cy="${y(last.views)}" r="4.5" fill="var(--series-1)" stroke="var(--surface)" stroke-width="2"/>
+    <rect id="hit" x="${L}" y="${T}" width="${W - L - R}" height="${H - T - B}" fill="transparent"/></svg>`;
+  const svg = el.querySelector('svg'), hit = svg.querySelector('#hit'), xh = svg.querySelector('#xh'), xd = svg.querySelector('#xd');
+  hit.addEventListener('mousemove', ev => {
+    const r = svg.getBoundingClientRect(), px = (ev.clientX - r.left) / r.width * W;
+    let i = 0, best = Infinity; ts.forEach((t, k) => { const d = Math.abs(x(t) - px); if (d < best) { best = d; i = k; } });
+    xh.setAttribute('x1', x(ts[i])); xh.setAttribute('x2', x(ts[i])); xh.setAttribute('visibility', 'visible');
+    xd.setAttribute('cx', x(ts[i])); xd.setAttribute('cy', y(s[i].views)); xd.setAttribute('visibility', 'visible');
+    showTip(ev, `<b>${fmt(s[i].views)}</b> Aufrufe<br><span class="small">${fmtT(ts[i])}</span>`);
+  });
+  hit.addEventListener('mouseleave', () => { xh.setAttribute('visibility', 'hidden'); xd.setAttribute('visibility', 'hidden'); hideTip(); });
+})();
+
+// ---- horizontal bars: views per short (HTML, damit Beschriftung auf dem Handy lesbar bleibt)
+(function () {
+  const el = $('c-bars'), rows = [...D.rows].sort((a, b) => b.views - a.views);
+  if (!rows.length) { el.innerHTML = '<p class="small">Noch keine Daten.</p>'; return; }
+  const vmax = Math.max(...rows.map(r => r.views)) || 1;
+  el.innerHTML = '<div class="bars" role="list" aria-label="Aufrufe pro Short">' + rows.map((r, i) =>
+    `<div class="bar-row" role="listitem" tabindex="0" data-i="${i}">
+       <div class="bl">${esc(r.title)}</div>
+       <div class="bt"><div class="bar" style="width:${r.views ? Math.max(r.views / vmax * 100, 1) : 0}%"></div><span class="bv">${fmt(r.views)}</span></div>
+     </div>`).join('') + '</div>';
+  el.querySelectorAll('.bar-row').forEach(n => {
+    const r = rows[+n.dataset.i];
+    const h = `<b>${esc(r.title)}</b><br>${fmt(r.views)} Aufrufe · ${r.angesehen == null ? '–' : r.angesehen + ' %'} angesehen<br><span class="small">${esc(r.streamer)} · ${r.verdict}</span>`;
+    n.addEventListener('mousemove', ev => showTip(ev, h)); n.addEventListener('mouseleave', hideTip);
+  });
+})();
+
+// ---- table
+const cols = [
+  ['uploaded_at', 'Gepostet', r => r.uploaded_at ? new Date(r.uploaded_at).toLocaleString('de-DE', {day:'2-digit', month:'2-digit', hour:'2-digit', minute:'2-digit'}) : '–'],
+  ['title', 'Short', r => `<a href="https://youtube.com/shorts/${r.id}" target="_blank" rel="noopener">${esc(r.title)}</a>${r.experiment ? `<div class="small">Experiment: ${esc(r.experiment)}</div>` : ''}`],
+  ['streamer', 'Streamer', r => esc(r.streamer)],
+  ['verdict', 'Bewertung', r => `<span class="tag ${r.cls}"><span class="ic">${{top:'▲', flop:'▼', test:'…', mid:'–'}[r.cls]}</span>${r.verdict}</span>`],
+  ['views', 'Aufrufe', r => fmt(r.views), 1], ['vph', 'pro Std', r => fmt(r.vph), 1],
+  ['angesehen', 'Angesehen', r => r.angesehen == null ? '–' : r.angesehen.toLocaleString('de-DE') + ' %', 1],
+  ['avd', 'Ø Sek.', r => r.avd == null ? '–' : r.avd.toLocaleString('de-DE'), 1],
+  ['dur', 'Länge', r => r.dur == null ? '–' : Math.round(r.dur) + ' s', 1],
+  ['like_rate', 'Likes', r => `${fmt(r.likes)} <span class="small">(${r.like_rate.toLocaleString('de-DE')} %)</span>`, 1],
+  ['design', 'Design', r => esc(r.design)],
+];
+let sortKey = 'uploaded_at', sortDir = -1;
+function renderTable() {
+  const rows = [...D.rows].sort((a, b) => { const x = a[sortKey] ?? -1, y = b[sortKey] ?? -1; return (x > y ? 1 : x < y ? -1 : 0) * sortDir; });
+  $('t-shorts').innerHTML = '<thead><tr>' + cols.map(c => `<th class="${c[3] ? 'n' : ''}" data-k="${c[0]}">${c[1]}${sortKey === c[0] ? (sortDir > 0 ? ' ↑' : ' ↓') : ''}</th>`).join('') + '</tr></thead><tbody>' +
+    rows.map(r => '<tr>' + cols.map(c => `<td class="${c[3] ? 'n' : ''}">${c[2](r)}</td>`).join('') + '</tr>').join('') + '</tbody>';
+  $('t-shorts').querySelectorAll('th').forEach(th => th.onclick = () => { const k = th.dataset.k; sortDir = sortKey === k ? -sortDir : -1; sortKey = k; renderTable(); });
+}
+renderTable();
+
+$('q').innerHTML = D.queue.length ? D.queue.map(q => `<li><b>${esc(q.slot)}</b> – ${esc(q.title)}</li>`).join('') : '<li class="small">Leer – der nächste Lauf sucht neue Clips.</li>';
+$('sk').innerHTML = D.skipped.length ? D.skipped.map(s => `<li>${esc(s.title)} <span class="small">– ${esc(s.reason)}</span></li>`).join('') : '<li class="small">Nichts aussortiert.</li>';
+$('logbox').textContent = D.log.length ? D.log.join('\n') : 'Noch keine Läufe.';
+</script>
+</body>
+</html>

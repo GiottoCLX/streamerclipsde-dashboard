@@ -1,0 +1,23 @@
+# Öffentliches Repo: alles ignorieren und nur ausdrücklich Erlaubtes hochladen.
+# NIE hochladen: client_secret.json, tokens/, state.json, output/, work/, scout/, queue/, .venv/
+*
+!.gitignore
+!README.md
+!STRATEGIE.md
+!POSTING_ROUTINE.md
+!DAILY_ROUTINE.md
+!YOUTUBE_SETUP.md
+!requirements.txt
+!shorts.py
+!dashboard.py
+!studio_upload.js
+!config.toml
+!docs/
+!docs/index.html
+!docs/.nojekyll
+!stats/
+!stats/*.json
+!picks/
+!picks/*.json
+!logs/
+!logs/posting.log

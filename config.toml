@@ -1,0 +1,154 @@
+# Einstellungen für die Shorts-Automatik
+# Änderungen hier wirken beim nächsten Start von shorts.py
+
+[general]
+output_dir = "output"        # hier landen die fertigen Shorts (output/<kanal>/<datum>/)
+clip_range = "7d"            # Zeitraum der Twitch-Clips: 24hr, 7d, 30d, all
+clips_per_streamer = 3       # wie viele neue Shorts pro Streamer und Durchlauf (nur "run")
+scan_limit = 30              # wie viele Top-Clips pro Streamer angeschaut werden
+min_duration = 8             # Sekunden, kürzere Clips werden übersprungen
+max_duration = 60            # Sekunden, längere Clips werden übersprungen
+whisper_model = "medium"     # Untertitel-Modell: medium (genau, GPU) oder small (schneller)
+language = "de"
+hashtags = ["#shorts", "#twitch", "#deutsch", "#streamer"]
+
+[youtube]
+channel = "kanal1"           # Standard-Kanal für API-Uploads (Login in tokens/kanal1.json)
+privacy = "public"           # private, unlisted oder public (ohne Zeitplan)
+uploads_per_run = 6          # max. Uploads pro Kanal und Durchlauf (API-Limit: 6 pro Tag pro Google-Projekt)
+publish_times = ["11:00", "13:00", "15:00", "17:00", "19:00", "21:00"]   # Veröffentlichungszeiten bei --schedule
+category_id = 20             # 20 = Gaming, 24 = Unterhaltung
+
+# ---------------------------------------------------------------- Kanäle
+# upload = "api"     -> shorts.py upload --channel <key> --schedule
+# upload = "browser" -> shorts.py browser-queue --channel <key>, dann Upload über YouTube Studio in Chrome
+
+[channels.kanal1]
+name = "StreamerclipsDE"     # Eligella-Bubble
+language = "de"
+accent = "#9146FF"           # Kanalfarbe (Banner, Trennbalken, Fortschrittsbalken)
+upload = "browser"          # Nutzerwunsch: immer über YouTube Studio im Browser posten
+hashtags = ["#shorts", "#twitch", "#deutsch", "#streamer"]
+
+[channels.kanal2]
+name = "Tellerrand Clips"    # Papaplatte-Bubble
+language = "de"
+accent = "#FF5A1F"
+upload = "browser"
+hashtags = ["#shorts", "#twitch", "#deutsch", "#papaplatte"]
+
+[channels.kanal3]
+name = "SMP Momente"         # Hugo-Bubble
+language = "de"
+accent = "#16C060"
+upload = "browser"
+hashtags = ["#shorts", "#twitch", "#deutsch", "#minecraft"]
+
+[channels.kanal4]
+name = "Stream Clips Daily"  # englische Streamer
+language = "en"
+accent = "#E8132B"
+upload = "browser"
+hashtags = ["#shorts", "#twitch", "#streamer", "#clips"]
+
+# ---------------------------------------------------------------- Streamer
+# Layout wird automatisch erkannt:
+#   Gameplay mit Facecam -> Facecam oben, Gameplay unten
+#   Streamer füllt das Bild (Just Chatting) -> Zuschnitt auf den Streamer
+#   kein Gesicht erkannt -> ganzes Bild mit unscharfem Hintergrund (zoom = Vergrößerung)
+# Manuelle Facecam (überschreibt Erkennung): facecam = [x, y, breite, höhe] in Anteilen 0-1
+# channel = zu welchem Kanal die Clips gehören
+
+# --- kanal1: Eligella-Bubble
+[[streamer]]
+name = "Eligella"
+twitch = "eliasn97"
+channel = "kanal1"
+zoom = 1.3
+
+[[streamer]]
+name = "Sidney"
+twitch = "sidneyeweka"
+channel = "kanal1"
+zoom = 1.3
+
+[[streamer]]
+name = "Niklas Wilson"
+twitch = "niklaswilson"
+channel = "kanal1"
+zoom = 1.3
+
+[[streamer]]
+name = "Trymacs"
+twitch = "trymacs"
+channel = "kanal1"
+zoom = 1.3
+
+[[streamer]]
+name = "MontanaBlack"
+twitch = "montanablack88"
+channel = "kanal1"
+zoom = 1.3
+
+# --- kanal2: Papaplatte-Bubble
+[[streamer]]
+name = "Papaplatte"
+twitch = "papaplatte"
+channel = "kanal2"
+zoom = 1.3
+
+[[streamer]]
+name = "Reeze"
+twitch = "reeze"
+channel = "kanal2"
+zoom = 1.3
+
+[[streamer]]
+name = "Rumathra"
+twitch = "rumathra"
+channel = "kanal2"
+zoom = 1.3
+
+[[streamer]]
+name = "BastiGHG"
+twitch = "bastighg"
+channel = "kanal2"
+zoom = 1.3
+
+# --- kanal3: Hugo-Bubble
+[[streamer]]
+name = "LetsHugo"
+twitch = "letshugotv"
+channel = "kanal3"
+zoom = 1.3
+
+# --- kanal4: englische Streamer
+[[streamer]]
+name = "Kai Cenat"
+twitch = "kaicenat"
+channel = "kanal4"
+zoom = 1.3
+
+[[streamer]]
+name = "Jynxzi"
+twitch = "jynxzi"
+channel = "kanal4"
+zoom = 1.3
+
+[[streamer]]
+name = "Marlon"
+twitch = "marlon"
+channel = "kanal4"
+zoom = 1.3
+
+[[streamer]]
+name = "Lacy"
+twitch = "lacy"
+channel = "kanal4"
+zoom = 1.3
+
+[[streamer]]
+name = "StableRonaldo"
+twitch = "stableronaldo"
+channel = "kanal4"
+zoom = 1.3

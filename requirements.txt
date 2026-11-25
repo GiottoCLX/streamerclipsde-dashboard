@@ -1,0 +1,9 @@
+yt-dlp
+faster-whisper
+opencv-python-headless
+nvidia-cublas-cu12
+nvidia-cudnn-cu12==9.*
+google-api-python-client
+google-auth-oauthlib
+pillow
+markdown
