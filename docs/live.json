@@ -1,6 +1,16 @@
 {
- "state": "idle",
- "current": null,
+ "state": "running",
+ "current": {
+  "title": "Test der Live-Anzeige",
+  "started": "2026-11-25T21:20:48",
+  "steps": [
+   {
+    "t": "2026-11-25T21:20:48",
+    "text": "Lauf gestartet, neueste Regeln geladen",
+    "kind": "step"
+   }
+  ]
+ },
  "runs": [
   {
    "title": "Manuell im Chat: Live-Monitoring + Regeln einrichten",
@@ -27,7 +37,11 @@
    "summary": "Live-Monitoring und Regeldatei eingerichtet"
   }
  ],
- "rules": null,
- "updated": "2026-11-25T21:19:18",
+ "rules": {
+  "commit": "a2cfbc9",
+  "date": "2026-11-25 21:19",
+  "web": false
+ },
+ "updated": "2026-11-25T21:20:48",
  "last_summary": "Live-Monitoring und Regeldatei eingerichtet"
 }
