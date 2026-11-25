@@ -1,5 +1,7 @@
 # Shorts-Automatik
 
+**Dashboard:** https://giottoclx.github.io/streamerclipsde-dashboard/ (wird alle 2 Stunden automatisch aktualisiert)
+
 Holt die meistgesehenen Twitch-Clips der Streamer aus `config.toml` und macht daraus fertige YouTube Shorts (1080x1920, mit Untertiteln, Titel und Beschreibung inkl. Credits).
 
 ## Benutzen
