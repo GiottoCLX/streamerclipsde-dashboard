@@ -23,6 +23,11 @@
     "t": "2026-11-26T00:10:34",
     "text": "Hole Studio-Werte für junge Shorts (GTA6-Real-Life, Tierleiche)",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T00:11:35",
+    "text": "Studio-Analytics zeigt 'Ein Fehler ist aufgetreten' (wie 22:10, vermutlich anderer Kanal aktiv) – keine Studio-Werte",
+    "kind": "warn"
    }
   ]
  },
@@ -150,7 +155,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T00:10:34",
+ "updated": "2026-11-26T00:11:35",
  "last_summary": "Kein Post (Mindestabstand), Vorrat 1 (Trymacs Festival-Story, Note 8), kein neuer 8er-Clip gefunden; Studio zeigt 'Hoppla' für StreamerclipsDE",
  "channel": "kanal1",
  "check": {
