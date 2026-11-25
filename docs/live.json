@@ -1,22 +1,31 @@
 {
- "state": "running",
- "current": {
-  "title": "Test der Live-Anzeige",
-  "started": "2026-11-25T21:20:48",
-  "steps": [
-   {
-    "t": "2026-11-25T21:20:48",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-25T21:20:51",
-    "text": "Prüfe, ob diese Meldung im Dashboard ankommt",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Test der Live-Anzeige",
+   "started": "2026-11-25T21:20:48",
+   "steps": [
+    {
+     "t": "2026-11-25T21:20:48",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-25T21:20:51",
+     "text": "Prüfe, ob diese Meldung im Dashboard ankommt",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-25T21:22:21",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-25T21:22:21",
+   "state": "ok",
+   "summary": "Test erfolgreich – Live-Anzeige funktioniert"
+  },
   {
    "title": "Manuell im Chat: Live-Monitoring + Regeln einrichten",
    "started": "2026-11-25T21:19:17",
@@ -47,6 +56,6 @@
   "date": "2026-11-25 21:19",
   "web": false
  },
- "updated": "2026-11-25T21:20:51",
- "last_summary": "Live-Monitoring und Regeldatei eingerichtet"
+ "updated": "2026-11-25T21:22:21",
+ "last_summary": "Test erfolgreich – Live-Anzeige funktioniert"
 }
