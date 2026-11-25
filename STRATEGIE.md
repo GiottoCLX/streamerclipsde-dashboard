@@ -29,7 +29,9 @@ Daten: `shorts.py stats` (Aufrufe/Likes über API) + Studio-Werte pro Short (`pe
 | Länge | ≤ 30 s vs. 45–60 s | läuft – ab jetzt bevorzugt kurz, Vergleich mit den 60-s-Clips |
 | Inhalt | Just Chatting / Aussage vs. GTA-Gameplay | läuft – GTA-Clips vom 25.11. (Krabbe, Krokodil) beobachten |
 | Headline-Stil | wörtliches Zitat „…“ vs. Beschreibung („Monte trifft auf…“) | läuft |
-| Design | v1 (altes Layout) vs. v2 (neues Layout) | Top-3 bisher alle v1 – v2-Shorts nach 24 h vergleichen |
+| Design | v1 (altes Layout) vs. v2 (neues Layout) | **Warnsignal 18:10:** alle 4 v2-Shorts bekommen kaum Impressionen (Niklas 2 Aufrufe nach 5,7 h – im selben Batch wie die 3 v1-Gewinner; Pyramide 3, Krabbe 1 nach 3,4 h; Krokodil 0 nach 1,6 h). Nicht weggewischt, sondern gar nicht ausgespielt. Design ist im Code an den Pfad gekoppelt (`design` aus `kanal` im Dateinamen) → nicht per Pick testbar, Nutzer informieren. Urteil nach 24 h. |
+| Teil-2-Clips | Fortsetzung eines geflopten Clips | nicht mehr machen – „Teil 2“ braucht Vorwissen (Regel 2), Pyramide Teil 2 am 25.11. 18:10 auf skip |
 
 ## Log der Analysen
 - **25.11.2026 16:50** – erste Auswertung (9 Shorts). 3 Gewinner (608/335/292 Aufrufe) alle aus dem 12-Uhr-Batch, Layout v1, Talk/Aussage-Clips. 2 Shorts im Test durchgefallen (80–100 % weggewischt) – beide mit schwachem Einstieg. Neue v2-Shorts (Pyramide, Krabbe, Krokodil, Niklas) noch zu jung für ein Urteil.
+- **25.11.2026 18:10** – (keine Studio-Abfrage fällig, letzte 16:50). API: Gewinner wachsen weiter (Armut 612 / 108 pro Std, Bauprojekt 365, Soundsetup 214). Alle v2-Shorts 0–3 Aufrufe → werden kaum getestet (siehe Experiment Design). Gepostet: Trymacs Stinger/Angel (20,8 s, Einstieg „Oh mein Gott, nein!“) als Test „kurz + starker Einstieg“. Pyramide Teil 2 und Trymacs Tierleichen (Einstieg „Ich geh ja gleich mal rüber…“) wegen Regel 2 aussortiert.

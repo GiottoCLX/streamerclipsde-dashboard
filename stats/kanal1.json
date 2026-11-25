@@ -29,13 +29,20 @@
     "views": 275,
     "likes": 3,
     "comments": 0
+   },
+   {
+    "t": "2026-11-25T18:11",
+    "age_h": 5.7,
+    "views": 365,
+    "likes": 4,
+    "comments": 0
    }
   ],
-  "views": 275,
-  "likes": 3,
+  "views": 365,
+  "likes": 4,
   "comments": 0,
-  "age_h": 4.4,
-  "views_per_h": 61.9,
+  "age_h": 5.7,
+  "views_per_h": 64.3,
   "like_rate": 1.1,
   "experiment": null,
   "clip_title": "häuser",
@@ -71,14 +78,21 @@
     "views": 464,
     "likes": 20,
     "comments": 2
+   },
+   {
+    "t": "2026-11-25T18:11",
+    "age_h": 5.7,
+    "views": 612,
+    "likes": 29,
+    "comments": 2
    }
   ],
-  "views": 464,
-  "likes": 20,
+  "views": 612,
+  "likes": 29,
   "comments": 2,
-  "age_h": 4.4,
-  "views_per_h": 104.4,
-  "like_rate": 4.3,
+  "age_h": 5.7,
+  "views_per_h": 107.8,
+  "like_rate": 4.7,
   "experiment": null,
   "clip_title": "wie war neuseeland",
   "design": "v1"
@@ -111,13 +125,20 @@
     "views": 3,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-25T18:11",
+    "age_h": 5.7,
+    "views": 3,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 3,
   "likes": 1,
   "comments": 0,
-  "age_h": 4.4,
-  "views_per_h": 0.7,
+  "age_h": 5.7,
+  "views_per_h": 0.5,
   "like_rate": 33.3,
   "experiment": null,
   "clip_title": "Sound ist schlecht",
@@ -151,13 +172,20 @@
     "views": 3,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-25T18:11",
+    "age_h": 5.7,
+    "views": 3,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 3,
   "likes": 1,
   "comments": 0,
-  "age_h": 4.4,
-  "views_per_h": 0.7,
+  "age_h": 5.7,
+  "views_per_h": 0.5,
   "like_rate": 33.3,
   "experiment": null,
   "clip_title": "Monte verprügelt schradin",
@@ -190,14 +218,21 @@
     "views": 1,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-25T18:11",
+    "age_h": 5.7,
+    "views": 2,
+    "likes": 1,
+    "comments": 0
    }
   ],
-  "views": 1,
+  "views": 2,
   "likes": 1,
   "comments": 0,
-  "age_h": 4.4,
-  "views_per_h": 0.2,
-  "like_rate": 100.0,
+  "age_h": 5.7,
+  "views_per_h": 0.4,
+  "like_rate": 50.0,
   "experiment": null,
   "clip_title": "zu viel",
   "design": "v1"
@@ -232,13 +267,20 @@
     "views": 214,
     "likes": 3,
     "comments": 0
+   },
+   {
+    "t": "2026-11-25T18:11",
+    "age_h": 6.3,
+    "views": 214,
+    "likes": 3,
+    "comments": 0
    }
   ],
   "views": 214,
   "likes": 3,
   "comments": 0,
-  "age_h": 5.1,
-  "views_per_h": 42.0,
+  "age_h": 6.3,
+  "views_per_h": 33.8,
   "like_rate": 1.4,
   "experiment": null,
   "clip_title": "trymacs platzt",
@@ -271,13 +313,20 @@
     "views": 3,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-25T18:11",
+    "age_h": 3.4,
+    "views": 3,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 3,
   "likes": 0,
   "comments": 0,
-  "age_h": 2.2,
-  "views_per_h": 1.4,
+  "age_h": 3.4,
+  "views_per_h": 0.9,
   "like_rate": 0.0,
   "experiment": null,
   "clip_title": "3vs3 Gaming-Olympiade mit dem Squad 🔥 |  !iconleague !doku !eligella !gaming !uncut !clips",
@@ -310,13 +359,20 @@
     "views": 1,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-25T18:11",
+    "age_h": 3.4,
+    "views": 1,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 1,
   "likes": 0,
   "comments": 0,
-  "age_h": 2.2,
-  "views_per_h": 0.5,
+  "age_h": 3.4,
+  "views_per_h": 0.3,
   "like_rate": 0.0,
   "experiment": null,
   "clip_title": "Krabbe greift Monte an",
@@ -345,16 +401,51 @@
     "views": 0,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-25T18:11",
+    "age_h": 1.6,
+    "views": 0,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 0,
   "likes": 0,
   "comments": 0,
-  "age_h": 0.3,
+  "age_h": 1.6,
   "views_per_h": 0.0,
   "like_rate": 0.0,
   "experiment": null,
   "clip_title": "Krokodil erschreckt Monte",
   "design": "v2"
+ },
+ "Np_c7kTAmuU": {
+  "dur": 20.8,
+  "title": "Trymacs dachte, er hat eine Stinger – es war eine Angel 💀 #shorts",
+  "streamer": "Trymacs",
+  "headline": "Trymacs hält eine Angel für einen Raketenwerfer 💀",
+  "experiment": null,
+  "clip_title": "max verwechselt",
+  "design": "v2",
+  "layout": "split",
+  "uploaded_at": "2026-11-25T18:11:36",
+  "upload_hour": 18,
+  "perf": {},
+  "snapshots": [
+   {
+    "t": "2026-11-25T18:11",
+    "age_h": 0.1,
+    "views": 0,
+    "likes": 0,
+    "comments": 0
+   }
+  ],
+  "views": 0,
+  "likes": 0,
+  "comments": 0,
+  "age_h": 0.1,
+  "views_per_h": 0.0,
+  "like_rate": 0.0
  }
 }
