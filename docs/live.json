@@ -1,6 +1,16 @@
 {
- "state": "idle",
- "current": null,
+ "state": "running",
+ "current": {
+  "title": "Lauf 22:10",
+  "started": "2026-11-25T22:10:03",
+  "steps": [
+   {
+    "t": "2026-11-25T22:10:03",
+    "text": "Lauf gestartet, neueste Regeln geladen",
+    "kind": "step"
+   }
+  ]
+ },
  "runs": [
   {
    "title": "Test der Live-Anzeige",
@@ -52,10 +62,11 @@
   }
  ],
  "rules": {
-  "commit": "a2cfbc9",
-  "date": "2026-11-25 21:19",
+  "commit": "f2dbbed",
+  "date": "2026-11-25 21:58",
   "web": false
  },
- "updated": "2026-11-25T21:22:21",
- "last_summary": "Test erfolgreich – Live-Anzeige funktioniert"
+ "updated": "2026-11-25T22:10:03",
+ "last_summary": "Test erfolgreich – Live-Anzeige funktioniert",
+ "channel": "kanal1"
 }
