@@ -138,6 +138,22 @@ def push():
     git("commit", "-m", f"Dashboard-Update {stamp}\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>")
     r = git("push", "-q", check=False)
     print("gepusht" if r.returncode == 0 else f"Push fehlgeschlagen: {r.stderr.strip()[:300]}")
+    ensure_pages()
+
+
+REPO = "GiottoCLX/streamerclipsde-dashboard"
+
+
+def ensure_pages():
+    """Schaltet GitHub Pages (main /docs) ein, falls noch nicht aktiv."""
+    gh = lambda *a, **kw: subprocess.run(["gh", "api", *a], capture_output=True, text=True, encoding="utf-8", **kw)
+    if gh(f"repos/{REPO}/pages").returncode == 0:
+        print(f"Dashboard: https://{REPO.split('/')[0].lower()}.github.io/{REPO.split('/')[1]}/")
+        return
+    r = gh("-X", "POST", f"repos/{REPO}/pages", "--input", "-",
+           input=json.dumps({"build_type": "legacy", "source": {"branch": "main", "path": "/docs"}}))
+    print("GitHub Pages eingeschaltet." if r.returncode == 0
+          else f"GitHub Pages konnte (noch) nicht eingeschaltet werden: {(r.stderr or r.stdout).strip()[:200]}")
 
 
 TEMPLATE = r"""<!doctype html>

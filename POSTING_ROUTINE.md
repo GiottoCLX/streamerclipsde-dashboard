@@ -61,3 +61,5 @@ Ziel: Es sollen immer **2 fertige, ungepostete** Shorts bereitliegen. Fertige Sh
 - Kein API-Upload (`shorts.py upload`), nur Browser.
 - Chrome nicht verbunden → nicht posten, aber Teil B trotzdem machen; im Bericht melden.
 - Am Ende eine Zeile an `logs\posting.log` anhängen: `<Zeit> | gepostet: <Titel> <ID oder -> | bereit: <Anzahl> | Notiz`.
+- **Ganz zum Schluss das Dashboard aktualisieren:** `.\.venv\Scripts\python.exe dashboard.py --push` (baut `docs\index.html` und pusht zu GitHub → https://giottoclx.github.io/streamerclipsde-dashboard/). Schlägt der Push fehl, im Bericht vermerken – nichts anderes deswegen ändern.
+- Das Repo ist **öffentlich**: Niemals `.gitignore` ändern oder Dateien wie `client_secret.json`, `tokens\`, `state.json`, `output\` mit `git add -f` hinzufügen.
