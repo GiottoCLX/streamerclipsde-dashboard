@@ -38,6 +38,11 @@
     "t": "2026-11-26T00:12:30",
     "text": "Suche neue Twitch-Clips (letzte 24 h)",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T00:14:15",
+    "text": "Keine 8+ in 24 h – suche in den letzten 7 Tagen",
+    "kind": "step"
    }
   ]
  },
@@ -165,7 +170,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T00:12:30",
+ "updated": "2026-11-26T00:14:15",
  "last_summary": "Kein Post (Mindestabstand), Vorrat 1 (Trymacs Festival-Story, Note 8), kein neuer 8er-Clip gefunden; Studio zeigt 'Hoppla' für StreamerclipsDE",
  "channel": "kanal1",
  "check": {
