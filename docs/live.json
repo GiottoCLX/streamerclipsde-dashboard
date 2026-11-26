@@ -48,6 +48,11 @@
     "t": "2026-11-26T10:15:27",
     "text": "Trage Erkenntnisse ein, Vorrat ist voll (2 Shorts, Note 8)",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T10:15:38",
+    "text": "Aktualisiere Dashboard",
+    "kind": "step"
    }
   ]
  },
@@ -485,7 +490,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T10:15:27",
+ "updated": "2026-11-26T10:15:38",
  "last_summary": "Kein Post: Studio meldet Tägliches Upload-Limit erreicht (Identitätsbestätigung nötig); Vorrat 2 (Trymacs Festival, Monte Polizei, Note 8)",
  "channel": "kanal1",
  "check": {
