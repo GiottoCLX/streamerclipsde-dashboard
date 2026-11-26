@@ -1,62 +1,71 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 04:10",
-  "started": "2026-11-26T04:10:03",
-  "steps": [
-   {
-    "t": "2026-11-26T04:10:03",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T04:10:12",
-    "text": "Prüfe, ob jetzt gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T04:10:23",
-    "text": "Kein Post (außerhalb 06-24 Uhr) – hole Aufrufzahlen aller Shorts",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T04:10:37",
-    "text": "Hole Studio-Werte für junge Shorts",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T04:10:55",
-    "text": "Studio: 'Ein Fehler ist aufgetreten' für StreamerclipsDE (4. Lauf in Folge) – im Browser vermutlich anderes Konto aktiv, bitte Kanal wechseln",
-    "kind": "warn"
-   },
-   {
-    "t": "2026-11-26T04:10:59",
-    "text": "Prüfe Vorrat fertiger Shorts",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T04:11:13",
-    "text": "Suche neue Twitch-Clips der letzten 24 h",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T04:12:42",
-    "text": "Kein 8+ in 24 h – suche weiter (7 Tage, mehr Clips pro Streamer)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T04:16:22",
-    "text": "Prüfe Kandidat: Monte – Polizei macht nichts (Wortzeiten)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T04:16:40",
-    "text": "Schneide Probe: Monte – Polizei macht nichts",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 04:10",
+   "started": "2026-11-26T04:10:03",
+   "steps": [
+    {
+     "t": "2026-11-26T04:10:03",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T04:10:12",
+     "text": "Prüfe, ob jetzt gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T04:10:23",
+     "text": "Kein Post (außerhalb 06-24 Uhr) – hole Aufrufzahlen aller Shorts",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T04:10:37",
+     "text": "Hole Studio-Werte für junge Shorts",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T04:10:55",
+     "text": "Studio: 'Ein Fehler ist aufgetreten' für StreamerclipsDE (4. Lauf in Folge) – im Browser vermutlich anderes Konto aktiv, bitte Kanal wechseln",
+     "kind": "warn"
+    },
+    {
+     "t": "2026-11-26T04:10:59",
+     "text": "Prüfe Vorrat fertiger Shorts",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T04:11:13",
+     "text": "Suche neue Twitch-Clips der letzten 24 h",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T04:12:42",
+     "text": "Kein 8+ in 24 h – suche weiter (7 Tage, mehr Clips pro Streamer)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T04:16:22",
+     "text": "Prüfe Kandidat: Monte – Polizei macht nichts (Wortzeiten)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T04:16:40",
+     "text": "Schneide Probe: Monte – Polizei macht nichts",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T04:18:03",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-26T04:18:03",
+   "state": "ok",
+   "summary": "Kein Post (außerhalb 06-24 Uhr); neu geschnitten: Monte Polizei macht nichts (Note 8), Vorrat 2; Studio zeigt weiter Fehler (falsches Konto)"
+  },
   {
    "title": "Lauf 02:10",
    "started": "2026-11-26T02:10:02",
@@ -308,8 +317,8 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T04:16:40",
- "last_summary": "Kein Post (außerhalb 06-24 Uhr), kein neuer 8+-Clip, Vorrat 1 (Trymacs Festival); Studio zeigt für StreamerclipsDE 'nicht berechtigt' – Konto im Browser prüfen",
+ "updated": "2026-11-26T04:18:03",
+ "last_summary": "Kein Post (außerhalb 06-24 Uhr); neu geschnitten: Monte Polizei macht nichts (Note 8), Vorrat 2; Studio zeigt weiter Fehler (falsches Konto)",
  "channel": "kanal1",
  "check": {
   "t": "2026-11-26T04:10:16",
