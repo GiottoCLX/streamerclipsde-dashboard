@@ -41,6 +41,7 @@ Start 25.11.2026. Noch keine eigenen Zahlen; die deutschen Regeln oben gelten al
 - Beobachtung 25.11.: Viele Clips von Kai Cenat und Jynxzi kommen schon im Hochformat mit eingebrannten Untertiteln → `"subtitles": false` oder Clip meiden (doppelte Untertitel).
 - Beobachtung 25.11.: Frische 24-h-Clips sind oft GTA-Chaos ohne klaren Moment; die Top-Clips der Woche (meiste Aufrufe) sind eher Highlights.
 - Hypothese: US-Publikum ist abends deutscher Zeit (ab ~15 Uhr) aktiv → Posts nachmittags/abends sollten besser laufen. Prüfen, sobald Zahlen da sind.
+- **26.11. 12:31:** Erster Short (Jynxzi Hard Sock, 30bh_jwC5b0) nach 14,5 h nur 2 Aufrufe → gleiches Ausspielungsproblem wie beim deutschen Kanal (zu früh für ein Urteil, n=1). Studio-Werte nicht abrufbar (Browser-Freigabe unbeantwortet). 24-h-Clips: kein 8+ (Lacy Miami-Rant ohne Pointe, Kai-Jumpscare unklar, Lacy-NFL braucht Kontext); 7 Tage: Lacy „restart the whole game“ (Zuschauer will 90-h-Marathon neu, Lacy startet wirklich neu) → Note 8, 26,7 s, Vorrat 1.
 
 ## Vorschläge für REGELN.md
 Claude ändert REGELN.md nicht selbst. Wenn die Zahlen eine Regeländerung nahelegen, steht der Vorschlag hier (mit Beleg) – der Nutzer entscheidet.
