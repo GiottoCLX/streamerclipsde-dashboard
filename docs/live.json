@@ -1,72 +1,81 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 18:09",
-  "started": "2026-11-26T18:09:12",
-  "steps": [
-   {
-    "t": "2026-11-26T18:09:12",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T18:09:22",
-    "text": "Prüfe, ob gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T18:09:32",
-    "text": "Posten erlaubt – hole ältesten fertigen Short",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T18:10:33",
-    "text": "Lade Short hoch: MontanaBlack – Elektro/G63",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T18:12:14",
-    "text": "Gepostet: Monte Elektro/G63 (CL4hHaVweWA) – werte Zahlen aus",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T18:12:31",
-    "text": "Hole Studio-Werte (Polizei, Armut, Pyramide, Krokodil)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T18:14:10",
-    "text": "Prüfe Vorrat",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T18:14:22",
-    "text": "Suche neue Twitch-Clips (24 h)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T18:17:20",
-    "text": "24 h ohne Note 8+ – suche in 7 Tagen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T18:18:25",
-    "text": "Prüfe Kandidat: Monte Realtalk Fremdgehen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T18:18:52",
-    "text": "Schneide: Monte Realtalk Fremdgehen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T18:19:48",
-    "text": "Abschluss: Log und Dashboard",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 18:09",
+   "started": "2026-11-26T18:09:12",
+   "steps": [
+    {
+     "t": "2026-11-26T18:09:12",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T18:09:22",
+     "text": "Prüfe, ob gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T18:09:32",
+     "text": "Posten erlaubt – hole ältesten fertigen Short",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T18:10:33",
+     "text": "Lade Short hoch: MontanaBlack – Elektro/G63",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T18:12:14",
+     "text": "Gepostet: Monte Elektro/G63 (CL4hHaVweWA) – werte Zahlen aus",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T18:12:31",
+     "text": "Hole Studio-Werte (Polizei, Armut, Pyramide, Krokodil)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T18:14:10",
+     "text": "Prüfe Vorrat",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T18:14:22",
+     "text": "Suche neue Twitch-Clips (24 h)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T18:17:20",
+     "text": "24 h ohne Note 8+ – suche in 7 Tagen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T18:18:25",
+     "text": "Prüfe Kandidat: Monte Realtalk Fremdgehen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T18:18:52",
+     "text": "Schneide: Monte Realtalk Fremdgehen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T18:19:48",
+     "text": "Abschluss: Log und Dashboard",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T18:20:06",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-26T18:20:06",
+   "state": "ok",
+   "summary": "Gepostet: Monte Elektro/G63 (CL4hHaVweWA); Vorrat 2 (Raab, Realtalk Fremdgehen, beide Note 8); Polizei-Short nach 2 h nur 3 Aufrufe"
+  },
   {
    "title": "Lauf 16:09",
    "started": "2026-11-26T16:09:11",
@@ -756,8 +765,8 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-26T18:19:48",
- "last_summary": "Gepostet: Monte Polizei (nVhqt2NdSe4); Festival nach 2 h bei 239 Aufrufen; bereit: Elektro + Stefan Raab (je Note 8)",
+ "updated": "2026-11-26T18:20:06",
+ "last_summary": "Gepostet: Monte Elektro/G63 (CL4hHaVweWA); Vorrat 2 (Raab, Realtalk Fremdgehen, beide Note 8); Polizei-Short nach 2 h nur 3 Aufrufe",
  "channel": "kanal1",
  "check": {
   "t": "2026-11-26T18:09:26",
