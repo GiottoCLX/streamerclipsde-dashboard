@@ -43,6 +43,11 @@
     "t": "2026-11-26T04:12:42",
     "text": "Kein 8+ in 24 h – suche weiter (7 Tage, mehr Clips pro Streamer)",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T04:16:22",
+    "text": "Prüfe Kandidat: Monte – Polizei macht nichts (Wortzeiten)",
+    "kind": "step"
    }
   ]
  },
@@ -298,7 +303,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T04:12:42",
+ "updated": "2026-11-26T04:16:22",
  "last_summary": "Kein Post (außerhalb 06-24 Uhr), kein neuer 8+-Clip, Vorrat 1 (Trymacs Festival); Studio zeigt für StreamerclipsDE 'nicht berechtigt' – Konto im Browser prüfen",
  "channel": "kanal1",
  "check": {
