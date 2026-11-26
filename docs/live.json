@@ -23,6 +23,11 @@
     "t": "2026-11-26T12:11:04",
     "text": "Kein Post: Studio meldet erneut 'Tägliches Upload-Limit erreicht' (3. Lauf in Folge) – Identitätsbestätigung durch Nutzer nötig",
     "kind": "warn"
+   },
+   {
+    "t": "2026-11-26T12:11:49",
+    "text": "Werte Zahlen aus: Aufrufe aller Shorts",
+    "kind": "step"
    }
   ]
  },
@@ -524,7 +529,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T12:11:04",
+ "updated": "2026-11-26T12:11:49",
  "last_summary": "Kein Post: Tägliches Upload-Limit weiterhin aktiv (Identitätsbestätigung nötig); Studio-Werte aktualisiert, 2 Shorts mit Note 8 liegen bereit.",
  "channel": "kanal1",
  "check": {
