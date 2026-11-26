@@ -43,6 +43,11 @@
     "t": "2026-11-26T08:12:25",
     "text": "Lese Studio-Werte für 4 Shorts",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T08:13:37",
+    "text": "Vorrat prüfen: 2 fertige Shorts (14 h und 4 h alt, Note 8) – Vorrat voll, kein neuer Schnitt nötig",
+    "kind": "step"
    }
   ]
  },
@@ -421,7 +426,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T08:12:25",
+ "updated": "2026-11-26T08:13:37",
  "last_summary": "Kein Post: Upload hing nach Kanal-Umschaltung (Veröffentlichen gesperrt, nicht wiederholt); Studio-Werte wieder da, Vorrat 2 (Trymacs Festival, Monte Polizei)",
  "channel": "kanal1",
  "check": {
