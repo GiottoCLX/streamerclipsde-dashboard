@@ -23,6 +23,11 @@
     "t": "2026-11-26T12:32:11",
     "text": "Lese Studio-Werte für Jynxzi-Short (14 h alt)",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T12:38:23",
+    "text": "Browser-Freigabe unbeantwortet – keine Studio-Werte, kein Upload in diesem Lauf",
+    "kind": "warn"
    }
   ]
  },
@@ -82,7 +87,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T12:32:11",
+ "updated": "2026-11-26T12:38:23",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-26T12:31:27",
