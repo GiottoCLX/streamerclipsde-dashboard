@@ -165,12 +165,12 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-26T17:09:22",
+ "updated": "2026-11-26T17:09:26",
  "channel": "kanal4",
  "check": {
-  "t": "2026-11-26T15:56:33",
-  "may_post": false,
-  "reason": "letzter Post erst vor 5 Min. (Mindestabstand 60)"
+  "t": "2026-11-26T17:09:26",
+  "may_post": true,
+  "reason": "Posten erlaubt"
  },
  "last_summary": "Lacy gepostet (lVDPIRi9WjM), StableRonaldo liegt für 17 Uhr bereit"
 }
