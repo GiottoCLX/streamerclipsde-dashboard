@@ -92,13 +92,20 @@
     "views": 599,
     "likes": 5,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T12:11",
+    "age_h": 23.7,
+    "views": 601,
+    "likes": 5,
+    "comments": 0
    }
   ],
-  "views": 599,
+  "views": 601,
   "likes": 5,
   "comments": 0,
-  "age_h": 21.7,
-  "views_per_h": 27.6,
+  "age_h": 23.7,
+  "views_per_h": 25.4,
   "like_rate": 0.8,
   "experiment": null,
   "clip_title": "häuser",
@@ -197,13 +204,20 @@
     "views": 1431,
     "likes": 36,
     "comments": 2
+   },
+   {
+    "t": "2026-11-26T12:11",
+    "age_h": 23.7,
+    "views": 1431,
+    "likes": 36,
+    "comments": 2
    }
   ],
   "views": 1431,
   "likes": 36,
   "comments": 2,
-  "age_h": 21.7,
-  "views_per_h": 65.9,
+  "age_h": 23.7,
+  "views_per_h": 60.4,
   "like_rate": 2.5,
   "experiment": null,
   "clip_title": "wie war neuseeland",
@@ -301,13 +315,20 @@
     "views": 10,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T12:11",
+    "age_h": 23.7,
+    "views": 10,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 10,
   "likes": 1,
   "comments": 0,
-  "age_h": 21.7,
-  "views_per_h": 0.5,
+  "age_h": 23.7,
+  "views_per_h": 0.4,
   "like_rate": 10.0,
   "experiment": null,
   "clip_title": "Sound ist schlecht",
@@ -405,13 +426,20 @@
     "views": 8,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T12:11",
+    "age_h": 23.7,
+    "views": 8,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 8,
   "likes": 1,
   "comments": 0,
-  "age_h": 21.7,
-  "views_per_h": 0.4,
+  "age_h": 23.7,
+  "views_per_h": 0.3,
   "like_rate": 12.5,
   "experiment": null,
   "clip_title": "Monte verprügelt schradin",
@@ -509,12 +537,19 @@
     "views": 3,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T12:11",
+    "age_h": 23.7,
+    "views": 3,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 3,
   "likes": 1,
   "comments": 0,
-  "age_h": 21.7,
+  "age_h": 23.7,
   "views_per_h": 0.1,
   "like_rate": 33.3,
   "experiment": null,
@@ -614,13 +649,20 @@
     "views": 356,
     "likes": 3,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T12:11",
+    "age_h": 24.3,
+    "views": 356,
+    "likes": 3,
+    "comments": 0
    }
   ],
   "views": 356,
   "likes": 3,
   "comments": 0,
-  "age_h": 22.4,
-  "views_per_h": 15.9,
+  "age_h": 24.3,
+  "views_per_h": 14.6,
   "like_rate": 0.8,
   "experiment": null,
   "clip_title": "trymacs platzt",
@@ -635,9 +677,11 @@
   "uploaded_at": "2026-11-25T14:48:17",
   "upload_hour": 14,
   "perf": {
-   "aufrufe": 5.0,
-   "angesehen": 100.0,
-   "checked_at": "2026-11-25T16:50"
+   "aufrufe": 8.0,
+   "angesehen": 50.0,
+   "checked_at": "2026-11-26T10:15",
+   "weggewischt": 50.0,
+   "likes": 0.0
   },
   "snapshots": [
    {
@@ -716,12 +760,19 @@
     "views": 8,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T12:11",
+    "age_h": 21.4,
+    "views": 8,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 8,
   "likes": 0,
   "comments": 0,
-  "age_h": 19.4,
+  "age_h": 21.4,
   "views_per_h": 0.4,
   "like_rate": 0.0,
   "experiment": null,
@@ -737,9 +788,11 @@
   "uploaded_at": "2026-11-25T14:48:13",
   "upload_hour": 14,
   "perf": {
-   "aufrufe": 4.0,
+   "aufrufe": 7.0,
    "angesehen": 100.0,
-   "checked_at": "2026-11-25T16:50"
+   "checked_at": "2026-11-26T10:15",
+   "weggewischt": 0.0,
+   "likes": 0.0
   },
   "snapshots": [
    {
@@ -818,13 +871,20 @@
     "views": 7,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T12:11",
+    "age_h": 21.4,
+    "views": 7,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 7,
   "likes": 0,
   "comments": 0,
-  "age_h": 19.4,
-  "views_per_h": 0.4,
+  "age_h": 21.4,
+  "views_per_h": 0.3,
   "like_rate": 0.0,
   "experiment": null,
   "clip_title": "Krabbe greift Monte an",
@@ -839,11 +899,11 @@
   "uploaded_at": "2026-11-25T16:37:42",
   "upload_hour": 16,
   "perf": {
-   "aufrufe": 4.0,
+   "aufrufe": 7.0,
    "angesehen": 100.0,
    "weggewischt": 0.0,
    "likes": 0.0,
-   "checked_at": "2026-11-25T20:12"
+   "checked_at": "2026-11-26T10:15"
   },
   "snapshots": [
    {
@@ -922,13 +982,20 @@
     "views": 6,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T12:11",
+    "age_h": 19.6,
+    "views": 7,
+    "likes": 0,
+    "comments": 0
    }
   ],
-  "views": 6,
+  "views": 7,
   "likes": 0,
   "comments": 0,
-  "age_h": 17.6,
-  "views_per_h": 0.3,
+  "age_h": 19.6,
+  "views_per_h": 0.4,
   "like_rate": 0.0,
   "experiment": null,
   "clip_title": "Krokodil erschreckt Monte",
@@ -946,11 +1013,11 @@
   "uploaded_at": "2026-11-25T18:11:36",
   "upload_hour": 18,
   "perf": {
-   "aufrufe": 3.0,
-   "angesehen": 100.0,
-   "weggewischt": 0.0,
+   "aufrufe": 5.0,
+   "angesehen": 60.0,
+   "weggewischt": 40.0,
    "likes": 0.0,
-   "checked_at": "2026-11-25T20:12"
+   "checked_at": "2026-11-26T10:15"
   },
   "snapshots": [
    {
@@ -1015,12 +1082,19 @@
     "views": 5,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T12:11",
+    "age_h": 18.0,
+    "views": 5,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 5,
   "likes": 0,
   "comments": 0,
-  "age_h": 16.0,
+  "age_h": 18.0,
   "views_per_h": 0.3,
   "like_rate": 0.0
  },
@@ -1098,13 +1172,20 @@
     "views": 5,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T12:11",
+    "age_h": 16.0,
+    "views": 5,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 5,
   "likes": 1,
   "comments": 0,
-  "age_h": 14.0,
-  "views_per_h": 0.4,
+  "age_h": 16.0,
+  "views_per_h": 0.3,
   "like_rate": 20.0
  },
  "EazTuqIluFY": {
@@ -1174,13 +1255,20 @@
     "views": 5,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T12:11",
+    "age_h": 15.1,
+    "views": 5,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 5,
   "likes": 0,
   "comments": 0,
-  "age_h": 13.1,
-  "views_per_h": 0.4,
+  "age_h": 15.1,
+  "views_per_h": 0.3,
   "like_rate": 0.0
  }
 }
