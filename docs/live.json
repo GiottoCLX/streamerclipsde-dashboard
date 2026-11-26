@@ -23,6 +23,11 @@
     "t": "2026-11-26T14:10:07",
     "text": "Lade Short hoch: Trymacs – Nicis Festival-Story",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T14:11:01",
+    "text": "Gepostet (öffentlich) – werte Zahlen aus",
+    "kind": "step"
    }
   ]
  },
@@ -578,7 +583,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T14:10:07",
+ "updated": "2026-11-26T14:11:01",
  "last_summary": "Kein Post: Tägliches Upload-Limit weiterhin aktiv (3. Lauf in Folge, Identitätsbestätigung nötig); Studio-Werte aktualisiert, Vorrat 2 (Note 8)",
  "channel": "kanal1",
  "check": {
