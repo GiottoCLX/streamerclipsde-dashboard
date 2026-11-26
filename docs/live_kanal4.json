@@ -18,6 +18,11 @@
     "t": "2026-11-26T21:09:32",
     "text": "Posten erlaubt – prüfe, ob ein fertiger Short bereitliegt",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T21:09:39",
+    "text": "Kein Short im Vorrat – hole Zahlen aller Shorts",
+    "kind": "step"
    }
   ]
  },
@@ -303,7 +308,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-26T21:09:32",
+ "updated": "2026-11-26T21:09:39",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-26T21:09:26",
