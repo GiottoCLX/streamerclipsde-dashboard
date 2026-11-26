@@ -13,6 +13,11 @@
     "t": "2026-11-26T14:09:20",
     "text": "Prüfe, ob gepostet werden darf",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T14:09:31",
+    "text": "Darf posten – hole ältesten fertigen Short",
+    "kind": "step"
    }
   ]
  },
@@ -568,7 +573,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T14:09:25",
+ "updated": "2026-11-26T14:09:31",
  "last_summary": "Kein Post: Tägliches Upload-Limit weiterhin aktiv (3. Lauf in Folge, Identitätsbestätigung nötig); Studio-Werte aktualisiert, Vorrat 2 (Note 8)",
  "channel": "kanal1",
  "check": {
