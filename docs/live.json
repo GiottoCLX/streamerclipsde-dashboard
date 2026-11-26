@@ -33,6 +33,11 @@
     "t": "2026-11-27T00:11:53",
     "text": "Suche neue Twitch-Clips (24 h)",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T00:14:17",
+    "text": "24 h ohne Note 8+ – suche in den letzten 7 Tagen",
+    "kind": "step"
    }
   ]
  },
@@ -933,7 +938,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T00:11:53",
+ "updated": "2026-11-27T00:14:17",
  "last_summary": "Gepostet: Monte Realtalk Fremdgehen (UFU3n6p_JY8); kein neuer Clip mit Note 8+, Vorrat 0",
  "channel": "kanal1",
  "check": {
