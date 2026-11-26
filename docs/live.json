@@ -1,62 +1,71 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 02:10",
-  "started": "2026-11-26T02:10:02",
-  "steps": [
-   {
-    "t": "2026-11-26T02:10:02",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T02:10:12",
-    "text": "Prüfe, ob gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T02:10:22",
-    "text": "Kein Post (außerhalb 06-24 Uhr) – hole Aufrufzahlen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T02:10:32",
-    "text": "Prüfe Vorrat an fertigen Shorts",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T02:10:42",
-    "text": "Vorrat 1/2 (Trymacs Festival, 4 h alt) – suche neue Twitch-Clips der letzten 24 h",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T02:12:06",
-    "text": "24 h gesichtet (52 Kandidaten), noch kein 8+ – suche in den letzten 7 Tagen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T02:14:04",
-    "text": "Kein Clip mit Note 8+ (24 h + 7 Tage, 72 Kandidaten) – nichts Neues vorbereitet",
-    "kind": "warn"
-   },
-   {
-    "t": "2026-11-26T02:14:07",
-    "text": "Hole Studio-Werte für junge Shorts",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T02:14:53",
-    "text": "Studio: 'Nicht berechtigt' für StreamerclipsDE – im Browser ist ein anderes Konto/Kanal aktiv (3. Lauf ohne Studio-Werte). Ab 06:00 kann so nicht gepostet werden.",
-    "kind": "warn"
-   },
-   {
-    "t": "2026-11-26T02:15:06",
-    "text": "Abschluss: Log und Dashboard",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 02:10",
+   "started": "2026-11-26T02:10:02",
+   "steps": [
+    {
+     "t": "2026-11-26T02:10:02",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T02:10:12",
+     "text": "Prüfe, ob gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T02:10:22",
+     "text": "Kein Post (außerhalb 06-24 Uhr) – hole Aufrufzahlen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T02:10:32",
+     "text": "Prüfe Vorrat an fertigen Shorts",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T02:10:42",
+     "text": "Vorrat 1/2 (Trymacs Festival, 4 h alt) – suche neue Twitch-Clips der letzten 24 h",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T02:12:06",
+     "text": "24 h gesichtet (52 Kandidaten), noch kein 8+ – suche in den letzten 7 Tagen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T02:14:04",
+     "text": "Kein Clip mit Note 8+ (24 h + 7 Tage, 72 Kandidaten) – nichts Neues vorbereitet",
+     "kind": "warn"
+    },
+    {
+     "t": "2026-11-26T02:14:07",
+     "text": "Hole Studio-Werte für junge Shorts",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T02:14:53",
+     "text": "Studio: 'Nicht berechtigt' für StreamerclipsDE – im Browser ist ein anderes Konto/Kanal aktiv (3. Lauf ohne Studio-Werte). Ab 06:00 kann so nicht gepostet werden.",
+     "kind": "warn"
+    },
+    {
+     "t": "2026-11-26T02:15:06",
+     "text": "Abschluss: Log und Dashboard",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T02:15:14",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-26T02:15:14",
+   "state": "ok",
+   "summary": "Kein Post (außerhalb 06-24 Uhr), kein neuer 8+-Clip, Vorrat 1 (Trymacs Festival); Studio zeigt für StreamerclipsDE 'nicht berechtigt' – Konto im Browser prüfen"
+  },
   {
    "title": "Lauf 00:10",
    "started": "2026-11-26T00:10:01",
@@ -244,8 +253,8 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T02:15:06",
- "last_summary": "Kein Post (außerhalb 06-24 Uhr), kein neuer 8+-Clip gefunden, Vorrat 1 (Trymacs Festival, Note 8); Studio-Analytics fehlerhaft",
+ "updated": "2026-11-26T02:15:14",
+ "last_summary": "Kein Post (außerhalb 06-24 Uhr), kein neuer 8+-Clip, Vorrat 1 (Trymacs Festival); Studio zeigt für StreamerclipsDE 'nicht berechtigt' – Konto im Browser prüfen",
  "channel": "kanal1",
  "check": {
   "t": "2026-11-26T02:10:16",
