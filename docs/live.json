@@ -23,6 +23,11 @@
     "t": "2026-11-26T10:11:00",
     "text": "Öffne YouTube Studio für StreamerclipsDE",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T10:11:28",
+    "text": "Lade Short hoch: Trymacs – Nicis Festival-Story",
+    "kind": "step"
    }
   ]
  },
@@ -460,7 +465,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T10:11:00",
+ "updated": "2026-11-26T10:11:28",
  "last_summary": "Kein Post: Studio meldet Tägliches Upload-Limit erreicht (Identitätsbestätigung nötig); Vorrat 2 (Trymacs Festival, Monte Polizei, Note 8)",
  "channel": "kanal1",
  "check": {
