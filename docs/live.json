@@ -33,6 +33,11 @@
     "t": "2026-11-26T02:12:06",
     "text": "24 h gesichtet (52 Kandidaten), noch kein 8+ – suche in den letzten 7 Tagen",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T02:14:04",
+    "text": "Kein Clip mit Note 8+ (24 h + 7 Tage, 72 Kandidaten) – nichts Neues vorbereitet",
+    "kind": "warn"
    }
   ]
  },
@@ -224,7 +229,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T02:12:06",
+ "updated": "2026-11-26T02:14:04",
  "last_summary": "Kein Post (außerhalb 06-24 Uhr), kein neuer 8+-Clip gefunden, Vorrat 1 (Trymacs Festival, Note 8); Studio-Analytics fehlerhaft",
  "channel": "kanal1",
  "check": {
