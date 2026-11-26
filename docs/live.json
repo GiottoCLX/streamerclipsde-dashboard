@@ -28,6 +28,11 @@
     "t": "2026-11-26T22:11:44",
     "text": "Gepostet (UFU3n6p_JY8, öffentlich) – werte Zahlen aus",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T22:12:30",
+    "text": "Vorrat leer – suche neue Clips der letzten 24 h",
+    "kind": "step"
    }
   ]
  },
@@ -874,7 +879,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-26T22:11:44",
+ "updated": "2026-11-26T22:12:30",
  "last_summary": "Gepostet: Monte über Stefan Raab (g_En7qeKFds); Vorrat 1 (Realtalk); Monte Fußsohle wegen abgeschnittenem Gesicht aussortiert",
  "channel": "kanal1",
  "check": {
