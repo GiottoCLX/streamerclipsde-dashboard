@@ -33,6 +33,11 @@
     "t": "2026-11-26T12:38:28",
     "text": "Suche neue Twitch-Clips (letzte 24 h)",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T12:41:56",
+    "text": "24 h ohne klaren 8er – suche Top-Clips der letzten 7 Tage",
+    "kind": "step"
    }
   ]
  },
@@ -92,7 +97,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T12:38:28",
+ "updated": "2026-11-26T12:41:56",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-26T12:31:27",
