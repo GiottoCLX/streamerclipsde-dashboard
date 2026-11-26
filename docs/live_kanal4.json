@@ -28,6 +28,11 @@
     "t": "2026-11-26T19:13:54",
     "text": "Keine 8+ in 24 h – suche über 7 Tage",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T19:18:02",
+    "text": "Prüfe Kandidaten genauer: Jynxzi Haaland, Jynxzi 'won't let you die'",
+    "kind": "step"
    }
   ]
  },
@@ -254,7 +259,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-26T19:13:54",
+ "updated": "2026-11-26T19:18:02",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-26T19:09:26",
