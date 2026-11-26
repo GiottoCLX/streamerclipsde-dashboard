@@ -13,6 +13,11 @@
     "t": "2026-11-26T22:09:25",
     "text": "Prüfe, ob gepostet werden darf",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T22:09:35",
+    "text": "Posten erlaubt – hole ältesten fertigen Short",
+    "kind": "step"
    }
   ]
  },
@@ -859,7 +864,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-26T22:09:29",
+ "updated": "2026-11-26T22:09:35",
  "last_summary": "Gepostet: Monte über Stefan Raab (g_En7qeKFds); Vorrat 1 (Realtalk); Monte Fußsohle wegen abgeschnittenem Gesicht aussortiert",
  "channel": "kanal1",
  "check": {
