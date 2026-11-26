@@ -13,6 +13,11 @@
     "t": "2026-11-26T12:09:27",
     "text": "Prüfung: Posten erlaubt (letzter Post vor 903 Min.) – bereite Upload vor",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T12:09:47",
+    "text": "Lade Short hoch: Trymacs – Nicis Festival-Story",
+    "kind": "step"
    }
   ]
  },
@@ -514,7 +519,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T12:09:27",
+ "updated": "2026-11-26T12:09:47",
  "last_summary": "Kein Post: Tägliches Upload-Limit weiterhin aktiv (Identitätsbestätigung nötig); Studio-Werte aktualisiert, 2 Shorts mit Note 8 liegen bereit.",
  "channel": "kanal1",
  "check": {
