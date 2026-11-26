@@ -43,6 +43,11 @@
     "t": "2026-11-26T06:19:19",
     "text": "Lese Studio-Werte für 4 Shorts",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T06:20:20",
+    "text": "Vorrat prüfen: 2 fertige Shorts, beide frisch – kein neuer Schnitt nötig",
+    "kind": "step"
    }
   ]
  },
@@ -362,7 +367,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T06:19:19",
+ "updated": "2026-11-26T06:20:20",
  "last_summary": "Kein Post (außerhalb 06-24 Uhr); neu geschnitten: Monte Polizei macht nichts (Note 8), Vorrat 2; Studio zeigt weiter Fehler (falsches Konto)",
  "channel": "kanal1",
  "check": {
