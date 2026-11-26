@@ -204,11 +204,11 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T02:10:12",
+ "updated": "2026-11-26T02:10:17",
  "last_summary": "Kein Post (außerhalb 06-24 Uhr), kein neuer 8+-Clip gefunden, Vorrat 1 (Trymacs Festival, Note 8); Studio-Analytics fehlerhaft",
  "channel": "kanal1",
  "check": {
-  "t": "2026-11-26T00:10:14",
+  "t": "2026-11-26T02:10:16",
   "may_post": false,
   "reason": "außerhalb der Posting-Zeiten 06:00-24:00"
  }
