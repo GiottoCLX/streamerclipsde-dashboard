@@ -1,57 +1,66 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 06:10",
-  "started": "2026-11-26T06:10:04",
-  "steps": [
-   {
-    "t": "2026-11-26T06:10:04",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T06:10:12",
-    "text": "Prüfe, ob jetzt gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T06:10:22",
-    "text": "Posten erlaubt – lade Warteschlange",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T06:11:23",
-    "text": "Öffne YouTube Studio für StreamerclipsDE",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T06:13:09",
-    "text": "Lade Short hoch: Trymacs – Nicis Festival-Story",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T06:18:51",
-    "text": "Upload Trymacs Festival-Story hängt: Studio hatte zuerst falschen Kanal aktiv (auf StreamerclipsDE umgeschaltet), danach blieb Veröffentlichen gesperrt, kein Entwurf angelegt – nicht wiederholt",
-    "kind": "warn"
-   },
-   {
-    "t": "2026-11-26T06:18:54",
-    "text": "Hole Aufrufe aller Shorts",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T06:19:19",
-    "text": "Lese Studio-Werte für 4 Shorts",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T06:20:20",
-    "text": "Vorrat prüfen: 2 fertige Shorts, beide frisch – kein neuer Schnitt nötig",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 06:10",
+   "started": "2026-11-26T06:10:04",
+   "steps": [
+    {
+     "t": "2026-11-26T06:10:04",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T06:10:12",
+     "text": "Prüfe, ob jetzt gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T06:10:22",
+     "text": "Posten erlaubt – lade Warteschlange",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T06:11:23",
+     "text": "Öffne YouTube Studio für StreamerclipsDE",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T06:13:09",
+     "text": "Lade Short hoch: Trymacs – Nicis Festival-Story",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T06:18:51",
+     "text": "Upload Trymacs Festival-Story hängt: Studio hatte zuerst falschen Kanal aktiv (auf StreamerclipsDE umgeschaltet), danach blieb Veröffentlichen gesperrt, kein Entwurf angelegt – nicht wiederholt",
+     "kind": "warn"
+    },
+    {
+     "t": "2026-11-26T06:18:54",
+     "text": "Hole Aufrufe aller Shorts",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T06:19:19",
+     "text": "Lese Studio-Werte für 4 Shorts",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T06:20:20",
+     "text": "Vorrat prüfen: 2 fertige Shorts, beide frisch – kein neuer Schnitt nötig",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T06:20:43",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-26T06:20:43",
+   "state": "ok",
+   "summary": "Kein Post: Upload hing nach Kanal-Umschaltung (Veröffentlichen gesperrt, nicht wiederholt); Studio-Werte wieder da, Vorrat 2 (Trymacs Festival, Monte Polizei)"
+  },
   {
    "title": "Lauf 04:10",
    "started": "2026-11-26T04:10:03",
@@ -367,8 +376,8 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T06:20:20",
- "last_summary": "Kein Post (außerhalb 06-24 Uhr); neu geschnitten: Monte Polizei macht nichts (Note 8), Vorrat 2; Studio zeigt weiter Fehler (falsches Konto)",
+ "updated": "2026-11-26T06:20:43",
+ "last_summary": "Kein Post: Upload hing nach Kanal-Umschaltung (Veröffentlichen gesperrt, nicht wiederholt); Studio-Werte wieder da, Vorrat 2 (Trymacs Festival, Monte Polizei)",
  "channel": "kanal1",
  "check": {
   "t": "2026-11-26T06:10:16",
