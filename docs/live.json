@@ -332,12 +332,12 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T06:10:12",
+ "updated": "2026-11-26T06:10:16",
  "last_summary": "Kein Post (außerhalb 06-24 Uhr); neu geschnitten: Monte Polizei macht nichts (Note 8), Vorrat 2; Studio zeigt weiter Fehler (falsches Konto)",
  "channel": "kanal1",
  "check": {
-  "t": "2026-11-26T04:10:16",
-  "may_post": false,
-  "reason": "außerhalb der Posting-Zeiten 06:00-24:00"
+  "t": "2026-11-26T06:10:16",
+  "may_post": true,
+  "reason": "Posten erlaubt"
  }
 }
