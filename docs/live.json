@@ -1,62 +1,71 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 14:09",
-  "started": "2026-11-26T14:09:11",
-  "steps": [
-   {
-    "t": "2026-11-26T14:09:11",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T14:09:20",
-    "text": "Prüfe, ob gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T14:09:31",
-    "text": "Darf posten – hole ältesten fertigen Short",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T14:10:07",
-    "text": "Lade Short hoch: Trymacs – Nicis Festival-Story",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T14:11:01",
-    "text": "Gepostet (öffentlich) – werte Zahlen aus",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T14:11:34",
-    "text": "Hole Studio-Werte für 4 Shorts (zuletzt vor 6 h geprüft)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T14:12:36",
-    "text": "Vorrat geprüft (1 Short: Monte Polizei, 10 h alt) – suche neue Clips der letzten 24 h",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T14:14:50",
-    "text": "Prüfe Kandidat: Monte –  Elektro ist gut für die Innenstadt? (G63-Rant)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T14:15:12",
-    "text": "Schneide Short: Monte – Elektro/G63-Rant",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T14:16:07",
-    "text": "Abschluss: Log, Dashboard",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 14:09",
+   "started": "2026-11-26T14:09:11",
+   "steps": [
+    {
+     "t": "2026-11-26T14:09:11",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T14:09:20",
+     "text": "Prüfe, ob gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T14:09:31",
+     "text": "Darf posten – hole ältesten fertigen Short",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T14:10:07",
+     "text": "Lade Short hoch: Trymacs – Nicis Festival-Story",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T14:11:01",
+     "text": "Gepostet (öffentlich) – werte Zahlen aus",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T14:11:34",
+     "text": "Hole Studio-Werte für 4 Shorts (zuletzt vor 6 h geprüft)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T14:12:36",
+     "text": "Vorrat geprüft (1 Short: Monte Polizei, 10 h alt) – suche neue Clips der letzten 24 h",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T14:14:50",
+     "text": "Prüfe Kandidat: Monte –  Elektro ist gut für die Innenstadt? (G63-Rant)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T14:15:12",
+     "text": "Schneide Short: Monte – Elektro/G63-Rant",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T14:16:07",
+     "text": "Abschluss: Log, Dashboard",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T14:16:18",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-26T14:16:18",
+   "state": "ok",
+   "summary": "Gepostet: Trymacs Festival-Story (youtube.com/shorts/BzLWrPpkJmA) – Upload-Limit ist weg; bereit: Monte Polizei + Monte Elektro/G63-Rant (je Note 8)"
+  },
   {
    "title": "Lauf 12:09",
    "started": "2026-11-26T12:09:07",
@@ -608,8 +617,8 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T14:16:07",
- "last_summary": "Kein Post: Tägliches Upload-Limit weiterhin aktiv (3. Lauf in Folge, Identitätsbestätigung nötig); Studio-Werte aktualisiert, Vorrat 2 (Note 8)",
+ "updated": "2026-11-26T14:16:18",
+ "last_summary": "Gepostet: Trymacs Festival-Story (youtube.com/shorts/BzLWrPpkJmA) – Upload-Limit ist weg; bereit: Monte Polizei + Monte Elektro/G63-Rant (je Note 8)",
  "channel": "kanal1",
  "check": {
   "t": "2026-11-26T14:09:24",
