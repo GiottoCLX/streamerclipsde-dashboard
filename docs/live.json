@@ -48,6 +48,11 @@
     "t": "2026-11-26T04:16:22",
     "text": "Prüfe Kandidat: Monte – Polizei macht nichts (Wortzeiten)",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T04:16:40",
+    "text": "Schneide Probe: Monte – Polizei macht nichts",
+    "kind": "step"
    }
   ]
  },
@@ -303,7 +308,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T04:16:22",
+ "updated": "2026-11-26T04:16:40",
  "last_summary": "Kein Post (außerhalb 06-24 Uhr), kein neuer 8+-Clip, Vorrat 1 (Trymacs Festival); Studio zeigt für StreamerclipsDE 'nicht berechtigt' – Konto im Browser prüfen",
  "channel": "kanal1",
  "check": {
