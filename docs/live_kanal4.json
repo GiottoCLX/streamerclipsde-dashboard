@@ -43,6 +43,11 @@
     "t": "2026-11-26T17:17:28",
     "text": "Kein 8er in 24 h – suche 7 Tage",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T17:20:39",
+    "text": "Prüfe Kandidat: Lacy droht Marlon (Waffle House)",
+    "kind": "step"
    }
   ]
  },
@@ -195,7 +200,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-26T17:17:28",
+ "updated": "2026-11-26T17:20:39",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-26T17:09:26",
