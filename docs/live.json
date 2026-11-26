@@ -38,6 +38,11 @@
     "t": "2026-11-26T02:14:04",
     "text": "Kein Clip mit Note 8+ (24 h + 7 Tage, 72 Kandidaten) – nichts Neues vorbereitet",
     "kind": "warn"
+   },
+   {
+    "t": "2026-11-26T02:14:07",
+    "text": "Hole Studio-Werte für junge Shorts",
+    "kind": "step"
    }
   ]
  },
@@ -229,7 +234,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T02:14:04",
+ "updated": "2026-11-26T02:14:07",
  "last_summary": "Kein Post (außerhalb 06-24 Uhr), kein neuer 8+-Clip gefunden, Vorrat 1 (Trymacs Festival, Note 8); Studio-Analytics fehlerhaft",
  "channel": "kanal1",
  "check": {
