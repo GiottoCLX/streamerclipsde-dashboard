@@ -38,6 +38,11 @@
     "t": "2026-11-26T19:18:28",
     "text": "Schneide 2 Jynxzi-Kandidaten zur Bildprüfung",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T19:19:48",
+    "text": "Beide Kandidaten im Bild nur Note 6 – aussortiert, nichts vorbereitet",
+    "kind": "step"
    }
   ]
  },
@@ -264,7 +269,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-26T19:18:28",
+ "updated": "2026-11-26T19:19:48",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-26T19:09:26",
