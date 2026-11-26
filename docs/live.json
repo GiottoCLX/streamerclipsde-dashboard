@@ -13,6 +13,11 @@
     "t": "2026-11-26T06:10:12",
     "text": "Prüfe, ob jetzt gepostet werden darf",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T06:10:22",
+    "text": "Posten erlaubt – lade Warteschlange",
+    "kind": "step"
    }
   ]
  },
@@ -332,7 +337,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T06:10:16",
+ "updated": "2026-11-26T06:10:22",
  "last_summary": "Kein Post (außerhalb 06-24 Uhr); neu geschnitten: Monte Polizei macht nichts (Note 8), Vorrat 2; Studio zeigt weiter Fehler (falsches Konto)",
  "channel": "kanal1",
  "check": {
