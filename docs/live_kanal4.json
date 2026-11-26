@@ -43,6 +43,11 @@
     "t": "2026-11-26T19:19:48",
     "text": "Beide Kandidaten im Bild nur Note 6 – aussortiert, nichts vorbereitet",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T19:20:03",
+    "text": "Abschluss: Log und Dashboard",
+    "kind": "step"
    }
   ]
  },
@@ -269,7 +274,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-26T19:19:48",
+ "updated": "2026-11-26T19:20:03",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-26T19:09:26",
