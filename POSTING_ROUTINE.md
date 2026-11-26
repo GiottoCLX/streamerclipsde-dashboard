@@ -29,6 +29,7 @@ Englische Clips haben oft schon **eingebrannte Untertitel** im Bild (z. B. Kai C
 1. `py shorts.py browser-queue --channel kanal1 --limit 3` → `queue\kanal1.json` (ältester zuerst, `file` = <10-MB-Version).
 2. Claude in Chrome: Werkzeuge in EINEM ToolSearch laden (tabs_context_mcp, tabs_create_mcp, navigate, computer, find, javascript_tool, file_upload, get_page_text, browser_batch, tabs_close_mcp), eigenen Tab öffnen:
    `https://studio.youtube.com/channel/UC5wsIwWO9EMifAyY9oLyRrQ/videos/short`
+   - **Kanal umschalten (immer zuerst, auch vor Schritt 4):** Beide Kanäle hängen am selben Google-Konto, im Browser ist aber nur einer aktiv – und der Lauf des anderen Kanals schaltet ihn um. Zeigt Studio „nicht berechtigt“, „Ein Fehler ist aufgetreten“ oder den anderen Kanal: `https://www.youtube.com/channel_switcher` öffnen, den Kanal dieses Laufs anklicken (kein Login, keine Passwörter), danach die Studio-URL **neu laden** (navigate) und erst dann weitermachen. Nie mitten in einem Upload umschalten.
    - Steht dort **StreamerclipsDE**? Sonst nicht posten (`live.py warn`).
    - Titel schon in der Liste? → nicht hochladen, ID aus der Liste holen, nur `mark-uploaded`.
 3. Inhalt von `studio_upload.js` per javascript_tool ausführen, dann je ein Aufruf:
