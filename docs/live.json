@@ -913,12 +913,12 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T00:09:33",
+ "updated": "2026-11-27T00:09:37",
  "last_summary": "Gepostet: Monte Realtalk Fremdgehen (UFU3n6p_JY8); kein neuer Clip mit Note 8+, Vorrat 0",
  "channel": "kanal1",
  "check": {
-  "t": "2026-11-26T22:09:29",
-  "may_post": true,
-  "reason": "Posten erlaubt"
+  "t": "2026-11-27T00:09:37",
+  "may_post": false,
+  "reason": "außerhalb der Posting-Zeiten 06:00-24:00"
  }
 }
