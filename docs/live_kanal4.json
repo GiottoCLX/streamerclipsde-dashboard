@@ -43,6 +43,11 @@
     "t": "2026-11-26T12:46:14",
     "text": "Prüfe Kandidat: Lacy soll 90-Stunden-Spiel neu starten (Render + Vorschau)",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T12:51:46",
+    "text": "Vorrat: 1 Short fertig (Lacy Restart, Note 8) – schreibe Log und Dashboard",
+    "kind": "step"
    }
   ]
  },
@@ -102,7 +107,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T12:46:14",
+ "updated": "2026-11-26T12:51:46",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-26T12:31:27",
