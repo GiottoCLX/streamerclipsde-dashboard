@@ -1,52 +1,61 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 23:09",
-  "started": "2026-11-26T23:09:17",
-  "steps": [
-   {
-    "t": "2026-11-26T23:09:17",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T23:09:30",
-    "text": "Prüfe, ob jetzt gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T23:09:45",
-    "text": "Kein Short im Vorrat – nichts zu posten. Hole Aufrufe aller Shorts",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T23:09:55",
-    "text": "Zahlen: alle 3 Shorts weiter 1–3 Aufrufe; Studio-Werte noch aktuell (19:09). Suche neue Clips der letzten 24 h",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T23:13:24",
-    "text": "Prüfe Kandidat: Lacy fällt in den Pool (Wörter + Bild)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T23:14:53",
-    "text": "Schneide Lacy Pool-Fail (Note 8), eingebrannte Untertitel -> subtitles false",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T23:15:46",
-    "text": "Lacy Pool-Fail fertig (Note 8). Prüfe 2. Kandidat: Jynxzi und das Fan-Shirt",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T23:16:22",
-    "text": "Jynxzi Fan-Shirt: Note 7 (Mitte Gelaber, gleicher Typ wie geflopptes Hard Sock) – verworfen. Abschluss: Log, Dashboard",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 23:09",
+   "started": "2026-11-26T23:09:17",
+   "steps": [
+    {
+     "t": "2026-11-26T23:09:17",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T23:09:30",
+     "text": "Prüfe, ob jetzt gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T23:09:45",
+     "text": "Kein Short im Vorrat – nichts zu posten. Hole Aufrufe aller Shorts",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T23:09:55",
+     "text": "Zahlen: alle 3 Shorts weiter 1–3 Aufrufe; Studio-Werte noch aktuell (19:09). Suche neue Clips der letzten 24 h",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T23:13:24",
+     "text": "Prüfe Kandidat: Lacy fällt in den Pool (Wörter + Bild)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T23:14:53",
+     "text": "Schneide Lacy Pool-Fail (Note 8), eingebrannte Untertitel -> subtitles false",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T23:15:46",
+     "text": "Lacy Pool-Fail fertig (Note 8). Prüfe 2. Kandidat: Jynxzi und das Fan-Shirt",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T23:16:22",
+     "text": "Jynxzi Fan-Shirt: Note 7 (Mitte Gelaber, gleicher Typ wie geflopptes Hard Sock) – verworfen. Abschluss: Log, Dashboard",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T23:16:40",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-26T23:16:40",
+   "state": "ok",
+   "summary": "Kein Post (Vorrat war leer); neu bereit: Lacy Pool-Fail (Note 8), Vorrat 1; alle 3 Shorts weiter 1–3 Aufrufe"
+  },
   {
    "title": "Lauf 21:09",
    "started": "2026-11-26T21:09:13",
@@ -382,12 +391,12 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-26T23:16:22",
+ "updated": "2026-11-26T23:16:40",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-26T23:09:34",
   "may_post": true,
   "reason": "Posten erlaubt"
  },
- "last_summary": "Kein Post (Vorrat leer); 33 Clips gesichtet, keiner mit Note 8+; alle 3 Shorts weiter bei 1–3 Aufrufen"
+ "last_summary": "Kein Post (Vorrat war leer); neu bereit: Lacy Pool-Fail (Note 8), Vorrat 1; alle 3 Shorts weiter 1–3 Aufrufe"
 }
