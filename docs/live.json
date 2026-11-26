@@ -1,57 +1,66 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 08:10",
-  "started": "2026-11-26T08:10:04",
-  "steps": [
-   {
-    "t": "2026-11-26T08:10:04",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T08:10:13",
-    "text": "Prüfe, ob jetzt gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T08:10:24",
-    "text": "Posten erlaubt – hole ältesten fertigen Short",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T08:10:40",
-    "text": "Öffne YouTube Studio und prüfe den Kanal",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T08:11:09",
-    "text": "Lade Short hoch: Trymacs – Nicis Festival-Story",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T08:11:49",
-    "text": "Kein Post: Studio meldet 'Tägliches Upload-Limit erreicht' (Identitätsbestätigung nötig oder 24 h warten) – nicht wiederholt",
-    "kind": "warn"
-   },
-   {
-    "t": "2026-11-26T08:11:52",
-    "text": "Hole Aufrufe aller Shorts",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T08:12:25",
-    "text": "Lese Studio-Werte für 4 Shorts",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T08:13:37",
-    "text": "Vorrat prüfen: 2 fertige Shorts (14 h und 4 h alt, Note 8) – Vorrat voll, kein neuer Schnitt nötig",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 08:10",
+   "started": "2026-11-26T08:10:04",
+   "steps": [
+    {
+     "t": "2026-11-26T08:10:04",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T08:10:13",
+     "text": "Prüfe, ob jetzt gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T08:10:24",
+     "text": "Posten erlaubt – hole ältesten fertigen Short",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T08:10:40",
+     "text": "Öffne YouTube Studio und prüfe den Kanal",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T08:11:09",
+     "text": "Lade Short hoch: Trymacs – Nicis Festival-Story",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T08:11:49",
+     "text": "Kein Post: Studio meldet 'Tägliches Upload-Limit erreicht' (Identitätsbestätigung nötig oder 24 h warten) – nicht wiederholt",
+     "kind": "warn"
+    },
+    {
+     "t": "2026-11-26T08:11:52",
+     "text": "Hole Aufrufe aller Shorts",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T08:12:25",
+     "text": "Lese Studio-Werte für 4 Shorts",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T08:13:37",
+     "text": "Vorrat prüfen: 2 fertige Shorts (14 h und 4 h alt, Note 8) – Vorrat voll, kein neuer Schnitt nötig",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T08:13:47",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-26T08:13:47",
+   "state": "ok",
+   "summary": "Kein Post: Studio meldet Tägliches Upload-Limit erreicht (Identitätsbestätigung nötig); Vorrat 2 (Trymacs Festival, Monte Polizei, Note 8)"
+  },
   {
    "title": "Lauf 06:10",
    "started": "2026-11-26T06:10:04",
@@ -426,8 +435,8 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T08:13:37",
- "last_summary": "Kein Post: Upload hing nach Kanal-Umschaltung (Veröffentlichen gesperrt, nicht wiederholt); Studio-Werte wieder da, Vorrat 2 (Trymacs Festival, Monte Polizei)",
+ "updated": "2026-11-26T08:13:47",
+ "last_summary": "Kein Post: Studio meldet Tägliches Upload-Limit erreicht (Identitätsbestätigung nötig); Vorrat 2 (Trymacs Festival, Monte Polizei, Note 8)",
  "channel": "kanal1",
  "check": {
   "t": "2026-11-26T08:10:18",
