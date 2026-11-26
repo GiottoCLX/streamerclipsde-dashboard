@@ -48,6 +48,11 @@
     "t": "2026-11-26T16:16:09",
     "text": "Kein 8+ in 24 h – suche in den letzten 7 Tagen",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T16:18:43",
+    "text": "Prüfe Kandidat: Monte über Stefan Raab (Wortzeiten)",
+    "kind": "step"
    }
   ]
  },
@@ -667,7 +672,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-26T16:16:09",
+ "updated": "2026-11-26T16:18:43",
  "last_summary": "Gepostet: Trymacs Festival-Story (youtube.com/shorts/BzLWrPpkJmA) – Upload-Limit ist weg; bereit: Monte Polizei + Monte Elektro/G63-Rant (je Note 8)",
  "channel": "kanal1",
  "check": {
