@@ -1,72 +1,81 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 17:09",
-  "started": "2026-11-26T17:09:11",
-  "steps": [
-   {
-    "t": "2026-11-26T17:09:11",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T17:09:22",
-    "text": "Prüfe, ob gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T17:09:32",
-    "text": "Hole ältesten fertigen Short",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T17:10:28",
-    "text": "Öffne YouTube Studio (Stream Clips Daily)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T17:11:08",
-    "text": "Lade Short hoch: StableRonaldo Avengers-Quiz",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T17:12:18",
-    "text": "Werte Zahlen aus",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T17:12:47",
-    "text": "Vorrat leer – suche neue Clips (24 h)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T17:17:28",
-    "text": "Kein 8er in 24 h – suche 7 Tage",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T17:20:39",
-    "text": "Prüfe Kandidat: Lacy droht Marlon (Waffle House)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T17:21:03",
-    "text": "Schneide: Lacy droht Marlon – Waffle House",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T17:21:54",
-    "text": "Kein Clip mit Note 8+ gefunden (24 h + 7 Tage, 166 Kandidaten) – nichts vorbereitet",
-    "kind": "warn"
-   },
-   {
-    "t": "2026-11-26T17:22:09",
-    "text": "Abschluss: Log und Dashboard",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 17:09",
+   "started": "2026-11-26T17:09:11",
+   "steps": [
+    {
+     "t": "2026-11-26T17:09:11",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T17:09:22",
+     "text": "Prüfe, ob gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T17:09:32",
+     "text": "Hole ältesten fertigen Short",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T17:10:28",
+     "text": "Öffne YouTube Studio (Stream Clips Daily)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T17:11:08",
+     "text": "Lade Short hoch: StableRonaldo Avengers-Quiz",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T17:12:18",
+     "text": "Werte Zahlen aus",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T17:12:47",
+     "text": "Vorrat leer – suche neue Clips (24 h)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T17:17:28",
+     "text": "Kein 8er in 24 h – suche 7 Tage",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T17:20:39",
+     "text": "Prüfe Kandidat: Lacy droht Marlon (Waffle House)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T17:21:03",
+     "text": "Schneide: Lacy droht Marlon – Waffle House",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T17:21:54",
+     "text": "Kein Clip mit Note 8+ gefunden (24 h + 7 Tage, 166 Kandidaten) – nichts vorbereitet",
+     "kind": "warn"
+    },
+    {
+     "t": "2026-11-26T17:22:09",
+     "text": "Abschluss: Log und Dashboard",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T17:22:19",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-26T17:22:19",
+   "state": "ok",
+   "summary": "Gepostet: StableRonaldo Avengers-Quiz (_3mBTiNY1-A); kein neuer 8+-Clip gefunden, Vorrat 0"
+  },
   {
    "title": "Manueller Post 15:50",
    "started": "2026-11-26T15:48:49",
@@ -215,12 +224,12 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-26T17:22:09",
+ "updated": "2026-11-26T17:22:19",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-26T17:09:26",
   "may_post": true,
   "reason": "Posten erlaubt"
  },
- "last_summary": "Lacy gepostet (lVDPIRi9WjM), StableRonaldo liegt für 17 Uhr bereit"
+ "last_summary": "Gepostet: StableRonaldo Avengers-Quiz (_3mBTiNY1-A); kein neuer 8+-Clip gefunden, Vorrat 0"
 }
