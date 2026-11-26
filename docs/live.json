@@ -450,11 +450,11 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T10:10:29",
+ "updated": "2026-11-26T10:10:33",
  "last_summary": "Kein Post: Studio meldet Tägliches Upload-Limit erreicht (Identitätsbestätigung nötig); Vorrat 2 (Trymacs Festival, Monte Polizei, Note 8)",
  "channel": "kanal1",
  "check": {
-  "t": "2026-11-26T08:10:18",
+  "t": "2026-11-26T10:10:33",
   "may_post": true,
   "reason": "Posten erlaubt"
  }
