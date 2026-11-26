@@ -18,6 +18,11 @@
     "t": "2026-11-26T10:10:44",
     "text": "Hole ältesten fertigen Short für den Upload",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T10:11:00",
+    "text": "Öffne YouTube Studio für StreamerclipsDE",
+    "kind": "step"
    }
   ]
  },
@@ -455,7 +460,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T10:10:44",
+ "updated": "2026-11-26T10:11:00",
  "last_summary": "Kein Post: Studio meldet Tägliches Upload-Limit erreicht (Identitätsbestätigung nötig); Vorrat 2 (Trymacs Festival, Monte Polizei, Note 8)",
  "channel": "kanal1",
  "check": {
