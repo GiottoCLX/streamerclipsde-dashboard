@@ -8,6 +8,11 @@
     "t": "2026-11-26T12:09:07",
     "text": "Lauf gestartet, neueste Regeln geladen",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T12:09:27",
+    "text": "Prüfung: Posten erlaubt (letzter Post vor 903 Min.) – bereite Upload vor",
+    "kind": "step"
    }
   ]
  },
@@ -509,7 +514,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T12:09:17",
+ "updated": "2026-11-26T12:09:27",
  "last_summary": "Kein Post: Tägliches Upload-Limit weiterhin aktiv (Identitätsbestätigung nötig); Studio-Werte aktualisiert, 2 Shorts mit Note 8 liegen bereit.",
  "channel": "kanal1",
  "check": {
