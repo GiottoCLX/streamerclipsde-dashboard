@@ -1,52 +1,61 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 12:09",
-  "started": "2026-11-26T12:09:07",
-  "steps": [
-   {
-    "t": "2026-11-26T12:09:07",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T12:09:27",
-    "text": "Prüfung: Posten erlaubt (letzter Post vor 903 Min.) – bereite Upload vor",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T12:09:47",
-    "text": "Lade Short hoch: Trymacs – Nicis Festival-Story",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T12:11:04",
-    "text": "Kein Post: Studio meldet erneut 'Tägliches Upload-Limit erreicht' (3. Lauf in Folge) – Identitätsbestätigung durch Nutzer nötig",
-    "kind": "warn"
-   },
-   {
-    "t": "2026-11-26T12:11:49",
-    "text": "Werte Zahlen aus: Aufrufe aller Shorts",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T12:11:59",
-    "text": "Lese Studio-Werte für 4 Shorts (Armut, Bauprojekt, GTA6, Tierleiche)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T12:13:14",
-    "text": "Vorrat geprüft: 2 Shorts frisch (Note 8) – voll, trage Erkenntnisse ein",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T12:13:40",
-    "text": "Aktualisiere Dashboard",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 12:09",
+   "started": "2026-11-26T12:09:07",
+   "steps": [
+    {
+     "t": "2026-11-26T12:09:07",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T12:09:27",
+     "text": "Prüfung: Posten erlaubt (letzter Post vor 903 Min.) – bereite Upload vor",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T12:09:47",
+     "text": "Lade Short hoch: Trymacs – Nicis Festival-Story",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T12:11:04",
+     "text": "Kein Post: Studio meldet erneut 'Tägliches Upload-Limit erreicht' (3. Lauf in Folge) – Identitätsbestätigung durch Nutzer nötig",
+     "kind": "warn"
+    },
+    {
+     "t": "2026-11-26T12:11:49",
+     "text": "Werte Zahlen aus: Aufrufe aller Shorts",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T12:11:59",
+     "text": "Lese Studio-Werte für 4 Shorts (Armut, Bauprojekt, GTA6, Tierleiche)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T12:13:14",
+     "text": "Vorrat geprüft: 2 Shorts frisch (Note 8) – voll, trage Erkenntnisse ein",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T12:13:40",
+     "text": "Aktualisiere Dashboard",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T12:13:50",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-26T12:13:50",
+   "state": "ok",
+   "summary": "Kein Post: Tägliches Upload-Limit weiterhin aktiv (3. Lauf in Folge, Identitätsbestätigung nötig); Studio-Werte aktualisiert, Vorrat 2 (Note 8)"
+  },
   {
    "title": "Lauf 10:10",
    "started": "2026-11-26T10:10:11",
@@ -544,8 +553,8 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T12:13:40",
- "last_summary": "Kein Post: Tägliches Upload-Limit weiterhin aktiv (Identitätsbestätigung nötig); Studio-Werte aktualisiert, 2 Shorts mit Note 8 liegen bereit.",
+ "updated": "2026-11-26T12:13:50",
+ "last_summary": "Kein Post: Tägliches Upload-Limit weiterhin aktiv (3. Lauf in Folge, Identitätsbestätigung nötig); Studio-Werte aktualisiert, Vorrat 2 (Note 8)",
  "channel": "kanal1",
  "check": {
   "t": "2026-11-26T12:09:17",
