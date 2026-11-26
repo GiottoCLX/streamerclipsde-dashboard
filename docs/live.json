@@ -33,6 +33,11 @@
     "t": "2026-11-26T10:13:42",
     "text": "Kein Post: Studio meldet erneut Tägliches Upload-Limit erreicht (Identitätsbestätigung nötig) – nicht wiederholt",
     "kind": "warn"
+   },
+   {
+    "t": "2026-11-26T10:13:46",
+    "text": "Hole Aufrufe aller Shorts",
+    "kind": "step"
    }
   ]
  },
@@ -470,7 +475,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T10:13:42",
+ "updated": "2026-11-26T10:13:46",
  "last_summary": "Kein Post: Studio meldet Tägliches Upload-Limit erreicht (Identitätsbestätigung nötig); Vorrat 2 (Trymacs Festival, Monte Polizei, Note 8)",
  "channel": "kanal1",
  "check": {
