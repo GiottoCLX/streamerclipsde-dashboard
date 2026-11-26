@@ -127,13 +127,20 @@
     "views": 606,
     "likes": 5,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T22:11",
+    "age_h": 33.7,
+    "views": 606,
+    "likes": 5,
+    "comments": 0
    }
   ],
   "views": 606,
   "likes": 5,
   "comments": 0,
-  "age_h": 31.7,
-  "views_per_h": 19.1,
+  "age_h": 33.7,
+  "views_per_h": 18.0,
   "like_rate": 0.8,
   "experiment": null,
   "clip_title": "häuser",
@@ -267,13 +274,20 @@
     "views": 1442,
     "likes": 36,
     "comments": 2
+   },
+   {
+    "t": "2026-11-26T22:11",
+    "age_h": 33.7,
+    "views": 1443,
+    "likes": 36,
+    "comments": 2
    }
   ],
-  "views": 1442,
+  "views": 1443,
   "likes": 36,
   "comments": 2,
-  "age_h": 31.7,
-  "views_per_h": 45.5,
+  "age_h": 33.7,
+  "views_per_h": 42.8,
   "like_rate": 2.5,
   "experiment": null,
   "clip_title": "wie war neuseeland",
@@ -406,12 +420,19 @@
     "views": 12,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T22:11",
+    "age_h": 33.7,
+    "views": 12,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 12,
   "likes": 1,
   "comments": 0,
-  "age_h": 31.7,
+  "age_h": 33.7,
   "views_per_h": 0.4,
   "like_rate": 8.3,
   "experiment": null,
@@ -545,14 +566,21 @@
     "views": 9,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T22:11",
+    "age_h": 33.7,
+    "views": 12,
+    "likes": 1,
+    "comments": 0
    }
   ],
-  "views": 9,
+  "views": 12,
   "likes": 1,
   "comments": 0,
-  "age_h": 31.7,
-  "views_per_h": 0.3,
-  "like_rate": 11.1,
+  "age_h": 33.7,
+  "views_per_h": 0.4,
+  "like_rate": 8.3,
   "experiment": null,
   "clip_title": "Monte verprügelt schradin",
   "design": "v1"
@@ -684,12 +712,19 @@
     "views": 2,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T22:11",
+    "age_h": 33.7,
+    "views": 2,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 2,
   "likes": 1,
   "comments": 0,
-  "age_h": 31.7,
+  "age_h": 33.7,
   "views_per_h": 0.1,
   "like_rate": 50.0,
   "experiment": null,
@@ -824,13 +859,20 @@
     "views": 356,
     "likes": 3,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T22:11",
+    "age_h": 34.3,
+    "views": 354,
+    "likes": 3,
+    "comments": 0
    }
   ],
-  "views": 356,
+  "views": 354,
   "likes": 3,
   "comments": 0,
-  "age_h": 32.3,
-  "views_per_h": 11.0,
+  "age_h": 34.3,
+  "views_per_h": 10.3,
   "like_rate": 0.8,
   "experiment": null,
   "clip_title": "trymacs platzt",
@@ -963,12 +1005,19 @@
     "views": 14,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T22:11",
+    "age_h": 31.4,
+    "views": 16,
+    "likes": 0,
+    "comments": 0
    }
   ],
-  "views": 14,
+  "views": 16,
   "likes": 0,
   "comments": 0,
-  "age_h": 29.4,
+  "age_h": 31.4,
   "views_per_h": 0.5,
   "like_rate": 0.0,
   "experiment": null,
@@ -1102,12 +1151,19 @@
     "views": 7,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T22:11",
+    "age_h": 31.4,
+    "views": 7,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 7,
   "likes": 0,
   "comments": 0,
-  "age_h": 29.4,
+  "age_h": 31.4,
   "views_per_h": 0.2,
   "like_rate": 0.0,
   "experiment": null,
@@ -1241,13 +1297,20 @@
     "views": 7,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T22:11",
+    "age_h": 29.6,
+    "views": 7,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 7,
   "likes": 0,
   "comments": 0,
-  "age_h": 27.6,
-  "views_per_h": 0.3,
+  "age_h": 29.6,
+  "views_per_h": 0.2,
   "like_rate": 0.0,
   "experiment": null,
   "clip_title": "Krokodil erschreckt Monte",
@@ -1265,11 +1328,11 @@
   "uploaded_at": "2026-11-25T18:11:36",
   "upload_hour": 18,
   "perf": {
-   "aufrufe": 5.0,
-   "angesehen": 60.0,
-   "weggewischt": 40.0,
+   "aufrufe": 6.0,
+   "angesehen": 57.1,
+   "weggewischt": 42.9,
    "likes": 0.0,
-   "checked_at": "2026-11-26T10:15"
+   "checked_at": "2026-11-26T20:13"
   },
   "snapshots": [
    {
@@ -1369,13 +1432,20 @@
     "views": 5,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T22:11",
+    "age_h": 28.0,
+    "views": 8,
+    "likes": 0,
+    "comments": 0
    }
   ],
-  "views": 5,
+  "views": 8,
   "likes": 0,
   "comments": 0,
-  "age_h": 26.0,
-  "views_per_h": 0.2,
+  "age_h": 28.0,
+  "views_per_h": 0.3,
   "like_rate": 0.0
  },
  "iEDWe8vu7Ms": {
@@ -1487,14 +1557,21 @@
     "views": 5,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T22:11",
+    "age_h": 26.0,
+    "views": 6,
+    "likes": 1,
+    "comments": 0
    }
   ],
-  "views": 5,
+  "views": 6,
   "likes": 1,
   "comments": 0,
-  "age_h": 24.0,
+  "age_h": 26.0,
   "views_per_h": 0.2,
-  "like_rate": 20.0
+  "like_rate": 16.7
  },
  "EazTuqIluFY": {
   "dur": 17.2,
@@ -1598,12 +1675,19 @@
     "views": 5,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T22:11",
+    "age_h": 25.1,
+    "views": 5,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 5,
   "likes": 0,
   "comments": 0,
-  "age_h": 23.1,
+  "age_h": 25.1,
   "views_per_h": 0.2,
   "like_rate": 0.0
  },
@@ -1619,12 +1703,12 @@
   "uploaded_at": "2026-11-26T14:10:56",
   "upload_hour": 14,
   "perf": {
-   "aufrufe": 239.0,
-   "angesehen": 28.5,
-   "weggewischt": 71.5,
-   "avd": 6.0,
-   "likes": 2.0,
-   "checked_at": "2026-11-26T16:11"
+   "aufrufe": 642.0,
+   "angesehen": 41.0,
+   "weggewischt": 59.0,
+   "avd": 7.9,
+   "likes": 6.0,
+   "checked_at": "2026-11-26T20:13"
   },
   "snapshots": [
    {
@@ -1654,14 +1738,21 @@
     "views": 483,
     "likes": 6,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T22:11",
+    "age_h": 8.0,
+    "views": 698,
+    "likes": 7,
+    "comments": 0
    }
   ],
-  "views": 483,
-  "likes": 6,
+  "views": 698,
+  "likes": 7,
   "comments": 0,
-  "age_h": 6.0,
-  "views_per_h": 80.2,
-  "like_rate": 1.2
+  "age_h": 8.0,
+  "views_per_h": 87.1,
+  "like_rate": 1.0
  },
  "nVhqt2NdSe4": {
   "dur": 33.3,
@@ -1702,12 +1793,19 @@
     "views": 3,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T22:11",
+    "age_h": 6.0,
+    "views": 4,
+    "likes": 0,
+    "comments": 0
    }
   ],
-  "views": 3,
+  "views": 4,
   "likes": 0,
   "comments": 0,
-  "age_h": 4.0,
+  "age_h": 6.0,
   "views_per_h": 0.7,
   "like_rate": 0.0
  },
@@ -1722,7 +1820,11 @@
   "layout": "cam",
   "uploaded_at": "2026-11-26T18:12:10",
   "upload_hour": 18,
-  "perf": {},
+  "perf": {
+   "aufrufe": 0.0,
+   "likes": 0.0,
+   "checked_at": "2026-11-26T20:13"
+  },
   "snapshots": [
    {
     "t": "2026-11-26T18:12",
@@ -1737,13 +1839,20 @@
     "views": 0,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T22:11",
+    "age_h": 4.0,
+    "views": 1,
+    "likes": 0,
+    "comments": 0
    }
   ],
-  "views": 0,
+  "views": 1,
   "likes": 0,
   "comments": 0,
-  "age_h": 2.0,
-  "views_per_h": 0.0,
+  "age_h": 4.0,
+  "views_per_h": 0.3,
   "like_rate": 0.0
  },
  "g_En7qeKFds": {
@@ -1761,6 +1870,41 @@
   "snapshots": [
    {
     "t": "2026-11-26T20:12",
+    "age_h": 0.1,
+    "views": 0,
+    "likes": 0,
+    "comments": 0
+   },
+   {
+    "t": "2026-11-26T22:11",
+    "age_h": 2.0,
+    "views": 15,
+    "likes": 0,
+    "comments": 0
+   }
+  ],
+  "views": 15,
+  "likes": 0,
+  "comments": 0,
+  "age_h": 2.0,
+  "views_per_h": 7.5,
+  "like_rate": 0.0
+ },
+ "UFU3n6p_JY8": {
+  "dur": 24.8,
+  "title": "MontanaBlack Realtalk: „Fremdgehen ist nicht zu verzeihen“ 💔 #shorts",
+  "streamer": "MontanaBlack",
+  "headline": "„Fremdgehen ist nicht zu verzeihen“ 💔",
+  "experiment": "Talk/Realtalk ~25 s, Einstieg mit starker Aussage",
+  "clip_title": "deep am morgen 2",
+  "design": "v2",
+  "layout": "cam",
+  "uploaded_at": "2026-11-26T22:11:40",
+  "upload_hour": 22,
+  "perf": {},
+  "snapshots": [
+   {
+    "t": "2026-11-26T22:11",
     "age_h": 0.1,
     "views": 0,
     "likes": 0,
