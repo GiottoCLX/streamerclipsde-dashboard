@@ -33,6 +33,11 @@
     "t": "2026-11-26T22:12:30",
     "text": "Vorrat leer – suche neue Clips der letzten 24 h",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T22:16:05",
+    "text": "24 h ohne Clip mit Note 8+ – suche in den letzten 7 Tagen",
+    "kind": "step"
    }
   ]
  },
@@ -879,7 +884,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-26T22:12:30",
+ "updated": "2026-11-26T22:16:05",
  "last_summary": "Gepostet: Monte über Stefan Raab (g_En7qeKFds); Vorrat 1 (Realtalk); Monte Fußsohle wegen abgeschnittenem Gesicht aussortiert",
  "channel": "kanal1",
  "check": {
