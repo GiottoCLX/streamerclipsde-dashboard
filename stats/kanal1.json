@@ -85,13 +85,20 @@
     "views": 599,
     "likes": 5,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T10:13",
+    "age_h": 21.7,
+    "views": 599,
+    "likes": 5,
+    "comments": 0
    }
   ],
   "views": 599,
   "likes": 5,
   "comments": 0,
-  "age_h": 19.7,
-  "views_per_h": 30.4,
+  "age_h": 21.7,
+  "views_per_h": 27.6,
   "like_rate": 0.8,
   "experiment": null,
   "clip_title": "häuser",
@@ -183,13 +190,20 @@
     "views": 1431,
     "likes": 36,
     "comments": 2
+   },
+   {
+    "t": "2026-11-26T10:13",
+    "age_h": 21.7,
+    "views": 1431,
+    "likes": 36,
+    "comments": 2
    }
   ],
   "views": 1431,
   "likes": 36,
   "comments": 2,
-  "age_h": 19.7,
-  "views_per_h": 72.7,
+  "age_h": 21.7,
+  "views_per_h": 65.9,
   "like_rate": 2.5,
   "experiment": null,
   "clip_title": "wie war neuseeland",
@@ -204,10 +218,11 @@
   "uploaded_at": "2026-11-25T12:31:08",
   "upload_hour": 12,
   "perf": {
-   "aufrufe": 3.0,
-   "angesehen": 0.0,
-   "weggewischt": 100.0,
-   "checked_at": "2026-11-25T16:50"
+   "aufrufe": 11.0,
+   "angesehen": 33.3,
+   "weggewischt": 66.7,
+   "checked_at": "2026-11-26T08:13",
+   "likes": 1.0
   },
   "snapshots": [
    {
@@ -279,14 +294,21 @@
     "views": 9,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T10:13",
+    "age_h": 21.7,
+    "views": 10,
+    "likes": 1,
+    "comments": 0
    }
   ],
-  "views": 9,
+  "views": 10,
   "likes": 1,
   "comments": 0,
-  "age_h": 19.7,
+  "age_h": 21.7,
   "views_per_h": 0.5,
-  "like_rate": 11.1,
+  "like_rate": 10.0,
   "experiment": null,
   "clip_title": "Sound ist schlecht",
   "design": "v1"
@@ -300,10 +322,11 @@
   "uploaded_at": "2026-11-25T12:31:08",
   "upload_hour": 12,
   "perf": {
-   "aufrufe": 3.0,
+   "aufrufe": 8.0,
    "angesehen": 20.0,
    "weggewischt": 80.0,
-   "checked_at": "2026-11-25T16:50"
+   "checked_at": "2026-11-26T08:13",
+   "likes": 1.0
   },
   "snapshots": [
    {
@@ -375,12 +398,19 @@
     "views": 8,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T10:13",
+    "age_h": 21.7,
+    "views": 8,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 8,
   "likes": 1,
   "comments": 0,
-  "age_h": 19.7,
+  "age_h": 21.7,
   "views_per_h": 0.4,
   "like_rate": 12.5,
   "experiment": null,
@@ -396,9 +426,11 @@
   "uploaded_at": "2026-11-25T12:31:08",
   "upload_hour": 12,
   "perf": {
-   "aufrufe": 1.0,
-   "angesehen": 100.0,
-   "checked_at": "2026-11-25T16:50"
+   "aufrufe": 2.0,
+   "angesehen": 33.3,
+   "checked_at": "2026-11-26T08:13",
+   "weggewischt": 66.7,
+   "likes": 1.0
   },
   "snapshots": [
    {
@@ -470,13 +502,20 @@
     "views": 3,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T10:13",
+    "age_h": 21.7,
+    "views": 3,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 3,
   "likes": 1,
   "comments": 0,
-  "age_h": 19.7,
-  "views_per_h": 0.2,
+  "age_h": 21.7,
+  "views_per_h": 0.1,
   "like_rate": 33.3,
   "experiment": null,
   "clip_title": "zu viel",
@@ -491,12 +530,12 @@
   "uploaded_at": "2026-11-25T11:52:14",
   "upload_hour": 11,
   "perf": {
-   "aufrufe": 292.0,
-   "angesehen": 38.4,
-   "weggewischt": 61.6,
-   "avd": 13.6,
+   "aufrufe": 355.0,
+   "angesehen": 41.3,
+   "weggewischt": 58.7,
+   "avd": 14.2,
    "likes": 3.0,
-   "checked_at": "2026-11-25T16:50"
+   "checked_at": "2026-11-26T08:13"
   },
   "snapshots": [
    {
@@ -568,13 +607,20 @@
     "views": 356,
     "likes": 3,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T10:13",
+    "age_h": 22.4,
+    "views": 356,
+    "likes": 3,
+    "comments": 0
    }
   ],
   "views": 356,
   "likes": 3,
   "comments": 0,
-  "age_h": 20.3,
-  "views_per_h": 17.5,
+  "age_h": 22.4,
+  "views_per_h": 15.9,
   "like_rate": 0.8,
   "experiment": null,
   "clip_title": "trymacs platzt",
@@ -663,13 +709,20 @@
     "views": 8,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T10:13",
+    "age_h": 19.4,
+    "views": 8,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 8,
   "likes": 0,
   "comments": 0,
-  "age_h": 17.4,
-  "views_per_h": 0.5,
+  "age_h": 19.4,
+  "views_per_h": 0.4,
   "like_rate": 0.0,
   "experiment": null,
   "clip_title": "3vs3 Gaming-Olympiade mit dem Squad 🔥 |  !iconleague !doku !eligella !gaming !uncut !clips",
@@ -758,12 +811,19 @@
     "views": 7,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T10:13",
+    "age_h": 19.4,
+    "views": 7,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 7,
   "likes": 0,
   "comments": 0,
-  "age_h": 17.4,
+  "age_h": 19.4,
   "views_per_h": 0.4,
   "like_rate": 0.0,
   "experiment": null,
@@ -855,13 +915,20 @@
     "views": 6,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T10:13",
+    "age_h": 17.6,
+    "views": 6,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 6,
   "likes": 0,
   "comments": 0,
-  "age_h": 15.6,
-  "views_per_h": 0.4,
+  "age_h": 17.6,
+  "views_per_h": 0.3,
   "like_rate": 0.0,
   "experiment": null,
   "clip_title": "Krokodil erschreckt Monte",
@@ -941,13 +1008,20 @@
     "views": 5,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T10:13",
+    "age_h": 16.0,
+    "views": 5,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 5,
   "likes": 0,
   "comments": 0,
-  "age_h": 14.0,
-  "views_per_h": 0.4,
+  "age_h": 16.0,
+  "views_per_h": 0.3,
   "like_rate": 0.0
  },
  "iEDWe8vu7Ms": {
@@ -1017,12 +1091,19 @@
     "views": 5,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T10:13",
+    "age_h": 14.0,
+    "views": 5,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 5,
   "likes": 1,
   "comments": 0,
-  "age_h": 12.0,
+  "age_h": 14.0,
   "views_per_h": 0.4,
   "like_rate": 20.0
  },
@@ -1086,13 +1167,20 @@
     "views": 3,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T10:13",
+    "age_h": 13.1,
+    "views": 5,
+    "likes": 0,
+    "comments": 0
    }
   ],
-  "views": 3,
+  "views": 5,
   "likes": 0,
   "comments": 0,
-  "age_h": 11.1,
-  "views_per_h": 0.3,
+  "age_h": 13.1,
+  "views_per_h": 0.4,
   "like_rate": 0.0
  }
 }
