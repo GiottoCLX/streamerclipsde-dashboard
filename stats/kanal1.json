@@ -64,13 +64,20 @@
     "views": 599,
     "likes": 5,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T04:10",
+    "age_h": 15.7,
+    "views": 599,
+    "likes": 5,
+    "comments": 0
    }
   ],
   "views": 599,
   "likes": 5,
   "comments": 0,
-  "age_h": 13.7,
-  "views_per_h": 43.9,
+  "age_h": 15.7,
+  "views_per_h": 38.3,
   "like_rate": 0.8,
   "experiment": null,
   "clip_title": "häuser",
@@ -141,13 +148,20 @@
     "views": 1424,
     "likes": 36,
     "comments": 2
+   },
+   {
+    "t": "2026-11-26T04:10",
+    "age_h": 15.7,
+    "views": 1424,
+    "likes": 36,
+    "comments": 2
    }
   ],
   "views": 1424,
   "likes": 36,
   "comments": 2,
-  "age_h": 13.7,
-  "views_per_h": 104.3,
+  "age_h": 15.7,
+  "views_per_h": 91.0,
   "like_rate": 2.5,
   "experiment": null,
   "clip_title": "wie war neuseeland",
@@ -216,14 +230,21 @@
     "views": 8,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T04:10",
+    "age_h": 15.7,
+    "views": 9,
+    "likes": 1,
+    "comments": 0
    }
   ],
-  "views": 8,
+  "views": 9,
   "likes": 1,
   "comments": 0,
-  "age_h": 13.7,
+  "age_h": 15.7,
   "views_per_h": 0.6,
-  "like_rate": 12.5,
+  "like_rate": 11.1,
   "experiment": null,
   "clip_title": "Sound ist schlecht",
   "design": "v1"
@@ -291,13 +312,20 @@
     "views": 7,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T04:10",
+    "age_h": 15.7,
+    "views": 7,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 7,
   "likes": 1,
   "comments": 0,
-  "age_h": 13.7,
-  "views_per_h": 0.5,
+  "age_h": 15.7,
+  "views_per_h": 0.4,
   "like_rate": 14.3,
   "experiment": null,
   "clip_title": "Monte verprügelt schradin",
@@ -365,12 +393,19 @@
     "views": 3,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T04:10",
+    "age_h": 15.7,
+    "views": 3,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 3,
   "likes": 1,
   "comments": 0,
-  "age_h": 13.7,
+  "age_h": 15.7,
   "views_per_h": 0.2,
   "like_rate": 33.3,
   "experiment": null,
@@ -442,13 +477,20 @@
     "views": 354,
     "likes": 3,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T04:10",
+    "age_h": 16.3,
+    "views": 356,
+    "likes": 3,
+    "comments": 0
    }
   ],
-  "views": 354,
+  "views": 356,
   "likes": 3,
   "comments": 0,
-  "age_h": 14.3,
-  "views_per_h": 24.7,
+  "age_h": 16.3,
+  "views_per_h": 21.8,
   "like_rate": 0.8,
   "experiment": null,
   "clip_title": "trymacs platzt",
@@ -516,13 +558,20 @@
     "views": 8,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T04:10",
+    "age_h": 13.4,
+    "views": 8,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 8,
   "likes": 0,
   "comments": 0,
-  "age_h": 11.4,
-  "views_per_h": 0.7,
+  "age_h": 13.4,
+  "views_per_h": 0.6,
   "like_rate": 0.0,
   "experiment": null,
   "clip_title": "3vs3 Gaming-Olympiade mit dem Squad 🔥 |  !iconleague !doku !eligella !gaming !uncut !clips",
@@ -590,13 +639,20 @@
     "views": 7,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T04:10",
+    "age_h": 13.4,
+    "views": 7,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 7,
   "likes": 0,
   "comments": 0,
-  "age_h": 11.4,
-  "views_per_h": 0.6,
+  "age_h": 13.4,
+  "views_per_h": 0.5,
   "like_rate": 0.0,
   "experiment": null,
   "clip_title": "Krabbe greift Monte an",
@@ -666,13 +722,20 @@
     "views": 6,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T04:10",
+    "age_h": 11.5,
+    "views": 6,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 6,
   "likes": 0,
   "comments": 0,
-  "age_h": 9.5,
-  "views_per_h": 0.6,
+  "age_h": 11.5,
+  "views_per_h": 0.5,
   "like_rate": 0.0,
   "experiment": null,
   "clip_title": "Krokodil erschreckt Monte",
@@ -731,13 +794,20 @@
     "views": 5,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T04:10",
+    "age_h": 10.0,
+    "views": 5,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 5,
   "likes": 0,
   "comments": 0,
-  "age_h": 8.0,
-  "views_per_h": 0.6,
+  "age_h": 10.0,
+  "views_per_h": 0.5,
   "like_rate": 0.0
  },
  "iEDWe8vu7Ms": {
@@ -780,13 +850,20 @@
     "views": 5,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T04:10",
+    "age_h": 8.0,
+    "views": 5,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 5,
   "likes": 1,
   "comments": 0,
-  "age_h": 6.0,
-  "views_per_h": 0.8,
+  "age_h": 8.0,
+  "views_per_h": 0.6,
   "like_rate": 20.0
  },
  "EazTuqIluFY": {
@@ -822,13 +899,20 @@
     "views": 3,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T04:10",
+    "age_h": 7.1,
+    "views": 3,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 3,
   "likes": 0,
   "comments": 0,
-  "age_h": 5.1,
-  "views_per_h": 0.6,
+  "age_h": 7.1,
+  "views_per_h": 0.4,
   "like_rate": 0.0
  }
 }
