@@ -1,67 +1,76 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 00:09",
-  "started": "2026-11-27T00:09:17",
-  "steps": [
-   {
-    "t": "2026-11-27T00:09:17",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T00:09:33",
-    "text": "Prüfe, ob gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T00:09:44",
-    "text": "Kein Post (außerhalb 06–24 Uhr). Hole Aufrufe aller Shorts",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T00:10:12",
-    "text": "Öffne Studio (StreamerclipsDE) für Studio-Werte",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T00:11:47",
-    "text": "Prüfe Vorrat",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T00:11:53",
-    "text": "Suche neue Twitch-Clips (24 h)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T00:14:17",
-    "text": "24 h ohne Note 8+ – suche in den letzten 7 Tagen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T00:14:57",
-    "text": "Sehe mir 2 Trymacs-Kandidaten im Bild an (Sportzigarette, Kann nicht mehr)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T00:16:29",
-    "text": "Kein 8+ – suche 7 Tage mit mehr Clips pro Streamer",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T00:16:45",
-    "text": "Keine neuen Kandidaten – schreibe Erkenntnisse und Log",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T00:16:59",
-    "text": "Aktualisiere Dashboard",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 00:09",
+   "started": "2026-11-27T00:09:17",
+   "steps": [
+    {
+     "t": "2026-11-27T00:09:17",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T00:09:33",
+     "text": "Prüfe, ob gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T00:09:44",
+     "text": "Kein Post (außerhalb 06–24 Uhr). Hole Aufrufe aller Shorts",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T00:10:12",
+     "text": "Öffne Studio (StreamerclipsDE) für Studio-Werte",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T00:11:47",
+     "text": "Prüfe Vorrat",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T00:11:53",
+     "text": "Suche neue Twitch-Clips (24 h)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T00:14:17",
+     "text": "24 h ohne Note 8+ – suche in den letzten 7 Tagen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T00:14:57",
+     "text": "Sehe mir 2 Trymacs-Kandidaten im Bild an (Sportzigarette, Kann nicht mehr)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T00:16:29",
+     "text": "Kein 8+ – suche 7 Tage mit mehr Clips pro Streamer",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T00:16:45",
+     "text": "Keine neuen Kandidaten – schreibe Erkenntnisse und Log",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T00:16:59",
+     "text": "Aktualisiere Dashboard",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T00:17:10",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-27T00:17:10",
+   "state": "ok",
+   "summary": "Kein Post (außerhalb 06–24 Uhr), Vorrat 0: kein Clip mit Note 8+ gefunden; Festival-Story bei 984 Aufrufen, Realtalk 0 nach 2 h"
+  },
   {
    "title": "Lauf 22:09",
    "started": "2026-11-26T22:09:14",
@@ -927,30 +936,6 @@
    "finished": "2026-11-25T21:22:21",
    "state": "ok",
    "summary": "Test erfolgreich – Live-Anzeige funktioniert"
-  },
-  {
-   "title": "Manuell im Chat: Live-Monitoring + Regeln einrichten",
-   "started": "2026-11-25T21:19:17",
-   "steps": [
-    {
-     "t": "2026-11-25T21:19:17",
-     "text": "Lauf gestartet, neueste Regeln geladen",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-25T21:19:18",
-     "text": "REGELN.md, live.py und Live-Bereich im Dashboard gebaut",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-25T21:19:18",
-     "text": "Fertig",
-     "kind": "step"
-    }
-   ],
-   "finished": "2026-11-25T21:19:18",
-   "state": "ok",
-   "summary": "Live-Monitoring und Regeldatei eingerichtet"
   }
  ],
  "rules": {
@@ -958,8 +943,8 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T00:16:59",
- "last_summary": "Gepostet: Monte Realtalk Fremdgehen (UFU3n6p_JY8); kein neuer Clip mit Note 8+, Vorrat 0",
+ "updated": "2026-11-27T00:17:10",
+ "last_summary": "Kein Post (außerhalb 06–24 Uhr), Vorrat 0: kein Clip mit Note 8+ gefunden; Festival-Story bei 984 Aufrufen, Realtalk 0 nach 2 h",
  "channel": "kanal1",
  "check": {
   "t": "2026-11-27T00:09:37",
