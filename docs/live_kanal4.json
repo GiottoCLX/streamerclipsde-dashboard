@@ -1,57 +1,66 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 19:09",
-  "started": "2026-11-26T19:09:12",
-  "steps": [
-   {
-    "t": "2026-11-26T19:09:12",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T19:09:23",
-    "text": "Prüfe, ob gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T19:09:39",
-    "text": "Kein fertiger Short im Vorrat – kein Post. Hole Aufrufzahlen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T19:10:41",
-    "text": "Vorrat leer – suche neue Clips (letzte 24 h)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T19:13:54",
-    "text": "Keine 8+ in 24 h – suche über 7 Tage",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T19:18:02",
-    "text": "Prüfe Kandidaten genauer: Jynxzi Haaland, Jynxzi 'won't let you die'",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T19:18:28",
-    "text": "Schneide 2 Jynxzi-Kandidaten zur Bildprüfung",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T19:19:48",
-    "text": "Beide Kandidaten im Bild nur Note 6 – aussortiert, nichts vorbereitet",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T19:20:03",
-    "text": "Abschluss: Log und Dashboard",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 19:09",
+   "started": "2026-11-26T19:09:12",
+   "steps": [
+    {
+     "t": "2026-11-26T19:09:12",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T19:09:23",
+     "text": "Prüfe, ob gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T19:09:39",
+     "text": "Kein fertiger Short im Vorrat – kein Post. Hole Aufrufzahlen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T19:10:41",
+     "text": "Vorrat leer – suche neue Clips (letzte 24 h)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T19:13:54",
+     "text": "Keine 8+ in 24 h – suche über 7 Tage",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T19:18:02",
+     "text": "Prüfe Kandidaten genauer: Jynxzi Haaland, Jynxzi 'won't let you die'",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T19:18:28",
+     "text": "Schneide 2 Jynxzi-Kandidaten zur Bildprüfung",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T19:19:48",
+     "text": "Beide Kandidaten im Bild nur Note 6 – aussortiert, nichts vorbereitet",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T19:20:03",
+     "text": "Abschluss: Log und Dashboard",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T19:20:14",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-26T19:20:14",
+   "state": "ok",
+   "summary": "Kein Post (Vorrat leer); alle 3 Shorts 1–3 Aufrufe bei 100 % angesehen; kein 8+-Clip gefunden, 2 Jynxzi-Kandidaten aussortiert, Vorrat 0"
+  },
   {
    "title": "Lauf 17:09",
    "started": "2026-11-26T17:09:11",
@@ -274,12 +283,12 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-26T19:20:03",
+ "updated": "2026-11-26T19:20:14",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-26T19:09:26",
   "may_post": true,
   "reason": "Posten erlaubt"
  },
- "last_summary": "Gepostet: StableRonaldo Avengers-Quiz (_3mBTiNY1-A); kein neuer 8+-Clip gefunden, Vorrat 0"
+ "last_summary": "Kein Post (Vorrat leer); alle 3 Shorts 1–3 Aufrufe bei 100 % angesehen; kein 8+-Clip gefunden, 2 Jynxzi-Kandidaten aussortiert, Vorrat 0"
 }
