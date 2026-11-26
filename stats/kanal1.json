@@ -8,12 +8,12 @@
   "uploaded_at": "2026-11-25T12:31:08",
   "upload_hour": 12,
   "perf": {
-   "aufrufe": 599.0,
-   "angesehen": 60.6,
-   "weggewischt": 39.4,
-   "avd": 15.6,
+   "aufrufe": 606.0,
+   "angesehen": 60.5,
+   "weggewischt": 39.5,
+   "avd": 15.4,
    "likes": 5.0,
-   "checked_at": "2026-11-26T06:20"
+   "checked_at": "2026-11-26T12:13"
   },
   "snapshots": [
    {
@@ -99,13 +99,20 @@
     "views": 601,
     "likes": 5,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T14:11",
+    "age_h": 25.7,
+    "views": 602,
+    "likes": 5,
+    "comments": 0
    }
   ],
-  "views": 601,
+  "views": 602,
   "likes": 5,
   "comments": 0,
-  "age_h": 23.7,
-  "views_per_h": 25.4,
+  "age_h": 25.7,
+  "views_per_h": 23.5,
   "like_rate": 0.8,
   "experiment": null,
   "clip_title": "häuser",
@@ -120,12 +127,12 @@
   "uploaded_at": "2026-11-25T12:31:08",
   "upload_hour": 12,
   "perf": {
-   "aufrufe": 1432.0,
+   "aufrufe": 1443.0,
    "angesehen": 65.5,
    "weggewischt": 34.5,
-   "avd": 20.9,
+   "avd": 21.2,
    "likes": 36.0,
-   "checked_at": "2026-11-26T06:20"
+   "checked_at": "2026-11-26T12:13"
   },
   "snapshots": [
    {
@@ -211,13 +218,20 @@
     "views": 1431,
     "likes": 36,
     "comments": 2
+   },
+   {
+    "t": "2026-11-26T14:11",
+    "age_h": 25.7,
+    "views": 1440,
+    "likes": 36,
+    "comments": 2
    }
   ],
-  "views": 1431,
+  "views": 1440,
   "likes": 36,
   "comments": 2,
-  "age_h": 23.7,
-  "views_per_h": 60.4,
+  "age_h": 25.7,
+  "views_per_h": 56.1,
   "like_rate": 2.5,
   "experiment": null,
   "clip_title": "wie war neuseeland",
@@ -322,14 +336,21 @@
     "views": 10,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T14:11",
+    "age_h": 25.7,
+    "views": 11,
+    "likes": 1,
+    "comments": 0
    }
   ],
-  "views": 10,
+  "views": 11,
   "likes": 1,
   "comments": 0,
-  "age_h": 23.7,
+  "age_h": 25.7,
   "views_per_h": 0.4,
-  "like_rate": 10.0,
+  "like_rate": 9.1,
   "experiment": null,
   "clip_title": "Sound ist schlecht",
   "design": "v1"
@@ -433,14 +454,21 @@
     "views": 8,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T14:11",
+    "age_h": 25.7,
+    "views": 9,
+    "likes": 1,
+    "comments": 0
    }
   ],
-  "views": 8,
+  "views": 9,
   "likes": 1,
   "comments": 0,
-  "age_h": 23.7,
-  "views_per_h": 0.3,
-  "like_rate": 12.5,
+  "age_h": 25.7,
+  "views_per_h": 0.4,
+  "like_rate": 11.1,
   "experiment": null,
   "clip_title": "Monte verprügelt schradin",
   "design": "v1"
@@ -544,12 +572,19 @@
     "views": 3,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T14:11",
+    "age_h": 25.7,
+    "views": 3,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 3,
   "likes": 1,
   "comments": 0,
-  "age_h": 23.7,
+  "age_h": 25.7,
   "views_per_h": 0.1,
   "like_rate": 33.3,
   "experiment": null,
@@ -656,13 +691,20 @@
     "views": 356,
     "likes": 3,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T14:11",
+    "age_h": 26.3,
+    "views": 356,
+    "likes": 3,
+    "comments": 0
    }
   ],
   "views": 356,
   "likes": 3,
   "comments": 0,
-  "age_h": 24.3,
-  "views_per_h": 14.6,
+  "age_h": 26.3,
+  "views_per_h": 13.5,
   "like_rate": 0.8,
   "experiment": null,
   "clip_title": "trymacs platzt",
@@ -767,12 +809,19 @@
     "views": 8,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T14:11",
+    "age_h": 23.4,
+    "views": 10,
+    "likes": 0,
+    "comments": 0
    }
   ],
-  "views": 8,
+  "views": 10,
   "likes": 0,
   "comments": 0,
-  "age_h": 21.4,
+  "age_h": 23.4,
   "views_per_h": 0.4,
   "like_rate": 0.0,
   "experiment": null,
@@ -878,12 +927,19 @@
     "views": 7,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T14:11",
+    "age_h": 23.4,
+    "views": 7,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 7,
   "likes": 0,
   "comments": 0,
-  "age_h": 21.4,
+  "age_h": 23.4,
   "views_per_h": 0.3,
   "like_rate": 0.0,
   "experiment": null,
@@ -989,13 +1045,20 @@
     "views": 7,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T14:11",
+    "age_h": 21.6,
+    "views": 7,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 7,
   "likes": 0,
   "comments": 0,
-  "age_h": 19.6,
-  "views_per_h": 0.4,
+  "age_h": 21.6,
+  "views_per_h": 0.3,
   "like_rate": 0.0,
   "experiment": null,
   "clip_title": "Krokodil erschreckt Monte",
@@ -1089,12 +1152,19 @@
     "views": 5,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T14:11",
+    "age_h": 20.0,
+    "views": 5,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 5,
   "likes": 0,
   "comments": 0,
-  "age_h": 18.0,
+  "age_h": 20.0,
   "views_per_h": 0.3,
   "like_rate": 0.0
  },
@@ -1114,7 +1184,7 @@
    "angesehen": 100.0,
    "weggewischt": 0.0,
    "likes": 1.0,
-   "checked_at": "2026-11-26T06:20"
+   "checked_at": "2026-11-26T12:13"
   },
   "snapshots": [
    {
@@ -1179,12 +1249,19 @@
     "views": 5,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T14:11",
+    "age_h": 18.0,
+    "views": 5,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 5,
   "likes": 1,
   "comments": 0,
-  "age_h": 16.0,
+  "age_h": 18.0,
   "views_per_h": 0.3,
   "like_rate": 20.0
  },
@@ -1200,11 +1277,11 @@
   "uploaded_at": "2026-11-25T21:06:12",
   "upload_hour": 21,
   "perf": {
-   "aufrufe": 2.0,
-   "angesehen": 50.0,
-   "weggewischt": 50.0,
+   "aufrufe": 5.0,
+   "angesehen": 75.0,
+   "weggewischt": 25.0,
    "likes": 0.0,
-   "checked_at": "2026-11-26T06:20"
+   "checked_at": "2026-11-26T12:13"
   },
   "snapshots": [
    {
@@ -1262,13 +1339,48 @@
     "views": 5,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T14:11",
+    "age_h": 17.1,
+    "views": 5,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 5,
   "likes": 0,
   "comments": 0,
-  "age_h": 15.1,
+  "age_h": 17.1,
   "views_per_h": 0.3,
+  "like_rate": 0.0
+ },
+ "BzLWrPpkJmA": {
+  "dur": 21.6,
+  "title": "Trymacs: „Er hat 'ne Faust von der Security bekommen“ – Nicis Festival-Story 💀 #shorts",
+  "streamer": "Trymacs",
+  "headline": "„Er hat 'ne Faust von der Security bekommen“ 💀",
+  "experiment": "Story-Clip nach Nutzer-Feedback; erster Pro-Schnitt (Füllsatz raus + Jump-Cuts)",
+  "clip_title": "Nici wird auf der Bühne geschlagen",
+  "design": "v2",
+  "layout": "split",
+  "uploaded_at": "2026-11-26T14:10:56",
+  "upload_hour": 14,
+  "perf": {},
+  "snapshots": [
+   {
+    "t": "2026-11-26T14:11",
+    "age_h": 0.1,
+    "views": 0,
+    "likes": 0,
+    "comments": 0
+   }
+  ],
+  "views": 0,
+  "likes": 0,
+  "comments": 0,
+  "age_h": 0.1,
+  "views_per_h": 0.0,
   "like_rate": 0.0
  }
 }
