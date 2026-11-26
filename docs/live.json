@@ -33,6 +33,11 @@
     "t": "2026-11-26T12:11:59",
     "text": "Lese Studio-Werte für 4 Shorts (Armut, Bauprojekt, GTA6, Tierleiche)",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T12:13:14",
+    "text": "Vorrat geprüft: 2 Shorts frisch (Note 8) – voll, trage Erkenntnisse ein",
+    "kind": "step"
    }
   ]
  },
@@ -534,7 +539,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T12:11:59",
+ "updated": "2026-11-26T12:13:14",
  "last_summary": "Kein Post: Tägliches Upload-Limit weiterhin aktiv (Identitätsbestätigung nötig); Studio-Werte aktualisiert, 2 Shorts mit Note 8 liegen bereit.",
  "channel": "kanal1",
  "check": {
