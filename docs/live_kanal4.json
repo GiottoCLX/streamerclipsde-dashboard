@@ -38,6 +38,11 @@
     "t": "2026-11-26T17:12:47",
     "text": "Vorrat leer – suche neue Clips (24 h)",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T17:17:28",
+    "text": "Kein 8er in 24 h – suche 7 Tage",
+    "kind": "step"
    }
   ]
  },
@@ -190,7 +195,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-26T17:12:47",
+ "updated": "2026-11-26T17:17:28",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-26T17:09:26",
