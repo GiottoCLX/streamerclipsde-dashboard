@@ -34,7 +34,7 @@ Englisch · @streamclipsdailyen · Läufe zu jeder **ungeraden** Stunde (01, 03,
 - **Pause:** nein
 - **Posts pro Lauf:** 1
 - **Posting-Zeiten:** 06:00-24:00
-- **Mindestabstand zwischen zwei Posts (Minuten):** 100
+- **Mindestabstand zwischen zwei Posts (Minuten):** 60
 - **Fertige Shorts auf Vorrat:** 2
 - **Cliplänge (Sekunden):** 15-45
 - **Fertige Shorts verfallen nach (Stunden):** 36

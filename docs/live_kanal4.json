@@ -13,6 +13,16 @@
     "t": "2026-11-26T15:48:52",
     "text": "Nutzerwunsch: Lacy-Clip jetzt posten",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T15:52:05",
+    "text": "Gepostet: Lacy (lVDPIRi9WjM) – suche nächsten Clip für 17 Uhr",
+    "kind": "step"
+   },
+   {
+    "t": "2026-11-26T15:55:36",
+    "text": "Schneide StableRonaldo Avengers-Quiz (Note 8)",
+    "kind": "step"
    }
   ]
  },
@@ -131,12 +141,12 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T15:48:52",
+ "updated": "2026-11-26T15:56:33",
  "channel": "kanal4",
  "check": {
-  "t": "2026-11-26T12:31:27",
-  "may_post": true,
-  "reason": "Posten erlaubt"
+  "t": "2026-11-26T15:56:33",
+  "may_post": false,
+  "reason": "letzter Post erst vor 5 Min. (Mindestabstand 60)"
  },
  "last_summary": "Kein Post (Vorrat leer, Browser nicht freigegeben); neu bereit: Lacy restart the whole game (Note 8)"
 }
