@@ -48,6 +48,11 @@
     "t": "2026-11-27T00:16:29",
     "text": "Kein 8+ – suche 7 Tage mit mehr Clips pro Streamer",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T00:16:45",
+    "text": "Keine neuen Kandidaten – schreibe Erkenntnisse und Log",
+    "kind": "step"
    }
   ]
  },
@@ -948,7 +953,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T00:16:29",
+ "updated": "2026-11-27T00:16:45",
  "last_summary": "Gepostet: Monte Realtalk Fremdgehen (UFU3n6p_JY8); kein neuer Clip mit Note 8+, Vorrat 0",
  "channel": "kanal1",
  "check": {
