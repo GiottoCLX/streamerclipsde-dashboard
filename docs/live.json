@@ -28,6 +28,11 @@
     "t": "2026-11-26T18:12:14",
     "text": "Gepostet: Monte Elektro/G63 (CL4hHaVweWA) – werte Zahlen aus",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T18:12:31",
+    "text": "Hole Studio-Werte (Polizei, Armut, Pyramide, Krokodil)",
+    "kind": "step"
    }
   ]
  },
@@ -721,7 +726,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-26T18:12:14",
+ "updated": "2026-11-26T18:12:31",
  "last_summary": "Gepostet: Monte Polizei (nVhqt2NdSe4); Festival nach 2 h bei 239 Aufrufen; bereit: Elektro + Stefan Raab (je Note 8)",
  "channel": "kanal1",
  "check": {
