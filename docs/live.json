@@ -13,6 +13,11 @@
     "t": "2026-11-26T16:09:21",
     "text": "Prüfe, ob gepostet werden darf",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T16:09:31",
+    "text": "Erlaubt – hole ältesten fertigen Short",
+    "kind": "step"
    }
   ]
  },
@@ -632,7 +637,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-26T16:09:25",
+ "updated": "2026-11-26T16:09:31",
  "last_summary": "Gepostet: Trymacs Festival-Story (youtube.com/shorts/BzLWrPpkJmA) – Upload-Limit ist weg; bereit: Monte Polizei + Monte Elektro/G63-Rant (je Note 8)",
  "channel": "kanal1",
  "check": {
