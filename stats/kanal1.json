@@ -120,13 +120,20 @@
     "views": 606,
     "likes": 5,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T20:12",
+    "age_h": 31.7,
+    "views": 606,
+    "likes": 5,
+    "comments": 0
    }
   ],
   "views": 606,
   "likes": 5,
   "comments": 0,
-  "age_h": 29.7,
-  "views_per_h": 20.4,
+  "age_h": 31.7,
+  "views_per_h": 19.1,
   "like_rate": 0.8,
   "experiment": null,
   "clip_title": "häuser",
@@ -141,12 +148,12 @@
   "uploaded_at": "2026-11-25T12:31:08",
   "upload_hour": 12,
   "perf": {
-   "aufrufe": 1443.0,
+   "aufrufe": 1444.0,
    "angesehen": 65.5,
    "weggewischt": 34.5,
    "avd": 21.2,
    "likes": 36.0,
-   "checked_at": "2026-11-26T12:13"
+   "checked_at": "2026-11-26T18:14"
   },
   "snapshots": [
    {
@@ -253,13 +260,20 @@
     "views": 1441,
     "likes": 36,
     "comments": 2
+   },
+   {
+    "t": "2026-11-26T20:12",
+    "age_h": 31.7,
+    "views": 1442,
+    "likes": 36,
+    "comments": 2
    }
   ],
-  "views": 1441,
+  "views": 1442,
   "likes": 36,
   "comments": 2,
-  "age_h": 29.7,
-  "views_per_h": 48.5,
+  "age_h": 31.7,
+  "views_per_h": 45.5,
   "like_rate": 2.5,
   "experiment": null,
   "clip_title": "wie war neuseeland",
@@ -385,12 +399,19 @@
     "views": 12,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T20:12",
+    "age_h": 31.7,
+    "views": 12,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 12,
   "likes": 1,
   "comments": 0,
-  "age_h": 29.7,
+  "age_h": 31.7,
   "views_per_h": 0.4,
   "like_rate": 8.3,
   "experiment": null,
@@ -517,12 +538,19 @@
     "views": 9,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T20:12",
+    "age_h": 31.7,
+    "views": 9,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 9,
   "likes": 1,
   "comments": 0,
-  "age_h": 29.7,
+  "age_h": 31.7,
   "views_per_h": 0.3,
   "like_rate": 11.1,
   "experiment": null,
@@ -649,12 +677,19 @@
     "views": 2,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T20:12",
+    "age_h": 31.7,
+    "views": 2,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 2,
   "likes": 1,
   "comments": 0,
-  "age_h": 29.7,
+  "age_h": 31.7,
   "views_per_h": 0.1,
   "like_rate": 50.0,
   "experiment": null,
@@ -782,13 +817,20 @@
     "views": 356,
     "likes": 3,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T20:12",
+    "age_h": 32.3,
+    "views": 356,
+    "likes": 3,
+    "comments": 0
    }
   ],
   "views": 356,
   "likes": 3,
   "comments": 0,
-  "age_h": 30.3,
-  "views_per_h": 11.7,
+  "age_h": 32.3,
+  "views_per_h": 11.0,
   "like_rate": 0.8,
   "experiment": null,
   "clip_title": "trymacs platzt",
@@ -803,10 +845,10 @@
   "uploaded_at": "2026-11-25T14:48:17",
   "upload_hour": 14,
   "perf": {
-   "aufrufe": 8.0,
-   "angesehen": 50.0,
-   "checked_at": "2026-11-26T10:15",
-   "weggewischt": 50.0,
+   "aufrufe": 14.0,
+   "angesehen": 60.0,
+   "checked_at": "2026-11-26T18:14",
+   "weggewischt": 40.0,
    "likes": 0.0
   },
   "snapshots": [
@@ -914,12 +956,19 @@
     "views": 14,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T20:12",
+    "age_h": 29.4,
+    "views": 14,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 14,
   "likes": 0,
   "comments": 0,
-  "age_h": 27.4,
+  "age_h": 29.4,
   "views_per_h": 0.5,
   "like_rate": 0.0,
   "experiment": null,
@@ -1046,13 +1095,20 @@
     "views": 7,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T20:12",
+    "age_h": 29.4,
+    "views": 7,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 7,
   "likes": 0,
   "comments": 0,
-  "age_h": 27.4,
-  "views_per_h": 0.3,
+  "age_h": 29.4,
+  "views_per_h": 0.2,
   "like_rate": 0.0,
   "experiment": null,
   "clip_title": "Krabbe greift Monte an",
@@ -1071,7 +1127,7 @@
    "angesehen": 100.0,
    "weggewischt": 0.0,
    "likes": 0.0,
-   "checked_at": "2026-11-26T10:15"
+   "checked_at": "2026-11-26T18:14"
   },
   "snapshots": [
    {
@@ -1178,12 +1234,19 @@
     "views": 7,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T20:12",
+    "age_h": 27.6,
+    "views": 7,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 7,
   "likes": 0,
   "comments": 0,
-  "age_h": 25.6,
+  "age_h": 27.6,
   "views_per_h": 0.3,
   "like_rate": 0.0,
   "experiment": null,
@@ -1299,12 +1362,19 @@
     "views": 5,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T20:12",
+    "age_h": 26.0,
+    "views": 5,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 5,
   "likes": 0,
   "comments": 0,
-  "age_h": 24.0,
+  "age_h": 26.0,
   "views_per_h": 0.2,
   "like_rate": 0.0
  },
@@ -1410,12 +1480,19 @@
     "views": 5,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T20:12",
+    "age_h": 24.0,
+    "views": 5,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 5,
   "likes": 1,
   "comments": 0,
-  "age_h": 22.0,
+  "age_h": 24.0,
   "views_per_h": 0.2,
   "like_rate": 20.0
  },
@@ -1514,12 +1591,19 @@
     "views": 5,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T20:12",
+    "age_h": 23.1,
+    "views": 5,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 5,
   "likes": 0,
   "comments": 0,
-  "age_h": 21.1,
+  "age_h": 23.1,
   "views_per_h": 0.2,
   "like_rate": 0.0
  },
@@ -1563,14 +1647,21 @@
     "views": 328,
     "likes": 3,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T20:12",
+    "age_h": 6.0,
+    "views": 483,
+    "likes": 6,
+    "comments": 0
    }
   ],
-  "views": 328,
-  "likes": 3,
+  "views": 483,
+  "likes": 6,
   "comments": 0,
-  "age_h": 4.0,
-  "views_per_h": 81.5,
-  "like_rate": 0.9
+  "age_h": 6.0,
+  "views_per_h": 80.2,
+  "like_rate": 1.2
  },
  "nVhqt2NdSe4": {
   "dur": 33.3,
@@ -1583,7 +1674,13 @@
   "layout": "split",
   "uploaded_at": "2026-11-26T16:11:11",
   "upload_hour": 16,
-  "perf": {},
+  "perf": {
+   "aufrufe": 3.0,
+   "angesehen": 50.0,
+   "weggewischt": 50.0,
+   "likes": 0.0,
+   "checked_at": "2026-11-26T18:14"
+  },
   "snapshots": [
    {
     "t": "2026-11-26T16:11",
@@ -1598,13 +1695,20 @@
     "views": 1,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T20:12",
+    "age_h": 4.0,
+    "views": 3,
+    "likes": 0,
+    "comments": 0
    }
   ],
-  "views": 1,
+  "views": 3,
   "likes": 0,
   "comments": 0,
-  "age_h": 2.0,
-  "views_per_h": 0.5,
+  "age_h": 4.0,
+  "views_per_h": 0.7,
   "like_rate": 0.0
  },
  "CL4hHaVweWA": {
@@ -1622,6 +1726,41 @@
   "snapshots": [
    {
     "t": "2026-11-26T18:12",
+    "age_h": 0.1,
+    "views": 0,
+    "likes": 0,
+    "comments": 0
+   },
+   {
+    "t": "2026-11-26T20:12",
+    "age_h": 2.0,
+    "views": 0,
+    "likes": 0,
+    "comments": 0
+   }
+  ],
+  "views": 0,
+  "likes": 0,
+  "comments": 0,
+  "age_h": 2.0,
+  "views_per_h": 0.0,
+  "like_rate": 0.0
+ },
+ "g_En7qeKFds": {
+  "dur": 39.1,
+  "title": "MontanaBlack über Stefan Raab: „Juckt mich nicht, guckt sowieso keiner“ 💀 #shorts",
+  "streamer": "MontanaBlack",
+  "headline": "„Stefan Raab? Guckt sowieso keiner“ 💀",
+  "experiment": "Provokantes Zitat + Cold Open, Talk ~37 s",
+  "clip_title": "Monte über den Stefan Raab Clip",
+  "design": "v2",
+  "layout": "cam",
+  "uploaded_at": "2026-11-26T20:12:16",
+  "upload_hour": 20,
+  "perf": {},
+  "snapshots": [
+   {
+    "t": "2026-11-26T20:12",
     "age_h": 0.1,
     "views": 0,
     "likes": 0,
