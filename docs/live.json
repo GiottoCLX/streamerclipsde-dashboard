@@ -13,6 +13,11 @@
     "t": "2026-11-26T02:10:12",
     "text": "Prüfe, ob gepostet werden darf",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T02:10:22",
+    "text": "Kein Post (außerhalb 06-24 Uhr) – hole Aufrufzahlen",
+    "kind": "step"
    }
   ]
  },
@@ -204,7 +209,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T02:10:17",
+ "updated": "2026-11-26T02:10:22",
  "last_summary": "Kein Post (außerhalb 06-24 Uhr), kein neuer 8+-Clip gefunden, Vorrat 1 (Trymacs Festival, Note 8); Studio-Analytics fehlerhaft",
  "channel": "kanal1",
  "check": {
