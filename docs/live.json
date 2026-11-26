@@ -18,6 +18,11 @@
     "t": "2026-11-26T08:10:24",
     "text": "Posten erlaubt – hole ältesten fertigen Short",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T08:10:40",
+    "text": "Öffne YouTube Studio und prüfe den Kanal",
+    "kind": "step"
    }
   ]
  },
@@ -396,7 +401,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T08:10:24",
+ "updated": "2026-11-26T08:10:40",
  "last_summary": "Kein Post: Upload hing nach Kanal-Umschaltung (Veröffentlichen gesperrt, nicht wiederholt); Studio-Werte wieder da, Vorrat 2 (Trymacs Festival, Monte Polizei)",
  "channel": "kanal1",
  "check": {
