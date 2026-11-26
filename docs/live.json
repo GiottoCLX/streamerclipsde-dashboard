@@ -13,6 +13,11 @@
     "t": "2026-11-27T00:09:33",
     "text": "Prüfe, ob gepostet werden darf",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T00:09:44",
+    "text": "Kein Post (außerhalb 06–24 Uhr). Hole Aufrufe aller Shorts",
+    "kind": "step"
    }
   ]
  },
@@ -913,7 +918,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T00:09:37",
+ "updated": "2026-11-27T00:09:44",
  "last_summary": "Gepostet: Monte Realtalk Fremdgehen (UFU3n6p_JY8); kein neuer Clip mit Note 8+, Vorrat 0",
  "channel": "kanal1",
  "check": {
