@@ -23,6 +23,11 @@
     "t": "2026-11-26T21:09:39",
     "text": "Kein Short im Vorrat – hole Zahlen aller Shorts",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T21:09:48",
+    "text": "Studio-Werte vor 2 h geholt – keine neue Abfrage nötig; prüfe Vorrat",
+    "kind": "step"
    }
   ]
  },
@@ -308,7 +313,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-26T21:09:39",
+ "updated": "2026-11-26T21:09:48",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-26T21:09:26",
