@@ -33,6 +33,11 @@
     "t": "2026-11-26T14:11:34",
     "text": "Hole Studio-Werte für 4 Shorts (zuletzt vor 6 h geprüft)",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T14:12:36",
+    "text": "Vorrat geprüft (1 Short: Monte Polizei, 10 h alt) – suche neue Clips der letzten 24 h",
+    "kind": "step"
    }
   ]
  },
@@ -588,7 +593,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T14:11:34",
+ "updated": "2026-11-26T14:12:36",
  "last_summary": "Kein Post: Tägliches Upload-Limit weiterhin aktiv (3. Lauf in Folge, Identitätsbestätigung nötig); Studio-Werte aktualisiert, Vorrat 2 (Note 8)",
  "channel": "kanal1",
  "check": {
