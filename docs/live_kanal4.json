@@ -23,6 +23,11 @@
     "t": "2026-11-26T17:10:28",
     "text": "Öffne YouTube Studio (Stream Clips Daily)",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T17:11:08",
+    "text": "Lade Short hoch: StableRonaldo Avengers-Quiz",
+    "kind": "step"
    }
   ]
  },
@@ -175,7 +180,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-26T17:10:28",
+ "updated": "2026-11-26T17:11:08",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-26T17:09:26",
