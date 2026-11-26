@@ -38,6 +38,11 @@
     "t": "2026-11-26T10:13:46",
     "text": "Hole Aufrufe aller Shorts",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T10:14:16",
+    "text": "Lese Studio-Werte für 4 Shorts (Pyramide, Krabbe, Krokodil, Stinger)",
+    "kind": "step"
    }
   ]
  },
@@ -475,7 +480,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T10:13:46",
+ "updated": "2026-11-26T10:14:16",
  "last_summary": "Kein Post: Studio meldet Tägliches Upload-Limit erreicht (Identitätsbestätigung nötig); Vorrat 2 (Trymacs Festival, Monte Polizei, Note 8)",
  "channel": "kanal1",
  "check": {
