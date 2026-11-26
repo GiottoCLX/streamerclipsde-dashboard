@@ -1,52 +1,61 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 22:09",
-  "started": "2026-11-26T22:09:14",
-  "steps": [
-   {
-    "t": "2026-11-26T22:09:14",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T22:09:25",
-    "text": "Prüfe, ob gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T22:09:35",
-    "text": "Posten erlaubt – hole ältesten fertigen Short",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T22:10:18",
-    "text": "Lade Short hoch: Monte – Realtalk Fremdgehen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T22:11:44",
-    "text": "Gepostet (UFU3n6p_JY8, öffentlich) – werte Zahlen aus",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T22:12:30",
-    "text": "Vorrat leer – suche neue Clips der letzten 24 h",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T22:16:05",
-    "text": "24 h ohne Clip mit Note 8+ – suche in den letzten 7 Tagen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-26T22:17:04",
-    "text": "Abschluss: Log, Dashboard",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 22:09",
+   "started": "2026-11-26T22:09:14",
+   "steps": [
+    {
+     "t": "2026-11-26T22:09:14",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T22:09:25",
+     "text": "Prüfe, ob gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T22:09:35",
+     "text": "Posten erlaubt – hole ältesten fertigen Short",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T22:10:18",
+     "text": "Lade Short hoch: Monte – Realtalk Fremdgehen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T22:11:44",
+     "text": "Gepostet (UFU3n6p_JY8, öffentlich) – werte Zahlen aus",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T22:12:30",
+     "text": "Vorrat leer – suche neue Clips der letzten 24 h",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T22:16:05",
+     "text": "24 h ohne Clip mit Note 8+ – suche in den letzten 7 Tagen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T22:17:04",
+     "text": "Abschluss: Log, Dashboard",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-26T22:17:11",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-26T22:17:11",
+   "state": "ok",
+   "summary": "Gepostet: Monte Realtalk Fremdgehen (UFU3n6p_JY8); kein neuer Clip mit Note 8+, Vorrat 0"
+  },
   {
    "title": "Lauf 20:09",
    "started": "2026-11-26T20:09:14",
@@ -889,8 +898,8 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-26T22:17:04",
- "last_summary": "Gepostet: Monte über Stefan Raab (g_En7qeKFds); Vorrat 1 (Realtalk); Monte Fußsohle wegen abgeschnittenem Gesicht aussortiert",
+ "updated": "2026-11-26T22:17:11",
+ "last_summary": "Gepostet: Monte Realtalk Fremdgehen (UFU3n6p_JY8); kein neuer Clip mit Note 8+, Vorrat 0",
  "channel": "kanal1",
  "check": {
   "t": "2026-11-26T22:09:29",
