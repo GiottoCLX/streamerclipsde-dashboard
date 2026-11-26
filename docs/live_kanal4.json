@@ -13,6 +13,11 @@
     "t": "2026-11-26T17:09:22",
     "text": "Prüfe, ob gepostet werden darf",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T17:09:32",
+    "text": "Hole ältesten fertigen Short",
+    "kind": "step"
    }
   ]
  },
@@ -165,7 +170,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-26T17:09:26",
+ "updated": "2026-11-26T17:09:32",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-26T17:09:26",
