@@ -43,6 +43,11 @@
     "t": "2026-11-26T02:14:07",
     "text": "Hole Studio-Werte für junge Shorts",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T02:14:53",
+    "text": "Studio: 'Nicht berechtigt' für StreamerclipsDE – im Browser ist ein anderes Konto/Kanal aktiv (3. Lauf ohne Studio-Werte). Ab 06:00 kann so nicht gepostet werden.",
+    "kind": "warn"
    }
   ]
  },
@@ -234,7 +239,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T02:14:07",
+ "updated": "2026-11-26T02:14:53",
  "last_summary": "Kein Post (außerhalb 06-24 Uhr), kein neuer 8+-Clip gefunden, Vorrat 1 (Trymacs Festival, Note 8); Studio-Analytics fehlerhaft",
  "channel": "kanal1",
  "check": {
