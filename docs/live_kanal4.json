@@ -23,6 +23,11 @@
     "t": "2026-11-26T23:09:55",
     "text": "Zahlen: alle 3 Shorts weiter 1–3 Aufrufe; Studio-Werte noch aktuell (19:09). Suche neue Clips der letzten 24 h",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T23:13:24",
+    "text": "Prüfe Kandidat: Lacy fällt in den Pool (Wörter + Bild)",
+    "kind": "step"
    }
   ]
  },
@@ -362,7 +367,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-26T23:09:55",
+ "updated": "2026-11-26T23:13:24",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-26T23:09:34",
