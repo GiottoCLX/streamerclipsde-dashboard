@@ -33,6 +33,11 @@
     "t": "2026-11-26T04:10:59",
     "text": "Prüfe Vorrat fertiger Shorts",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-26T04:11:13",
+    "text": "Suche neue Twitch-Clips der letzten 24 h",
+    "kind": "step"
    }
   ]
  },
@@ -288,7 +293,7 @@
   "date": "2026-11-25 22:13",
   "web": false
  },
- "updated": "2026-11-26T04:10:59",
+ "updated": "2026-11-26T04:11:13",
  "last_summary": "Kein Post (außerhalb 06-24 Uhr), kein neuer 8+-Clip, Vorrat 1 (Trymacs Festival); Studio zeigt für StreamerclipsDE 'nicht berechtigt' – Konto im Browser prüfen",
  "channel": "kanal1",
  "check": {
