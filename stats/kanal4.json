@@ -46,12 +46,19 @@
     "views": 3,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T21:09",
+    "age_h": 23.1,
+    "views": 3,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 3,
   "likes": 0,
   "comments": 0,
-  "age_h": 21.1,
+  "age_h": 23.1,
   "views_per_h": 0.1,
   "like_rate": 0.0
  },
@@ -66,7 +73,13 @@
   "layout": "split",
   "uploaded_at": "2026-11-26T17:12:14",
   "upload_hour": 17,
-  "perf": {},
+  "perf": {
+   "aufrufe": 1.0,
+   "angesehen": 100.0,
+   "weggewischt": 0.0,
+   "likes": 0.0,
+   "checked_at": "2026-11-26T19:10"
+  },
   "snapshots": [
    {
     "t": "2026-11-26T17:12",
@@ -81,13 +94,20 @@
     "views": 1,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T21:09",
+    "age_h": 4.0,
+    "views": 1,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 1,
   "likes": 0,
   "comments": 0,
-  "age_h": 2.0,
-  "views_per_h": 0.5,
+  "age_h": 4.0,
+  "views_per_h": 0.3,
   "like_rate": 0.0
  },
  "lVDPIRi9WjM": {
@@ -101,7 +121,13 @@
   "layout": "split",
   "uploaded_at": "2026-11-26T15:51:35",
   "upload_hour": 15,
-  "perf": {},
+  "perf": {
+   "aufrufe": 3.0,
+   "angesehen": 100.0,
+   "weggewischt": 0.0,
+   "likes": 0.0,
+   "checked_at": "2026-11-26T19:10"
+  },
   "snapshots": [
    {
     "t": "2026-11-26T17:12",
@@ -116,13 +142,20 @@
     "views": 3,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-26T21:09",
+    "age_h": 5.3,
+    "views": 3,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 3,
   "likes": 0,
   "comments": 0,
-  "age_h": 3.3,
-  "views_per_h": 0.9,
+  "age_h": 5.3,
+  "views_per_h": 0.6,
   "like_rate": 0.0
  }
 }
