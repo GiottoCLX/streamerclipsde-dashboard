@@ -1013,12 +1013,12 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-28T00:09:38",
+ "updated": "2026-11-28T00:09:42",
  "last_summary": "Gepostet: Trymacs Hand-in-Hand-Crash (SmqPMytEmVs); alle Suchstufen ohne neuen 7+-Clip, Vorrat 0",
  "channel": "kanal1",
  "check": {
-  "t": "2026-11-27T22:09:46",
-  "may_post": true,
-  "reason": "Posten erlaubt"
+  "t": "2026-11-28T00:09:42",
+  "may_post": false,
+  "reason": "außerhalb der Posting-Zeiten 06:00-24:00"
  }
 }
