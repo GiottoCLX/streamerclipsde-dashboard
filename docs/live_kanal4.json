@@ -13,6 +13,11 @@
     "t": "2026-11-27T17:09:32",
     "text": "Prüfe, ob gepostet werden darf",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T17:09:43",
+    "text": "Vorrat prüfen (Stand vor dem Posten)",
+    "kind": "step"
    }
   ]
  },
@@ -923,7 +928,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T17:09:36",
+ "updated": "2026-11-27T17:09:43",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T17:09:36",
