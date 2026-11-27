@@ -1,6 +1,16 @@
 {
- "state": "idle",
- "current": null,
+ "state": "running",
+ "current": {
+  "title": "Lauf 14:09",
+  "started": "2026-11-27T14:09:21",
+  "steps": [
+   {
+    "t": "2026-11-27T14:09:21",
+    "text": "Lauf gestartet, neueste Regeln geladen",
+    "kind": "step"
+   }
+  ]
+ },
  "runs": [
   {
    "title": "Lauf 12:09",
@@ -963,7 +973,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T12:38:40",
+ "updated": "2026-11-27T14:09:21",
  "last_summary": "Gepostet: Monte Greenscreen-Panne (k9iEsdKFtjI, Note 8); Vorrat 0 – 5 Kandidaten verworfen, nächster Lauf sucht in 'alle Zeiten' weiter",
  "channel": "kanal1",
  "check": {
