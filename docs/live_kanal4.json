@@ -33,6 +33,11 @@
     "t": "2026-11-27T21:14:31",
     "text": "7 Tage ohne 7+: Suche 30 Tage und alle Zeiten",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T21:15:06",
+    "text": "Teste 3 Alle-Zeiten-Clips im Bild: Kai Game-Awards-Kid, Jynxzi Trump-Socke, Jynxzi Disaster Aim",
+    "kind": "step"
    }
   ]
  },
@@ -1003,7 +1008,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T21:14:31",
+ "updated": "2026-11-27T21:15:06",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T21:09:49",
