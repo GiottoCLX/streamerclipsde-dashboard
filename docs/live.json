@@ -93,6 +93,11 @@
     "t": "2026-11-27T12:36:59",
     "text": "Schneide 2 Kandidaten: Sidney Decke, Trymacs Unfall",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T12:38:22",
+    "text": "Sidney Decke + Trymacs Unfall (alle Zeiten) nach Vorschaubild verworfen (Note 6) – 45 Min erreicht, nächster Lauf sucht weiter",
+    "kind": "warn"
    }
   ]
  },
@@ -1008,7 +1013,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T12:36:59",
+ "updated": "2026-11-27T12:38:22",
  "last_summary": "Kein Post: Vorrat 0 und kein Clip mit Note 8+; Monte Boot/Synchron nach Vorschaubild verworfen; Festival 1376 Aufrufe / 49 % angesehen",
  "channel": "kanal1",
  "check": {
