@@ -8,6 +8,11 @@
     "t": "2026-11-27T16:09:23",
     "text": "Lauf gestartet, neueste Regeln geladen",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T16:09:32",
+    "text": "Prüfe, ob gepostet werden darf",
+    "kind": "step"
    }
   ]
  },
@@ -993,7 +998,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T16:09:23",
+ "updated": "2026-11-27T16:09:32",
  "last_summary": "Gepostet: Monte zieht Ronaldinho (PXMqwBGZRgk, öffentlich); Greenscreen-Short läuft mit 95 Aufrufen/Std; Vorrat 0 – 8 Top-Clips nach Vorschaubild verworfen, nächster Lauf sucht weiter",
  "channel": "kanal1",
  "check": {
