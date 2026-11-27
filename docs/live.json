@@ -1,107 +1,116 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 12:09",
-  "started": "2026-11-27T12:09:23",
-  "steps": [
-   {
-    "t": "2026-11-27T12:09:23",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T12:09:51",
-    "text": "Prüfe, ob gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T12:10:01",
-    "text": "Prüfe Vorrat an fertigen Shorts",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T12:10:10",
-    "text": "Vorrat leer – suche Clips der letzten 24 h",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T12:12:23",
-    "text": "Prüfe Kandidat: Monte – Kack Traum",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T12:12:56",
-    "text": "Schneide Monte – Kack Traum",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T12:13:34",
-    "text": "Monte 'Kack Traum' nach Vorschaubild verworfen (14 s, leerer Stuhl unten, Note 7)",
-    "kind": "warn"
-   },
-   {
-    "t": "2026-11-27T12:13:38",
-    "text": "Suche Clips der letzten 7 Tage",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T12:14:36",
-    "text": "Schneide 2 Test-Kandidaten: Monte NPC, Monte Alien",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T12:15:58",
-    "text": "Monte NPC + Alien nach Vorschaubild verworfen (dunkel, kein klarer Moment, Note 6)",
-    "kind": "warn"
-   },
-   {
-    "t": "2026-11-27T12:16:01",
-    "text": "Suche Clips der letzten 30 Tage",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T12:20:38",
-    "text": "Schneide Test-Kandidat: Monte Greenscreen-Panne",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T12:21:46",
-    "text": "Schneide final: Monte – Die View gab es gratis (Greenscreen)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T12:22:22",
-    "text": "Bereite Upload vor: Monte – Die View gab es gratis",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T12:23:21",
-    "text": "Lade Short hoch: Monte – Die View gab es gratis",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T12:24:58",
-    "text": "Gepostet: k9iEsdKFtjI – werte jetzt Zahlen aus",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T12:25:39",
-    "text": "Vorrat 0 – suche Top-Clips aller Zeiten",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T12:36:59",
-    "text": "Schneide 2 Kandidaten: Sidney Decke, Trymacs Unfall",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T12:38:22",
-    "text": "Sidney Decke + Trymacs Unfall (alle Zeiten) nach Vorschaubild verworfen (Note 6) – 45 Min erreicht, nächster Lauf sucht weiter",
-    "kind": "warn"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 12:09",
+   "started": "2026-11-27T12:09:23",
+   "steps": [
+    {
+     "t": "2026-11-27T12:09:23",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T12:09:51",
+     "text": "Prüfe, ob gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T12:10:01",
+     "text": "Prüfe Vorrat an fertigen Shorts",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T12:10:10",
+     "text": "Vorrat leer – suche Clips der letzten 24 h",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T12:12:23",
+     "text": "Prüfe Kandidat: Monte – Kack Traum",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T12:12:56",
+     "text": "Schneide Monte – Kack Traum",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T12:13:34",
+     "text": "Monte 'Kack Traum' nach Vorschaubild verworfen (14 s, leerer Stuhl unten, Note 7)",
+     "kind": "warn"
+    },
+    {
+     "t": "2026-11-27T12:13:38",
+     "text": "Suche Clips der letzten 7 Tage",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T12:14:36",
+     "text": "Schneide 2 Test-Kandidaten: Monte NPC, Monte Alien",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T12:15:58",
+     "text": "Monte NPC + Alien nach Vorschaubild verworfen (dunkel, kein klarer Moment, Note 6)",
+     "kind": "warn"
+    },
+    {
+     "t": "2026-11-27T12:16:01",
+     "text": "Suche Clips der letzten 30 Tage",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T12:20:38",
+     "text": "Schneide Test-Kandidat: Monte Greenscreen-Panne",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T12:21:46",
+     "text": "Schneide final: Monte – Die View gab es gratis (Greenscreen)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T12:22:22",
+     "text": "Bereite Upload vor: Monte – Die View gab es gratis",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T12:23:21",
+     "text": "Lade Short hoch: Monte – Die View gab es gratis",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T12:24:58",
+     "text": "Gepostet: k9iEsdKFtjI – werte jetzt Zahlen aus",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T12:25:39",
+     "text": "Vorrat 0 – suche Top-Clips aller Zeiten",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T12:36:59",
+     "text": "Schneide 2 Kandidaten: Sidney Decke, Trymacs Unfall",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T12:38:22",
+     "text": "Sidney Decke + Trymacs Unfall (alle Zeiten) nach Vorschaubild verworfen (Note 6) – 45 Min erreicht, nächster Lauf sucht weiter",
+     "kind": "warn"
+    },
+    {
+     "t": "2026-11-27T12:38:40",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-27T12:38:40",
+   "state": "ok",
+   "summary": "Gepostet: Monte Greenscreen-Panne (k9iEsdKFtjI, Note 8); Vorrat 0 – 5 Kandidaten verworfen, nächster Lauf sucht in 'alle Zeiten' weiter"
+  },
   {
    "title": "Lauf 10:09",
    "started": "2026-11-27T10:09:21",
@@ -947,65 +956,6 @@
    "finished": "2026-11-26T08:13:47",
    "state": "ok",
    "summary": "Kein Post: Studio meldet Tägliches Upload-Limit erreicht (Identitätsbestätigung nötig); Vorrat 2 (Trymacs Festival, Monte Polizei, Note 8)"
-  },
-  {
-   "title": "Lauf 06:10",
-   "started": "2026-11-26T06:10:04",
-   "steps": [
-    {
-     "t": "2026-11-26T06:10:04",
-     "text": "Lauf gestartet, neueste Regeln geladen",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T06:10:12",
-     "text": "Prüfe, ob jetzt gepostet werden darf",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T06:10:22",
-     "text": "Posten erlaubt – lade Warteschlange",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T06:11:23",
-     "text": "Öffne YouTube Studio für StreamerclipsDE",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T06:13:09",
-     "text": "Lade Short hoch: Trymacs – Nicis Festival-Story",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T06:18:51",
-     "text": "Upload Trymacs Festival-Story hängt: Studio hatte zuerst falschen Kanal aktiv (auf StreamerclipsDE umgeschaltet), danach blieb Veröffentlichen gesperrt, kein Entwurf angelegt – nicht wiederholt",
-     "kind": "warn"
-    },
-    {
-     "t": "2026-11-26T06:18:54",
-     "text": "Hole Aufrufe aller Shorts",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T06:19:19",
-     "text": "Lese Studio-Werte für 4 Shorts",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T06:20:20",
-     "text": "Vorrat prüfen: 2 fertige Shorts, beide frisch – kein neuer Schnitt nötig",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T06:20:43",
-     "text": "Fertig",
-     "kind": "step"
-    }
-   ],
-   "finished": "2026-11-26T06:20:43",
-   "state": "ok",
-   "summary": "Kein Post: Upload hing nach Kanal-Umschaltung (Veröffentlichen gesperrt, nicht wiederholt); Studio-Werte wieder da, Vorrat 2 (Trymacs Festival, Monte Polizei)"
   }
  ],
  "rules": {
@@ -1013,8 +963,8 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T12:38:22",
- "last_summary": "Kein Post: Vorrat 0 und kein Clip mit Note 8+; Monte Boot/Synchron nach Vorschaubild verworfen; Festival 1376 Aufrufe / 49 % angesehen",
+ "updated": "2026-11-27T12:38:40",
+ "last_summary": "Gepostet: Monte Greenscreen-Panne (k9iEsdKFtjI, Note 8); Vorrat 0 – 5 Kandidaten verworfen, nächster Lauf sucht in 'alle Zeiten' weiter",
  "channel": "kanal1",
  "check": {
   "t": "2026-11-27T12:09:54",
