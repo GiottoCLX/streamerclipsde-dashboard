@@ -1,6 +1,16 @@
 {
- "state": "idle",
- "current": null,
+ "state": "running",
+ "current": {
+  "title": "Lauf 00:09",
+  "started": "2026-11-28T00:09:28",
+  "steps": [
+   {
+    "t": "2026-11-28T00:09:28",
+    "text": "Lauf gestartet, neueste Regeln geladen",
+    "kind": "step"
+   }
+  ]
+ },
  "runs": [
   {
    "title": "Lauf 22:09",
@@ -998,7 +1008,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T22:19:11",
+ "updated": "2026-11-28T00:09:28",
  "last_summary": "Gepostet: Trymacs Hand-in-Hand-Crash (SmqPMytEmVs); alle Suchstufen ohne neuen 7+-Clip, Vorrat 0",
  "channel": "kanal1",
  "check": {
