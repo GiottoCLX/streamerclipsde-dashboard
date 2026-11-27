@@ -13,6 +13,11 @@
     "t": "2026-11-27T22:09:42",
     "text": "Prüfe, ob gepostet werden darf",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T22:09:52",
+    "text": "Posten erlaubt – bereite Upload vor",
+    "kind": "step"
    }
   ]
  },
@@ -1023,7 +1028,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T22:09:46",
+ "updated": "2026-11-27T22:09:52",
  "last_summary": "Gepostet: Monte KI bellt (FNEuxkAM31k); Vorrat 1: Trymacs Hand-in-Hand-Crash (Note 7); Greenscreen jetzt 55 % angesehen, Pack-Openings 3x ohne Ausspielung",
  "channel": "kanal1",
  "check": {
