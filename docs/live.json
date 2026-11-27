@@ -33,6 +33,11 @@
     "t": "2026-11-27T10:12:57",
     "text": "Rendere Tests: Monte 'Boot fährt nicht los' und 'Synchron gesprungen'",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T10:14:54",
+    "text": "Monte Boot/Synchron nach Vorschaubild verworfen (kein sichtbarer Moment, zu dunkel) – Note 6",
+    "kind": "warn"
    }
   ]
  },
@@ -953,7 +958,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T10:12:57",
+ "updated": "2026-11-27T10:14:54",
  "last_summary": "Kein Post: Vorrat 0 und kein Clip mit Note 8+ in 24 h/7 Tagen; Festival-Story 1260 Aufrufe, läuft aus",
  "channel": "kanal1",
  "check": {
