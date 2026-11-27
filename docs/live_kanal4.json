@@ -43,6 +43,11 @@
     "t": "2026-11-27T01:15:44",
     "text": "Lacy Swatting + Jynxzi Award nach Vorschaubild aussortiert (Note 6)",
     "kind": "warn"
+   },
+   {
+    "t": "2026-11-27T01:15:47",
+    "text": "Kein 8+ in 24 h – suche 7 Tage mit mehr Clips pro Streamer",
+    "kind": "step"
    }
   ]
  },
@@ -436,7 +441,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T01:15:44",
+ "updated": "2026-11-27T01:15:47",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T01:09:37",
