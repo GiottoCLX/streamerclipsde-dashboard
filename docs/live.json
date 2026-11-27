@@ -38,6 +38,11 @@
     "t": "2026-11-27T14:18:06",
     "text": "Gepostet (PXMqwBGZRgk, öffentlich) – werte Zahlen aus",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T14:18:37",
+    "text": "Vorrat 0/2 – sichte weitere Top-Clips aller Zeiten",
+    "kind": "step"
    }
   ]
  },
@@ -1003,7 +1008,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T14:18:06",
+ "updated": "2026-11-27T14:18:37",
  "last_summary": "Gepostet: Monte Greenscreen-Panne (k9iEsdKFtjI, Note 8); Vorrat 0 – 5 Kandidaten verworfen, nächster Lauf sucht in 'alle Zeiten' weiter",
  "channel": "kanal1",
  "check": {
