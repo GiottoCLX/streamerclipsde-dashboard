@@ -123,12 +123,19 @@
     "views": 3,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T19:15",
+    "age_h": 45.2,
+    "views": 3,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 3,
   "likes": 0,
   "comments": 0,
-  "age_h": 43.2,
+  "age_h": 45.2,
   "views_per_h": 0.1,
   "like_rate": 0.0
  },
@@ -241,12 +248,19 @@
     "views": 4,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T19:15",
+    "age_h": 26.1,
+    "views": 4,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 4,
   "likes": 0,
   "comments": 0,
-  "age_h": 24.1,
+  "age_h": 26.1,
   "views_per_h": 0.2,
   "like_rate": 0.0
  },
@@ -359,12 +373,19 @@
     "views": 3,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T19:15",
+    "age_h": 27.4,
+    "views": 3,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 3,
   "likes": 0,
   "comments": 0,
-  "age_h": 25.4,
+  "age_h": 27.4,
   "views_per_h": 0.1,
   "like_rate": 0.0
  },
@@ -429,13 +450,20 @@
     "views": 624,
     "likes": 7,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T19:15",
+    "age_h": 12.1,
+    "views": 624,
+    "likes": 7,
+    "comments": 0
    }
   ],
   "views": 624,
   "likes": 7,
   "comments": 0,
-  "age_h": 10.1,
-  "views_per_h": 61.7,
+  "age_h": 12.1,
+  "views_per_h": 51.7,
   "like_rate": 1.1
  },
  "wAvggQAk5Wk": {
@@ -464,13 +492,20 @@
     "views": 1,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T19:15",
+    "age_h": 4.0,
+    "views": 1,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 1,
   "likes": 0,
   "comments": 0,
-  "age_h": 2.0,
-  "views_per_h": 0.5,
+  "age_h": 4.0,
+  "views_per_h": 0.3,
   "like_rate": 0.0
  },
  "MAjJ77kIqRM": {
@@ -499,14 +534,21 @@
     "views": 1,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T19:15",
+    "age_h": 5.9,
+    "views": 2,
+    "likes": 1,
+    "comments": 0
    }
   ],
-  "views": 1,
+  "views": 2,
   "likes": 1,
   "comments": 0,
-  "age_h": 3.9,
+  "age_h": 5.9,
   "views_per_h": 0.3,
-  "like_rate": 100.0
+  "like_rate": 50.0
  },
  "GsPbTjvo9oQ": {
   "dur": 25.6,
@@ -523,6 +565,41 @@
   "snapshots": [
    {
     "t": "2026-11-27T17:18",
+    "age_h": 0.1,
+    "views": 0,
+    "likes": 0,
+    "comments": 0
+   },
+   {
+    "t": "2026-11-27T19:15",
+    "age_h": 2.0,
+    "views": 0,
+    "likes": 0,
+    "comments": 0
+   }
+  ],
+  "views": 0,
+  "likes": 0,
+  "comments": 0,
+  "age_h": 2.0,
+  "views_per_h": 0.0,
+  "like_rate": 0.0
+ },
+ "iMrgoJrjNtI": {
+  "dur": 36.7,
+  "title": "Jynxzi finds out there's a roach in his room 🪳 Jynxzi #shorts",
+  "streamer": "Jynxzi",
+  "headline": "\"There's no way there was a roach in my room\" 🪳",
+  "experiment": "Alle-Zeiten-Clip (501k Views), Reaktion",
+  "clip_title": "richard the roach",
+  "design": "v2",
+  "layout": "split",
+  "uploaded_at": "2026-11-27T19:15:40",
+  "upload_hour": 19,
+  "perf": {},
+  "snapshots": [
+   {
+    "t": "2026-11-27T19:15",
     "age_h": 0.1,
     "views": 0,
     "likes": 0,
