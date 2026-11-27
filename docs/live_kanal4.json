@@ -53,6 +53,11 @@
     "t": "2026-11-27T23:18:12",
     "text": "Rendere Test-Kandidat Jynxzi 'That's a light'",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T23:18:58",
+    "text": "Suche Clips der letzten 30 Tage und alle Zeiten",
+    "kind": "step"
    }
   ]
  },
@@ -1058,7 +1063,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T23:18:12",
+ "updated": "2026-11-27T23:18:58",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T23:09:59",
