@@ -28,6 +28,11 @@
     "t": "2026-11-27T01:10:46",
     "text": "Vorrat 1 (Lacy Pool-Fail, 2 h alt) – suche neue Twitch-Clips (24 h)",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T01:14:09",
+    "text": "Sichte 62 Kandidaten – prüfe Lacy Swatting und Jynxzi Award im Bild",
+    "kind": "step"
    }
   ]
  },
@@ -421,7 +426,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T01:10:46",
+ "updated": "2026-11-27T01:14:09",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T01:09:37",
