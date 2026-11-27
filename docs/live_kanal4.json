@@ -1,72 +1,81 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 01:09",
-  "started": "2026-11-27T01:09:17",
-  "steps": [
-   {
-    "t": "2026-11-27T01:09:17",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T01:09:33",
-    "text": "Prüfe, ob gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T01:09:44",
-    "text": "Kein Post (außerhalb 06–24 Uhr) – hole Zahlen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T01:09:57",
-    "text": "Prüfe Vorrat",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T01:10:46",
-    "text": "Vorrat 1 (Lacy Pool-Fail, 2 h alt) – suche neue Twitch-Clips (24 h)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T01:14:09",
-    "text": "Sichte 62 Kandidaten – prüfe Lacy Swatting und Jynxzi Award im Bild",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T01:14:23",
-    "text": "Schneide Probe: Lacy Swatting + Jynxzi Award",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T01:15:44",
-    "text": "Lacy Swatting + Jynxzi Award nach Vorschaubild aussortiert (Note 6)",
-    "kind": "warn"
-   },
-   {
-    "t": "2026-11-27T01:15:47",
-    "text": "Kein 8+ in 24 h – suche 7 Tage mit mehr Clips pro Streamer",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T01:18:12",
-    "text": "7 Tage (19 neue Kandidaten) ohne 8+ – schreibe Erkenntnisse und Log",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T01:18:15",
-    "text": "Studio-Werte nicht neu abgefragt: API-Aufrufe seit 19:09 unverändert (1–3 pro Short)",
-    "kind": "warn"
-   },
-   {
-    "t": "2026-11-27T01:18:29",
-    "text": "Aktualisiere Dashboard",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 01:09",
+   "started": "2026-11-27T01:09:17",
+   "steps": [
+    {
+     "t": "2026-11-27T01:09:17",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T01:09:33",
+     "text": "Prüfe, ob gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T01:09:44",
+     "text": "Kein Post (außerhalb 06–24 Uhr) – hole Zahlen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T01:09:57",
+     "text": "Prüfe Vorrat",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T01:10:46",
+     "text": "Vorrat 1 (Lacy Pool-Fail, 2 h alt) – suche neue Twitch-Clips (24 h)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T01:14:09",
+     "text": "Sichte 62 Kandidaten – prüfe Lacy Swatting und Jynxzi Award im Bild",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T01:14:23",
+     "text": "Schneide Probe: Lacy Swatting + Jynxzi Award",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T01:15:44",
+     "text": "Lacy Swatting + Jynxzi Award nach Vorschaubild aussortiert (Note 6)",
+     "kind": "warn"
+    },
+    {
+     "t": "2026-11-27T01:15:47",
+     "text": "Kein 8+ in 24 h – suche 7 Tage mit mehr Clips pro Streamer",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T01:18:12",
+     "text": "7 Tage (19 neue Kandidaten) ohne 8+ – schreibe Erkenntnisse und Log",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T01:18:15",
+     "text": "Studio-Werte nicht neu abgefragt: API-Aufrufe seit 19:09 unverändert (1–3 pro Short)",
+     "kind": "warn"
+    },
+    {
+     "t": "2026-11-27T01:18:29",
+     "text": "Aktualisiere Dashboard",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T01:18:39",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-27T01:18:39",
+   "state": "ok",
+   "summary": "Kein Post (außerhalb 06–24 Uhr), Vorrat 1 (Lacy Pool-Fail, Note 8); 24 h + 7 Tage ohne neuen 8+-Clip"
+  },
   {
    "title": "Lauf 23:09",
    "started": "2026-11-26T23:09:17",
@@ -456,12 +465,12 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T01:18:29",
+ "updated": "2026-11-27T01:18:39",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T01:09:37",
   "may_post": false,
   "reason": "außerhalb der Posting-Zeiten 06:00-24:00"
  },
- "last_summary": "Kein Post (Vorrat war leer); neu bereit: Lacy Pool-Fail (Note 8), Vorrat 1; alle 3 Shorts weiter 1–3 Aufrufe"
+ "last_summary": "Kein Post (außerhalb 06–24 Uhr), Vorrat 1 (Lacy Pool-Fail, Note 8); 24 h + 7 Tage ohne neuen 8+-Clip"
 }
