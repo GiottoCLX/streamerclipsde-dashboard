@@ -8,6 +8,11 @@
     "t": "2026-11-27T03:09:18",
     "text": "Lauf gestartet, neueste Regeln geladen",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T03:09:32",
+    "text": "Prüfe, ob gepostet werden darf",
+    "kind": "step"
    }
   ]
  },
@@ -475,7 +480,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T03:09:18",
+ "updated": "2026-11-27T03:09:32",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T01:09:37",
