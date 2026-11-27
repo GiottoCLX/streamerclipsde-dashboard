@@ -141,13 +141,20 @@
     "views": 606,
     "likes": 5,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T02:09",
+    "age_h": 37.6,
+    "views": 606,
+    "likes": 5,
+    "comments": 0
    }
   ],
   "views": 606,
   "likes": 5,
   "comments": 0,
-  "age_h": 35.6,
-  "views_per_h": 17.0,
+  "age_h": 37.6,
+  "views_per_h": 16.1,
   "like_rate": 0.8,
   "experiment": null,
   "clip_title": "häuser",
@@ -295,13 +302,20 @@
     "views": 1443,
     "likes": 36,
     "comments": 2
+   },
+   {
+    "t": "2026-11-27T02:09",
+    "age_h": 37.6,
+    "views": 1444,
+    "likes": 36,
+    "comments": 2
    }
   ],
-  "views": 1443,
+  "views": 1444,
   "likes": 36,
   "comments": 2,
-  "age_h": 35.6,
-  "views_per_h": 40.5,
+  "age_h": 37.6,
+  "views_per_h": 38.4,
   "like_rate": 2.5,
   "experiment": null,
   "clip_title": "wie war neuseeland",
@@ -448,12 +462,19 @@
     "views": 12,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T02:09",
+    "age_h": 37.6,
+    "views": 12,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 12,
   "likes": 1,
   "comments": 0,
-  "age_h": 35.6,
+  "age_h": 37.6,
   "views_per_h": 0.3,
   "like_rate": 8.3,
   "experiment": null,
@@ -601,12 +622,19 @@
     "views": 12,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T02:09",
+    "age_h": 37.6,
+    "views": 12,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 12,
   "likes": 1,
   "comments": 0,
-  "age_h": 35.6,
+  "age_h": 37.6,
   "views_per_h": 0.3,
   "like_rate": 8.3,
   "experiment": null,
@@ -754,12 +782,19 @@
     "views": 2,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T02:09",
+    "age_h": 37.6,
+    "views": 2,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 2,
   "likes": 1,
   "comments": 0,
-  "age_h": 35.6,
+  "age_h": 37.6,
   "views_per_h": 0.1,
   "like_rate": 50.0,
   "experiment": null,
@@ -908,13 +943,20 @@
     "views": 354,
     "likes": 3,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T02:09",
+    "age_h": 38.3,
+    "views": 354,
+    "likes": 3,
+    "comments": 0
    }
   ],
   "views": 354,
   "likes": 3,
   "comments": 0,
-  "age_h": 36.3,
-  "views_per_h": 9.8,
+  "age_h": 38.3,
+  "views_per_h": 9.2,
   "like_rate": 0.8,
   "experiment": null,
   "clip_title": "trymacs platzt",
@@ -1061,12 +1103,19 @@
     "views": 16,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T02:09",
+    "age_h": 35.4,
+    "views": 17,
+    "likes": 0,
+    "comments": 0
    }
   ],
-  "views": 16,
+  "views": 17,
   "likes": 0,
   "comments": 0,
-  "age_h": 33.4,
+  "age_h": 35.4,
   "views_per_h": 0.5,
   "like_rate": 0.0,
   "experiment": null,
@@ -1214,12 +1263,19 @@
     "views": 7,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T02:09",
+    "age_h": 35.4,
+    "views": 7,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 7,
   "likes": 0,
   "comments": 0,
-  "age_h": 33.4,
+  "age_h": 35.4,
   "views_per_h": 0.2,
   "like_rate": 0.0,
   "experiment": null,
@@ -1367,12 +1423,19 @@
     "views": 7,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T02:09",
+    "age_h": 33.5,
+    "views": 7,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 7,
   "likes": 0,
   "comments": 0,
-  "age_h": 31.5,
+  "age_h": 33.5,
   "views_per_h": 0.2,
   "like_rate": 0.0,
   "experiment": null,
@@ -1509,12 +1572,19 @@
     "views": 9,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T02:09",
+    "age_h": 32.0,
+    "views": 9,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 9,
   "likes": 0,
   "comments": 0,
-  "age_h": 30.0,
+  "age_h": 32.0,
   "views_per_h": 0.3,
   "like_rate": 0.0
  },
@@ -1530,11 +1600,11 @@
   "uploaded_at": "2026-11-25T20:11:31",
   "upload_hour": 20,
   "perf": {
-   "aufrufe": 5.0,
+   "aufrufe": 7.0,
    "angesehen": 100.0,
    "weggewischt": 0.0,
    "likes": 1.0,
-   "checked_at": "2026-11-26T12:13"
+   "checked_at": "2026-11-27T00:11"
   },
   "snapshots": [
    {
@@ -1641,14 +1711,21 @@
     "views": 6,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T02:09",
+    "age_h": 30.0,
+    "views": 7,
+    "likes": 1,
+    "comments": 0
    }
   ],
-  "views": 6,
+  "views": 7,
   "likes": 1,
   "comments": 0,
-  "age_h": 28.0,
+  "age_h": 30.0,
   "views_per_h": 0.2,
-  "like_rate": 16.7
+  "like_rate": 14.3
  },
  "EazTuqIluFY": {
   "dur": 17.2,
@@ -1662,11 +1739,11 @@
   "uploaded_at": "2026-11-25T21:06:12",
   "upload_hour": 21,
   "perf": {
-   "aufrufe": 5.0,
-   "angesehen": 75.0,
-   "weggewischt": 25.0,
+   "aufrufe": 6.0,
+   "angesehen": 60.0,
+   "weggewischt": 40.0,
    "likes": 0.0,
-   "checked_at": "2026-11-26T12:13"
+   "checked_at": "2026-11-27T00:11"
   },
   "snapshots": [
    {
@@ -1766,12 +1843,19 @@
     "views": 6,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T02:09",
+    "age_h": 29.1,
+    "views": 6,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 6,
   "likes": 0,
   "comments": 0,
-  "age_h": 27.1,
+  "age_h": 29.1,
   "views_per_h": 0.2,
   "like_rate": 0.0
  },
@@ -1836,14 +1920,21 @@
     "views": 984,
     "likes": 9,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T02:09",
+    "age_h": 12.0,
+    "views": 1132,
+    "likes": 9,
+    "comments": 0
    }
   ],
-  "views": 984,
+  "views": 1132,
   "likes": 9,
   "comments": 0,
-  "age_h": 10.0,
-  "views_per_h": 98.6,
-  "like_rate": 0.9
+  "age_h": 12.0,
+  "views_per_h": 94.5,
+  "like_rate": 0.8
  },
  "nVhqt2NdSe4": {
   "dur": 33.3,
@@ -1857,11 +1948,11 @@
   "uploaded_at": "2026-11-26T16:11:11",
   "upload_hour": 16,
   "perf": {
-   "aufrufe": 3.0,
-   "angesehen": 50.0,
-   "weggewischt": 50.0,
+   "aufrufe": 7.0,
+   "angesehen": 66.7,
+   "weggewischt": 33.3,
    "likes": 0.0,
-   "checked_at": "2026-11-26T18:14"
+   "checked_at": "2026-11-27T00:11"
   },
   "snapshots": [
    {
@@ -1898,13 +1989,20 @@
     "views": 5,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T02:09",
+    "age_h": 10.0,
+    "views": 5,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 5,
   "likes": 0,
   "comments": 0,
-  "age_h": 8.0,
-  "views_per_h": 0.6,
+  "age_h": 10.0,
+  "views_per_h": 0.5,
   "like_rate": 0.0
  },
  "CL4hHaVweWA": {
@@ -1953,13 +2051,20 @@
     "views": 3,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T02:09",
+    "age_h": 8.0,
+    "views": 3,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 3,
   "likes": 0,
   "comments": 0,
-  "age_h": 6.0,
-  "views_per_h": 0.5,
+  "age_h": 8.0,
+  "views_per_h": 0.4,
   "like_rate": 0.0
  },
  "g_En7qeKFds": {
@@ -2002,13 +2107,20 @@
     "views": 22,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T02:09",
+    "age_h": 6.0,
+    "views": 36,
+    "likes": 0,
+    "comments": 0
    }
   ],
-  "views": 22,
+  "views": 36,
   "likes": 0,
   "comments": 0,
-  "age_h": 4.0,
-  "views_per_h": 5.6,
+  "age_h": 6.0,
+  "views_per_h": 6.0,
   "like_rate": 0.0
  },
  "UFU3n6p_JY8": {
@@ -2022,7 +2134,11 @@
   "layout": "cam",
   "uploaded_at": "2026-11-26T22:11:40",
   "upload_hour": 22,
-  "perf": {},
+  "perf": {
+   "aufrufe": 0.0,
+   "likes": 0.0,
+   "checked_at": "2026-11-27T00:11"
+  },
   "snapshots": [
    {
     "t": "2026-11-26T22:11",
@@ -2037,12 +2153,19 @@
     "views": 0,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T02:09",
+    "age_h": 4.0,
+    "views": 0,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 0,
   "likes": 0,
   "comments": 0,
-  "age_h": 2.0,
+  "age_h": 4.0,
   "views_per_h": 0.0,
   "like_rate": 0.0
  }
