@@ -18,6 +18,11 @@
     "t": "2026-11-27T14:09:44",
     "text": "Vorrat leer – suche Clips der letzten 24 h",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T14:11:16",
+    "text": "Rendere 3 Top-Clips (Niklas Jumpscare, Monte Ronaldinho, Monte Fahrgeschäft)",
+    "kind": "step"
    }
   ]
  },
@@ -983,7 +988,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T14:09:44",
+ "updated": "2026-11-27T14:11:16",
  "last_summary": "Gepostet: Monte Greenscreen-Panne (k9iEsdKFtjI, Note 8); Vorrat 0 – 5 Kandidaten verworfen, nächster Lauf sucht in 'alle Zeiten' weiter",
  "channel": "kanal1",
  "check": {
