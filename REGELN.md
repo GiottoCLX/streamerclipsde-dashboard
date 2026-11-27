@@ -58,10 +58,15 @@ Jeder Schritt wird live im Dashboard gemeldet (`live.py step`).
 
 1. **Start:** `live.py start --channel <kanal>` – neueste Regeln laden, Live-Status „läuft“.
 2. **Prüfen:** `live.py check --channel <kanal>` – darf jetzt gepostet werden? (Pause, Posting-Zeiten, Mindestabstand). Ergebnis melden.
-3. **Posten** (nur wenn erlaubt und ein geprüfter Short bereitliegt): ältester fertiger Short über YouTube Studio im Browser, öffentlich. Danach prüfen, dass er wirklich öffentlich ist.
+3. **Posten** (nur wenn erlaubt): ältester fertiger Short über YouTube Studio im Browser, öffentlich. Danach prüfen, dass er wirklich öffentlich ist. **Ist der Vorrat leer, aber Posten erlaubt:** zuerst Schritt 6 ausführen und den ersten neu fertigen Short direkt in diesem Lauf posten (danach weiter mit Schritt 4).
 4. **Zahlen auswerten:** Aufrufe aller Shorts holen, für junge Shorts (2–72 h) die Studio-Werte (angesehen/weggewischt). Gewinner und Verlierer vergleichen, Erkenntnisse in `STRATEGIE.md` (nur mit Zahlen-Beleg).
 5. **Vorrat prüfen:** fertige Shorts gegen diese Regeln prüfen; zu alte oder unpassende aussortieren (mit Grund).
-6. **Nächsten Clip vorbereiten**, bis der Vorrat (Schalter) wieder voll ist: neue Twitch-Clips der letzten 24 h suchen (sonst 7 Tage), auswählen, schneiden, Vorschaubild ansehen und kritisch prüfen.
+6. **Nächsten Clip vorbereiten**, bis der Vorrat (Schalter) wieder voll ist: Twitch-Clips suchen, auswählen, schneiden, Vorschaubild ansehen und kritisch prüfen. **Der Vorrat darf nie leer bleiben:** Solange kein fertiger Short da ist, wird immer weiter gesucht, Stufe für Stufe:
+   1. letzte 24 h (8 Clips pro Streamer)
+   2. letzte 7 Tage (15 Clips pro Streamer)
+   3. letzte 30 Tage (25 Clips pro Streamer)
+   4. alle Zeiten / Top-Clips (40 Clips pro Streamer)
+   Bei jeder Stufe nur Clips ansehen, die noch nicht geprüft wurden. Früher wegen Note 7 aussortierte Shorts dürfen wieder genommen werden. Ein Lauf sucht höchstens ~45 Minuten, damit der Lauf des anderen Kanals nicht ausfällt – ist dann noch nichts da, sucht der nächste Lauf an derselben Stelle weiter.
 7. **Abschluss:** Log-Zeile, Dashboard aktualisieren, `live.py done` mit kurzer Zusammenfassung, Bericht auf Deutsch.
 
 Geht etwas schief: `live.py warn` (weiter machen) oder `live.py fail` (Lauf abbrechen) – mit Grund.
@@ -70,7 +75,7 @@ Geht etwas schief: `live.py warn` (weiter machen) oder `live.py fail` (Lauf abbr
 
 ## 3. Welche Clips genommen werden
 
-**Sehr streng prüfen. Lieber gar nichts posten als einen mittelmäßigen Short.** Nur echte Highlights: ein **lustiger** Moment (man lacht wirklich), ein **krasser** Moment (Schreck, Fail, Rage, unfassbare Situation) oder ein **cooler** Moment (Skill, epische Szene, legendäre Aussage). Kein Gelaber, keine Meinungen ohne Knall, kein „ganz nett“.
+**Kritisch prüfen – kein mittelmäßiger Short.** Nur echte Highlights: ein **lustiger** Moment (man lacht wirklich), ein **krasser** Moment (Schreck, Fail, Rage, unfassbare Situation) oder ein **cooler** Moment (Skill, epische Szene, legendäre Aussage). Kein Gelaber, keine Meinungen ohne Knall, kein „ganz nett“.
 
 **Qualitäts-Check – jeder Punkt muss mit JA beantwortet werden:**
 
@@ -81,9 +86,9 @@ Geht etwas schief: `live.py warn` (weiter machen) oder `live.py fail` (Lauf abbr
 5. **Pointe drin:** Die Reaktion/Auflösung ist im Clip.
 6. **Kein Leerlauf:** keine Pausen, kein Drumherum-Reden, kein Wirrwarr aus mehreren Leuten durcheinander.
 
-Danach eine **Note von 1–10** vergeben (10 = viral-verdächtig). **Nur ab Note 8 wird geschnitten und gepostet.** Note und eine Begründung in einem Satz („warum ist das cool?“) stehen im Pick (`"note"`, `"warum"`) und werden im Dashboard angezeigt. Nach dem Schneiden das Vorschaubild noch einmal mit demselben Maßstab prüfen – wirkt es geschnitten schwächer, aussortieren.
+Danach eine **Note von 1–10** vergeben (10 = viral-verdächtig, 7 = klar lustig/krass/cool, man würde ihn weiterschicken). **Ab Note 7 wird geschnitten und gepostet.** Liegen mehrere Clips vor, kommt der mit der höheren Note zuerst. Note und eine Begründung in einem Satz („warum ist das cool?“) stehen im Pick (`"note"`, `"warum"`) und werden im Dashboard angezeigt. Nach dem Schneiden das Vorschaubild noch einmal mit demselben Maßstab prüfen – wirkt es geschnitten schwächer, aussortieren.
 
-Findet ein Lauf keinen Clip mit Note 8+: weiter suchen (7 Tage, mehr Clips pro Streamer). Gibt es dann immer noch keinen, **nichts vorbereiten** und das im Bericht sagen.
+Findet ein Lauf keinen Clip mit Note 7+: **weitersuchen** nach den Stufen in Abschnitt 2, Schritt 6 (24 h → 7 Tage → 30 Tage → alle Zeiten), bis ein Clip fertig ist. Die Note wird dafür nicht gesenkt.
 
 Außerdem:
 
@@ -134,4 +139,4 @@ Außerdem:
 
 - Chrome nicht verbunden oder Studio nicht eingeloggt → **nicht posten**, Rest des Laufs trotzdem machen, Warnung im Dashboard.
 - Upload abgelehnt / Fehler → nicht wiederholen, Warnung im Dashboard und im Bericht.
-- Kein guter Clip gefunden → lieber **nichts** vorbereiten als einen schlechten Clip; im Bericht sagen.
+- Kein guter Clip gefunden → weitersuchen (Abschnitt 2, Schritt 6), keinen Clip unter Note 7 nehmen. Nach ~45 Min. ohne Treffer: im Bericht sagen, der nächste Lauf sucht weiter.

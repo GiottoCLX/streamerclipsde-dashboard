@@ -46,8 +46,9 @@ Englische Clips haben oft schon **eingebrannte Untertitel** im Bild (z. B. Kai C
 Fertige, ungepostete Shorts (`.json` ohne `uploaded`/`skip`) gegen REGELN.md prüfen. Älter als `expire_h` oder unpassend → `"skip": "<Grund>"` in die .json.
 
 ## Schritt 6 – Nächsten Clip vorbereiten
-1. `py shorts.py scout --channel kanal1 --range 24hr --limit 8` (zu wenig → `--range 7d --limit 5`).
-2. `scout\<datum>.txt` lesen (Abschnitt StreamerclipsDE) und nach REGELN.md Abschnitt 3 auswählen (Qualitäts-Check, Note ≥ 8). Nur Streamer aus dem Schalter. Bei Kandidaten, die vom Text her gut wirken, vor dem Pick auch das Bild ansehen: rendern + `sheet` – erst dann die endgültige Note.
+1. Suchstufen (REGELN.md Abschnitt 2, Schritt 6), so lange bis ein Short fertig ist:
+   `py shorts.py scout --channel <kanal> --range 24hr --limit 8` → `--range 7d --limit 15` → `--range 30d --limit 25` → `--range all --limit 40`. Clips, die schon in einer früheren Stufe/einem früheren Lauf geprüft oder gerendert wurden (STRATEGIE.md, `output\<kanal>\…\*.json` mit `skip`), nicht nochmal ansehen. Ist der Vorrat leer und `may_post` wahr: den ersten fertigen Short sofort nach Schritt 3 posten. Höchstens ~45 Min. suchen.
+2. `scout\<datum>.txt` lesen (Abschnitt des Kanals) und nach REGELN.md Abschnitt 3 auswählen (Qualitäts-Check, Note ≥ 7; höhere Note zuerst). Nur Streamer aus dem Schalter. Bei Kandidaten, die vom Text her gut wirken, vor dem Pick auch das Bild ansehen: rendern + `sheet` – erst dann die endgültige Note.
 3. `picks\<datum>_<HHMM>.json`: `[{"id": "...", "headline": "...", "title": "...", "start": s, "end": s, "note": 8, "warum": "1 Satz: was passiert und warum es lustig/krass/cool ist", "experiment": "..."}]` – Länge laut Schalter `clip_len`.
    **Schnitt (REGELN.md Abschnitt 4, Technik in `schnitt.py`):**
    - Jump-Cuts laufen automatisch (Pausen ohne Sprache, leise, ohne Bewegung; max. 25 % pro Teil). Abschalten: `"tighten": false`.
