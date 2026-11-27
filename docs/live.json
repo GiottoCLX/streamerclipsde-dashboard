@@ -38,6 +38,11 @@
     "t": "2026-11-27T12:13:34",
     "text": "Monte 'Kack Traum' nach Vorschaubild verworfen (14 s, leerer Stuhl unten, Note 7)",
     "kind": "warn"
+   },
+   {
+    "t": "2026-11-27T12:13:38",
+    "text": "Suche Clips der letzten 7 Tage",
+    "kind": "step"
    }
   ]
  },
@@ -953,7 +958,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T12:13:34",
+ "updated": "2026-11-27T12:13:38",
  "last_summary": "Kein Post: Vorrat 0 und kein Clip mit Note 8+; Monte Boot/Synchron nach Vorschaubild verworfen; Festival 1376 Aufrufe / 49 % angesehen",
  "channel": "kanal1",
  "check": {
