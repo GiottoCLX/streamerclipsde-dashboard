@@ -38,6 +38,11 @@
     "t": "2026-11-27T02:13:19",
     "text": "24 h ohne 8+ – suche 7 Tage",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T02:14:32",
+    "text": "Schreibe Log und aktualisiere Dashboard",
+    "kind": "step"
    }
   ]
  },
@@ -983,7 +988,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T02:13:19",
+ "updated": "2026-11-27T02:14:32",
  "last_summary": "Kein Post (außerhalb 06–24 Uhr), Vorrat 0: kein Clip mit Note 8+ gefunden; Festival-Story bei 984 Aufrufen, Realtalk 0 nach 2 h",
  "channel": "kanal1",
  "check": {
