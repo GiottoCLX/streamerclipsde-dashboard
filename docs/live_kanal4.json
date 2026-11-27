@@ -38,6 +38,11 @@
     "t": "2026-11-27T17:12:58",
     "text": "Fanum-Clip verworfen (Moment nicht im Bild) – rendere StableRonaldo  hey!",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T17:13:55",
+    "text": "Ron-Clip verworfen – suche neue Clips (30 Tage, alle Zeiten)",
+    "kind": "step"
    }
   ]
  },
@@ -948,7 +953,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T17:12:58",
+ "updated": "2026-11-27T17:13:55",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T17:09:36",
