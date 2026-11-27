@@ -38,6 +38,11 @@
     "t": "2026-11-27T20:16:23",
     "text": "Keine 7+ in 7 Tagen – suche in 30 Tagen",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T20:16:42",
+    "text": "Keine neuen 30-Tage-Clips – prüfe ungeprüfte Top-Clips aller Zeiten",
+    "kind": "step"
    }
   ]
  },
@@ -1033,7 +1038,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T20:16:23",
+ "updated": "2026-11-27T20:16:42",
  "last_summary": "Gepostet: Trymacs Icon Garrincha (CG_iSPUugaA); Festival-Story mit 2. Schub (2483 Aufrufe, 55 % angesehen); bereit: Monte KI bellt (Note 7)",
  "channel": "kanal1",
  "check": {
