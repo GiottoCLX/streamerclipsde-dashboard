@@ -1,47 +1,56 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 04:09",
-  "started": "2026-11-27T04:09:19",
-  "steps": [
-   {
-    "t": "2026-11-27T04:09:19",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T04:09:31",
-    "text": "Prüfe, ob jetzt gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T04:09:41",
-    "text": "Kein Post (außerhalb 06–24 Uhr) – hole Aufrufe aller Shorts",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T04:12:07",
-    "text": "Studio-Werte gespeichert – prüfe Vorrat",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T04:12:14",
-    "text": "Suche neue Twitch-Clips der letzten 24 h",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T04:13:53",
-    "text": "24 h ohne 8+ – suche in den letzten 7 Tagen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T04:14:56",
-    "text": "Kein 8+ in 24 h und 7 Tagen – schreibe Log und aktualisiere Dashboard",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 04:09",
+   "started": "2026-11-27T04:09:19",
+   "steps": [
+    {
+     "t": "2026-11-27T04:09:19",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T04:09:31",
+     "text": "Prüfe, ob jetzt gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T04:09:41",
+     "text": "Kein Post (außerhalb 06–24 Uhr) – hole Aufrufe aller Shorts",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T04:12:07",
+     "text": "Studio-Werte gespeichert – prüfe Vorrat",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T04:12:14",
+     "text": "Suche neue Twitch-Clips der letzten 24 h",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T04:13:53",
+     "text": "24 h ohne 8+ – suche in den letzten 7 Tagen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T04:14:56",
+     "text": "Kein 8+ in 24 h und 7 Tagen – schreibe Log und aktualisiere Dashboard",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T04:15:04",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-27T04:15:04",
+   "state": "ok",
+   "summary": "Kein Post (außerhalb 06–24 Uhr); 24 h + 7 Tage ohne Clip mit Note 8+, Vorrat 0; Festival-Story 1238 Aufrufe, Ansehen-Quote auf 48 % gestiegen."
+  },
   {
    "title": "Lauf 02:09",
    "started": "2026-11-27T02:09:18",
@@ -937,75 +946,6 @@
    "finished": "2026-11-26T00:17:02",
    "state": "ok",
    "summary": "Kein Post (außerhalb 06-24 Uhr), kein neuer 8+-Clip gefunden, Vorrat 1 (Trymacs Festival, Note 8); Studio-Analytics fehlerhaft"
-  },
-  {
-   "title": "Lauf 22:10",
-   "started": "2026-11-25T22:10:03",
-   "steps": [
-    {
-     "t": "2026-11-25T22:10:03",
-     "text": "Lauf gestartet, neueste Regeln geladen",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-25T22:10:11",
-     "text": "Prüfe, ob gepostet werden darf",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-25T22:10:22",
-     "text": "Kein Post: letzter Post erst vor 64 Min. – werte Zahlen aus",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-25T22:11:16",
-     "text": "Studio zeigt für StreamerclipsDE nur 'Hoppla' (wohl anderer Kanal aktiv) – Studio-Werte übersprungen",
-     "kind": "warn"
-    },
-    {
-     "t": "2026-11-25T22:11:20",
-     "text": "Prüfe Vorrat an fertigen Shorts",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-25T22:12:12",
-     "text": "Suche neue Twitch-Clips (letzte 24 h)",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-25T22:14:20",
-     "text": "Kein 8er-Clip in 24 h – suche in den letzten 7 Tagen",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-25T22:18:37",
-     "text": "Schneide Kandidat: Monte – Apfel-Wurf in GTA 6",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-25T22:19:35",
-     "text": "Apfel-Clip aussortiert (Note 6) – teste Trymacs Jumpscare",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-25T22:20:20",
-     "text": "Kein neuer Clip mit Note 8+ (24 h + 7 Tage): Apfel-Clip Note 6, Jumpscare = Duplikat Krokodil-Szene – Vorrat bleibt bei 1",
-     "kind": "warn"
-    },
-    {
-     "t": "2026-11-25T22:20:35",
-     "text": "Abschluss: Log und Dashboard",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-25T22:20:42",
-     "text": "Fertig",
-     "kind": "step"
-    }
-   ],
-   "finished": "2026-11-25T22:20:42",
-   "state": "ok",
-   "summary": "Kein Post (Mindestabstand), Vorrat 1 (Trymacs Festival-Story, Note 8), kein neuer 8er-Clip gefunden; Studio zeigt 'Hoppla' für StreamerclipsDE"
   }
  ],
  "rules": {
@@ -1013,8 +953,8 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T04:14:56",
- "last_summary": "Kein Post (außerhalb 06–24 Uhr); 24 h + 7 Tage ohne Clip mit Note 8+, Vorrat 0; Festival-Story 1132 Aufrufe nach 12 h.",
+ "updated": "2026-11-27T04:15:04",
+ "last_summary": "Kein Post (außerhalb 06–24 Uhr); 24 h + 7 Tage ohne Clip mit Note 8+, Vorrat 0; Festival-Story 1238 Aufrufe, Ansehen-Quote auf 48 % gestiegen.",
  "channel": "kanal1",
  "check": {
   "t": "2026-11-27T04:09:35",
