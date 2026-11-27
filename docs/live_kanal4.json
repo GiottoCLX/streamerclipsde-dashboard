@@ -28,6 +28,11 @@
     "t": "2026-11-27T09:10:37",
     "text": "Prüfe Vorrat und suche neue Twitch-Clips der letzten 24 h",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T09:12:00",
+    "text": "Kein 8+ in 24 h – suche in den letzten 7 Tagen",
+    "kind": "step"
    }
   ]
  },
@@ -702,7 +707,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T09:10:37",
+ "updated": "2026-11-27T09:12:00",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T09:09:42",
