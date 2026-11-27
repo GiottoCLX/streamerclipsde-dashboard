@@ -1,67 +1,76 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 07:09",
-  "started": "2026-11-27T07:09:20",
-  "steps": [
-   {
-    "t": "2026-11-27T07:09:20",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T07:09:33",
-    "text": "Prüfe, ob jetzt gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T07:09:43",
-    "text": "Posten erlaubt – hole ältesten fertigen Short",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T07:10:01",
-    "text": "Öffne YouTube Studio und prüfe den Kanal",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T07:10:40",
-    "text": "Lade Short hoch: Lacy – Pool-Fail",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T07:11:49",
-    "text": "Prüfe, ob der Short öffentlich ist",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T07:11:56",
-    "text": "Werte die Zahlen aller Shorts aus",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T07:12:05",
-    "text": "Vorrat leer – suche neue Twitch-Clips (24 h)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T07:13:50",
-    "text": "Prüfe Kandidat: StableRonaldo – Hund beißt Ron",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T07:14:50",
-    "text": "Kein 8+ in 24 h – suche in 7 Tagen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T07:17:44",
-    "text": "Schreibe Log und aktualisiere Dashboard",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 07:09",
+   "started": "2026-11-27T07:09:20",
+   "steps": [
+    {
+     "t": "2026-11-27T07:09:20",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T07:09:33",
+     "text": "Prüfe, ob jetzt gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T07:09:43",
+     "text": "Posten erlaubt – hole ältesten fertigen Short",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T07:10:01",
+     "text": "Öffne YouTube Studio und prüfe den Kanal",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T07:10:40",
+     "text": "Lade Short hoch: Lacy – Pool-Fail",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T07:11:49",
+     "text": "Prüfe, ob der Short öffentlich ist",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T07:11:56",
+     "text": "Werte die Zahlen aller Shorts aus",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T07:12:05",
+     "text": "Vorrat leer – suche neue Twitch-Clips (24 h)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T07:13:50",
+     "text": "Prüfe Kandidat: StableRonaldo – Hund beißt Ron",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T07:14:50",
+     "text": "Kein 8+ in 24 h – suche in 7 Tagen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T07:17:44",
+     "text": "Schreibe Log und aktualisiere Dashboard",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T07:17:55",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-27T07:17:55",
+   "state": "ok",
+   "summary": "Gepostet: Lacy Pool-Fail (FtkWDK2wNqY); 24 h + 7 Tage ohne 8+, Vorrat 0"
+  },
   {
    "title": "Lauf 05:09",
    "started": "2026-11-27T05:09:18",
@@ -663,12 +672,12 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T07:17:44",
+ "updated": "2026-11-27T07:17:55",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T07:09:36",
   "may_post": true,
   "reason": "Posten erlaubt"
  },
- "last_summary": "Kein Post (außerhalb 06–24 Uhr); 24 h + 7 Tage ohne 8+, zwei Kandidaten nach Vorschaubild verworfen; Vorrat 1 (Lacy Pool-Fail, Note 8)"
+ "last_summary": "Gepostet: Lacy Pool-Fail (FtkWDK2wNqY); 24 h + 7 Tage ohne 8+, Vorrat 0"
 }
