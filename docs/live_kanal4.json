@@ -1,62 +1,71 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 13:09",
-  "started": "2026-11-27T13:09:20",
-  "steps": [
-   {
-    "t": "2026-11-27T13:09:20",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T13:09:34",
-    "text": "Prüfe, ob gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T13:09:45",
-    "text": "Vorrat leer – hole Zahlen und suche neue Clips (24 h)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T13:11:58",
-    "text": "24 h ohne 8+ – suche in 30 Tagen (25 Clips pro Streamer)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T13:18:32",
-    "text": "Rendere 2 Test-Kandidaten: Ron Fahr-Fail, Lacy 500.000-Yen-Rechnung",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T13:20:44",
-    "text": "Lacy-Rechnung verworfen (Note 5) – schneide Ron Fahr-Fail enger",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T13:22:44",
-    "text": "Lade Short hoch: StableRonaldo – lucky I'm good at driving",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T13:24:55",
-    "text": "Gepostet (MAjJ77kIqRM, öffentlich) – fülle Vorrat: prüfe Alle-Zeiten-Top-Clips",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T13:34:04",
-    "text": "Prüfe Jynxzi 'Rest in Peace Chair' (Stuhl bricht nach Ansage)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T13:35:23",
-    "text": "Stuhl-Clip verworfen (Note 6) – teste Kai x Kevin Hart Wasser-Clips",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 13:09",
+   "started": "2026-11-27T13:09:20",
+   "steps": [
+    {
+     "t": "2026-11-27T13:09:20",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T13:09:34",
+     "text": "Prüfe, ob gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T13:09:45",
+     "text": "Vorrat leer – hole Zahlen und suche neue Clips (24 h)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T13:11:58",
+     "text": "24 h ohne 8+ – suche in 30 Tagen (25 Clips pro Streamer)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T13:18:32",
+     "text": "Rendere 2 Test-Kandidaten: Ron Fahr-Fail, Lacy 500.000-Yen-Rechnung",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T13:20:44",
+     "text": "Lacy-Rechnung verworfen (Note 5) – schneide Ron Fahr-Fail enger",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T13:22:44",
+     "text": "Lade Short hoch: StableRonaldo – lucky I'm good at driving",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T13:24:55",
+     "text": "Gepostet (MAjJ77kIqRM, öffentlich) – fülle Vorrat: prüfe Alle-Zeiten-Top-Clips",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T13:34:04",
+     "text": "Prüfe Jynxzi 'Rest in Peace Chair' (Stuhl bricht nach Ansage)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T13:35:23",
+     "text": "Stuhl-Clip verworfen (Note 6) – teste Kai x Kevin Hart Wasser-Clips",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T13:37:00",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-27T13:37:00",
+   "state": "ok",
+   "summary": "Gepostet: StableRonaldo Fahr-Fail (MAjJ77kIqRM, öffentlich, Note 7); Vorrat 0 – 5 weitere Kandidaten aus 30 Tagen/alle Zeiten nach Vorschaubild verworfen; Lacy Pool-Fail 524 Aufrufe nach 6 h"
+  },
   {
    "title": "Lauf 11:09",
    "started": "2026-11-27T11:09:22",
@@ -835,12 +844,12 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T13:35:23",
+ "updated": "2026-11-27T13:37:00",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T13:09:38",
   "may_post": true,
   "reason": "Posten erlaubt"
  },
- "last_summary": "Kein Post: Vorrat 0 und kein Clip mit Note 8+; Lacy Pool-Fail 350 Aufrufe nach 4 h"
+ "last_summary": "Gepostet: StableRonaldo Fahr-Fail (MAjJ77kIqRM, öffentlich, Note 7); Vorrat 0 – 5 weitere Kandidaten aus 30 Tagen/alle Zeiten nach Vorschaubild verworfen; Lacy Pool-Fail 524 Aufrufe nach 6 h"
 }
