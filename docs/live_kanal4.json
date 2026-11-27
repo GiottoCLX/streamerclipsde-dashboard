@@ -38,6 +38,11 @@
     "t": "2026-11-27T05:13:12",
     "text": "Schneide Testversion: Lacy – Do not tell Darla",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T05:14:09",
+    "text": "Lacy 'Do not tell Darla' nach Vorschaubild verworfen (Note 7)",
+    "kind": "warn"
    }
   ]
  },
@@ -569,7 +574,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T05:13:12",
+ "updated": "2026-11-27T05:14:09",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T05:09:37",
