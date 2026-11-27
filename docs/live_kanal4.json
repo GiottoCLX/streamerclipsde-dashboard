@@ -63,6 +63,11 @@
     "t": "2026-11-27T17:17:13",
     "text": "Lade Short hoch: Lacy – Do not tell Darla",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T17:18:25",
+    "text": "Gepostet – werte Zahlen aus",
+    "kind": "step"
    }
   ]
  },
@@ -973,7 +978,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T17:17:13",
+ "updated": "2026-11-27T17:18:25",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T17:09:36",
