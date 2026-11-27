@@ -53,6 +53,11 @@
     "t": "2026-11-27T18:16:48",
     "text": "7 Tage: nur GTA-Clips ohne Moment – suche in letzten 30 Tagen",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T18:18:40",
+    "text": "30 Tage ohne 7+ – Lern-Notizen (STRATEGIE.md) ergänzen",
+    "kind": "step"
    }
   ]
  },
@@ -1028,7 +1033,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T18:16:48",
+ "updated": "2026-11-27T18:18:40",
  "last_summary": "Gepostet: Trymacs seltenste Pokémon-Karte (9UHmXidU9Es); Vorrat 1 (Trymacs Icon Garrincha, Note 7)",
  "channel": "kanal1",
  "check": {
