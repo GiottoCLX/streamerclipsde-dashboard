@@ -13,6 +13,11 @@
     "t": "2026-11-27T07:09:33",
     "text": "Prüfe, ob jetzt gepostet werden darf",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T07:09:43",
+    "text": "Posten erlaubt – hole ältesten fertigen Short",
+    "kind": "step"
    }
   ]
  },
@@ -618,7 +623,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T07:09:37",
+ "updated": "2026-11-27T07:09:43",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T07:09:36",
