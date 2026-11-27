@@ -8,6 +8,11 @@
     "t": "2026-11-27T20:09:25",
     "text": "Lauf gestartet, neueste Regeln geladen",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T20:09:37",
+    "text": "Prüfe, ob gepostet werden darf",
+    "kind": "step"
    }
   ]
  },
@@ -1003,7 +1008,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T20:09:25",
+ "updated": "2026-11-27T20:09:37",
  "last_summary": "Gepostet: Trymacs Icon Garrincha (CG_iSPUugaA); Festival-Story mit 2. Schub (2483 Aufrufe, 55 % angesehen); bereit: Monte KI bellt (Note 7)",
  "channel": "kanal1",
  "check": {
