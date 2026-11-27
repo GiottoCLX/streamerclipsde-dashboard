@@ -18,6 +18,11 @@
     "t": "2026-11-27T13:09:45",
     "text": "Vorrat leer – hole Zahlen und suche neue Clips (24 h)",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T13:11:58",
+    "text": "24 h ohne 8+ – suche in 30 Tagen (25 Clips pro Streamer)",
+    "kind": "step"
    }
   ]
  },
@@ -800,7 +805,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T13:09:45",
+ "updated": "2026-11-27T13:11:58",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T13:09:38",
