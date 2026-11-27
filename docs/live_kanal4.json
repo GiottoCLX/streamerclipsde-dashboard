@@ -18,6 +18,11 @@
     "t": "2026-11-27T11:09:58",
     "text": "Kein Short im Vorrat – hole Aufrufe aller Shorts",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T11:10:09",
+    "text": "Vorrat leer – suche neue Twitch-Clips der letzten 24 h",
+    "kind": "step"
    }
   ]
  },
@@ -746,7 +751,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T11:09:58",
+ "updated": "2026-11-27T11:10:09",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T11:09:48",
