@@ -33,6 +33,11 @@
     "t": "2026-11-27T04:13:53",
     "text": "24 h ohne 8+ – suche in den letzten 7 Tagen",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T04:14:56",
+    "text": "Kein 8+ in 24 h und 7 Tagen – schreibe Log und aktualisiere Dashboard",
+    "kind": "step"
    }
   ]
  },
@@ -1008,7 +1013,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T04:13:53",
+ "updated": "2026-11-27T04:14:56",
  "last_summary": "Kein Post (außerhalb 06–24 Uhr); 24 h + 7 Tage ohne Clip mit Note 8+, Vorrat 0; Festival-Story 1132 Aufrufe nach 12 h.",
  "channel": "kanal1",
  "check": {
