@@ -43,6 +43,11 @@
     "t": "2026-11-27T18:14:51",
     "text": "Schneide Monte KI-Bellen und Monte Zivilstreife (Probe)",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T18:16:05",
+    "text": "Vorrat 1 (Monte KI bellt, Note 7) – suche weiter: letzte 7 Tage",
+    "kind": "step"
    }
   ]
  },
@@ -1018,7 +1023,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T18:14:51",
+ "updated": "2026-11-27T18:16:05",
  "last_summary": "Gepostet: Trymacs seltenste Pokémon-Karte (9UHmXidU9Es); Vorrat 1 (Trymacs Icon Garrincha, Note 7)",
  "channel": "kanal1",
  "check": {
