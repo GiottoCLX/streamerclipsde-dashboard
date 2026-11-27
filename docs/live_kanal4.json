@@ -33,6 +33,11 @@
     "t": "2026-11-27T07:11:49",
     "text": "Prüfe, ob der Short öffentlich ist",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T07:11:56",
+    "text": "Werte die Zahlen aller Shorts aus",
+    "kind": "step"
    }
   ]
  },
@@ -638,7 +643,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T07:11:49",
+ "updated": "2026-11-27T07:11:56",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T07:09:36",
