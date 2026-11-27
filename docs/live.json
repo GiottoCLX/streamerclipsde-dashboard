@@ -18,6 +18,11 @@
     "t": "2026-11-27T18:09:49",
     "text": "Posten erlaubt – bereite Upload des ältesten fertigen Shorts vor",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T18:10:15",
+    "text": "Lade Short hoch: Trymacs zieht Icon Garrincha",
+    "kind": "step"
    }
   ]
  },
@@ -993,7 +998,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T18:09:49",
+ "updated": "2026-11-27T18:10:15",
  "last_summary": "Gepostet: Trymacs seltenste Pokémon-Karte (9UHmXidU9Es); Vorrat 1 (Trymacs Icon Garrincha, Note 7)",
  "channel": "kanal1",
  "check": {
