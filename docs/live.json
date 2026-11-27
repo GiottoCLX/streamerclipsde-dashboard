@@ -1,47 +1,56 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 08:09",
-  "started": "2026-11-27T08:09:20",
-  "steps": [
-   {
-    "t": "2026-11-27T08:09:20",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T08:09:34",
-    "text": "Prüfe, ob jetzt gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T08:09:44",
-    "text": "Posten erlaubt – suche fertigen Short im Vorrat",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T08:09:50",
-    "text": "Kein Short bereit – hole Aufrufe aller Shorts",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T08:10:00",
-    "text": "Vorrat leer – suche neue Twitch-Clips der letzten 24 h",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T08:10:59",
-    "text": "Kein 8+ in 24 h – suche in 7 Tagen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T08:11:44",
-    "text": "Kein 8+ gefunden – schreibe Log und aktualisiere Dashboard",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 08:09",
+   "started": "2026-11-27T08:09:20",
+   "steps": [
+    {
+     "t": "2026-11-27T08:09:20",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T08:09:34",
+     "text": "Prüfe, ob jetzt gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T08:09:44",
+     "text": "Posten erlaubt – suche fertigen Short im Vorrat",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T08:09:50",
+     "text": "Kein Short bereit – hole Aufrufe aller Shorts",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T08:10:00",
+     "text": "Vorrat leer – suche neue Twitch-Clips der letzten 24 h",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T08:10:59",
+     "text": "Kein 8+ in 24 h – suche in 7 Tagen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T08:11:44",
+     "text": "Kein 8+ gefunden – schreibe Log und aktualisiere Dashboard",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T08:11:55",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-27T08:11:55",
+   "state": "ok",
+   "summary": "Kein Post: Vorrat 0 und kein Clip mit Note 8+ in 24 h/7 Tagen; Festival-Story 1260 Aufrufe, läuft aus"
+  },
   {
    "title": "Lauf 06:09",
    "started": "2026-11-27T06:09:19",
@@ -902,70 +911,6 @@
    "finished": "2026-11-26T04:18:03",
    "state": "ok",
    "summary": "Kein Post (außerhalb 06-24 Uhr); neu geschnitten: Monte Polizei macht nichts (Note 8), Vorrat 2; Studio zeigt weiter Fehler (falsches Konto)"
-  },
-  {
-   "title": "Lauf 02:10",
-   "started": "2026-11-26T02:10:02",
-   "steps": [
-    {
-     "t": "2026-11-26T02:10:02",
-     "text": "Lauf gestartet, neueste Regeln geladen",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T02:10:12",
-     "text": "Prüfe, ob gepostet werden darf",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T02:10:22",
-     "text": "Kein Post (außerhalb 06-24 Uhr) – hole Aufrufzahlen",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T02:10:32",
-     "text": "Prüfe Vorrat an fertigen Shorts",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T02:10:42",
-     "text": "Vorrat 1/2 (Trymacs Festival, 4 h alt) – suche neue Twitch-Clips der letzten 24 h",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T02:12:06",
-     "text": "24 h gesichtet (52 Kandidaten), noch kein 8+ – suche in den letzten 7 Tagen",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T02:14:04",
-     "text": "Kein Clip mit Note 8+ (24 h + 7 Tage, 72 Kandidaten) – nichts Neues vorbereitet",
-     "kind": "warn"
-    },
-    {
-     "t": "2026-11-26T02:14:07",
-     "text": "Hole Studio-Werte für junge Shorts",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T02:14:53",
-     "text": "Studio: 'Nicht berechtigt' für StreamerclipsDE – im Browser ist ein anderes Konto/Kanal aktiv (3. Lauf ohne Studio-Werte). Ab 06:00 kann so nicht gepostet werden.",
-     "kind": "warn"
-    },
-    {
-     "t": "2026-11-26T02:15:06",
-     "text": "Abschluss: Log und Dashboard",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T02:15:14",
-     "text": "Fertig",
-     "kind": "step"
-    }
-   ],
-   "finished": "2026-11-26T02:15:14",
-   "state": "ok",
-   "summary": "Kein Post (außerhalb 06-24 Uhr), kein neuer 8+-Clip, Vorrat 1 (Trymacs Festival); Studio zeigt für StreamerclipsDE 'nicht berechtigt' – Konto im Browser prüfen"
   }
  ],
  "rules": {
@@ -973,8 +918,8 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T08:11:44",
- "last_summary": "Kein Post (Vorrat 0); 24 h + 7 Tage ohne 8+, nichts vorbereitet; Festival-Story bei 1202 Aufrufen",
+ "updated": "2026-11-27T08:11:55",
+ "last_summary": "Kein Post: Vorrat 0 und kein Clip mit Note 8+ in 24 h/7 Tagen; Festival-Story 1260 Aufrufe, läuft aus",
  "channel": "kanal1",
  "check": {
   "t": "2026-11-27T08:09:38",
