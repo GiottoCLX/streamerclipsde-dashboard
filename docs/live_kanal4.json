@@ -58,6 +58,11 @@
     "t": "2026-11-27T19:15:44",
     "text": "Gepostet (iMrgoJrjNtI) – werte Zahlen aus",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T19:15:57",
+    "text": "Vorrat 0 – prüfe Marlon  and one (Note 7) neu mit kürzerem Ende",
+    "kind": "step"
    }
   ]
  },
@@ -1008,7 +1013,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T19:15:44",
+ "updated": "2026-11-27T19:15:57",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T19:09:48",
