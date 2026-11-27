@@ -23,6 +23,11 @@
     "t": "2026-11-27T03:09:53",
     "text": "Aufrufe unverändert – prüfe Vorrat",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T03:10:04",
+    "text": "Vorrat 1 (Lacy Pool-Fail, 4 h alt) – suche neue Twitch-Clips (24 h)",
+    "kind": "step"
    }
   ]
  },
@@ -490,7 +495,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T03:09:53",
+ "updated": "2026-11-27T03:10:04",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T03:09:36",
