@@ -28,6 +28,11 @@
     "t": "2026-11-27T23:15:13",
     "text": "Öffne YouTube Studio und prüfe den Kanal",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T23:15:37",
+    "text": "Lade Short hoch: Marlon – Who's eating a thousand wings",
+    "kind": "step"
    }
   ]
  },
@@ -1033,7 +1038,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T23:15:13",
+ "updated": "2026-11-27T23:15:37",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T23:09:59",
