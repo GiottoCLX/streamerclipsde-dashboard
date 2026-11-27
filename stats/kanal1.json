@@ -9,11 +9,11 @@
   "upload_hour": 12,
   "perf": {
    "aufrufe": 606.0,
-   "angesehen": 60.5,
-   "weggewischt": 39.5,
+   "angesehen": 60.3,
+   "weggewischt": 39.7,
    "avd": 15.4,
    "likes": 5.0,
-   "checked_at": "2026-11-26T12:13"
+   "checked_at": "2026-11-27T02:11"
   },
   "snapshots": [
    {
@@ -148,13 +148,20 @@
     "views": 606,
     "likes": 5,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T04:09",
+    "age_h": 39.6,
+    "views": 606,
+    "likes": 5,
+    "comments": 0
    }
   ],
   "views": 606,
   "likes": 5,
   "comments": 0,
-  "age_h": 37.6,
-  "views_per_h": 16.1,
+  "age_h": 39.6,
+  "views_per_h": 15.3,
   "like_rate": 0.8,
   "experiment": null,
   "clip_title": "häuser",
@@ -169,12 +176,12 @@
   "uploaded_at": "2026-11-25T12:31:08",
   "upload_hour": 12,
   "perf": {
-   "aufrufe": 1444.0,
-   "angesehen": 65.5,
-   "weggewischt": 34.5,
+   "aufrufe": 1446.0,
+   "angesehen": 65.6,
+   "weggewischt": 34.4,
    "avd": 21.2,
    "likes": 36.0,
-   "checked_at": "2026-11-26T18:14"
+   "checked_at": "2026-11-27T02:11"
   },
   "snapshots": [
    {
@@ -309,13 +316,20 @@
     "views": 1444,
     "likes": 36,
     "comments": 2
+   },
+   {
+    "t": "2026-11-27T04:09",
+    "age_h": 39.6,
+    "views": 1444,
+    "likes": 36,
+    "comments": 2
    }
   ],
   "views": 1444,
   "likes": 36,
   "comments": 2,
-  "age_h": 37.6,
-  "views_per_h": 38.4,
+  "age_h": 39.6,
+  "views_per_h": 36.4,
   "like_rate": 2.5,
   "experiment": null,
   "clip_title": "wie war neuseeland",
@@ -333,7 +347,7 @@
    "aufrufe": 12.0,
    "angesehen": 33.3,
    "weggewischt": 66.7,
-   "checked_at": "2026-11-26T14:12",
+   "checked_at": "2026-11-27T02:11",
    "likes": 1.0
   },
   "snapshots": [
@@ -469,12 +483,19 @@
     "views": 12,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T04:09",
+    "age_h": 39.6,
+    "views": 12,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 12,
   "likes": 1,
   "comments": 0,
-  "age_h": 37.6,
+  "age_h": 39.6,
   "views_per_h": 0.3,
   "like_rate": 8.3,
   "experiment": null,
@@ -629,14 +650,21 @@
     "views": 12,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T04:09",
+    "age_h": 39.6,
+    "views": 13,
+    "likes": 1,
+    "comments": 0
    }
   ],
-  "views": 12,
+  "views": 13,
   "likes": 1,
   "comments": 0,
-  "age_h": 37.6,
+  "age_h": 39.6,
   "views_per_h": 0.3,
-  "like_rate": 8.3,
+  "like_rate": 7.7,
   "experiment": null,
   "clip_title": "Monte verprügelt schradin",
   "design": "v1"
@@ -789,12 +817,19 @@
     "views": 2,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T04:09",
+    "age_h": 39.6,
+    "views": 2,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 2,
   "likes": 1,
   "comments": 0,
-  "age_h": 37.6,
+  "age_h": 39.6,
   "views_per_h": 0.1,
   "like_rate": 50.0,
   "experiment": null,
@@ -810,12 +845,12 @@
   "uploaded_at": "2026-11-25T11:52:14",
   "upload_hour": 11,
   "perf": {
-   "aufrufe": 355.0,
+   "aufrufe": 353.0,
    "angesehen": 41.3,
    "weggewischt": 58.7,
-   "avd": 14.2,
+   "avd": 13.3,
    "likes": 3.0,
-   "checked_at": "2026-11-26T14:12"
+   "checked_at": "2026-11-27T02:11"
   },
   "snapshots": [
    {
@@ -950,13 +985,20 @@
     "views": 354,
     "likes": 3,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T04:09",
+    "age_h": 40.3,
+    "views": 354,
+    "likes": 3,
+    "comments": 0
    }
   ],
   "views": 354,
   "likes": 3,
   "comments": 0,
-  "age_h": 38.3,
-  "views_per_h": 9.2,
+  "age_h": 40.3,
+  "views_per_h": 8.8,
   "like_rate": 0.8,
   "experiment": null,
   "clip_title": "trymacs platzt",
@@ -1110,12 +1152,19 @@
     "views": 17,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T04:09",
+    "age_h": 37.4,
+    "views": 17,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 17,
   "likes": 0,
   "comments": 0,
-  "age_h": 35.4,
+  "age_h": 37.4,
   "views_per_h": 0.5,
   "like_rate": 0.0,
   "experiment": null,
@@ -1270,12 +1319,19 @@
     "views": 7,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T04:09",
+    "age_h": 37.4,
+    "views": 7,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 7,
   "likes": 0,
   "comments": 0,
-  "age_h": 35.4,
+  "age_h": 37.4,
   "views_per_h": 0.2,
   "like_rate": 0.0,
   "experiment": null,
@@ -1430,12 +1486,19 @@
     "views": 7,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T04:09",
+    "age_h": 35.5,
+    "views": 7,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 7,
   "likes": 0,
   "comments": 0,
-  "age_h": 33.5,
+  "age_h": 35.5,
   "views_per_h": 0.2,
   "like_rate": 0.0,
   "experiment": null,
@@ -1579,12 +1642,19 @@
     "views": 9,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T04:09",
+    "age_h": 34.0,
+    "views": 9,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 9,
   "likes": 0,
   "comments": 0,
-  "age_h": 32.0,
+  "age_h": 34.0,
   "views_per_h": 0.3,
   "like_rate": 0.0
  },
@@ -1718,12 +1788,19 @@
     "views": 7,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T04:09",
+    "age_h": 32.0,
+    "views": 7,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 7,
   "likes": 1,
   "comments": 0,
-  "age_h": 30.0,
+  "age_h": 32.0,
   "views_per_h": 0.2,
   "like_rate": 14.3
  },
@@ -1850,12 +1927,19 @@
     "views": 6,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T04:09",
+    "age_h": 31.1,
+    "views": 6,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 6,
   "likes": 0,
   "comments": 0,
-  "age_h": 29.1,
+  "age_h": 31.1,
   "views_per_h": 0.2,
   "like_rate": 0.0
  },
@@ -1927,13 +2011,20 @@
     "views": 1132,
     "likes": 9,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T04:09",
+    "age_h": 14.0,
+    "views": 1189,
+    "likes": 9,
+    "comments": 0
    }
   ],
-  "views": 1132,
+  "views": 1189,
   "likes": 9,
   "comments": 0,
-  "age_h": 12.0,
-  "views_per_h": 94.5,
+  "age_h": 14.0,
+  "views_per_h": 85.0,
   "like_rate": 0.8
  },
  "nVhqt2NdSe4": {
@@ -1996,13 +2087,20 @@
     "views": 5,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T04:09",
+    "age_h": 12.0,
+    "views": 5,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 5,
   "likes": 0,
   "comments": 0,
-  "age_h": 10.0,
-  "views_per_h": 0.5,
+  "age_h": 12.0,
+  "views_per_h": 0.4,
   "like_rate": 0.0
  },
  "CL4hHaVweWA": {
@@ -2058,13 +2156,20 @@
     "views": 3,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T04:09",
+    "age_h": 10.0,
+    "views": 3,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 3,
   "likes": 0,
   "comments": 0,
-  "age_h": 8.0,
-  "views_per_h": 0.4,
+  "age_h": 10.0,
+  "views_per_h": 0.3,
   "like_rate": 0.0
  },
  "g_En7qeKFds": {
@@ -2114,13 +2219,20 @@
     "views": 36,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T04:09",
+    "age_h": 8.0,
+    "views": 36,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 36,
   "likes": 0,
   "comments": 0,
-  "age_h": 6.0,
-  "views_per_h": 6.0,
+  "age_h": 8.0,
+  "views_per_h": 4.5,
   "like_rate": 0.0
  },
  "UFU3n6p_JY8": {
@@ -2160,12 +2272,19 @@
     "views": 0,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T04:09",
+    "age_h": 6.0,
+    "views": 0,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 0,
   "likes": 0,
   "comments": 0,
-  "age_h": 4.0,
+  "age_h": 6.0,
   "views_per_h": 0.0,
   "like_rate": 0.0
  }
