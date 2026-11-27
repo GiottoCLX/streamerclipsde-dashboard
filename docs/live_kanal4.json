@@ -33,6 +33,11 @@
     "t": "2026-11-27T15:13:54",
     "text": "Rendere Test: StableRonaldo – Duke 'Who are you?'",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T15:15:33",
+    "text": "Lade Short hoch: StableRonaldo – Duke 'Who are you?'",
+    "kind": "step"
    }
   ]
  },
@@ -879,7 +884,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T15:13:54",
+ "updated": "2026-11-27T15:15:33",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T15:09:35",
