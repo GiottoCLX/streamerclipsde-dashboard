@@ -28,6 +28,11 @@
     "t": "2026-11-27T15:12:59",
     "text": "Keine 7+ in 7 Tagen – suche 30 Tage und alle Zeiten",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T15:13:54",
+    "text": "Rendere Test: StableRonaldo – Duke 'Who are you?'",
+    "kind": "step"
    }
   ]
  },
@@ -874,7 +879,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T15:12:59",
+ "updated": "2026-11-27T15:13:54",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T15:09:35",
