@@ -58,6 +58,11 @@
     "t": "2026-11-27T23:18:58",
     "text": "Suche Clips der letzten 30 Tage und alle Zeiten",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T23:19:33",
+    "text": "Rendere Test-Kandidat Kai 'Car Horn'",
+    "kind": "step"
    }
   ]
  },
@@ -1063,7 +1068,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T23:18:58",
+ "updated": "2026-11-27T23:19:33",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T23:09:59",
