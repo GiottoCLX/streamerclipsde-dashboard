@@ -1,62 +1,71 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 22:09",
-  "started": "2026-11-27T22:09:27",
-  "steps": [
-   {
-    "t": "2026-11-27T22:09:27",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T22:09:42",
-    "text": "Prüfe, ob gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T22:09:52",
-    "text": "Posten erlaubt – bereite Upload vor",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T22:10:25",
-    "text": "Lade Short hoch: Trymacs – Hand in Hand in den Crash",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T22:12:07",
-    "text": "Gepostet (SmqPMytEmVs) – prüfe öffentlich und werte Zahlen aus",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T22:12:18",
-    "text": "Vorrat prüfen und Clips suchen (24 h)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T22:15:38",
-    "text": "24 h ohne 7+ – suche 7 Tage",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T22:16:06",
-    "text": "7 Tage ohne 7+ – suche 30 Tage und alle Zeiten",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T22:17:26",
-    "text": "Teste Monte 'Verpiss dich' (Alle-Zeiten-Clip) – rendern und prüfen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T22:18:38",
-    "text": "Abschluss: STRATEGIE, Log-Zeile und Dashboard",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 22:09",
+   "started": "2026-11-27T22:09:27",
+   "steps": [
+    {
+     "t": "2026-11-27T22:09:27",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T22:09:42",
+     "text": "Prüfe, ob gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T22:09:52",
+     "text": "Posten erlaubt – bereite Upload vor",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T22:10:25",
+     "text": "Lade Short hoch: Trymacs – Hand in Hand in den Crash",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T22:12:07",
+     "text": "Gepostet (SmqPMytEmVs) – prüfe öffentlich und werte Zahlen aus",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T22:12:18",
+     "text": "Vorrat prüfen und Clips suchen (24 h)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T22:15:38",
+     "text": "24 h ohne 7+ – suche 7 Tage",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T22:16:06",
+     "text": "7 Tage ohne 7+ – suche 30 Tage und alle Zeiten",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T22:17:26",
+     "text": "Teste Monte 'Verpiss dich' (Alle-Zeiten-Clip) – rendern und prüfen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T22:18:38",
+     "text": "Abschluss: STRATEGIE, Log-Zeile und Dashboard",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T22:19:11",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-27T22:19:11",
+   "state": "ok",
+   "summary": "Gepostet: Trymacs Hand-in-Hand-Crash (SmqPMytEmVs); alle Suchstufen ohne neuen 7+-Clip, Vorrat 0"
+  },
   {
    "title": "Lauf 20:09",
    "started": "2026-11-27T20:09:25",
@@ -982,80 +991,6 @@
    "finished": "2026-11-26T18:20:06",
    "state": "ok",
    "summary": "Gepostet: Monte Elektro/G63 (CL4hHaVweWA); Vorrat 2 (Raab, Realtalk Fremdgehen, beide Note 8); Polizei-Short nach 2 h nur 3 Aufrufe"
-  },
-  {
-   "title": "Lauf 16:09",
-   "started": "2026-11-26T16:09:11",
-   "steps": [
-    {
-     "t": "2026-11-26T16:09:11",
-     "text": "Lauf gestartet, neueste Regeln geladen",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T16:09:21",
-     "text": "Prüfe, ob gepostet werden darf",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T16:09:31",
-     "text": "Erlaubt – hole ältesten fertigen Short",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T16:09:47",
-     "text": "Öffne YouTube Studio und prüfe den Kanal",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T16:10:19",
-     "text": "Lade Short hoch: Monte – Polizei macht nichts",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T16:11:15",
-     "text": "Gepostet (nVhqt2NdSe4) – werte Zahlen aus",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T16:12:04",
-     "text": "Vorrat ok (1) – suche neue Twitch-Clips (24 h)",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T16:15:26",
-     "text": "Teste Kandidat: Trymacs Riesen-Schwein in GTA 6 (Vorschau)",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T16:16:09",
-     "text": "Kein 8+ in 24 h – suche in den letzten 7 Tagen",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T16:18:43",
-     "text": "Prüfe Kandidat: Monte über Stefan Raab (Wortzeiten)",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T16:19:09",
-     "text": "Schneide: Monte über Stefan Raab –  Guckt sowieso keiner",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T16:20:24",
-     "text": "Abschluss: Log und Dashboard",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T16:20:34",
-     "text": "Fertig",
-     "kind": "step"
-    }
-   ],
-   "finished": "2026-11-26T16:20:34",
-   "state": "ok",
-   "summary": "Gepostet: Monte Polizei (nVhqt2NdSe4); Festival nach 2 h bei 239 Aufrufen; bereit: Elektro + Stefan Raab (je Note 8)"
   }
  ],
  "rules": {
@@ -1063,8 +998,8 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T22:18:38",
- "last_summary": "Gepostet: Monte KI bellt (FNEuxkAM31k); Vorrat 1: Trymacs Hand-in-Hand-Crash (Note 7); Greenscreen jetzt 55 % angesehen, Pack-Openings 3x ohne Ausspielung",
+ "updated": "2026-11-27T22:19:11",
+ "last_summary": "Gepostet: Trymacs Hand-in-Hand-Crash (SmqPMytEmVs); alle Suchstufen ohne neuen 7+-Clip, Vorrat 0",
  "channel": "kanal1",
  "check": {
   "t": "2026-11-27T22:09:46",
