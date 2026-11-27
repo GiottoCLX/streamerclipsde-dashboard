@@ -8,6 +8,11 @@
     "t": "2026-11-27T14:09:21",
     "text": "Lauf gestartet, neueste Regeln geladen",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T14:09:31",
+    "text": "Prüfe, ob gepostet werden darf",
+    "kind": "step"
    }
   ]
  },
@@ -973,7 +978,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T14:09:21",
+ "updated": "2026-11-27T14:09:31",
  "last_summary": "Gepostet: Monte Greenscreen-Panne (k9iEsdKFtjI, Note 8); Vorrat 0 – 5 Kandidaten verworfen, nächster Lauf sucht in 'alle Zeiten' weiter",
  "channel": "kanal1",
  "check": {
