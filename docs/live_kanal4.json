@@ -53,6 +53,11 @@
     "t": "2026-11-27T19:14:43",
     "text": "Lade Short hoch: Jynxzi – Kakerlake im Zimmer",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T19:15:44",
+    "text": "Gepostet (iMrgoJrjNtI) – werte Zahlen aus",
+    "kind": "step"
    }
   ]
  },
@@ -1003,7 +1008,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T19:14:43",
+ "updated": "2026-11-27T19:15:44",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T19:09:48",
