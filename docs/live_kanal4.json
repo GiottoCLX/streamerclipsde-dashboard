@@ -58,6 +58,11 @@
     "t": "2026-11-27T17:15:43",
     "text": "Wieder aufgenommen: Lacy  Do not tell Darla (Note 7) – bereite Upload vor",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T17:17:13",
+    "text": "Lade Short hoch: Lacy – Do not tell Darla",
+    "kind": "step"
    }
   ]
  },
@@ -968,7 +973,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T17:15:43",
+ "updated": "2026-11-27T17:17:13",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T17:09:36",
