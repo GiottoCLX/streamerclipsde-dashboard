@@ -176,13 +176,20 @@
     "views": 606,
     "likes": 5,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T12:25",
+    "age_h": 47.9,
+    "views": 606,
+    "likes": 5,
+    "comments": 0
    }
   ],
   "views": 606,
   "likes": 5,
   "comments": 0,
-  "age_h": 45.6,
-  "views_per_h": 13.3,
+  "age_h": 47.9,
+  "views_per_h": 12.7,
   "like_rate": 0.8,
   "experiment": null,
   "clip_title": "häuser",
@@ -365,13 +372,20 @@
     "views": 1446,
     "likes": 36,
     "comments": 2
+   },
+   {
+    "t": "2026-11-27T12:25",
+    "age_h": 47.9,
+    "views": 1446,
+    "likes": 36,
+    "comments": 2
    }
   ],
   "views": 1446,
   "likes": 36,
   "comments": 2,
-  "age_h": 45.6,
-  "views_per_h": 31.7,
+  "age_h": 47.9,
+  "views_per_h": 30.2,
   "like_rate": 2.5,
   "experiment": null,
   "clip_title": "wie war neuseeland",
@@ -553,14 +567,21 @@
     "views": 12,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T12:25",
+    "age_h": 47.9,
+    "views": 13,
+    "likes": 1,
+    "comments": 0
    }
   ],
-  "views": 12,
+  "views": 13,
   "likes": 1,
   "comments": 0,
-  "age_h": 45.6,
+  "age_h": 47.9,
   "views_per_h": 0.3,
-  "like_rate": 8.3,
+  "like_rate": 7.7,
   "experiment": null,
   "clip_title": "Sound ist schlecht",
   "design": "v1"
@@ -741,12 +762,19 @@
     "views": 13,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T12:25",
+    "age_h": 47.9,
+    "views": 13,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 13,
   "likes": 1,
   "comments": 0,
-  "age_h": 45.6,
+  "age_h": 47.9,
   "views_per_h": 0.3,
   "like_rate": 7.7,
   "experiment": null,
@@ -929,12 +957,19 @@
     "views": 2,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T12:25",
+    "age_h": 47.9,
+    "views": 2,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 2,
   "likes": 1,
   "comments": 0,
-  "age_h": 45.6,
+  "age_h": 47.9,
   "views_per_h": 0.0,
   "like_rate": 50.0,
   "experiment": null,
@@ -1118,13 +1153,20 @@
     "views": 354,
     "likes": 3,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T12:25",
+    "age_h": 48.5,
+    "views": 354,
+    "likes": 3,
+    "comments": 0
    }
   ],
   "views": 354,
   "likes": 3,
   "comments": 0,
-  "age_h": 46.3,
-  "views_per_h": 7.6,
+  "age_h": 48.5,
+  "views_per_h": 7.3,
   "like_rate": 0.8,
   "experiment": null,
   "clip_title": "trymacs platzt",
@@ -1306,12 +1348,19 @@
     "views": 20,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T12:25",
+    "age_h": 45.6,
+    "views": 22,
+    "likes": 0,
+    "comments": 0
    }
   ],
-  "views": 20,
+  "views": 22,
   "likes": 0,
   "comments": 0,
-  "age_h": 43.4,
+  "age_h": 45.6,
   "views_per_h": 0.5,
   "like_rate": 0.0,
   "experiment": null,
@@ -1494,12 +1543,19 @@
     "views": 7,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T12:25",
+    "age_h": 45.6,
+    "views": 7,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 7,
   "likes": 0,
   "comments": 0,
-  "age_h": 43.4,
+  "age_h": 45.6,
   "views_per_h": 0.2,
   "like_rate": 0.0,
   "experiment": null,
@@ -1682,12 +1738,19 @@
     "views": 7,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T12:25",
+    "age_h": 43.8,
+    "views": 7,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 7,
   "likes": 0,
   "comments": 0,
-  "age_h": 41.5,
+  "age_h": 43.8,
   "views_per_h": 0.2,
   "like_rate": 0.0,
   "experiment": null,
@@ -1859,12 +1922,19 @@
     "views": 9,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T12:25",
+    "age_h": 42.2,
+    "views": 9,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 9,
   "likes": 0,
   "comments": 0,
-  "age_h": 40.0,
+  "age_h": 42.2,
   "views_per_h": 0.2,
   "like_rate": 0.0
  },
@@ -2026,12 +2096,19 @@
     "views": 7,
     "likes": 1,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T12:25",
+    "age_h": 40.2,
+    "views": 7,
+    "likes": 1,
+    "comments": 0
    }
   ],
   "views": 7,
   "likes": 1,
   "comments": 0,
-  "age_h": 38.0,
+  "age_h": 40.2,
   "views_per_h": 0.2,
   "like_rate": 14.3
  },
@@ -2186,12 +2263,19 @@
     "views": 6,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T12:25",
+    "age_h": 39.3,
+    "views": 6,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 6,
   "likes": 0,
   "comments": 0,
-  "age_h": 37.1,
+  "age_h": 39.3,
   "views_per_h": 0.2,
   "like_rate": 0.0
  },
@@ -2207,12 +2291,12 @@
   "uploaded_at": "2026-11-26T14:10:56",
   "upload_hour": 14,
   "perf": {
-   "aufrufe": 1238.0,
-   "angesehen": 48.0,
-   "weggewischt": 52.0,
-   "avd": 8.7,
-   "likes": 9.0,
-   "checked_at": "2026-11-27T04:12"
+   "aufrufe": 1376.0,
+   "angesehen": 49.0,
+   "weggewischt": 51.0,
+   "avd": 8.9,
+   "likes": 10.0,
+   "checked_at": "2026-11-27T10:11"
   },
   "snapshots": [
    {
@@ -2291,13 +2375,20 @@
     "views": 1301,
     "likes": 10,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T12:25",
+    "age_h": 22.2,
+    "views": 1397,
+    "likes": 11,
+    "comments": 0
    }
   ],
-  "views": 1301,
-  "likes": 10,
+  "views": 1397,
+  "likes": 11,
   "comments": 0,
-  "age_h": 20.0,
-  "views_per_h": 65.1,
+  "age_h": 22.2,
+  "views_per_h": 62.8,
   "like_rate": 0.8
  },
  "nVhqt2NdSe4": {
@@ -2388,13 +2479,20 @@
     "views": 7,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T12:25",
+    "age_h": 20.2,
+    "views": 7,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 7,
   "likes": 0,
   "comments": 0,
-  "age_h": 18.0,
-  "views_per_h": 0.4,
+  "age_h": 20.2,
+  "views_per_h": 0.3,
   "like_rate": 0.0
  },
  "CL4hHaVweWA": {
@@ -2478,12 +2576,19 @@
     "views": 3,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T12:25",
+    "age_h": 18.2,
+    "views": 3,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 3,
   "likes": 0,
   "comments": 0,
-  "age_h": 16.0,
+  "age_h": 18.2,
   "views_per_h": 0.2,
   "like_rate": 0.0
  },
@@ -2499,12 +2604,12 @@
   "uploaded_at": "2026-11-26T20:12:16",
   "upload_hour": 20,
   "perf": {
-   "aufrufe": 44.0,
-   "angesehen": 46.3,
-   "weggewischt": 53.7,
+   "aufrufe": 45.0,
+   "angesehen": 45.2,
+   "weggewischt": 54.8,
    "avd": 12.4,
    "likes": 0.0,
-   "checked_at": "2026-11-27T04:12"
+   "checked_at": "2026-11-27T10:11"
   },
   "snapshots": [
    {
@@ -2562,13 +2667,20 @@
     "views": 45,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T12:25",
+    "age_h": 16.2,
+    "views": 45,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 45,
   "likes": 0,
   "comments": 0,
-  "age_h": 14.0,
-  "views_per_h": 3.2,
+  "age_h": 16.2,
+  "views_per_h": 2.8,
   "like_rate": 0.0
  },
  "UFU3n6p_JY8": {
@@ -2636,13 +2748,48 @@
     "views": 3,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T12:25",
+    "age_h": 14.2,
+    "views": 5,
+    "likes": 0,
+    "comments": 0
    }
   ],
-  "views": 3,
+  "views": 5,
   "likes": 0,
   "comments": 0,
-  "age_h": 12.0,
-  "views_per_h": 0.3,
+  "age_h": 14.2,
+  "views_per_h": 0.4,
+  "like_rate": 0.0
+ },
+ "k9iEsdKFtjI": {
+  "dur": 26.7,
+  "title": "MontanaBlack: „Die View gab es gratis“ – dann fällt der Greenscreen aus 💀 #shorts",
+  "streamer": "MontanaBlack",
+  "headline": "„Die View gab es gratis“ 💀",
+  "experiment": "visuelle Panne mit Ironie-Zitat als Headline",
+  "clip_title": "Greenscreen Leak",
+  "design": "v2",
+  "layout": "split",
+  "uploaded_at": "2026-11-27T12:24:57",
+  "upload_hour": 12,
+  "perf": {},
+  "snapshots": [
+   {
+    "t": "2026-11-27T12:25",
+    "age_h": 0.1,
+    "views": 0,
+    "likes": 0,
+    "comments": 0
+   }
+  ],
+  "views": 0,
+  "likes": 0,
+  "comments": 0,
+  "age_h": 0.1,
+  "views_per_h": 0.0,
   "like_rate": 0.0
  }
 }
