@@ -48,6 +48,11 @@
     "t": "2026-11-27T01:15:47",
     "text": "Kein 8+ in 24 h – suche 7 Tage mit mehr Clips pro Streamer",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T01:18:12",
+    "text": "7 Tage (19 neue Kandidaten) ohne 8+ – schreibe Erkenntnisse und Log",
+    "kind": "step"
    }
   ]
  },
@@ -441,7 +446,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T01:15:47",
+ "updated": "2026-11-27T01:18:12",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T01:09:37",
