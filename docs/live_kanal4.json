@@ -1,87 +1,96 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 17:09",
-  "started": "2026-11-27T17:09:23",
-  "steps": [
-   {
-    "t": "2026-11-27T17:09:23",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T17:09:32",
-    "text": "Prüfe, ob gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T17:09:43",
-    "text": "Vorrat prüfen (Stand vor dem Posten)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T17:09:50",
-    "text": "Vorrat leer – suche Clips der letzten 24 Stunden",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T17:10:33",
-    "text": "Keine 7+ in 24 h – suche Clips der letzten 7 Tage",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T17:11:54",
-    "text": "Alle-Zeiten-Kandidat rendern: Kai Cenat – Tür als Fanum Tax",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T17:12:58",
-    "text": "Fanum-Clip verworfen (Moment nicht im Bild) – rendere StableRonaldo  hey!",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T17:13:55",
-    "text": "Ron-Clip verworfen – suche neue Clips (30 Tage, alle Zeiten)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T17:14:32",
-    "text": "Rendere Marlon  LOLLL (30 Tage, 1142 Views) zur Ansicht",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T17:15:21",
-    "text": "Alle Stufen ohne 7+ – prüfe früher mit Note 7 aussortierte Shorts",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T17:15:43",
-    "text": "Wieder aufgenommen: Lacy  Do not tell Darla (Note 7) – bereite Upload vor",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T17:17:13",
-    "text": "Lade Short hoch: Lacy – Do not tell Darla",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T17:18:25",
-    "text": "Gepostet – werte Zahlen aus",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T17:18:35",
-    "text": "Vorrat prüfen und Lern-Notizen (STRATEGIE.md) ergänzen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T17:18:54",
-    "text": "Dashboard aktualisieren",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 17:09",
+   "started": "2026-11-27T17:09:23",
+   "steps": [
+    {
+     "t": "2026-11-27T17:09:23",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T17:09:32",
+     "text": "Prüfe, ob gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T17:09:43",
+     "text": "Vorrat prüfen (Stand vor dem Posten)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T17:09:50",
+     "text": "Vorrat leer – suche Clips der letzten 24 Stunden",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T17:10:33",
+     "text": "Keine 7+ in 24 h – suche Clips der letzten 7 Tage",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T17:11:54",
+     "text": "Alle-Zeiten-Kandidat rendern: Kai Cenat – Tür als Fanum Tax",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T17:12:58",
+     "text": "Fanum-Clip verworfen (Moment nicht im Bild) – rendere StableRonaldo  hey!",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T17:13:55",
+     "text": "Ron-Clip verworfen – suche neue Clips (30 Tage, alle Zeiten)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T17:14:32",
+     "text": "Rendere Marlon  LOLLL (30 Tage, 1142 Views) zur Ansicht",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T17:15:21",
+     "text": "Alle Stufen ohne 7+ – prüfe früher mit Note 7 aussortierte Shorts",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T17:15:43",
+     "text": "Wieder aufgenommen: Lacy  Do not tell Darla (Note 7) – bereite Upload vor",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T17:17:13",
+     "text": "Lade Short hoch: Lacy – Do not tell Darla",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T17:18:25",
+     "text": "Gepostet – werte Zahlen aus",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T17:18:35",
+     "text": "Vorrat prüfen und Lern-Notizen (STRATEGIE.md) ergänzen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T17:18:54",
+     "text": "Dashboard aktualisieren",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T17:19:04",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-27T17:19:04",
+   "state": "ok",
+   "summary": "Gepostet: Lacy 'Do not tell Darla' (GsPbTjvo9oQ, Note 7, wieder aufgenommen); Vorrat 0 - Clip-Pool aller Stufen ausgeschoepft, Vorschlag: mehr Streamer"
+  },
   {
    "title": "Lauf 15:09",
    "started": "2026-11-27T15:09:22",
@@ -932,55 +941,6 @@
    "finished": "2026-11-26T12:51:54",
    "state": "ok",
    "summary": "Kein Post (Vorrat leer, Browser nicht freigegeben); neu bereit: Lacy restart the whole game (Note 8)"
-  },
-  {
-   "title": "Einrichtung im Chat",
-   "started": "2026-11-25T21:55:24",
-   "steps": [
-    {
-     "t": "2026-11-25T21:55:24",
-     "text": "Lauf gestartet, neueste Regeln geladen",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-25T21:55:28",
-     "text": "Kanal umbenannt zu Stream Clips Daily, Regeln und Dashboard für 2 Kanäle erweitert",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-25T21:55:36",
-     "text": "Prüfe die englischen Clips von heute nach dem strengen Maßstab",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-25T21:56:16",
-     "text": "4 alte englische Shorts aussortiert (Note 5) – warte auf frische Clips",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-25T21:57:43",
-     "text": "Frische 24-h-Clips geprüft: keiner schafft Note 8 – suche in den Top-Clips der letzten 7 Tage",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-25T22:00:36",
-     "text": "Clip gefunden (Note 8): Jynxzi bekommt eine harte Socke per Fanpost – schneide ihn",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-25T22:01:44",
-     "text": "Lade Short hoch: A fan mailed Jynxzi a hard sock",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-25T22:04:08",
-     "text": "Fertig",
-     "kind": "step"
-    }
-   ],
-   "finished": "2026-11-25T22:04:08",
-   "state": "ok",
-   "summary": "Kanal eingerichtet, erster Short online: A fan mailed Jynxzi a hard sock (Note 8)"
   }
  ],
  "rules": {
@@ -988,12 +948,12 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T17:18:54",
+ "updated": "2026-11-27T17:19:04",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T17:09:36",
   "may_post": true,
   "reason": "Posten erlaubt"
  },
- "last_summary": "Gepostet: StableRonaldo 'Who are you?' (wAvggQAk5Wk, öffentlich); Vorrat 0 – 3 Testclips verworfen, Pool fast ausgeschöpft, nächster Lauf sucht weiter"
+ "last_summary": "Gepostet: Lacy 'Do not tell Darla' (GsPbTjvo9oQ, Note 7, wieder aufgenommen); Vorrat 0 - Clip-Pool aller Stufen ausgeschoepft, Vorschlag: mehr Streamer"
 }
