@@ -1,62 +1,71 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 15:09",
-  "started": "2026-11-27T15:09:22",
-  "steps": [
-   {
-    "t": "2026-11-27T15:09:22",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T15:09:31",
-    "text": "Prüfe, ob gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T15:09:45",
-    "text": "Vorrat leer – suche Clips (letzte 24 h)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T15:11:44",
-    "text": "Keine 7+ in 24 h – suche letzte 7 Tage",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T15:12:59",
-    "text": "Keine 7+ in 7 Tagen – suche 30 Tage und alle Zeiten",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T15:13:54",
-    "text": "Rendere Test: StableRonaldo – Duke 'Who are you?'",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T15:15:33",
-    "text": "Lade Short hoch: StableRonaldo – Duke 'Who are you?'",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T15:16:55",
-    "text": "Gepostet – werte Zahlen aus",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T15:17:43",
-    "text": "Vorrat auffüllen: rendere 2 Test-Clips (StableRonaldo)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T15:19:09",
-    "text": "Rendere Test: Kai Cenat – PC kaputt",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 15:09",
+   "started": "2026-11-27T15:09:22",
+   "steps": [
+    {
+     "t": "2026-11-27T15:09:22",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T15:09:31",
+     "text": "Prüfe, ob gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T15:09:45",
+     "text": "Vorrat leer – suche Clips (letzte 24 h)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T15:11:44",
+     "text": "Keine 7+ in 24 h – suche letzte 7 Tage",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T15:12:59",
+     "text": "Keine 7+ in 7 Tagen – suche 30 Tage und alle Zeiten",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T15:13:54",
+     "text": "Rendere Test: StableRonaldo – Duke 'Who are you?'",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T15:15:33",
+     "text": "Lade Short hoch: StableRonaldo – Duke 'Who are you?'",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T15:16:55",
+     "text": "Gepostet – werte Zahlen aus",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T15:17:43",
+     "text": "Vorrat auffüllen: rendere 2 Test-Clips (StableRonaldo)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T15:19:09",
+     "text": "Rendere Test: Kai Cenat – PC kaputt",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T15:20:26",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-27T15:20:26",
+   "state": "ok",
+   "summary": "Gepostet: StableRonaldo 'Who are you?' (wAvggQAk5Wk, öffentlich); Vorrat 0 – 3 Testclips verworfen, Pool fast ausgeschöpft, nächster Lauf sucht weiter"
+  },
   {
    "title": "Lauf 13:09",
    "started": "2026-11-27T13:09:20",
@@ -899,12 +908,12 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T15:19:09",
+ "updated": "2026-11-27T15:20:26",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T15:09:35",
   "may_post": true,
   "reason": "Posten erlaubt"
  },
- "last_summary": "Gepostet: StableRonaldo Fahr-Fail (MAjJ77kIqRM, öffentlich, Note 7); Vorrat 0 – 5 weitere Kandidaten aus 30 Tagen/alle Zeiten nach Vorschaubild verworfen; Lacy Pool-Fail 524 Aufrufe nach 6 h"
+ "last_summary": "Gepostet: StableRonaldo 'Who are you?' (wAvggQAk5Wk, öffentlich); Vorrat 0 – 3 Testclips verworfen, Pool fast ausgeschöpft, nächster Lauf sucht weiter"
 }
