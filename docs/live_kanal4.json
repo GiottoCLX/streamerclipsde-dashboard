@@ -1,72 +1,81 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 05:09",
-  "started": "2026-11-27T05:09:18",
-  "steps": [
-   {
-    "t": "2026-11-27T05:09:18",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T05:09:34",
-    "text": "Prüfe, ob jetzt gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T05:09:44",
-    "text": "Kein Post (außerhalb 06–24 Uhr) – hole Aufrufe aller Shorts",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T05:09:54",
-    "text": "Prüfe Vorrat fertiger Shorts",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T05:10:01",
-    "text": "Vorrat 1/2 – suche neue Twitch-Clips der letzten 24 h",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T05:12:50",
-    "text": "Prüfe Kandidat: Lacy füttert Hund heimlich Truthahn",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T05:13:12",
-    "text": "Schneide Testversion: Lacy – Do not tell Darla",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T05:14:09",
-    "text": "Lacy 'Do not tell Darla' nach Vorschaubild verworfen (Note 7)",
-    "kind": "warn"
-   },
-   {
-    "t": "2026-11-27T05:14:12",
-    "text": "24 h ohne 8+ – suche in den letzten 7 Tagen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T05:15:57",
-    "text": "Schneide Testversion: StableRonaldo – real driver",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T05:16:32",
-    "text": "StableRonaldo 'real driver' nach Vorschaubild verworfen (Note 6) – kein 8+ in 24 h und 7 Tagen",
-    "kind": "warn"
-   },
-   {
-    "t": "2026-11-27T05:16:36",
-    "text": "Kein 8+ gefunden – schreibe Log und aktualisiere Dashboard",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 05:09",
+   "started": "2026-11-27T05:09:18",
+   "steps": [
+    {
+     "t": "2026-11-27T05:09:18",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T05:09:34",
+     "text": "Prüfe, ob jetzt gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T05:09:44",
+     "text": "Kein Post (außerhalb 06–24 Uhr) – hole Aufrufe aller Shorts",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T05:09:54",
+     "text": "Prüfe Vorrat fertiger Shorts",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T05:10:01",
+     "text": "Vorrat 1/2 – suche neue Twitch-Clips der letzten 24 h",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T05:12:50",
+     "text": "Prüfe Kandidat: Lacy füttert Hund heimlich Truthahn",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T05:13:12",
+     "text": "Schneide Testversion: Lacy – Do not tell Darla",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T05:14:09",
+     "text": "Lacy 'Do not tell Darla' nach Vorschaubild verworfen (Note 7)",
+     "kind": "warn"
+    },
+    {
+     "t": "2026-11-27T05:14:12",
+     "text": "24 h ohne 8+ – suche in den letzten 7 Tagen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T05:15:57",
+     "text": "Schneide Testversion: StableRonaldo – real driver",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T05:16:32",
+     "text": "StableRonaldo 'real driver' nach Vorschaubild verworfen (Note 6) – kein 8+ in 24 h und 7 Tagen",
+     "kind": "warn"
+    },
+    {
+     "t": "2026-11-27T05:16:36",
+     "text": "Kein 8+ gefunden – schreibe Log und aktualisiere Dashboard",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T05:17:03",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-27T05:17:03",
+   "state": "ok",
+   "summary": "Kein Post (außerhalb 06–24 Uhr); 24 h + 7 Tage ohne 8+, zwei Kandidaten nach Vorschaubild verworfen; Vorrat 1 (Lacy Pool-Fail, Note 8)"
+  },
   {
    "title": "Lauf 03:09",
    "started": "2026-11-27T03:09:18",
@@ -594,12 +603,12 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T05:16:36",
+ "updated": "2026-11-27T05:17:03",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T05:09:37",
   "may_post": false,
   "reason": "außerhalb der Posting-Zeiten 06:00-24:00"
  },
- "last_summary": "Kein Post (außerhalb 06–24 Uhr); 24 h + 7 Tage ohne Clip mit Note 8+ (2 Kandidaten nach Vorschau verworfen); Vorrat 1 (Lacy Pool-Fail)"
+ "last_summary": "Kein Post (außerhalb 06–24 Uhr); 24 h + 7 Tage ohne 8+, zwei Kandidaten nach Vorschaubild verworfen; Vorrat 1 (Lacy Pool-Fail, Note 8)"
 }
