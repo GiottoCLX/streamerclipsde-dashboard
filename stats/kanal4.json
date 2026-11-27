@@ -102,12 +102,19 @@
     "views": 3,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T13:09",
+    "age_h": 39.1,
+    "views": 3,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 3,
   "likes": 0,
   "comments": 0,
-  "age_h": 37.1,
+  "age_h": 39.1,
   "views_per_h": 0.1,
   "like_rate": 0.0
  },
@@ -199,13 +206,20 @@
     "views": 2,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T13:09",
+    "age_h": 20.0,
+    "views": 3,
+    "likes": 0,
+    "comments": 0
    }
   ],
-  "views": 2,
+  "views": 3,
   "likes": 0,
   "comments": 0,
-  "age_h": 18.0,
-  "views_per_h": 0.1,
+  "age_h": 20.0,
+  "views_per_h": 0.2,
   "like_rate": 0.0
  },
  "lVDPIRi9WjM": {
@@ -296,13 +310,20 @@
     "views": 3,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T13:09",
+    "age_h": 21.3,
+    "views": 3,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 3,
   "likes": 0,
   "comments": 0,
-  "age_h": 19.3,
-  "views_per_h": 0.2,
+  "age_h": 21.3,
+  "views_per_h": 0.1,
   "like_rate": 0.0
  },
  "FtkWDK2wNqY": {
@@ -345,13 +366,20 @@
     "views": 350,
     "likes": 6,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T13:09",
+    "age_h": 6.0,
+    "views": 524,
+    "likes": 7,
+    "comments": 0
    }
   ],
-  "views": 350,
-  "likes": 6,
+  "views": 524,
+  "likes": 7,
   "comments": 0,
-  "age_h": 4.0,
-  "views_per_h": 88.2,
-  "like_rate": 1.7
+  "age_h": 6.0,
+  "views_per_h": 87.8,
+  "like_rate": 1.3
  }
 }
