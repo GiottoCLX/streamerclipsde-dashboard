@@ -23,6 +23,11 @@
     "t": "2026-11-27T10:10:23",
     "text": "Hole Studio-Werte: Festival-Story und Raab",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T10:11:09",
+    "text": "Vorrat leer – suche neue Twitch-Clips der letzten 24 h",
+    "kind": "step"
    }
   ]
  },
@@ -943,7 +948,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T10:10:23",
+ "updated": "2026-11-27T10:11:09",
  "last_summary": "Kein Post: Vorrat 0 und kein Clip mit Note 8+ in 24 h/7 Tagen; Festival-Story 1260 Aufrufe, läuft aus",
  "channel": "kanal1",
  "check": {
