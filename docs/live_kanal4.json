@@ -1,52 +1,61 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 09:09",
-  "started": "2026-11-27T09:09:21",
-  "steps": [
-   {
-    "t": "2026-11-27T09:09:21",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T09:09:38",
-    "text": "Prüfe, ob gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T09:09:52",
-    "text": "Kein fertiger Short im Vorrat – hole Aufrufzahlen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T09:10:02",
-    "text": "Hole Studio-Werte für Lacy Pool-Fail",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T09:10:37",
-    "text": "Prüfe Vorrat und suche neue Twitch-Clips der letzten 24 h",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T09:12:00",
-    "text": "Kein 8+ in 24 h – suche in den letzten 7 Tagen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T09:13:23",
-    "text": "Rendere Test: Kai Cenat 'damn bruh' (Bild prüfen)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T09:14:29",
-    "text": "Kein 8+ gefunden – schreibe Log und aktualisiere Dashboard",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 09:09",
+   "started": "2026-11-27T09:09:21",
+   "steps": [
+    {
+     "t": "2026-11-27T09:09:21",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T09:09:38",
+     "text": "Prüfe, ob gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T09:09:52",
+     "text": "Kein fertiger Short im Vorrat – hole Aufrufzahlen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T09:10:02",
+     "text": "Hole Studio-Werte für Lacy Pool-Fail",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T09:10:37",
+     "text": "Prüfe Vorrat und suche neue Twitch-Clips der letzten 24 h",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T09:12:00",
+     "text": "Kein 8+ in 24 h – suche in den letzten 7 Tagen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T09:13:23",
+     "text": "Rendere Test: Kai Cenat 'damn bruh' (Bild prüfen)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T09:14:29",
+     "text": "Kein 8+ gefunden – schreibe Log und aktualisiere Dashboard",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T09:14:40",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-27T09:14:40",
+   "state": "ok",
+   "summary": "Kein Post: Vorrat 0 und kein Clip mit Note 8+; Lacy Pool-Fail läuft (158 Aufrufe nach 2 h, 48,5 % angesehen)"
+  },
   {
    "title": "Lauf 07:09",
    "started": "2026-11-27T07:09:20",
@@ -717,12 +726,12 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T09:14:29",
+ "updated": "2026-11-27T09:14:40",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T09:09:42",
   "may_post": true,
   "reason": "Posten erlaubt"
  },
- "last_summary": "Gepostet: Lacy Pool-Fail (FtkWDK2wNqY); 24 h + 7 Tage ohne 8+, Vorrat 0"
+ "last_summary": "Kein Post: Vorrat 0 und kein Clip mit Note 8+; Lacy Pool-Fail läuft (158 Aufrufe nach 2 h, 48,5 % angesehen)"
 }
