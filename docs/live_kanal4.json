@@ -48,6 +48,11 @@
     "t": "2026-11-27T15:17:43",
     "text": "Vorrat auffüllen: rendere 2 Test-Clips (StableRonaldo)",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T15:19:09",
+    "text": "Rendere Test: Kai Cenat – PC kaputt",
+    "kind": "step"
    }
   ]
  },
@@ -894,7 +899,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T15:17:43",
+ "updated": "2026-11-27T15:19:09",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T15:09:35",
