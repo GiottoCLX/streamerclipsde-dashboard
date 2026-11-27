@@ -58,6 +58,11 @@
     "t": "2026-11-27T05:16:32",
     "text": "StableRonaldo 'real driver' nach Vorschaubild verworfen (Note 6) – kein 8+ in 24 h und 7 Tagen",
     "kind": "warn"
+   },
+   {
+    "t": "2026-11-27T05:16:36",
+    "text": "Kein 8+ gefunden – schreibe Log und aktualisiere Dashboard",
+    "kind": "step"
    }
   ]
  },
@@ -589,7 +594,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T05:16:32",
+ "updated": "2026-11-27T05:16:36",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T05:09:37",
