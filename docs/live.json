@@ -38,6 +38,11 @@
     "t": "2026-11-27T16:17:37",
     "text": "Vorrat auffüllen: suche Clips der letzten 7 Tage",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T16:18:23",
+    "text": "Dashboard aktualisieren",
+    "kind": "step"
    }
   ]
  },
@@ -1023,7 +1028,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T16:17:37",
+ "updated": "2026-11-27T16:18:23",
  "last_summary": "Gepostet: Monte zieht Ronaldinho (PXMqwBGZRgk, öffentlich); Greenscreen-Short läuft mit 95 Aufrufen/Std; Vorrat 0 – 8 Top-Clips nach Vorschaubild verworfen, nächster Lauf sucht weiter",
  "channel": "kanal1",
  "check": {
