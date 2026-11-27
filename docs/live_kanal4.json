@@ -48,6 +48,11 @@
     "t": "2026-11-27T03:15:13",
     "text": "Prüfe Kandidat aus 7 Tagen: StableRonaldo 'Speed Bump' (GTA 6)",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T03:15:58",
+    "text": "Kein 8+ in 24 h und 7 Tagen – schreibe Log und aktualisiere Dashboard",
+    "kind": "step"
    }
   ]
  },
@@ -515,7 +520,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T03:15:13",
+ "updated": "2026-11-27T03:15:58",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T03:09:36",
