@@ -1,52 +1,61 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 00:09",
-  "started": "2026-11-28T00:09:28",
-  "steps": [
-   {
-    "t": "2026-11-28T00:09:28",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-28T00:09:38",
-    "text": "Prüfe, ob gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-28T00:09:52",
-    "text": "Kein Post (außerhalb 06-24 Uhr) – hole Aufrufe aller Shorts",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-28T00:10:08",
-    "text": "Hole Studio-Werte für Festival-Story",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-28T00:10:54",
-    "text": "Prüfe Vorrat und suche Clips der letzten 24 h",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-28T00:13:46",
-    "text": "24 h ohne Note 7 – suche Clips der letzten 7 Tage",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-28T00:14:15",
-    "text": "7 Tage ohne Note 7 – suche Clips der letzten 30 Tage und alle Zeiten",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-28T00:15:03",
-    "text": "Abschluss: STRATEGIE, Log-Zeile und Dashboard",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 00:09",
+   "started": "2026-11-28T00:09:28",
+   "steps": [
+    {
+     "t": "2026-11-28T00:09:28",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-28T00:09:38",
+     "text": "Prüfe, ob gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-28T00:09:52",
+     "text": "Kein Post (außerhalb 06-24 Uhr) – hole Aufrufe aller Shorts",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-28T00:10:08",
+     "text": "Hole Studio-Werte für Festival-Story",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-28T00:10:54",
+     "text": "Prüfe Vorrat und suche Clips der letzten 24 h",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-28T00:13:46",
+     "text": "24 h ohne Note 7 – suche Clips der letzten 7 Tage",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-28T00:14:15",
+     "text": "7 Tage ohne Note 7 – suche Clips der letzten 30 Tage und alle Zeiten",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-28T00:15:03",
+     "text": "Abschluss: STRATEGIE, Log-Zeile und Dashboard",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-28T00:15:27",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-28T00:15:27",
+   "state": "ok",
+   "summary": "Kein Post (außerhalb 06-24 Uhr); Festival-Story 3012 Aufrufe/57 % angesehen; alle Suchstufen ohne Note-7-Clip, Vorrat 0 – nächster Lauf sucht weiter"
+  },
   {
    "title": "Lauf 22:09",
    "started": "2026-11-27T22:09:27",
@@ -962,80 +971,6 @@
    "finished": "2026-11-26T20:20:31",
    "state": "ok",
    "summary": "Gepostet: Monte über Stefan Raab (g_En7qeKFds); Vorrat 1 (Realtalk); Monte Fußsohle wegen abgeschnittenem Gesicht aussortiert"
-  },
-  {
-   "title": "Lauf 18:09",
-   "started": "2026-11-26T18:09:12",
-   "steps": [
-    {
-     "t": "2026-11-26T18:09:12",
-     "text": "Lauf gestartet, neueste Regeln geladen",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T18:09:22",
-     "text": "Prüfe, ob gepostet werden darf",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T18:09:32",
-     "text": "Posten erlaubt – hole ältesten fertigen Short",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T18:10:33",
-     "text": "Lade Short hoch: MontanaBlack – Elektro/G63",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T18:12:14",
-     "text": "Gepostet: Monte Elektro/G63 (CL4hHaVweWA) – werte Zahlen aus",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T18:12:31",
-     "text": "Hole Studio-Werte (Polizei, Armut, Pyramide, Krokodil)",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T18:14:10",
-     "text": "Prüfe Vorrat",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T18:14:22",
-     "text": "Suche neue Twitch-Clips (24 h)",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T18:17:20",
-     "text": "24 h ohne Note 8+ – suche in 7 Tagen",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T18:18:25",
-     "text": "Prüfe Kandidat: Monte Realtalk Fremdgehen",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T18:18:52",
-     "text": "Schneide: Monte Realtalk Fremdgehen",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T18:19:48",
-     "text": "Abschluss: Log und Dashboard",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T18:20:06",
-     "text": "Fertig",
-     "kind": "step"
-    }
-   ],
-   "finished": "2026-11-26T18:20:06",
-   "state": "ok",
-   "summary": "Gepostet: Monte Elektro/G63 (CL4hHaVweWA); Vorrat 2 (Raab, Realtalk Fremdgehen, beide Note 8); Polizei-Short nach 2 h nur 3 Aufrufe"
   }
  ],
  "rules": {
@@ -1043,8 +978,8 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-28T00:15:03",
- "last_summary": "Gepostet: Trymacs Hand-in-Hand-Crash (SmqPMytEmVs); alle Suchstufen ohne neuen 7+-Clip, Vorrat 0",
+ "updated": "2026-11-28T00:15:27",
+ "last_summary": "Kein Post (außerhalb 06-24 Uhr); Festival-Story 3012 Aufrufe/57 % angesehen; alle Suchstufen ohne Note-7-Clip, Vorrat 0 – nächster Lauf sucht weiter",
  "channel": "kanal1",
  "check": {
   "t": "2026-11-28T00:09:42",
