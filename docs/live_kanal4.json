@@ -1,67 +1,76 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 21:09",
-  "started": "2026-11-27T21:09:26",
-  "steps": [
-   {
-    "t": "2026-11-27T21:09:26",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T21:09:45",
-    "text": "Prüfe, ob jetzt gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T21:09:59",
-    "text": "Vorrat leer: Suche Twitch-Clips der letzten 24 h",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T21:11:54",
-    "text": "Teste 2 Kandidaten im Bild: Ron OLED-Monitor, Ron Augenbrauen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T21:13:20",
-    "text": "24 h ohne 7+: Suche letzte 7 Tage",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T21:14:31",
-    "text": "7 Tage ohne 7+: Suche 30 Tage und alle Zeiten",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T21:15:06",
-    "text": "Teste 3 Alle-Zeiten-Clips im Bild: Kai Game-Awards-Kid, Jynxzi Trump-Socke, Jynxzi Disaster Aim",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T21:17:38",
-    "text": "Schneide Jynxzi Trump-Socke final (Note 7)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T21:18:32",
-    "text": "Lade Short hoch: Jynxzi – Is this a sock of Trump?",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T21:20:48",
-    "text": "Gepostet (9Ta6FXqKagk) – werte Zahlen aus",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T21:21:30",
-    "text": "Abschluss: Log-Zeile und Dashboard",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 21:09",
+   "started": "2026-11-27T21:09:26",
+   "steps": [
+    {
+     "t": "2026-11-27T21:09:26",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T21:09:45",
+     "text": "Prüfe, ob jetzt gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T21:09:59",
+     "text": "Vorrat leer: Suche Twitch-Clips der letzten 24 h",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T21:11:54",
+     "text": "Teste 2 Kandidaten im Bild: Ron OLED-Monitor, Ron Augenbrauen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T21:13:20",
+     "text": "24 h ohne 7+: Suche letzte 7 Tage",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T21:14:31",
+     "text": "7 Tage ohne 7+: Suche 30 Tage und alle Zeiten",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T21:15:06",
+     "text": "Teste 3 Alle-Zeiten-Clips im Bild: Kai Game-Awards-Kid, Jynxzi Trump-Socke, Jynxzi Disaster Aim",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T21:17:38",
+     "text": "Schneide Jynxzi Trump-Socke final (Note 7)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T21:18:32",
+     "text": "Lade Short hoch: Jynxzi – Is this a sock of Trump?",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T21:20:48",
+     "text": "Gepostet (9Ta6FXqKagk) – werte Zahlen aus",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T21:21:30",
+     "text": "Abschluss: Log-Zeile und Dashboard",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T21:21:41",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-27T21:21:41",
+   "state": "ok",
+   "summary": "Gepostet: Jynxzi Trump-Socke (9Ta6FXqKagk, Note 7); Lacy Pool-Fail zweite Welle 729 Aufrufe; Vorrat 0, Clip-Pool aller Stufen ausgeschöpft"
+  },
   {
    "title": "Lauf 19:09",
    "started": "2026-11-27T19:09:23",
@@ -987,40 +996,6 @@
    "finished": "2026-11-26T17:22:19",
    "state": "ok",
    "summary": "Gepostet: StableRonaldo Avengers-Quiz (_3mBTiNY1-A); kein neuer 8+-Clip gefunden, Vorrat 0"
-  },
-  {
-   "title": "Manueller Post 15:50",
-   "started": "2026-11-26T15:48:49",
-   "steps": [
-    {
-     "t": "2026-11-26T15:48:49",
-     "text": "Lauf gestartet, neueste Regeln geladen",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T15:48:52",
-     "text": "Nutzerwunsch: Lacy-Clip jetzt posten",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T15:52:05",
-     "text": "Gepostet: Lacy (lVDPIRi9WjM) – suche nächsten Clip für 17 Uhr",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T15:55:36",
-     "text": "Schneide StableRonaldo Avengers-Quiz (Note 8)",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T15:56:37",
-     "text": "Fertig",
-     "kind": "step"
-    }
-   ],
-   "finished": "2026-11-26T15:56:37",
-   "state": "ok",
-   "summary": "Lacy gepostet (lVDPIRi9WjM), StableRonaldo liegt für 17 Uhr bereit"
   }
  ],
  "rules": {
@@ -1028,12 +1003,12 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T21:21:30",
+ "updated": "2026-11-27T21:21:41",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T21:09:49",
   "may_post": true,
   "reason": "Posten erlaubt"
  },
- "last_summary": "Gepostet: Jynxzi Kakerlake (iMrgoJrjNtI, Note 7); Vorrat 0 – alle Suchstufen ausgeschöpft, nächster Lauf sucht in 24 h weiter"
+ "last_summary": "Gepostet: Jynxzi Trump-Socke (9Ta6FXqKagk, Note 7); Lacy Pool-Fail zweite Welle 729 Aufrufe; Vorrat 0, Clip-Pool aller Stufen ausgeschöpft"
 }
