@@ -38,6 +38,11 @@
     "t": "2026-11-28T00:14:15",
     "text": "7 Tage ohne Note 7 – suche Clips der letzten 30 Tage und alle Zeiten",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-28T00:15:03",
+    "text": "Abschluss: STRATEGIE, Log-Zeile und Dashboard",
+    "kind": "step"
    }
   ]
  },
@@ -1038,7 +1043,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-28T00:14:15",
+ "updated": "2026-11-28T00:15:03",
  "last_summary": "Gepostet: Trymacs Hand-in-Hand-Crash (SmqPMytEmVs); alle Suchstufen ohne neuen 7+-Clip, Vorrat 0",
  "channel": "kanal1",
  "check": {
