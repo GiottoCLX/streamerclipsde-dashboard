@@ -406,12 +406,12 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T01:09:33",
+ "updated": "2026-11-27T01:09:37",
  "channel": "kanal4",
  "check": {
-  "t": "2026-11-26T23:09:34",
-  "may_post": true,
-  "reason": "Posten erlaubt"
+  "t": "2026-11-27T01:09:37",
+  "may_post": false,
+  "reason": "außerhalb der Posting-Zeiten 06:00-24:00"
  },
  "last_summary": "Kein Post (Vorrat war leer); neu bereit: Lacy Pool-Fail (Note 8), Vorrat 1; alle 3 Shorts weiter 1–3 Aufrufe"
 }
