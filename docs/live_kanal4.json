@@ -43,6 +43,11 @@
     "t": "2026-11-27T23:17:07",
     "text": "Werte Zahlen aus",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T23:17:18",
+    "text": "Vorrat 0/2 – suche Clips der letzten 7 Tage",
+    "kind": "step"
    }
   ]
  },
@@ -1048,7 +1053,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T23:17:07",
+ "updated": "2026-11-27T23:17:18",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T23:09:59",
