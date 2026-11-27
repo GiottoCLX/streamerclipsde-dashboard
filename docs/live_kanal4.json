@@ -38,6 +38,11 @@
     "t": "2026-11-27T11:14:54",
     "text": "Marlon 'and one' nach Vorschaubild verworfen (Note 7) – kein 8+-Clip, Vorrat bleibt 0",
     "kind": "warn"
+   },
+   {
+    "t": "2026-11-27T11:15:10",
+    "text": "Kein 8+ gefunden – schreibe Log und aktualisiere Dashboard",
+    "kind": "step"
    }
   ]
  },
@@ -766,7 +771,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T11:14:54",
+ "updated": "2026-11-27T11:15:10",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T11:09:48",
