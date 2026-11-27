@@ -43,6 +43,11 @@
     "t": "2026-11-27T15:16:55",
     "text": "Gepostet – werte Zahlen aus",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T15:17:43",
+    "text": "Vorrat auffüllen: rendere 2 Test-Clips (StableRonaldo)",
+    "kind": "step"
    }
   ]
  },
@@ -889,7 +894,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T15:16:55",
+ "updated": "2026-11-27T15:17:43",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T15:09:35",
