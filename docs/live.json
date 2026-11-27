@@ -1,6 +1,16 @@
 {
- "state": "idle",
- "current": null,
+ "state": "running",
+ "current": {
+  "title": "Lauf 02:09",
+  "started": "2026-11-27T02:09:18",
+  "steps": [
+   {
+    "t": "2026-11-27T02:09:18",
+    "text": "Lauf gestartet, neueste Regeln geladen",
+    "kind": "step"
+   }
+  ]
+ },
  "runs": [
   {
    "title": "Lauf 00:09",
@@ -943,7 +953,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T00:17:10",
+ "updated": "2026-11-27T02:09:18",
  "last_summary": "Kein Post (außerhalb 06–24 Uhr), Vorrat 0: kein Clip mit Note 8+ gefunden; Festival-Story bei 984 Aufrufen, Realtalk 0 nach 2 h",
  "channel": "kanal1",
  "check": {
