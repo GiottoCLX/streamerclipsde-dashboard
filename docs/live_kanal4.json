@@ -43,6 +43,11 @@
     "t": "2026-11-27T19:12:43",
     "text": "Rendere Kandidat: Jynxzi – Kakerlake im Zimmer",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T19:13:42",
+    "text": "Short fertig (Note 7) – bereite Upload vor",
+    "kind": "step"
    }
   ]
  },
@@ -993,7 +998,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T19:12:43",
+ "updated": "2026-11-27T19:13:42",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T19:09:48",
