@@ -1,6 +1,16 @@
 {
- "state": "idle",
- "current": null,
+ "state": "running",
+ "current": {
+  "title": "Lauf 10:09",
+  "started": "2026-11-27T10:09:21",
+  "steps": [
+   {
+    "t": "2026-11-27T10:09:21",
+    "text": "Lauf gestartet, neueste Regeln geladen",
+    "kind": "step"
+   }
+  ]
+ },
  "runs": [
   {
    "title": "Lauf 08:09",
@@ -918,7 +928,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T08:11:55",
+ "updated": "2026-11-27T10:09:21",
  "last_summary": "Kein Post: Vorrat 0 und kein Clip mit Note 8+ in 24 h/7 Tagen; Festival-Story 1260 Aufrufe, läuft aus",
  "channel": "kanal1",
  "check": {
