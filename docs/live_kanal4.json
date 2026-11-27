@@ -33,6 +33,11 @@
     "t": "2026-11-27T17:11:54",
     "text": "Alle-Zeiten-Kandidat rendern: Kai Cenat – Tür als Fanum Tax",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T17:12:58",
+    "text": "Fanum-Clip verworfen (Moment nicht im Bild) – rendere StableRonaldo  hey!",
+    "kind": "step"
    }
   ]
  },
@@ -943,7 +948,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T17:11:54",
+ "updated": "2026-11-27T17:12:58",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T17:09:36",
