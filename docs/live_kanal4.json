@@ -1,52 +1,61 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 11:09",
-  "started": "2026-11-27T11:09:22",
-  "steps": [
-   {
-    "t": "2026-11-27T11:09:22",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T11:09:44",
-    "text": "Prüfe, ob jetzt gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T11:09:58",
-    "text": "Kein Short im Vorrat – hole Aufrufe aller Shorts",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T11:10:09",
-    "text": "Vorrat leer – suche neue Twitch-Clips der letzten 24 h",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T11:12:08",
-    "text": "Kein 8+ in 24 h – suche in den letzten 7 Tagen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T11:13:47",
-    "text": "Rendere Test: Marlon 'and one' (Trash-Talk) – Bild prüfen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T11:14:54",
-    "text": "Marlon 'and one' nach Vorschaubild verworfen (Note 7) – kein 8+-Clip, Vorrat bleibt 0",
-    "kind": "warn"
-   },
-   {
-    "t": "2026-11-27T11:15:10",
-    "text": "Kein 8+ gefunden – schreibe Log und aktualisiere Dashboard",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 11:09",
+   "started": "2026-11-27T11:09:22",
+   "steps": [
+    {
+     "t": "2026-11-27T11:09:22",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T11:09:44",
+     "text": "Prüfe, ob jetzt gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T11:09:58",
+     "text": "Kein Short im Vorrat – hole Aufrufe aller Shorts",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T11:10:09",
+     "text": "Vorrat leer – suche neue Twitch-Clips der letzten 24 h",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T11:12:08",
+     "text": "Kein 8+ in 24 h – suche in den letzten 7 Tagen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T11:13:47",
+     "text": "Rendere Test: Marlon 'and one' (Trash-Talk) – Bild prüfen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T11:14:54",
+     "text": "Marlon 'and one' nach Vorschaubild verworfen (Note 7) – kein 8+-Clip, Vorrat bleibt 0",
+     "kind": "warn"
+    },
+    {
+     "t": "2026-11-27T11:15:10",
+     "text": "Kein 8+ gefunden – schreibe Log und aktualisiere Dashboard",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T11:15:20",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-27T11:15:20",
+   "state": "ok",
+   "summary": "Kein Post: Vorrat 0 und kein Clip mit Note 8+; Lacy Pool-Fail 350 Aufrufe nach 4 h"
+  },
   {
    "title": "Lauf 09:09",
    "started": "2026-11-27T09:09:21",
@@ -771,12 +780,12 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T11:15:10",
+ "updated": "2026-11-27T11:15:20",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T11:09:48",
   "may_post": true,
   "reason": "Posten erlaubt"
  },
- "last_summary": "Kein Post: Vorrat 0 und kein Clip mit Note 8+; Lacy Pool-Fail läuft (158 Aufrufe nach 2 h, 48,5 % angesehen)"
+ "last_summary": "Kein Post: Vorrat 0 und kein Clip mit Note 8+; Lacy Pool-Fail 350 Aufrufe nach 4 h"
 }
