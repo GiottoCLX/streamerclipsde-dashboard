@@ -18,6 +18,11 @@
     "t": "2026-11-27T04:09:41",
     "text": "Kein Post (außerhalb 06–24 Uhr) – hole Aufrufe aller Shorts",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T04:12:07",
+    "text": "Studio-Werte gespeichert – prüfe Vorrat",
+    "kind": "step"
    }
   ]
  },
@@ -993,7 +998,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T04:09:41",
+ "updated": "2026-11-27T04:12:07",
  "last_summary": "Kein Post (außerhalb 06–24 Uhr); 24 h + 7 Tage ohne Clip mit Note 8+, Vorrat 0; Festival-Story 1132 Aufrufe nach 12 h.",
  "channel": "kanal1",
  "check": {
