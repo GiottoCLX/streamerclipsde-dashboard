@@ -33,6 +33,11 @@
     "t": "2026-11-27T19:11:55",
     "text": "7 Tage ohne neue Clips – suche in letzten 30 Tagen",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T19:12:09",
+    "text": "30 Tage geprüft – suche Top-Clips aller Zeiten",
+    "kind": "step"
    }
   ]
  },
@@ -983,7 +988,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T19:11:55",
+ "updated": "2026-11-27T19:12:09",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T19:09:48",
