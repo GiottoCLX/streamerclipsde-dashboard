@@ -28,6 +28,11 @@
     "t": "2026-11-27T21:13:20",
     "text": "24 h ohne 7+: Suche letzte 7 Tage",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T21:14:31",
+    "text": "7 Tage ohne 7+: Suche 30 Tage und alle Zeiten",
+    "kind": "step"
    }
   ]
  },
@@ -998,7 +1003,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T21:13:20",
+ "updated": "2026-11-27T21:14:31",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T21:09:49",
