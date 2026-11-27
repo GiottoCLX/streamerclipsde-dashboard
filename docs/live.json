@@ -53,6 +53,11 @@
     "t": "2026-11-27T12:15:58",
     "text": "Monte NPC + Alien nach Vorschaubild verworfen (dunkel, kein klarer Moment, Note 6)",
     "kind": "warn"
+   },
+   {
+    "t": "2026-11-27T12:16:01",
+    "text": "Suche Clips der letzten 30 Tage",
+    "kind": "step"
    }
   ]
  },
@@ -968,7 +973,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T12:15:58",
+ "updated": "2026-11-27T12:16:01",
  "last_summary": "Kein Post: Vorrat 0 und kein Clip mit Note 8+; Monte Boot/Synchron nach Vorschaubild verworfen; Festival 1376 Aufrufe / 49 % angesehen",
  "channel": "kanal1",
  "check": {
