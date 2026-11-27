@@ -28,6 +28,11 @@
     "t": "2026-11-27T07:10:40",
     "text": "Lade Short hoch: Lacy – Pool-Fail",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T07:11:49",
+    "text": "Prüfe, ob der Short öffentlich ist",
+    "kind": "step"
    }
   ]
  },
@@ -633,7 +638,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T07:10:40",
+ "updated": "2026-11-27T07:11:49",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T07:09:36",
