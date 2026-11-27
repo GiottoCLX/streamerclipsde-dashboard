@@ -43,6 +43,11 @@
     "t": "2026-11-27T03:13:39",
     "text": "Kai 'caught' aussortiert (Vorschau zu dunkel, Note 6) – suche 7 Tage",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T03:15:13",
+    "text": "Prüfe Kandidat aus 7 Tagen: StableRonaldo 'Speed Bump' (GTA 6)",
+    "kind": "step"
    }
   ]
  },
@@ -510,7 +515,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T03:13:39",
+ "updated": "2026-11-27T03:15:13",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T03:09:36",
