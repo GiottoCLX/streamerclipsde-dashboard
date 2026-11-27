@@ -1,6 +1,16 @@
 {
- "state": "idle",
- "current": null,
+ "state": "running",
+ "current": {
+  "title": "Lauf 19:09",
+  "started": "2026-11-27T19:09:23",
+  "steps": [
+   {
+    "t": "2026-11-27T19:09:23",
+    "text": "Lauf gestartet, neueste Regeln geladen",
+    "kind": "step"
+   }
+  ]
+ },
  "runs": [
   {
    "title": "Lauf 17:09",
@@ -948,7 +958,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T17:19:04",
+ "updated": "2026-11-27T19:09:23",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T17:09:36",
