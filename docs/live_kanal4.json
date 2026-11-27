@@ -48,6 +48,11 @@
     "t": "2026-11-27T05:14:12",
     "text": "24 h ohne 8+ – suche in den letzten 7 Tagen",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T05:15:57",
+    "text": "Schneide Testversion: StableRonaldo – real driver",
+    "kind": "step"
    }
   ]
  },
@@ -579,7 +584,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T05:14:12",
+ "updated": "2026-11-27T05:15:57",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T05:09:37",
