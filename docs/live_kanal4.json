@@ -33,6 +33,11 @@
     "t": "2026-11-27T01:14:09",
     "text": "Sichte 62 Kandidaten – prüfe Lacy Swatting und Jynxzi Award im Bild",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T01:14:23",
+    "text": "Schneide Probe: Lacy Swatting + Jynxzi Award",
+    "kind": "step"
    }
   ]
  },
@@ -426,7 +431,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T01:14:09",
+ "updated": "2026-11-27T01:14:23",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T01:09:37",
