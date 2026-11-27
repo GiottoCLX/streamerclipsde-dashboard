@@ -23,6 +23,11 @@
     "t": "2026-11-27T08:09:50",
     "text": "Kein Short bereit – hole Aufrufe aller Shorts",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T08:10:00",
+    "text": "Vorrat leer – suche neue Twitch-Clips der letzten 24 h",
+    "kind": "step"
    }
   ]
  },
@@ -958,7 +963,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T08:09:50",
+ "updated": "2026-11-27T08:10:00",
  "last_summary": "Kein Post (Vorrat 0); 24 h + 7 Tage ohne 8+, nichts vorbereitet; Festival-Story bei 1202 Aufrufen",
  "channel": "kanal1",
  "check": {
