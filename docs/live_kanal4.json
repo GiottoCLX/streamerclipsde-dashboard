@@ -18,6 +18,11 @@
     "t": "2026-11-27T03:09:42",
     "text": "Kein Post (außerhalb 06–24 Uhr) – hole Aufrufe aller Shorts",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T03:09:53",
+    "text": "Aufrufe unverändert – prüfe Vorrat",
+    "kind": "step"
    }
   ]
  },
@@ -485,7 +490,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T03:09:42",
+ "updated": "2026-11-27T03:09:53",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T03:09:36",
