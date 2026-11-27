@@ -28,6 +28,11 @@
     "t": "2026-11-27T03:10:04",
     "text": "Vorrat 1 (Lacy Pool-Fail, 4 h alt) – suche neue Twitch-Clips (24 h)",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T03:12:35",
+    "text": "Prüfe Kandidat: Kai Cenat 'caught' (Freund erwischt Kai im Strip-Club)",
+    "kind": "step"
    }
   ]
  },
@@ -495,7 +500,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T03:10:04",
+ "updated": "2026-11-27T03:12:35",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T03:09:36",
