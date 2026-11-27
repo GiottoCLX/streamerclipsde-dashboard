@@ -8,6 +8,11 @@
     "t": "2026-11-28T00:09:28",
     "text": "Lauf gestartet, neueste Regeln geladen",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-28T00:09:38",
+    "text": "Prüfe, ob gepostet werden darf",
+    "kind": "step"
    }
   ]
  },
@@ -1008,7 +1013,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-28T00:09:28",
+ "updated": "2026-11-28T00:09:38",
  "last_summary": "Gepostet: Trymacs Hand-in-Hand-Crash (SmqPMytEmVs); alle Suchstufen ohne neuen 7+-Clip, Vorrat 0",
  "channel": "kanal1",
  "check": {
