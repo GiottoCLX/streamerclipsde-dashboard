@@ -1,77 +1,86 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 19:09",
-  "started": "2026-11-27T19:09:23",
-  "steps": [
-   {
-    "t": "2026-11-27T19:09:23",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T19:09:44",
-    "text": "Prüfe, ob gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T19:09:54",
-    "text": "Posten erlaubt – prüfe Vorrat",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T19:10:00",
-    "text": "Vorrat leer – suche Clips der letzten 24 h",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T19:11:40",
-    "text": "24 h ohne 7+ – suche in letzten 7 Tagen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T19:11:55",
-    "text": "7 Tage ohne neue Clips – suche in letzten 30 Tagen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T19:12:09",
-    "text": "30 Tage geprüft – suche Top-Clips aller Zeiten",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T19:12:43",
-    "text": "Rendere Kandidat: Jynxzi – Kakerlake im Zimmer",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T19:13:42",
-    "text": "Short fertig (Note 7) – bereite Upload vor",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T19:14:43",
-    "text": "Lade Short hoch: Jynxzi – Kakerlake im Zimmer",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T19:15:44",
-    "text": "Gepostet (iMrgoJrjNtI) – werte Zahlen aus",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T19:15:57",
-    "text": "Vorrat 0 – prüfe Marlon  and one (Note 7) neu mit kürzerem Ende",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T19:16:24",
-    "text": "Dashboard aktualisieren",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 19:09",
+   "started": "2026-11-27T19:09:23",
+   "steps": [
+    {
+     "t": "2026-11-27T19:09:23",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T19:09:44",
+     "text": "Prüfe, ob gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T19:09:54",
+     "text": "Posten erlaubt – prüfe Vorrat",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T19:10:00",
+     "text": "Vorrat leer – suche Clips der letzten 24 h",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T19:11:40",
+     "text": "24 h ohne 7+ – suche in letzten 7 Tagen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T19:11:55",
+     "text": "7 Tage ohne neue Clips – suche in letzten 30 Tagen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T19:12:09",
+     "text": "30 Tage geprüft – suche Top-Clips aller Zeiten",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T19:12:43",
+     "text": "Rendere Kandidat: Jynxzi – Kakerlake im Zimmer",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T19:13:42",
+     "text": "Short fertig (Note 7) – bereite Upload vor",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T19:14:43",
+     "text": "Lade Short hoch: Jynxzi – Kakerlake im Zimmer",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T19:15:44",
+     "text": "Gepostet (iMrgoJrjNtI) – werte Zahlen aus",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T19:15:57",
+     "text": "Vorrat 0 – prüfe Marlon  and one (Note 7) neu mit kürzerem Ende",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T19:16:24",
+     "text": "Dashboard aktualisieren",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T19:16:32",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-27T19:16:32",
+   "state": "ok",
+   "summary": "Gepostet: Jynxzi Kakerlake (iMrgoJrjNtI, Note 7); Vorrat 0 – alle Suchstufen ausgeschöpft, nächster Lauf sucht in 24 h weiter"
+  },
   {
    "title": "Lauf 17:09",
    "started": "2026-11-27T17:09:23",
@@ -952,65 +961,6 @@
    "finished": "2026-11-26T15:56:37",
    "state": "ok",
    "summary": "Lacy gepostet (lVDPIRi9WjM), StableRonaldo liegt für 17 Uhr bereit"
-  },
-  {
-   "title": "Lauf 12:31",
-   "started": "2026-11-26T12:31:11",
-   "steps": [
-    {
-     "t": "2026-11-26T12:31:11",
-     "text": "Lauf gestartet, neueste Regeln geladen",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T12:31:36",
-     "text": "Posten erlaubt (868 Min seit letztem Post) – lade Warteschlange",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T12:31:51",
-     "text": "Kein fertiger Short im Vorrat – hole Aufrufzahlen",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T12:32:11",
-     "text": "Lese Studio-Werte für Jynxzi-Short (14 h alt)",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T12:38:23",
-     "text": "Browser-Freigabe unbeantwortet – keine Studio-Werte, kein Upload in diesem Lauf",
-     "kind": "warn"
-    },
-    {
-     "t": "2026-11-26T12:38:28",
-     "text": "Suche neue Twitch-Clips (letzte 24 h)",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T12:41:56",
-     "text": "24 h ohne klaren 8er – suche Top-Clips der letzten 7 Tage",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T12:46:14",
-     "text": "Prüfe Kandidat: Lacy soll 90-Stunden-Spiel neu starten (Render + Vorschau)",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T12:51:46",
-     "text": "Vorrat: 1 Short fertig (Lacy Restart, Note 8) – schreibe Log und Dashboard",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T12:51:54",
-     "text": "Fertig",
-     "kind": "step"
-    }
-   ],
-   "finished": "2026-11-26T12:51:54",
-   "state": "ok",
-   "summary": "Kein Post (Vorrat leer, Browser nicht freigegeben); neu bereit: Lacy restart the whole game (Note 8)"
   }
  ],
  "rules": {
@@ -1018,12 +968,12 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T19:16:24",
+ "updated": "2026-11-27T19:16:32",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T19:09:48",
   "may_post": true,
   "reason": "Posten erlaubt"
  },
- "last_summary": "Gepostet: Lacy 'Do not tell Darla' (GsPbTjvo9oQ, Note 7, wieder aufgenommen); Vorrat 0 - Clip-Pool aller Stufen ausgeschoepft, Vorschlag: mehr Streamer"
+ "last_summary": "Gepostet: Jynxzi Kakerlake (iMrgoJrjNtI, Note 7); Vorrat 0 – alle Suchstufen ausgeschöpft, nächster Lauf sucht in 24 h weiter"
 }
