@@ -13,6 +13,11 @@
     "t": "2026-11-27T11:09:44",
     "text": "Prüfe, ob jetzt gepostet werden darf",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T11:09:58",
+    "text": "Kein Short im Vorrat – hole Aufrufe aller Shorts",
+    "kind": "step"
    }
   ]
  },
@@ -741,7 +746,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T11:09:48",
+ "updated": "2026-11-27T11:09:58",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T11:09:48",
