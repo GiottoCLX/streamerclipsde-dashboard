@@ -13,6 +13,11 @@
     "t": "2026-11-27T21:09:45",
     "text": "Prüfe, ob jetzt gepostet werden darf",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T21:09:59",
+    "text": "Vorrat leer: Suche Twitch-Clips der letzten 24 h",
+    "kind": "step"
    }
   ]
  },
@@ -983,7 +988,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T21:09:49",
+ "updated": "2026-11-27T21:09:59",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T21:09:49",
