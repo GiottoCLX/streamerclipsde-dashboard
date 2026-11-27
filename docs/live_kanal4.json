@@ -23,6 +23,11 @@
     "t": "2026-11-27T13:11:58",
     "text": "24 h ohne 8+ – suche in 30 Tagen (25 Clips pro Streamer)",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T13:18:32",
+    "text": "Rendere 2 Test-Kandidaten: Ron Fahr-Fail, Lacy 500.000-Yen-Rechnung",
+    "kind": "step"
    }
   ]
  },
@@ -805,7 +810,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T13:11:58",
+ "updated": "2026-11-27T13:18:32",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T13:09:38",
