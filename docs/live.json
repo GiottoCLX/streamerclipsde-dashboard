@@ -8,6 +8,11 @@
     "t": "2026-11-27T02:09:18",
     "text": "Lauf gestartet, neueste Regeln geladen",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T02:09:31",
+    "text": "Prüfe, ob gepostet werden darf",
+    "kind": "step"
    }
   ]
  },
@@ -953,7 +958,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T02:09:18",
+ "updated": "2026-11-27T02:09:31",
  "last_summary": "Kein Post (außerhalb 06–24 Uhr), Vorrat 0: kein Clip mit Note 8+ gefunden; Festival-Story bei 984 Aufrufen, Realtalk 0 nach 2 h",
  "channel": "kanal1",
  "check": {
