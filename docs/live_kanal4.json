@@ -58,6 +58,11 @@
     "t": "2026-11-27T01:18:15",
     "text": "Studio-Werte nicht neu abgefragt: API-Aufrufe seit 19:09 unverändert (1–3 pro Short)",
     "kind": "warn"
+   },
+   {
+    "t": "2026-11-27T01:18:29",
+    "text": "Aktualisiere Dashboard",
+    "kind": "step"
    }
   ]
  },
@@ -451,7 +456,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T01:18:15",
+ "updated": "2026-11-27T01:18:29",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T01:09:37",
