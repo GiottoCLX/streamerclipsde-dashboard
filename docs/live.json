@@ -18,6 +18,11 @@
     "t": "2026-11-27T08:09:44",
     "text": "Posten erlaubt – suche fertigen Short im Vorrat",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T08:09:50",
+    "text": "Kein Short bereit – hole Aufrufe aller Shorts",
+    "kind": "step"
    }
   ]
  },
@@ -953,7 +958,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T08:09:44",
+ "updated": "2026-11-27T08:09:50",
  "last_summary": "Kein Post (Vorrat 0); 24 h + 7 Tage ohne 8+, nichts vorbereitet; Festival-Story bei 1202 Aufrufen",
  "channel": "kanal1",
  "check": {
