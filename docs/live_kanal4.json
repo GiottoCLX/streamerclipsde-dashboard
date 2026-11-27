@@ -33,6 +33,11 @@
     "t": "2026-11-27T23:15:37",
     "text": "Lade Short hoch: Marlon – Who's eating a thousand wings",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T23:17:04",
+    "text": "Short 'Is this a sock of Trump?' (9Ta6FXqKagk, 21:09) ist nicht mehr auf dem Kanal – API: nicht gefunden (gelöscht oder von YouTube entfernt?)",
+    "kind": "warn"
    }
   ]
  },
@@ -1038,7 +1043,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T23:15:37",
+ "updated": "2026-11-27T23:17:04",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T23:09:59",
