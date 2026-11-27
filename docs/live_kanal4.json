@@ -33,6 +33,11 @@
     "t": "2026-11-27T09:12:00",
     "text": "Kein 8+ in 24 h – suche in den letzten 7 Tagen",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T09:13:23",
+    "text": "Rendere Test: Kai Cenat 'damn bruh' (Bild prüfen)",
+    "kind": "step"
    }
   ]
  },
@@ -707,7 +712,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T09:12:00",
+ "updated": "2026-11-27T09:13:23",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T09:09:42",
