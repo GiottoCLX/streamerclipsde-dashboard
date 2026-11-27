@@ -109,12 +109,19 @@
     "views": 3,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T15:17",
+    "age_h": 41.2,
+    "views": 3,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 3,
   "likes": 0,
   "comments": 0,
-  "age_h": 39.1,
+  "age_h": 41.2,
   "views_per_h": 0.1,
   "like_rate": 0.0
  },
@@ -213,12 +220,19 @@
     "views": 3,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T15:17",
+    "age_h": 22.1,
+    "views": 4,
+    "likes": 0,
+    "comments": 0
    }
   ],
-  "views": 3,
+  "views": 4,
   "likes": 0,
   "comments": 0,
-  "age_h": 20.0,
+  "age_h": 22.1,
   "views_per_h": 0.2,
   "like_rate": 0.0
  },
@@ -317,12 +331,19 @@
     "views": 3,
     "likes": 0,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T15:17",
+    "age_h": 23.4,
+    "views": 3,
+    "likes": 0,
+    "comments": 0
    }
   ],
   "views": 3,
   "likes": 0,
   "comments": 0,
-  "age_h": 21.3,
+  "age_h": 23.4,
   "views_per_h": 0.1,
   "like_rate": 0.0
  },
@@ -373,13 +394,76 @@
     "views": 524,
     "likes": 7,
     "comments": 0
+   },
+   {
+    "t": "2026-11-27T15:17",
+    "age_h": 8.1,
+    "views": 586,
+    "likes": 7,
+    "comments": 0
    }
   ],
-  "views": 524,
+  "views": 586,
   "likes": 7,
   "comments": 0,
-  "age_h": 6.0,
-  "views_per_h": 87.8,
-  "like_rate": 1.3
+  "age_h": 8.1,
+  "views_per_h": 72.5,
+  "like_rate": 1.2
+ },
+ "wAvggQAk5Wk": {
+  "dur": 19.5,
+  "title": "StableRonaldo asks Duke for a photo – \"Who are you?\" 💀 #shorts",
+  "streamer": "StableRonaldo",
+  "headline": "\"Who are you?\" 💀 Duke snubs Ron",
+  "experiment": "IRL-Abblitz-Moment (Top-Clip aller Zeiten)",
+  "clip_title": "duke \"who is you\" 😭😭",
+  "design": "v2",
+  "layout": "blur",
+  "uploaded_at": "2026-11-27T15:16:51",
+  "upload_hour": 15,
+  "perf": {},
+  "snapshots": [
+   {
+    "t": "2026-11-27T15:17",
+    "age_h": 0.1,
+    "views": 0,
+    "likes": 0,
+    "comments": 0
+   }
+  ],
+  "views": 0,
+  "likes": 0,
+  "comments": 0,
+  "age_h": 0.1,
+  "views_per_h": 0.0,
+  "like_rate": 0.0
+ },
+ "MAjJ77kIqRM": {
+  "dur": 31.0,
+  "title": "StableRonaldo: \"He's so lucky I'm good at driving\" 💀 #shorts",
+  "streamer": "StableRonaldo",
+  "headline": "\"He's so lucky I'm good at driving\" 💀",
+  "experiment": "IRL-Fahrt mit Ansage -> Fail (30-Tage-Top-Clip, 11k Twitch-Views)",
+  "clip_title": "Ron almost crashed",
+  "design": "v2",
+  "layout": "blur",
+  "uploaded_at": "2026-11-27T13:24:48",
+  "upload_hour": 13,
+  "perf": {},
+  "snapshots": [
+   {
+    "t": "2026-11-27T15:17",
+    "age_h": 1.9,
+    "views": 1,
+    "likes": 1,
+    "comments": 0
+   }
+  ],
+  "views": 1,
+  "likes": 1,
+  "comments": 0,
+  "age_h": 1.9,
+  "views_per_h": 0.5,
+  "like_rate": 100.0
  }
 }
