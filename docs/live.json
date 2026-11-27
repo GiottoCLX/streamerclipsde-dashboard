@@ -1,6 +1,16 @@
 {
- "state": "idle",
- "current": null,
+ "state": "running",
+ "current": {
+  "title": "Lauf 20:09",
+  "started": "2026-11-27T20:09:25",
+  "steps": [
+   {
+    "t": "2026-11-27T20:09:25",
+    "text": "Lauf gestartet, neueste Regeln geladen",
+    "kind": "step"
+   }
+  ]
+ },
  "runs": [
   {
    "title": "Lauf 18:09",
@@ -993,7 +1003,7 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T18:18:54",
+ "updated": "2026-11-27T20:09:25",
  "last_summary": "Gepostet: Trymacs Icon Garrincha (CG_iSPUugaA); Festival-Story mit 2. Schub (2483 Aufrufe, 55 % angesehen); bereit: Monte KI bellt (Note 7)",
  "channel": "kanal1",
  "check": {
