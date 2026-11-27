@@ -1,62 +1,71 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 03:09",
-  "started": "2026-11-27T03:09:18",
-  "steps": [
-   {
-    "t": "2026-11-27T03:09:18",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T03:09:32",
-    "text": "Prüfe, ob gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T03:09:42",
-    "text": "Kein Post (außerhalb 06–24 Uhr) – hole Aufrufe aller Shorts",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T03:09:53",
-    "text": "Aufrufe unverändert – prüfe Vorrat",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T03:10:04",
-    "text": "Vorrat 1 (Lacy Pool-Fail, 4 h alt) – suche neue Twitch-Clips (24 h)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T03:12:35",
-    "text": "Prüfe Kandidat: Kai Cenat 'caught' (Freund erwischt Kai im Strip-Club)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T03:12:55",
-    "text": "Schneide Kai Cenat 'caught' und prüfe Vorschaubild",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T03:13:39",
-    "text": "Kai 'caught' aussortiert (Vorschau zu dunkel, Note 6) – suche 7 Tage",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T03:15:13",
-    "text": "Prüfe Kandidat aus 7 Tagen: StableRonaldo 'Speed Bump' (GTA 6)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T03:15:58",
-    "text": "Kein 8+ in 24 h und 7 Tagen – schreibe Log und aktualisiere Dashboard",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 03:09",
+   "started": "2026-11-27T03:09:18",
+   "steps": [
+    {
+     "t": "2026-11-27T03:09:18",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T03:09:32",
+     "text": "Prüfe, ob gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T03:09:42",
+     "text": "Kein Post (außerhalb 06–24 Uhr) – hole Aufrufe aller Shorts",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T03:09:53",
+     "text": "Aufrufe unverändert – prüfe Vorrat",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T03:10:04",
+     "text": "Vorrat 1 (Lacy Pool-Fail, 4 h alt) – suche neue Twitch-Clips (24 h)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T03:12:35",
+     "text": "Prüfe Kandidat: Kai Cenat 'caught' (Freund erwischt Kai im Strip-Club)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T03:12:55",
+     "text": "Schneide Kai Cenat 'caught' und prüfe Vorschaubild",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T03:13:39",
+     "text": "Kai 'caught' aussortiert (Vorschau zu dunkel, Note 6) – suche 7 Tage",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T03:15:13",
+     "text": "Prüfe Kandidat aus 7 Tagen: StableRonaldo 'Speed Bump' (GTA 6)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T03:15:58",
+     "text": "Kein 8+ in 24 h und 7 Tagen – schreibe Log und aktualisiere Dashboard",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T03:16:19",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-27T03:16:19",
+   "state": "ok",
+   "summary": "Kein Post (außerhalb 06–24 Uhr); 24 h + 7 Tage ohne Clip mit Note 8+ (2 Kandidaten nach Vorschau verworfen); Vorrat 1 (Lacy Pool-Fail)"
+  },
   {
    "title": "Lauf 01:09",
    "started": "2026-11-27T01:09:17",
@@ -520,12 +529,12 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T03:15:58",
+ "updated": "2026-11-27T03:16:19",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T03:09:36",
   "may_post": false,
   "reason": "außerhalb der Posting-Zeiten 06:00-24:00"
  },
- "last_summary": "Kein Post (außerhalb 06–24 Uhr), Vorrat 1 (Lacy Pool-Fail, Note 8); 24 h + 7 Tage ohne neuen 8+-Clip"
+ "last_summary": "Kein Post (außerhalb 06–24 Uhr); 24 h + 7 Tage ohne Clip mit Note 8+ (2 Kandidaten nach Vorschau verworfen); Vorrat 1 (Lacy Pool-Fail)"
 }
