@@ -28,6 +28,11 @@
     "t": "2026-11-27T05:10:01",
     "text": "Vorrat 1/2 – suche neue Twitch-Clips der letzten 24 h",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T05:12:50",
+    "text": "Prüfe Kandidat: Lacy füttert Hund heimlich Truthahn",
+    "kind": "step"
    }
   ]
  },
@@ -559,7 +564,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T05:10:01",
+ "updated": "2026-11-27T05:12:50",
  "channel": "kanal4",
  "check": {
   "t": "2026-11-27T05:09:37",
