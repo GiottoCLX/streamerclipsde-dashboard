@@ -18,6 +18,11 @@
     "t": "2026-11-27T02:09:42",
     "text": "Kein Post (außerhalb 06–24 Uhr) – hole Aufrufzahlen",
     "kind": "step"
+   },
+   {
+    "t": "2026-11-27T02:10:04",
+    "text": "Hole Studio-Werte (Browser)",
+    "kind": "step"
    }
   ]
  },
@@ -963,7 +968,7 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T02:09:42",
+ "updated": "2026-11-27T02:10:04",
  "last_summary": "Kein Post (außerhalb 06–24 Uhr), Vorrat 0: kein Clip mit Note 8+ gefunden; Festival-Story bei 984 Aufrufen, Realtalk 0 nach 2 h",
  "channel": "kanal1",
  "check": {
