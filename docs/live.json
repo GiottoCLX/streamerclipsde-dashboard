@@ -1,72 +1,81 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 18:09",
-  "started": "2026-11-27T18:09:22",
-  "steps": [
-   {
-    "t": "2026-11-27T18:09:22",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T18:09:39",
-    "text": "Prüfe, ob jetzt gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T18:09:49",
-    "text": "Posten erlaubt – bereite Upload des ältesten fertigen Shorts vor",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T18:10:15",
-    "text": "Lade Short hoch: Trymacs zieht Icon Garrincha",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T18:11:44",
-    "text": "Gepostet: Trymacs Icon Garrincha (CG_iSPUugaA) – werte Zahlen aus",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T18:12:15",
-    "text": "Vorrat prüfen (0 nach Post) und neue Clips suchen: letzte 24 h",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T18:14:15",
-    "text": "Prüfe Kandidaten: Monte vs. KI (bellt) und Monte Zivilstreife-Story",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T18:14:51",
-    "text": "Schneide Monte KI-Bellen und Monte Zivilstreife (Probe)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T18:16:05",
-    "text": "Vorrat 1 (Monte KI bellt, Note 7) – suche weiter: letzte 7 Tage",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T18:16:48",
-    "text": "7 Tage: nur GTA-Clips ohne Moment – suche in letzten 30 Tagen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T18:18:40",
-    "text": "30 Tage ohne 7+ – Lern-Notizen (STRATEGIE.md) ergänzen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T18:18:43",
-    "text": "Dashboard aktualisieren",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 18:09",
+   "started": "2026-11-27T18:09:22",
+   "steps": [
+    {
+     "t": "2026-11-27T18:09:22",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T18:09:39",
+     "text": "Prüfe, ob jetzt gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T18:09:49",
+     "text": "Posten erlaubt – bereite Upload des ältesten fertigen Shorts vor",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T18:10:15",
+     "text": "Lade Short hoch: Trymacs zieht Icon Garrincha",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T18:11:44",
+     "text": "Gepostet: Trymacs Icon Garrincha (CG_iSPUugaA) – werte Zahlen aus",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T18:12:15",
+     "text": "Vorrat prüfen (0 nach Post) und neue Clips suchen: letzte 24 h",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T18:14:15",
+     "text": "Prüfe Kandidaten: Monte vs. KI (bellt) und Monte Zivilstreife-Story",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T18:14:51",
+     "text": "Schneide Monte KI-Bellen und Monte Zivilstreife (Probe)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T18:16:05",
+     "text": "Vorrat 1 (Monte KI bellt, Note 7) – suche weiter: letzte 7 Tage",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T18:16:48",
+     "text": "7 Tage: nur GTA-Clips ohne Moment – suche in letzten 30 Tagen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T18:18:40",
+     "text": "30 Tage ohne 7+ – Lern-Notizen (STRATEGIE.md) ergänzen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T18:18:43",
+     "text": "Dashboard aktualisieren",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T18:18:54",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-27T18:18:54",
+   "state": "ok",
+   "summary": "Gepostet: Trymacs Icon Garrincha (CG_iSPUugaA); Festival-Story mit 2. Schub (2483 Aufrufe, 55 % angesehen); bereit: Monte KI bellt (Note 7)"
+  },
   {
    "title": "Lauf 16:09",
    "started": "2026-11-27T16:09:23",
@@ -977,60 +986,6 @@
    "finished": "2026-11-26T14:16:18",
    "state": "ok",
    "summary": "Gepostet: Trymacs Festival-Story (youtube.com/shorts/BzLWrPpkJmA) – Upload-Limit ist weg; bereit: Monte Polizei + Monte Elektro/G63-Rant (je Note 8)"
-  },
-  {
-   "title": "Lauf 12:09",
-   "started": "2026-11-26T12:09:07",
-   "steps": [
-    {
-     "t": "2026-11-26T12:09:07",
-     "text": "Lauf gestartet, neueste Regeln geladen",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T12:09:27",
-     "text": "Prüfung: Posten erlaubt (letzter Post vor 903 Min.) – bereite Upload vor",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T12:09:47",
-     "text": "Lade Short hoch: Trymacs – Nicis Festival-Story",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T12:11:04",
-     "text": "Kein Post: Studio meldet erneut 'Tägliches Upload-Limit erreicht' (3. Lauf in Folge) – Identitätsbestätigung durch Nutzer nötig",
-     "kind": "warn"
-    },
-    {
-     "t": "2026-11-26T12:11:49",
-     "text": "Werte Zahlen aus: Aufrufe aller Shorts",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T12:11:59",
-     "text": "Lese Studio-Werte für 4 Shorts (Armut, Bauprojekt, GTA6, Tierleiche)",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T12:13:14",
-     "text": "Vorrat geprüft: 2 Shorts frisch (Note 8) – voll, trage Erkenntnisse ein",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T12:13:40",
-     "text": "Aktualisiere Dashboard",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-26T12:13:50",
-     "text": "Fertig",
-     "kind": "step"
-    }
-   ],
-   "finished": "2026-11-26T12:13:50",
-   "state": "ok",
-   "summary": "Kein Post: Tägliches Upload-Limit weiterhin aktiv (3. Lauf in Folge, Identitätsbestätigung nötig); Studio-Werte aktualisiert, Vorrat 2 (Note 8)"
   }
  ],
  "rules": {
@@ -1038,8 +993,8 @@
   "date": "2026-11-27 11:41",
   "web": false
  },
- "updated": "2026-11-27T18:18:43",
- "last_summary": "Gepostet: Trymacs seltenste Pokémon-Karte (9UHmXidU9Es); Vorrat 1 (Trymacs Icon Garrincha, Note 7)",
+ "updated": "2026-11-27T18:18:54",
+ "last_summary": "Gepostet: Trymacs Icon Garrincha (CG_iSPUugaA); Festival-Story mit 2. Schub (2483 Aufrufe, 55 % angesehen); bereit: Monte KI bellt (Note 7)",
  "channel": "kanal1",
  "check": {
   "t": "2026-11-27T18:09:43",
