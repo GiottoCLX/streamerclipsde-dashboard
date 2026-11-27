@@ -1,52 +1,61 @@
 {
- "state": "running",
- "current": {
-  "title": "Lauf 02:09",
-  "started": "2026-11-27T02:09:18",
-  "steps": [
-   {
-    "t": "2026-11-27T02:09:18",
-    "text": "Lauf gestartet, neueste Regeln geladen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T02:09:31",
-    "text": "Prüfe, ob gepostet werden darf",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T02:09:42",
-    "text": "Kein Post (außerhalb 06–24 Uhr) – hole Aufrufzahlen",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T02:10:04",
-    "text": "Hole Studio-Werte (Browser)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T02:11:51",
-    "text": "Prüfe Vorrat",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T02:12:01",
-    "text": "Vorrat 0 – suche neue Twitch-Clips (24 h)",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T02:13:19",
-    "text": "24 h ohne 8+ – suche 7 Tage",
-    "kind": "step"
-   },
-   {
-    "t": "2026-11-27T02:14:32",
-    "text": "Schreibe Log und aktualisiere Dashboard",
-    "kind": "step"
-   }
-  ]
- },
+ "state": "idle",
+ "current": null,
  "runs": [
+  {
+   "title": "Lauf 02:09",
+   "started": "2026-11-27T02:09:18",
+   "steps": [
+    {
+     "t": "2026-11-27T02:09:18",
+     "text": "Lauf gestartet, neueste Regeln geladen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T02:09:31",
+     "text": "Prüfe, ob gepostet werden darf",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T02:09:42",
+     "text": "Kein Post (außerhalb 06–24 Uhr) – hole Aufrufzahlen",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T02:10:04",
+     "text": "Hole Studio-Werte (Browser)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T02:11:51",
+     "text": "Prüfe Vorrat",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T02:12:01",
+     "text": "Vorrat 0 – suche neue Twitch-Clips (24 h)",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T02:13:19",
+     "text": "24 h ohne 8+ – suche 7 Tage",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T02:14:32",
+     "text": "Schreibe Log und aktualisiere Dashboard",
+     "kind": "step"
+    },
+    {
+     "t": "2026-11-27T02:14:43",
+     "text": "Fertig",
+     "kind": "step"
+    }
+   ],
+   "finished": "2026-11-27T02:14:43",
+   "state": "ok",
+   "summary": "Kein Post (außerhalb 06–24 Uhr); 24 h + 7 Tage ohne Clip mit Note 8+, Vorrat 0; Festival-Story 1132 Aufrufe nach 12 h."
+  },
   {
    "title": "Lauf 00:09",
    "started": "2026-11-27T00:09:17",
@@ -957,30 +966,6 @@
    "finished": "2026-11-25T22:20:42",
    "state": "ok",
    "summary": "Kein Post (Mindestabstand), Vorrat 1 (Trymacs Festival-Story, Note 8), kein neuer 8er-Clip gefunden; Studio zeigt 'Hoppla' für StreamerclipsDE"
-  },
-  {
-   "title": "Test der Live-Anzeige",
-   "started": "2026-11-25T21:20:48",
-   "steps": [
-    {
-     "t": "2026-11-25T21:20:48",
-     "text": "Lauf gestartet, neueste Regeln geladen",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-25T21:20:51",
-     "text": "Prüfe, ob diese Meldung im Dashboard ankommt",
-     "kind": "step"
-    },
-    {
-     "t": "2026-11-25T21:22:21",
-     "text": "Fertig",
-     "kind": "step"
-    }
-   ],
-   "finished": "2026-11-25T21:22:21",
-   "state": "ok",
-   "summary": "Test erfolgreich – Live-Anzeige funktioniert"
   }
  ],
  "rules": {
@@ -988,8 +973,8 @@
   "date": "2026-11-26 15:56",
   "web": false
  },
- "updated": "2026-11-27T02:14:32",
- "last_summary": "Kein Post (außerhalb 06–24 Uhr), Vorrat 0: kein Clip mit Note 8+ gefunden; Festival-Story bei 984 Aufrufen, Realtalk 0 nach 2 h",
+ "updated": "2026-11-27T02:14:43",
+ "last_summary": "Kein Post (außerhalb 06–24 Uhr); 24 h + 7 Tage ohne Clip mit Note 8+, Vorrat 0; Festival-Story 1132 Aufrufe nach 12 h.",
  "channel": "kanal1",
  "check": {
   "t": "2026-11-27T02:09:34",
